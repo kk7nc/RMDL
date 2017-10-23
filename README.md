@@ -16,7 +16,7 @@ Refrenced paper : [RMDL: Random Multimodel Deep Learning for Classification]()
         This dataset contains 50,000 documents with 2 categories.
 [Reters-21578 Dataset](https://keras.io/datasets/)
 
-        This dataset contains 21578 documents with 90 categories.
+        This dataset contains 21,578 documents with 90 categories.
 [20Newsgroups Dataset](https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups)
 
         This dataset contains 20,000 documents with 20 categories.
@@ -33,7 +33,12 @@ Web of Science Dataset [WOS-5736](https://github.com/kk7nc/HDLTex/tree/master/DA
 
 **Image datasets:** 
 
+[MNIST Dataset](https://en.wikipedia.org/wiki/MNIST_database)
 
+        The MNIST database contains 60,000 training images and 10,000 testing images.
+[CIFAR-10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
+
+        The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.
 **Requirment :**
 
 
