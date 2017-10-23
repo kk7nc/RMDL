@@ -9,7 +9,17 @@ Refrenced paper : [RMDL: Random Multimodel Deep Learning for Classification]()
 
 **Datasets for RMDL:** 
 
+**Text Datasets:** 
 
+[IMDB Dataset](http://ai.stanford.edu/~amaas/data/sentiment/)
+
+        This dataset contains 50,000 documents with 2 categories.
+[Reters-21578 Dataset](https://keras.io/datasets/)
+
+        This dataset contains 21578 documents with 90 categories.
+[20Newsgroups Dataset](https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups)
+
+        This dataset contains 20,000 documents with 20 categories.
 Web of Science Dataset [WOS-11967](https://github.com/kk7nc/HDLTex/tree/master/DATA)
 
         This dataset contains 11,967 documents with 35 categories which include 7 parents categories.
@@ -21,6 +31,7 @@ Web of Science Dataset [WOS-5736](https://github.com/kk7nc/HDLTex/tree/master/DA
 
         This dataset contains 5,736 documents with 11 categories which include 3 parents categories.
 
+**Image datasets:** 
 
 
 **Requirment :**
