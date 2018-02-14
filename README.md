@@ -6,8 +6,8 @@ All codes and Datasets: coming soon
 Refrenced paper : [RMDL: Random Multimodel Deep Learning for Classification]()
 
 
-![picture](http://kowsari.net/onewebmedia/RMDL.jpg =48)
 
+![alt tag](http://kowsari.net/onewebmedia/RMDL.jpg "Description goes here")
 
 
 **Documentation:**
