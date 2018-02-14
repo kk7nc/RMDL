@@ -9,8 +9,7 @@ Refrenced paper : [RMDL: Random Multimodel Deep Learning for Classification]()
 Refrenced paper : [A Novel Approach of Data Classification using Random Multimodel Deep Learning (RMDL)]()
 
 **Documentation:**
-The   continually   increasing   number   of   complexdatasets  each  year  necessitates  ever  improving  machine  learn-ing  methods  for  robust  and  accurate  categorization  of  thesedata.  This  paper  introduces  Random  Multimodel  Deep  Learn-ing   (RMDL):   a   new   ensemble,   deep   learning   approach   forclassification.  Deep  learning  models  have  achieved  state-of-the-art  results  across  many  domains.  RMDL  solves  the  problemof  finding  the  best  deep  learning  structure  and  architecturewhile simultaneously improving robustness and accuracy throughensembles  of  deep  learning  architectures.  RDML  can  accept  asinput a variety data to include text, video, images, and symbolic.This paper describes RMDL and shows test results for image andtext  data  including  MNIST,  CIFAR-10,  WOS,  Reuters,  IMDB,and 20newsgroup. These test results show that RDML producesconsistently  better  performance  than  standard  methods  over  abroad  range  of  data  types  and  classification  problems
-
+*Random  Multimodel  Deep  Learn-ing (RMDL):*   a   new   ensemble,   deep   learning   approach   for classification.  Deep  learning  models  have  achieved  state-of-the-art  results  across  many  domains.  RMDL  solves  the  problem of  finding  the  best  deep  learning  structure  and  architecture while simultaneously improving robustness and accuracy through ensembles  of  deep  learning  architectures.  RDML  can  accept  asinput a variety data to include text, video, images, and symbolic. 
 
 
 Overview  of  RDML:  Random  Multimodel  Deep  Learning  for  classification.  The  RMDL  includesnRandom  modelswhich aredrandom model of DNN classifiers,cmodels of CNN classifiers, andrRNN classifiers wherer+c+d=n.
