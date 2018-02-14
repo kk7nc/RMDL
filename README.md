@@ -5,6 +5,11 @@ All codes and Datasets: coming soon
 
 Refrenced paper : [RMDL: Random Multimodel Deep Learning for Classification]()
 
+
+![picture](http://kowsari.net/onewebmedia/RMDL.jpg "HDLTex as both Hierarchy lavel are DNN")
+
+
+
 **Documentation:**
 
 **Datasets for RMDL:** 
