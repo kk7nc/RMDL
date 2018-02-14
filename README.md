@@ -79,7 +79,7 @@ Keras see [Instruction Documents](https://keras.io/)
 
 scipy see [Instruction Documents](https://www.scipy.org/install.html)
 
-GPU:
+GPU (if you want to run on GPU):
 
 CUDA® Toolkit 8.0. For details, see [NVIDIA's documentation](https://developer.nvidia.com/cuda-toolkit). 
 
