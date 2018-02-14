@@ -6,7 +6,8 @@ All codes and Datasets: coming soon
 Refrenced paper : [RMDL: Random Multimodel Deep Learning for Classification]()
 
 
-
+**Documentation:**
+The   continually   increasing   number   of   complexdatasets  each  year  necessitates  ever  improving  machine  learn-ing  methods  for  robust  and  accurate  categorization  of  thesedata.  This  paper  introduces  Random  Multimodel  Deep  Learn-ing   (RMDL):   a   new   ensemble,   deep   learning   approach   forclassification.  Deep  learning  models  have  achieved  state-of-the-art  results  across  many  domains.  RMDL  solves  the  problemof  finding  the  best  deep  learning  structure  and  architecturewhile simultaneously improving robustness and accuracy throughensembles  of  deep  learning  architectures.  RDML  can  accept  asinput a variety data to include text, video, images, and symbolic.This paper describes RMDL and shows test results for image andtext  data  including  MNIST,  CIFAR-10,  WOS,  Reuters,  IMDB,and 20newsgroup. These test results show that RDML producesconsistently  better  performance  than  standard  methods  over  abroad  range  of  data  types  and  classification  problems
 
 
 
@@ -14,7 +15,7 @@ Overview  of  RDML:  Random  Multimodel  Deep  Learning  for  classification.  T
 
 
 
-<img src="http://kowsari.net/onewebmedia/RDL.jpg" width="60%"></img> 
+<img src="http://kowsari.net/onewebmedia/RDL.jpg" width="80%"></img> 
 
 
 
@@ -23,11 +24,13 @@ Random  Multimodel  Deep  Learning  (RDML)  architecture  for  classification.  
 
 
 
-<img src="http://kowsari.net/onewebmedia/RMDL.jpg" width="60%"></img> 
+<img src="http://kowsari.net/onewebmedia/RMDL.jpg" width="80%"></img> 
 
 
 
 **Documentation:**
+The   continually   increasing   number   of   complexdatasets  each  year  necessitates  ever  improving  machine  learn-ing  methods  for  robust  and  accurate  categorization  of  thesedata.  This  paper  introduces  Random  Multimodel  Deep  Learn-ing   (RMDL):   a   new   ensemble,   deep   learning   approach   forclassification.  Deep  learning  models  have  achieved  state-of-the-art  results  across  many  domains.  RMDL  solves  the  problemof  finding  the  best  deep  learning  structure  and  architecturewhile simultaneously improving robustness and accuracy throughensembles  of  deep  learning  architectures.  RDML  can  accept  asinput a variety data to include text, video, images, and symbolic.This paper describes RMDL and shows test results for image andtext  data  including  MNIST,  CIFAR-10,  WOS,  Reuters,  IMDB,and 20newsgroup. These test results show that RDML producesconsistently  better  performance  than  standard  methods  over  abroad  range  of  data  types  and  classification  problems
+
 
 **Datasets for RMDL:** 
 
