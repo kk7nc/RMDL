@@ -7,9 +7,11 @@ Refrenced paper : [RMDL: Random Multimodel Deep Learning for Classification]()
 
 
 
-![alt tag](http://kowsari.net/onewebmedia/RMDL.jpg "Description goes here")
+![alt tag](http://kowsari.net/onewebmedia/RMDL.jpg "Description goes here" )
 
 
+
+<img src="http://kowsari.net/onewebmedia/RMDL.jpg" width="30%"></img> 
 **Documentation:**
 
 **Datasets for RMDL:** 
