@@ -7,7 +7,21 @@ Refrenced paper : [RMDL: Random Multimodel Deep Learning for Classification]()
 
 
 
+
+
+
+Overview  of  RDML:  Random  Multimodel  Deep  Learning  for  classification.  The  RMDL  includesnRandom  modelswhich aredrandom model of DNN classifiers,cmodels of CNN classifiers, andrRNN classifiers wherer+c+d=n.
+
+
+
 <img src="http://kowsari.net/onewebmedia/RDL.jpg" width="60%"></img> 
+
+
+
+Random  Multimodel  Deep  Learning  (RDML)  architecture  for  classification.  RMDL  includes  3  Random  models,  oneDNN classifier at left, one Deep CNN classifier at middle, and one Deep RNN classifier at right (each unit could be LSTMor GRU).
+
+
+
 
 <img src="http://kowsari.net/onewebmedia/RMDL.jpg" width="60%"></img> 
 
