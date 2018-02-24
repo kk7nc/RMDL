@@ -25,7 +25,7 @@ DATA_URL = 'http://kowsari.net/WebOfScience.tar.gz'
 
 def download_and_extract():
     """
-    Download and extract the STL-10 dataset
+    Download and extract the WOS dataset
     :return: None
     """
     dest_directory = DATA_DIR
