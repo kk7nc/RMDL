@@ -96,6 +96,6 @@ To install this library, issue the following command:
 $ sudo apt-get install libcupti-dev
 ```
 
-**Error and Comments **
+**Error and Comments:**
 
 Send an email to [kk7nc@virginia.edu](mailto:kk7nc@virginia.edu)
