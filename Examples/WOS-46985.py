@@ -23,7 +23,6 @@ if __name__ == "__main__":
     contentk = [x.strip() for x in contentk]
     Label = np.matrix(contentk, dtype=int)
     Label = np.transpose(Label)
-
     np.random.seed(7)
     print(Label.shape)
     X_train, X_test, y_train, y_test = train_test_split(content, Label, test_size=0.2, random_state=4)

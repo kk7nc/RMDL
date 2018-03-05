@@ -9,14 +9,13 @@ import matplotlib.pyplot as plt
 import gc
 from sklearn.metrics import confusion_matrix
 import Plot
+from pylab import *
 import collections
 from sklearn.metrics import precision_recall_fscore_support
 import BuildModel
-
+import pylab
 from keras.callbacks import ModelCheckpoint
 np.random.seed(7)
-
-
 
 def Text_classification(X_train, X_train_M, y_train, X_test, X_test_M, y_test,
                         Random_Deep,n_epochs,batch_size,sparse_categorical,
@@ -170,7 +169,7 @@ def Text_classification(X_train, X_train_M, y_train, X_test, X_test_M, y_test,
     gc.collect()
     # Plot.plot_RMDL(History)# plot histori of all RDL models
     y_proba = np.array(y_proba).transpose()
-    # print(y_proba.shape)
+
     final_y = []
     for i in range(0, y_proba.shape[0]):
         a = np.array(y_proba[i, :])
@@ -183,9 +182,11 @@ def Text_classification(X_train, X_train_M, y_train, X_test, X_test_M, y_test,
         F3 = precision_recall_fscore_support(y_test, final_y, average='weighted')
         cnf_matrix = confusion_matrix(y_test, final_y)
         # Compute confusion matrix
-        np.set_printoptions(precision=2)
         # Plot non-normalized confusion matrix
+
+        plt.plot(range(10))
         plt.figure()
+        print("jhasgjdsh")
         Plot.plot_confusion_matrix(cnf_matrix, classes=[0, 1],
                                    title='Confusion matrix, without normalization')
 
@@ -199,6 +200,7 @@ def Text_classification(X_train, X_train_M, y_train, X_test, X_test_M, y_test,
         F1 = precision_recall_fscore_support(y_test_temp, final_y, average='micro')
         F2 = precision_recall_fscore_support(y_test_temp, final_y, average='macro')
         F3 = precision_recall_fscore_support(y_test_temp, final_y, average='weighted')
+    print(y_proba.shape)
     print(score)
     print(F_score)
     print(F1)

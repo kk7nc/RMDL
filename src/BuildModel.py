@@ -57,7 +57,7 @@ def to_multi_gpu(model, n_gpus=2):
 
 def buildModel_DNN_image(shape, nClasses,sparse_categorical):
     model = Sequential()
-    values = list(range(128,512))
+    values = list(range(128,1024))
     Numberof_NOde = random.choice(values)
     Lvalues = list(range(1,5))
     nLayers =random.choice(Lvalues)
@@ -70,7 +70,6 @@ def buildModel_DNN_image(shape, nClasses,sparse_categorical):
         model.add(Dense(Numberof_NOde,activation='relu'))
         model.add(Dropout(0.25))
     model.add(Dense(nClasses, activation='softmax'))
-    sgd = SGD(lr=0.01, decay=1e-2, momentum=0.9, nesterov=True)
     model_tmp = model
     if sparse_categorical==0:
         model.compile(loss='sparse_categorical_crossentropy',
@@ -321,7 +320,6 @@ def buildModel_CNN(word_index,embeddings_index,nClasses,MAX_SEQUENCE_LENGTH,EMBE
         l_dense = Dense(node, activation='relu')(l_flat)
         l_dense = Dropout(0.5)(l_dense)
         preds = Dense(nClasses, activation='softmax')(l_dense)
-
         model = Model(sequence_input, preds)
         model_tmp = model
         if sparse_categorical == 0:

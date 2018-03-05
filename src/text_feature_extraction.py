@@ -3,6 +3,8 @@ import sys
 sys.path.append('../Download_datasets')
 from keras.datasets import imdb
 import pandas
+import nltk
+import gensim
 from nltk.corpus import stopwords, reuters
 from sklearn.datasets import fetch_20newsgroups
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -19,6 +21,7 @@ from nltk import word_tokenize
 from nltk.stem.porter import PorterStemmer
 from nltk.corpus import stopwords
 import re
+from nltk import PorterStemmer
 
 cachedStopWords = stopwords.words("english")
 
@@ -64,8 +67,8 @@ def text_cleaner(text):
             text = regex.sub(v, text)
         text = text.rstrip()
         text = text.strip()
+    #PorterStemmer().stem('text')
     return text.lower()
-
 
 def loadData_Tokenizer(X_train, X_test,MAX_NB_WORDS,MAX_SEQUENCE_LENGTH):
     np.random.seed(7)
@@ -98,170 +101,43 @@ def loadData_Tokenizer(X_train, X_test,MAX_NB_WORDS,MAX_SEQUENCE_LENGTH):
     print('Total %s word vectors.' % len(embeddings_index))
     return (X_train, X_test, word_index,embeddings_index)
 
+def W2V_Tokenizer(Data,X_train, X_test,MAX_NB_WORDS,MAX_SEQUENCE_LENGTH):
 
-def Load_data(Data_text,MAX_NB_WORDS,MAX_SEQUENCE_LENGTH):
-    X_train=0
-    X_train_M=0
-    y_train=0
-    X_test=0
-    X_test_M=0
-    y_test=0
-    word_index =0
-    embeddings_index =0
-    if Data_text ==0:
-        WOS.download_and_extract()
-        fname = "./Data_WOS/WebOfScience/WOS5736/X.txt"
-        fnamek = "./Data_WOS/WebOfScience/WOS5736/Y.txt"
-        with open(fname, encoding="utf-8") as f:
-            content = f.readlines()
-            content = [text_cleaner(x) for x in content]
-        with open(fnamek) as fk:
-            contentk = fk.readlines()
-        contentk = [x.strip() for x in contentk]
-        Label = np.matrix(contentk, dtype=int)
-        Label = np.transpose(Label)
+    nar = [nltk.word_tokenize(sentences) for sentences in Data]
+    w2vmodel = gensim.models.Word2Vec(nar, size=100, window=5, min_count=5, workers=4)
+    selected_nar = nar
+    word_indexes = {}
+    for i in range(len(w2vmodel.wv.vocab)):
+        word_indexes[w2vmodel.wv.index2word[i]] = i
+    narindexed = []
 
-        np.random.seed(7)
-        print(Label.shape)
-        X, X_t, y_train, y_test = train_test_split(content, Label, test_size=0.2, random_state=4)
-        X_train, X_test = loadData(X, X_t)
-        X_train_M, X_test_M, word_index, embeddings_index = loadData_Tokenizer(X, X_t, MAX_NB_WORDS,
-                                                                               MAX_SEQUENCE_LENGTH)
-    elif (Data_text == 1):
+    for a_nar in selected_nar:
+        a_nar_indexed = []
+        for a_word in a_nar:
+            if a_word in word_indexes.keys():
+                a_nar_indexed.append(word_indexes[a_word])
+            else:
+                a_nar_indexed.append(0)
+        narindexed.append(a_nar_indexed)
 
-        fname = "./Data_WOS/WebOfScience//WOS11967/X.txt"
-        fnamek = "./Data_WOS/WebOfScience/WOS11967/Y.txt"
-        with open(fname, encoding="utf-8") as f:
-            content = f.readlines()
-            content = [text_cleaner(x) for x in content]
-        with open(fnamek) as fk:
-            contentk = fk.readlines()
-        contentk = [x.strip() for x in contentk]
-        Label = np.matrix(contentk, dtype=int)
-        Label = np.transpose(Label)
+        word_index = w2vmodel.wv.vocab
 
-        np.random.seed(7)
-        print(Label.shape)
-        X, X_t, y_train, y_test = train_test_split(content, Label, test_size=0.2, random_state=4)
-        X_train, X_test = loadData(X, X_t)
-        X_train_M, X_test_M, word_index, embeddings_index = loadData_Tokenizer(X, X_t, MAX_NB_WORDS,
-                                                                               MAX_SEQUENCE_LENGTH)
-    elif (Data_text == 2):
+    data = pad_sequences(narindexed, maxlen=500)
 
-        fname = "./Data_WOS/WebOfScience/WOS46985/X.txt"
-        fnamek = "./Data_WOS/WebOfScience/WOS46985/Y.txt"
-        with open(fname, encoding="utf-8") as f:
-            content = f.readlines()
-            content = [text_cleaner(x) for x in content]
-        with open(fnamek) as fk:
-            contentk = fk.readlines()
-        contentk = [x.strip() for x in contentk]
-        Label = np.matrix(contentk, dtype=int)
-        Label = np.transpose(Label)
+    EMBEDDING_DIM = 100
+    embedding_matrix = np.zeros((len(w2vmodel.wv.vocab), 100))
+    for i in range(len(w2vmodel.wv.vocab)):
+        embedding_vector = w2vmodel.wv[w2vmodel.wv.index2word[i]]
+        if embedding_vector is not None:
+            embedding_matrix[i] = embedding_vector
+    embedding_layer = Embedding(len(w2vmodel.wv.vocab),
+                                EMBEDDING_DIM,
+                                weights=[embedding_matrix],
+                                input_length=500,
+                                trainable=True)
+    n = 5
 
-        np.random.seed(7)
-        print(Label.shape)
-        X, X_t, y_train, y_test = train_test_split(content, Label, test_size=0.2, random_state=4)
-        X_train, X_test = loadData(X, X_t)
-        X_train_M, X_test_M, word_index, embeddings_index = loadData_Tokenizer(X, X_t, MAX_NB_WORDS,
-                                                                               MAX_SEQUENCE_LENGTH)
-    elif (Data_text == 3):
-            documents = reuters.fileids()
-
-            train_docs_id = list(filter(lambda doc: doc.startswith("train"),
-                                        documents))
-            test_docs_id = list(filter(lambda doc: doc.startswith("test"),
-                                       documents))
-            train_docs = [(reuters.raw(doc_id)) for doc_id in train_docs_id]
-            test_docs = [(reuters.raw(doc_id)) for doc_id in test_docs_id]
-
-            mlb = MultiLabelBinarizer()
-            y_train = mlb.fit_transform([reuters.categories(doc_id)
-                                              for doc_id in train_docs_id])
-            y_test = mlb.transform([reuters.categories(doc_id)
-                                         for doc_id in test_docs_id])
-            y_train = np.argmax(y_train, axis=1)
-            y_test = np.argmax(y_test,axis=1)
-            print(np.max(y_test))
-            print(np.max(y_test))
-            X_train, X_test = loadData(train_docs, test_docs)
-            X_train_M, X_test_M, word_index, embeddings_index = loadData_Tokenizer(train_docs, test_docs, MAX_NB_WORDS, MAX_SEQUENCE_LENGTH)
-    elif Data_text == 4:
-        TEXT_DATA_DIR = "../Data/20_newsgroup"
-        texts = []  # list of text samples
-        labels_index = {}  # dictionary mapping label name to numeric id
-        labels = []  # list of label ids
-        for name in sorted(os.listdir(TEXT_DATA_DIR)):
-            path = os.path.join(TEXT_DATA_DIR, name)
-            if os.path.isdir(path):
-                label_id = len(labels_index)
-                labels_index[name] = label_id
-                for fname in sorted(os.listdir(path)):
-                    if fname.isdigit():
-                        fpath = os.path.join(path, fname)
-                        if sys.version_info < (3,):
-                            f = open(fpath)
-                        else:
-                            f = open(fpath, encoding='latin-1')
-                        t = f.read()
-                        i = t.find('\n\n')  # skip header
-                        if 0 < i:
-                            t = t[i:]
-                        texts.append(t)
-                        f.close()
-                        labels.append(label_id)
-
-        print('Found %s texts.' % len(texts))
-
-        texts = [text_cleaner(x) for x in texts]
-        x_train, x_test, y_train, y_test = train_test_split(texts, labels, test_size=0.2, random_state=2)
-        X_train, X_test = loadData(x_train, x_test)
-        X_train_M, X_test_M, word_index, embeddings_index = loadData_Tokenizer(x_train, x_test, MAX_NB_WORDS,
-                                                                               MAX_SEQUENCE_LENGTH)
-    elif Data_text==5:
-            print("Load IMDB dataset....")
-
-            (X_train, y_train), (X_test, y_test) = imdb.load_data(num_words=MAX_NB_WORDS)
-            print(len(X_train))
-            print(y_test)
-            word_index = imdb.get_word_index()
-            index_word = {v: k for k, v in word_index.items()}
-            X_train = [text_cleaner(' '.join(index_word.get(w) for w in x)) for x in X_train]
-            X_test = [text_cleaner(' '.join(index_word.get(w) for w in x)) for x in X_test]
-            X_train = np.array(X_train)
-            X_train = np.array(X_train).ravel()
-            print(X_train.shape)
-            X_test = np.array(X_test)
-            X_test = np.array(X_test).ravel()
-
-            print(np.array(X_test).shape)
-
-            X_train_M, X_test_M, word_index, embeddings_index = loadData_Tokenizer(X_train, X_test,
-                                                                                   MAX_NB_WORDS,
-                                                                                   MAX_SEQUENCE_LENGTH)
-            X_train, X_test = loadData(X_train, X_test)
-    elif Data_text == 6:
-            import pandas as pd
-            file_x = "D:\CHI\Facebook\X.csv"
-            file_y = "D:\CHI\Facebook\Y.csv"
-            content = pd.read_csv(file_x, encoding="utf-8")
-            Label = pd.read_csv(file_y, encoding="utf-8")
-            # content = content.as_matrix()
-            content = content.ix[:, 1]
-            content = np.array(content).ravel()
-            print(np.array(content).transpose().shape)
-            Label = Label.as_matrix()
-            Label = np.matrix(Label)
-            np.random.seed(7)
-            # print(Label)
-            content = [text_cleaner(x) for x in content]
-            X, X_t, y_train, y_test = train_test_split(content, Label, test_size=0.2, random_state=0)
-            X_train, X_test = loadData(X, X_t)
-            X_train_M, X_test_M, word_index, embeddings_index = loadData_Tokenizer(X, X_t, MAX_NB_WORDS,
-                                                                                   MAX_SEQUENCE_LENGTH)
-
-            number_of_classes = 2
-    return (X_train,X_train_M, y_train,X_test, X_test_M, y_test, word_index, embeddings_index, number_of_classes)
+    return (X_train, X_test, word_index,embeddings_index)
 
 
 def loadData(X_train, X_test):

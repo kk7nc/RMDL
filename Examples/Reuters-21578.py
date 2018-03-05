@@ -22,7 +22,6 @@ if __name__ == "__main__":
                                documents))
     X_train = [(reuters.raw(doc_id)) for doc_id in train_docs_id]
     X_test = [(reuters.raw(doc_id)) for doc_id in test_docs_id]
-
     mlb = MultiLabelBinarizer()
     y_train = mlb.fit_transform([reuters.categories(doc_id)
                                  for doc_id in train_docs_id])

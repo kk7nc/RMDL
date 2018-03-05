@@ -1,7 +1,5 @@
 from __future__ import print_function
-
 import os, sys, tarfile
-import numpy as np
 
 if sys.version_info >= (3, 0, 0):
     import urllib.request as urllib  # ugly but works

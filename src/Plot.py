@@ -3,13 +3,13 @@ from sklearn.metrics import accuracy_score
 from keras.datasets import cifar,mnist,imdb
 import numpy as np
 import itertools
-
 import matplotlib.pyplot as plt
 from sklearn.metrics import f1_score,precision_recall_fscore_support
 import BuildModel
 from sklearn.feature_extraction.text import CountVectorizer
 from itertools import chain
 from keras.callbacks import ModelCheckpoint
+from pylab import *
 
 def plot_RMDL(history_):
     Number_of_models = len(history_)
@@ -65,6 +65,7 @@ def plot_confusion_matrix(cm, classes,
                           normalize=False,
                           title='Confusion matrix',
                           cmap=plt.cm.Blues):
+    plot()
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)
     plt.colorbar()
@@ -82,10 +83,7 @@ def plot_confusion_matrix(cm, classes,
     plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
-    plt.show()
-
-
-
+    show()
 
 def accuracy(y_test,final_y):
     np.set_printoptions(precision=2)

@@ -19,7 +19,6 @@ if __name__ == "__main__":
                                                         data.target, stratify=data.target, test_size=200)
     X_train = X_train.reshape(X_train.shape[0], 64, 64, 1).astype('float32')
     X_test = X_test.reshape(X_test.shape[0], 64, 64, 1).astype('float32')
-
     batch_size = 100
     sparse_categorical = 0
     n_epochs = [5000, 500, 1000]  ## DNN--RNN-CNN

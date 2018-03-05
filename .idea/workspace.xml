@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/Examples/LFW.py" line="45" mnemonic="9" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a4c78d4-a455-45d3-99a2-5c81c09af077" name="Default" comment="" />
+    <list default="true" id="2a4c78d4-a455-45d3-99a2-5c81c09af077" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Download_datasets/WOS_input.py" afterPath="$PROJECT_DIR$/Download_datasets/WOS_input.py" />
+      <change beforePath="$PROJECT_DIR$/Examples/CIFAR.py" afterPath="$PROJECT_DIR$/Examples/CIFAR.py" />
+      <change beforePath="$PROJECT_DIR$/Examples/IMDB.py" afterPath="$PROJECT_DIR$/Examples/IMDB.py" />
+      <change beforePath="$PROJECT_DIR$/Examples/MNIST.py" afterPath="$PROJECT_DIR$/Examples/MNIST.py" />
+      <change beforePath="$PROJECT_DIR$/Examples/ORL.py" afterPath="$PROJECT_DIR$/Examples/ORL.py" />
+      <change beforePath="$PROJECT_DIR$/Examples/Reuters-21578.py" afterPath="$PROJECT_DIR$/Examples/Reuters-21578.py" />
+      <change beforePath="$PROJECT_DIR$/Examples/WOS-11967.py" afterPath="$PROJECT_DIR$/Examples/WOS-11967.py" />
+      <change beforePath="$PROJECT_DIR$/Examples/WOS-46985.py" afterPath="$PROJECT_DIR$/Examples/WOS-46985.py" />
+      <change beforePath="$PROJECT_DIR$/Examples/WOS-5736.py" afterPath="$PROJECT_DIR$/Examples/WOS-5736.py" />
+      <change beforePath="$PROJECT_DIR$/src/BuildModel.py" afterPath="$PROJECT_DIR$/src/BuildModel.py" />
+      <change beforePath="$PROJECT_DIR$/src/Plot.py" afterPath="$PROJECT_DIR$/src/Plot.py" />
+      <change beforePath="$PROJECT_DIR$/src/RMDL.py" afterPath="$PROJECT_DIR$/src/RMDL.py" />
+      <change beforePath="$PROJECT_DIR$/src/RMDL_Image.py" afterPath="$PROJECT_DIR$/src/RMDL_Image.py" />
+      <change beforePath="$PROJECT_DIR$/src/RMDL_Text.py" afterPath="$PROJECT_DIR$/src/RMDL_Text.py" />
+      <change beforePath="$PROJECT_DIR$/src/text_feature_extraction.py" afterPath="$PROJECT_DIR$/src/text_feature_extraction.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,92 +81,108 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="20NewsGroup .py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Example/20NewsGroup .py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CIFAR.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Example/CIFAR.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IMDB.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Example/IMDB.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MNIST.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Example/MNIST.py">
+        <entry file="file://$PROJECT_DIR$/Examples/MNIST.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+            <state relative-caret-position="289">
+              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ORL.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Example/ORL.py">
+        <entry file="file://$PROJECT_DIR$/Examples/ORL.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+            <state relative-caret-position="323">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Text_pandas.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Examples/Text_pandas.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Reuters-21578.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Example/Reuters-21578.py">
+        <entry file="file://$PROJECT_DIR$/Examples/Reuters-21578.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+            <state relative-caret-position="391">
+              <caret line="23" column="63" lean-forward="false" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WOS-5736.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Example/WOS-5736.py">
+      <file leaf-file-name="BuildModel.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BuildModel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="533">
+              <caret line="321" column="62" lean-forward="false" selection-start-line="321" selection-start-column="62" selection-end-line="321" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Plot.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Plot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="584">
+              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RMDL.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RMDL.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WOS-11967.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Example/WOS-11967.py">
+      <file leaf-file-name="RMDL_Image.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RMDL_Image.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+            <state relative-caret-position="-1201">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WOS-46985.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Example/WOS-46985.py">
+      <file leaf-file-name="RMDL_Text.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RMDL_Text.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+            <state relative-caret-position="289">
+              <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="text_feature_extraction.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/text_feature_extraction.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -162,7 +198,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getUniqueWords</find>
       <find>StandardScaler</find>
       <find>ev</find>
       <find>y_test</find>
@@ -192,29 +227,15 @@
       <find>to_multi_gpu</find>
       <find>gpu</find>
       <find>plot_confusion_matrix</find>
+      <find>loadData</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Data_helper.py" />
-        <option value="$PROJECT_DIR$/RDeeps.py" />
-        <option value="D:/cbm/Project1/Project1/Plot.py" />
-        <option value="D:/cbm/Project1/Project1/Plot_co.py" />
-        <option value="$USER_HOME$/AppData/Local/Temp/Rar$DIa0.659/train_1.py" />
-        <option value="C:/ProgramData/Anaconda3/envs/TensorFlow/Lib/site-packages/keras/engine/training.py" />
-        <option value="D:/cbm/Project1/Project1/Correlation_STD_ACC_STD_RR/Plot.py" />
-        <option value="$PROJECT_DIR$/ACM_CHI.py" />
-        <option value="D:/cbm/Project1/Project1/ALL_ACC_RR.py" />
-        <option value="$PROJECT_DIR$/Load_CHI.py" />
-        <option value="D:/Mojtaba-Kamran/HDLTex_finalCode/svm.py" />
-        <option value="D:/Route_project/TrafficPrediction/Code/main2.py" />
-        <option value="$PROJECT_DIR$/Load_reuters.py" />
-        <option value="D:/Mojtaba-Kamran/HDLTex_finalCode/BuildModel.py" />
-        <option value="D:/Mojtaba-Kamran/HDLTex_finalCode/HDLTex.py" />
-        <option value="D:/Mojtaba-Kamran/HDLTex_finalCode/Data_helper.py" />
-        <option value="D:/SHen/Route_code/Route.py" />
-        <option value="$PROJECT_DIR$/svm.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="D:/Route_project/TrafficPrediction/Code/regressionmodels.py" />
         <option value="D:/cbm/Project1/Project1/Multi_Correlation_Accelemeter.py" />
@@ -248,6 +269,24 @@
         <option value="$PROJECT_DIR$/Example/ORL.py" />
         <option value="$PROJECT_DIR$/Example/MNIST.py" />
         <option value="$PROJECT_DIR$/Example/IMDB.py" />
+        <option value="$PROJECT_DIR$/Download_datasets/WOS_input.py" />
+        <option value="$PROJECT_DIR$/Examples/20NewsGroup .py" />
+        <option value="$PROJECT_DIR$/Examples/WOS-46985.py" />
+        <option value="$PROJECT_DIR$/Examples/WOS-5736.py" />
+        <option value="$PROJECT_DIR$/Examples/WOS-11967.py" />
+        <option value="$PROJECT_DIR$/Examples/CIFAR.py" />
+        <option value="$PROJECT_DIR$/Examples/IMDB.py" />
+        <option value="$PROJECT_DIR$/Examples/LFW.py" />
+        <option value="$PROJECT_DIR$/Examples/MNIST.py" />
+        <option value="$PROJECT_DIR$/Examples/ORL.py" />
+        <option value="$PROJECT_DIR$/Examples/Text_pandas.py" />
+        <option value="$PROJECT_DIR$/Examples/Reuters-21578.py" />
+        <option value="$PROJECT_DIR$/src/BuildModel.py" />
+        <option value="$PROJECT_DIR$/src/Plot.py" />
+        <option value="$PROJECT_DIR$/src/RMDL.py" />
+        <option value="$PROJECT_DIR$/src/RMDL_Image.py" />
+        <option value="$PROJECT_DIR$/src/RMDL_Text.py" />
+        <option value="$PROJECT_DIR$/src/text_feature_extraction.py" />
       </list>
     </option>
   </component>
@@ -298,6 +337,11 @@
       </console-settings>
     </option>
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kamran\Documents\GitHub\RMDL\Examples" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -311,60 +355,60 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.WOS-5736">
-    <configuration name="Data_load" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="LFW" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/CHI/Code" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Data Cleaning Code Python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:/CHI/Code/Data_load.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="RMDL (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scr" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Examples" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Data Cleaning Code Python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scr/RMDL.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Examples/LFW.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="RMDL" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ORL" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Examples" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Data Cleaning Code Python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RMDL.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Examples/ORL.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="WOS-5736 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Data Cleaning Code Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Examples/WOS-5736.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
@@ -387,6 +431,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="WOS_input" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Download_datasets" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Data Cleaning Code Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Download_datasets/WOS_input.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -403,25 +466,6 @@
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/CHI/Code" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Data Cleaning Code Python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:/CHI/Code/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
@@ -553,19 +597,19 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.RMDL" />
-      <item index="1" class="java.lang.String" itemvalue="Python.main" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Data_load" />
-      <item index="3" class="java.lang.String" itemvalue="Python.RMDL (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.WOS-5736" />
+      <item index="0" class="java.lang.String" itemvalue="Python.WOS-5736" />
+      <item index="1" class="java.lang.String" itemvalue="Python.ORL" />
+      <item index="2" class="java.lang.String" itemvalue="Python.LFW" />
+      <item index="3" class="java.lang.String" itemvalue="Python.WOS-5736 (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.WOS_input" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.WOS-5736" />
-        <item index="1" class="java.lang.String" itemvalue="Python.RMDL" />
-        <item index="2" class="java.lang.String" itemvalue="Python.RMDL (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.main" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Data_load" />
+        <item index="0" class="java.lang.String" itemvalue="Python.WOS-5736 (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.WOS_input" />
+        <item index="2" class="java.lang.String" itemvalue="Python.ORL" />
+        <item index="3" class="java.lang.String" itemvalue="Python.LFW" />
+        <item index="4" class="java.lang.String" itemvalue="Python.WOS-5736" />
       </list>
     </recent_temporary>
   </component>
@@ -608,17 +652,17 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31509846" sideWeight="0.50656456" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="434" height="856" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33766234" sideWeight="0.49343544" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33766234" sideWeight="0.49343544" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32683983" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.069296375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958803" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3982684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3982684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -674,120 +718,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/cbm/Project1/Project1/Multi_Correlation_Accelemeter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="109" column="44" lean-forward="false" selection-start-line="109" selection-start-column="44" selection-end-line="109" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/envs/TensorFlow/Lib/site-packages/keras/optimizers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="399" column="18" lean-forward="false" selection-start-line="399" selection-start-column="13" selection-end-line="399" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/envs/TensorFlow/Lib/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4369">
-          <caret line="263" column="0" lean-forward="false" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/BackUP/Mojtaba-Kamran - Copy/HDLTex_finalCode/HDLTex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Google/Mojtaba-Kamran/HDLTex_finalCode/HDLTex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="50" lean-forward="false" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Mojtaba-Kamran/HDLTex_finalCode/HDLTex.py" />
-    <entry file="file://D:/Mojtaba-Kamran/HDLTex/plot.py" />
-    <entry file="file://D:/Google/RDeeps/RMDL/svm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="65" column="70" lean-forward="false" selection-start-line="65" selection-start-column="70" selection-end-line="65" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Google/Mojtaba-Kamran/HDLTex_finalCode/BuildModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/envs/TensorFlow/Lib/site-packages/keras/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="861" column="58" lean-forward="false" selection-start-line="861" selection-start-column="58" selection-end-line="861" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Google/Mojtaba-Kamran/HDLTex_finalCode/Data_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Mojtaba-Kamran/HDLTex/BuildModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="44" column="18" lean-forward="false" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/envs/TensorFlow/Lib/site-packages/keras/layers/convolutional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1695">
-          <caret line="232" column="9" lean-forward="true" selection-start-line="232" selection-start-column="9" selection-end-line="232" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/envs/TensorFlow/Lib/site-packages/sklearn/metrics/classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="1046" column="22" lean-forward="true" selection-start-line="1046" selection-start-column="22" selection-end-line="1046" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/envs/TensorFlow/Lib/site-packages/keras/utils/training_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="90" column="54" lean-forward="false" selection-start-line="90" selection-start-column="54" selection-end-line="90" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Google/RDeeps/RMDL/Data_load.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="197" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/envs/TensorFlow/Lib/site-packages/keras/engine/topology.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="575" column="43" lean-forward="false" selection-start-line="575" selection-start-column="31" selection-end-line="575" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Mojtaba-Kamran/HDLTex/Data_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="193" column="0" lean-forward="true" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Mojtaba-Kamran/HDLTex/HDLTex.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -863,92 +793,164 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../RMDL - Copy/RMDL2.py" />
-    <entry file="file://$PROJECT_DIR$/scr/RMDL_Text.py">
+    <entry file="file://$PROJECT_DIR$/scr/RMDL_Text.py" />
+    <entry file="file://$PROJECT_DIR$/scr/RMDL.py" />
+    <entry file="file://$PROJECT_DIR$/scr/Text_Data_load.py" />
+    <entry file="file://$PROJECT_DIR$/Example/WOS-46985.py" />
+    <entry file="file://$PROJECT_DIR$/Example/WOS-11967.py" />
+    <entry file="file://$PROJECT_DIR$/Example/ORL.py" />
+    <entry file="file://$PROJECT_DIR$/Example/MNIST.py" />
+    <entry file="file://$PROJECT_DIR$/Example/IMDB.py" />
+    <entry file="file://$PROJECT_DIR$/Example/CIFAR.py" />
+    <entry file="file://$PROJECT_DIR$/Example/20NewsGroup .py" />
+    <entry file="file://$PROJECT_DIR$/Example/Reuters-21578.py" />
+    <entry file="file://$PROJECT_DIR$/Example/WOS-5736.py" />
+    <entry file="file://$PROJECT_DIR$/Download_datasets/WOS_input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/20NewsGroup .py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/WOS-5736.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/WOS-11967.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="31" lean-forward="false" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/WOS-46985.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="31" lean-forward="false" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/CIFAR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="73" lean-forward="false" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/IMDB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scr/RMDL.py">
+    <entry file="file://$PROJECT_DIR$/Examples/LFW.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="391">
+          <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scr/Text_Data_load.py" />
-    <entry file="file://$PROJECT_DIR$/Example/WOS-46985.py">
+    <entry file="file://$PROJECT_DIR$/Examples/MNIST.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        <state relative-caret-position="289">
+          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Example/WOS-11967.py">
+    <entry file="file://$PROJECT_DIR$/Examples/ORL.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Example/ORL.py">
+    <entry file="file://$PROJECT_DIR$/Examples/Text_pandas.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        <state relative-caret-position="578">
+          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Example/MNIST.py">
+    <entry file="file://$PROJECT_DIR$/Examples/Reuters-21578.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        <state relative-caret-position="391">
+          <caret line="23" column="63" lean-forward="false" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Example/IMDB.py">
+    <entry file="file://$PROJECT_DIR$/src/BuildModel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        <state relative-caret-position="533">
+          <caret line="321" column="62" lean-forward="false" selection-start-line="321" selection-start-column="62" selection-end-line="321" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RMDL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Example/CIFAR.py">
+    <entry file="file://$PROJECT_DIR$/src/RMDL_Image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        <state relative-caret-position="-1201">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Example/20NewsGroup .py">
+    <entry file="file://$PROJECT_DIR$/src/RMDL_Text.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="289">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Example/Reuters-21578.py">
+    <entry file="file://$PROJECT_DIR$/src/text_feature_extraction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Example/WOS-5736.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="199">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

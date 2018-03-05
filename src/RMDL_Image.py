@@ -19,7 +19,6 @@ from itertools import chain
 from keras.callbacks import ModelCheckpoint
 np.random.seed(7)
 
-
 def image_classifciation(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
                             n_epochs):
     y_proba = []

@@ -27,8 +27,6 @@ if __name__ == "__main__":
     X_test = np.array(X_test)
     X_test = np.array(X_test).ravel()
 
-
-
     batch_size = 100
     sparse_categorical = 0
     n_epochs = [5000, 500, 1000]  ## DNN--RNN-CNN
