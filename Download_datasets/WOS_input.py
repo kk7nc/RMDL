@@ -1,5 +1,6 @@
 from __future__ import print_function
 import os, sys, tarfile
+import time
 
 if sys.version_info >= (3, 0, 0):
     import urllib.request as urllib  # ugly but works
@@ -36,8 +37,16 @@ def download_and_extract():
 
     if not os.path.exists(filepath):
         def _progress(count, block_size, total_size):
-            sys.stdout.write('\rDownloading %s %.2f%%' % (filename,
-                                                          float(count * block_size) / float(total_size) * 100.0))
+            global start_time
+            if count == 0:
+                start_time = time.time()
+                return
+            duration = time.time() - start_time
+            progress_size = int(count * block_size)
+            speed = int(progress_size / (1024 * duration))
+            percent = int(count * block_size * 100 / total_size)
+            sys.stdout.write("\r...%d%%, %d MB, %d KB/s, %d seconds passed" %
+                             (percent, progress_size / (1024 * 1024), speed, duration))
             sys.stdout.flush()
 
         filepath, _ = urllib.urlretrieve(DATA_URL, filepath, reporthook=_progress)

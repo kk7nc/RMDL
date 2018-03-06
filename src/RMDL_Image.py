@@ -122,13 +122,12 @@ def image_classifciation(X_train, y_train, X_test, y_test, batch_size, shape, sp
 
     # Plot non-normalized confusion matrix
     plt.figure()
-    Plot.plot_confusion_matrix(cnf_matrix, classes=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    classes = list(range(0,np.max(y_test)))
+    Plot.plot_confusion_matrix(cnf_matrix, classes=classes,
                           title='Confusion matrix, without normalization')
 
     # Plot normalized confusion matrix
     plt.figure()
-    Plot.plot_confusion_matrix(cnf_matrix, classes=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], normalize=True,
-                          title='Normalized confusion matrix')
     print(score)
     print(F_score)
     print(F1)

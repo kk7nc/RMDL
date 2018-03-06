@@ -187,12 +187,13 @@ def Text_classification(X_train, X_train_M, y_train, X_test, X_test_M, y_test,
 
         plt.plot(range(10))
         plt.figure()
-        Plot.plot_confusion_matrix(cnf_matrix, classes=[0, 1],
+        classes = list(range(0, np.max(y_test)))
+        Plot.plot_confusion_matrix(cnf_matrix, classes=classes,
                                    title='Confusion matrix, without normalization')
 
         # Plot normalized confusion matrix
         plt.figure()
-        Plot.plot_confusion_matrix(cnf_matrix, classes=[0, 1], normalize=True,
+        Plot.plot_confusion_matrix(cnf_matrix, classes=classes, normalize=True,
                                    title='Normalized confusion matrix')
     else:
         y_test_temp = np.argmax(y_test, axis=1)
