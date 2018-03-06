@@ -46,18 +46,19 @@ The exponential growth in the number of complex datasets every year requires  mo
 
         This dataset contains 20,000 documents with 20 categories.
         
-Web of Science Dataset (DOI: [10.17632/9rw3vkcfy4.2](http://dx.doi.org/10.17632/9rw3vkcfy4.2)
-        Web of Science Dataset [WOS-11967](http://dx.doi.org/10.17632/9rw3vkcfy4.2)
+*Web of Science Dataset (DOI: [10.17632/9rw3vkcfy4.2](http://dx.doi.org/10.17632/9rw3vkcfy4.2)*
 
-                This dataset contains 11,967 documents with 35 categories which include 7 parents categories.
+Web of Science Dataset [WOS-11967](http://dx.doi.org/10.17632/9rw3vkcfy4.2)
 
-        Web of Science Dataset [WOS-46985](http://dx.doi.org/10.17632/9rw3vkcfy4.2)
+        This dataset contains 11,967 documents with 35 categories which include 7 parents categories.
 
-                This dataset contains 46,985 documents with 134 categories which include 7 parents categories.
+Web of Science Dataset [WOS-46985](http://dx.doi.org/10.17632/9rw3vkcfy4.2)
 
-        Web of Science Dataset [WOS-5736](http://dx.doi.org/10.17632/9rw3vkcfy4.2)
+        This dataset contains 46,985 documents with 134 categories which include 7 parents categories.
 
-                This dataset contains 5,736 documents with 11 categories which include 3 parents categories.
+Web of Science Dataset [WOS-5736](http://dx.doi.org/10.17632/9rw3vkcfy4.2)
+
+        This dataset contains 5,736 documents with 11 categories which include 3 parents categories.
 
 **Image datasets:** 
 
