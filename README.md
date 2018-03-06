@@ -46,7 +46,7 @@ The exponential growth in the number of complex datasets every year requires  mo
 
         This dataset contains 20,000 documents with 20 categories.
         
-*Web of Science Dataset (DOI: [10.17632/9rw3vkcfy4.2](http://dx.doi.org/10.17632/9rw3vkcfy4.2)*
+**Web of Science Dataset (DOI: [10.17632/9rw3vkcfy4.2](http://dx.doi.org/10.17632/9rw3vkcfy4.2)**
 
 Web of Science Dataset [WOS-11967](http://dx.doi.org/10.17632/9rw3vkcfy4.2)
 
