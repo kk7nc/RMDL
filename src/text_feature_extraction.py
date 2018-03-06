@@ -1,31 +1,23 @@
 import re
 import sys
 sys.path.append('../Download_datasets')
-from keras.datasets import imdb
-import pandas
+
 import nltk
 import gensim
-from nltk.corpus import stopwords, reuters
-from sklearn.datasets import fetch_20newsgroups
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.preprocessing import MultiLabelBinarizer
-from sklearn.cross_validation import train_test_split, cross_val_score
-from sklearn.feature_extraction.text import CountVectorizer
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
-from keras.utils.np_utils import to_categorical
-import sys
 import numpy as np
 import os
 from nltk import word_tokenize
-from nltk.stem.porter import PorterStemmer
 from nltk.corpus import stopwords
 import re
 from nltk import PorterStemmer
+import Global
 
 cachedStopWords = stopwords.words("english")
 
-GLOVE_DIR = "D:/glove/"
+
 def tokenize(text):
   min_length = 3
   words = map(lambda word: word.lower(), word_tokenize(text))
@@ -86,9 +78,8 @@ def loadData_Tokenizer(X_train, X_test,MAX_NB_WORDS,MAX_SEQUENCE_LENGTH):
     print(text.shape)
     X_train = text[0:len(X_train),]
     X_test = text[len(X_train):,]
-    GLOVE_DIR = "D:/glove/"
     embeddings_index = {}
-    f = open(os.path.join(GLOVE_DIR, 'glove.twitter.27B.100d.txt'), encoding="utf8")
+    f = open(os.path.join(Global.GLOVE_DIR, 'glove.twitter.27B.100d.txt'), encoding="utf8")
     for line in f:
         values = line.split()
         word = values[0]

@@ -3,35 +3,23 @@ os.environ["THEANO_FLAGS"] = "mode=FAST_RUN,device=gpu,floatX=float32"
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 import numpy as np
-from operator import itemgetter
 import RMDL_Image
 import RMDL_Text
 import text_feature_extraction as txt
 np.random.seed(7)
-
+import Global
+Global.setup()
+global GLOVE_DIR
+GLOVE_DIR = "D:/glove/" # https://nlp.stanford.edu/projects/glove/
 
 def Image_Classifcation(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
                         n_epochs):
-
-    Data_Type = 1  # 0 if data is text 1 if data is image
-    np.set_printoptions(threshold=np.inf)
-    np.random.seed(7)
-    if not os.path.exists(".\weights"):
-        os.makedirs(".\weights")
-        # data_image MINST =1 , CIRFAR = 2, SVHN =3, ORL
-        Data_Image = 5
     RMDL_Image.image_classifciation(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
                     n_epochs)
 
 
 def Text_Classifcation(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
                         n_epochs):
-
-    Data_Type = 1  # 0 if data is text 1 if data is image
-    np.set_printoptions(threshold=np.inf)
-    np.random.seed(7)
-    if not os.path.exists(".\weights"):
-        os.makedirs(".\weights")
 
     MAX_SEQUENCE_LENGTH = 500
     MAX_NB_WORDS = 75000

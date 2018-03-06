@@ -17,6 +17,7 @@ import pylab
 from keras.callbacks import ModelCheckpoint
 np.random.seed(7)
 
+
 def Text_classification(X_train, X_train_M, y_train, X_test, X_test_M, y_test,
                         Random_Deep,n_epochs,batch_size,sparse_categorical,
                         EMBEDDING_DIM,MAX_SEQUENCE_LENGTH,
@@ -186,7 +187,6 @@ def Text_classification(X_train, X_train_M, y_train, X_test, X_test_M, y_test,
 
         plt.plot(range(10))
         plt.figure()
-        print("jhasgjdsh")
         Plot.plot_confusion_matrix(cnf_matrix, classes=[0, 1],
                                    title='Confusion matrix, without normalization')
 
