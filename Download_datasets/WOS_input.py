@@ -1,6 +1,7 @@
 from __future__ import print_function
 import os, sys, tarfile
 import time
+import numpy as np
 
 if sys.version_info >= (3, 0, 0):
     import urllib.request as urllib  # ugly but works
@@ -39,18 +40,18 @@ def download_and_extract():
         def _progress(count, block_size, total_size):
             global start_time
             if count == 0:
-                start_time = time.time()
+                start_time = time.time()-1
                 return
             duration = time.time() - start_time
             progress_size = int(count * block_size)
             speed = int(progress_size / (1024 * duration))
             percent = int(count * block_size * 100 / total_size)
-            sys.stdout.write("\r...%d%%, %d MB, %d KB/s, %d seconds passed" %
+            sys.stdout.write("\rDownloading Web Of Science Datasets ...%d%%, %d MB, %d KB/s, %d seconds passed" %
                              (percent, progress_size / (1024 * 1024), speed, duration))
             sys.stdout.flush()
 
         filepath, _ = urllib.urlretrieve(DATA_URL, filepath, reporthook=_progress)
-        print('Downloaded', filename)
+        print('\n Downloaded', filename)
 
         tarfile.open(filepath, 'r').extractall(dest_directory)
 
