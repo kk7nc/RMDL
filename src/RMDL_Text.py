@@ -124,6 +124,7 @@ def Text_classification(X_train, X_train_M, y_train, X_test, X_test_M, y_test,
             print("Error in model ", i, "   try to re-generate an other model")
 
     gc.collect()
+    i=0
     while i < Random_Deep[2]:
         try:
             print("RNN " + str(i))
@@ -185,14 +186,12 @@ def Text_classification(X_train, X_train_M, y_train, X_test, X_test_M, y_test,
         # Compute confusion matrix
         # Plot non-normalized confusion matrix
 
-        plt.plot(range(10))
-        plt.figure()
-        classes = list(range(0, np.max(y_test)))
+        classes = list(range(0, np.max(y_test)+1))
         Plot.plot_confusion_matrix(cnf_matrix, classes=classes,
                                    title='Confusion matrix, without normalization')
 
         # Plot normalized confusion matrix
-        plt.figure()
+
         Plot.plot_confusion_matrix(cnf_matrix, classes=classes, normalize=True,
                                    title='Normalized confusion matrix')
     else:
