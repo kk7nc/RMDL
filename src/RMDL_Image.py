@@ -125,7 +125,6 @@ def image_classifciation(X_train, y_train, X_test, y_test, batch_size, shape, sp
     classes = list(range(0,np.max(y_test)))
     Plot.plot_confusion_matrix(cnf_matrix, classes=classes,
                           title='Confusion matrix, without normalization')
-
     # Plot normalized confusion matrix
     plt.figure()
     print(score)
