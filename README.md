@@ -1,4 +1,4 @@
-# [RMDL: Random Multimodel Deep Learning for Classification]()
+# RMDL: Random Multimodel Deep Learning for Classification #
 
 All codes and Datasets: coming soon
 
