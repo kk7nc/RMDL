@@ -27,60 +27,70 @@ def image_classifciation(X_train, y_train, X_test, y_test, batch_size, shape, sp
     history_ = []
     number_of_classes = np.max(y_train)+1
     #X_train, y_train, X_test, y_test, shape, number_of_classes = Image_Data_load.load(Data_Image)
-    for i in range(0, Random_Deep[0]):
-        print("MNIST DNN ", i, "\n")
-        model.append(Sequential())
-        model[i], model_tmp = BuildModel.buildModel_DNN_image(shape, number_of_classes, 0)
-        filepath = "weights\weights_DNN_" + str(i) + ".hdf5"
-        checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
-                                     mode='max')
-        callbacks_list = [checkpoint]
+    i =0
+    while i < Random_Deep[0]:
+        try:
+            print("MNIST DNN ", i, "\n")
+            model.append(Sequential())
+            model[i], model_tmp = BuildModel.buildModel_DNN_image(shape, number_of_classes, 0)
+            filepath = "weights\weights_DNN_" + str(i) + ".hdf5"
+            checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
+                                         mode='max')
+            callbacks_list = [checkpoint]
 
-        history = model[i].fit(X_train, y_train, validation_data=(X_test, y_test),
-                               epochs=n_epochs[0], batch_size=batch_size, callbacks=callbacks_list,
-                               verbose=2)
-        history_.append(history)
-        model_tmp.load_weights(filepath)
+            history = model[i].fit(X_train, y_train, validation_data=(X_test, y_test),
+                                   epochs=n_epochs[0], batch_size=batch_size, callbacks=callbacks_list,
+                                   verbose=2)
+            history_.append(history)
+            model_tmp.load_weights(filepath)
 
-        if sparse_categorical == 0:
+            if sparse_categorical == 0:
+                model_tmp.compile(loss='sparse_categorical_crossentropy',
+                                  optimizer='adam',
+                                  metrics=['accuracy'])
+            else:
+                model_tmp.compile(loss='categorical_crossentropy',
+                                  optimizer='adam',
+                                  metrics=['accuracy'])
+
+            y_pr = model_tmp.predict_classes(X_test, batch_size=batch_size)
+            y_proba.append(np.array(y_pr))
+            score.append(accuracy_score(y_test, y_pr))
+            i = i + 1
+        except:
+            print("Error in model ", i, "   try to re-generate an other model")
+
+    i =0
+    while i < Random_Deep[1]:
+        try:
+            print("RNN ", i, "\n")
+            model.append(Sequential())
+            model[i], model_tmp = BuildModel.Image_model_RNN(number_of_classes, shape)
+
+            filepath = "weights\weights_RNN_" + str(i) + ".hdf5"
+            checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
+                                         mode='max')
+            callbacks_list = [checkpoint]
+
+            history = model[i].fit(X_train, y_train, validation_data=(X_test, y_test),
+                                   epochs=n_epochs[2], batch_size=batch_size, verbose=2, callbacks=callbacks_list)
+            model_tmp.load_weights(filepath)
             model_tmp.compile(loss='sparse_categorical_crossentropy',
-                              optimizer='adam',
+                              optimizer='rmsprop',
                               metrics=['accuracy'])
-        else:
-            model_tmp.compile(loss='categorical_crossentropy',
-                              optimizer='adam',
-                              metrics=['accuracy'])
+            history_.append(history)
 
-        y_pr = model_tmp.predict_classes(X_test, batch_size=batch_size)
-        y_proba.append(np.array(y_pr))
-        score.append(accuracy_score(y_test, y_pr))
-
-    for i in range(0, Random_Deep[2]):
-        print("RNN ", i, "\n")
-        model.append(Sequential())
-        model[i], model_tmp = BuildModel.Image_model_RNN(number_of_classes, shape)
-
-        filepath = "weights\weights_RNN_" + str(i) + ".hdf5"
-        checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
-                                     mode='max')
-        callbacks_list = [checkpoint]
-
-        history = model[i].fit(X_train, y_train, validation_data=(X_test, y_test),
-                               epochs=n_epochs[2], batch_size=batch_size, verbose=2, callbacks=callbacks_list)
-        model_tmp.load_weights(filepath)
-        model_tmp.compile(loss='sparse_categorical_crossentropy',
-                          optimizer='rmsprop',
-                          metrics=['accuracy'])
-        history_.append(history)
-
-        y_pr = model_tmp.predict(X_test, batch_size=batch_size)
-        y_pr = np.argmax(y_pr, axis=1)
-        y_proba.append(np.array(y_pr))
-        score.append(accuracy_score(y_test, y_pr))
+            y_pr = model_tmp.predict(X_test, batch_size=batch_size)
+            y_pr = np.argmax(y_pr, axis=1)
+            y_proba.append(np.array(y_pr))
+            score.append(accuracy_score(y_test, y_pr))
+            i = i+1
+        except:
+            print("Error in model ", i, "   try to re-generate an other model")
 
     # reshape to be [samples][pixels][width][height]
     i=0
-    while i < Random_Deep[1]:
+    while i < Random_Deep[2]:
         try:
             print("CNN ", i, "\n")
             model.append(Sequential())

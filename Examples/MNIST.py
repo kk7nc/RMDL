@@ -18,7 +18,7 @@ if __name__ == "__main__":
     shape = (28, 28, 1)
     batch_size = 100
     sparse_categorical = 0
-    n_epochs = [5000, 500, 1000]  ## DNN--RNN-CNN
-    Random_Deep = [0, 30, 0]  ## DNN--RNN-CNN
+    n_epochs = [10, 10, 10]  ## DNN--RNN-CNN
+    Random_Deep = [1, 1, 1]  ## DNN--RNN-CNN
     RMDL.Image_Classifcation(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
                             n_epochs)
