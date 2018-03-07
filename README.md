@@ -73,29 +73,29 @@ The exponential growth in the number of complex datasets every year requires  mo
 
 General:
 
-Python 3.5 or later see [Instruction Documents](https://www.python.org/)
+- Python 3.5 or later see [Instruction Documents](https://www.python.org/)
 
-TensorFlow see [Instruction Documents](https://www.tensorflow.org/install/install_linux).
+- TensorFlow see [Instruction Documents](https://www.tensorflow.org/install/install_linux).
 
-scikit-learn see [Instruction Documents](http://scikit-learn.org/stable/install.html)
+- scikit-learn see [Instruction Documents](http://scikit-learn.org/stable/install.html)
 
-Keras see [Instruction Documents](https://keras.io/)
+- Keras see [Instruction Documents](https://keras.io/)
 
-scipy see [Instruction Documents](https://www.scipy.org/install.html)
+- scipy see [Instruction Documents](https://www.scipy.org/install.html)
 
-GPU (if you want to run on GPU):
+- GPU (if you want to run on GPU):
 
-CUDA® Toolkit 8.0. For details, see [NVIDIA's documentation](https://developer.nvidia.com/cuda-toolkit). 
+- CUDA® Toolkit 8.0. For details, see [NVIDIA's documentation](https://developer.nvidia.com/cuda-toolkit). 
 
-The [NVIDIA drivers associated with CUDA Toolkit 8.0](http://www.nvidia.com/Download/index.aspx).
+- The [NVIDIA drivers associated with CUDA Toolkit 8.0](http://www.nvidia.com/Download/index.aspx).
 
-cuDNN v6. For details, see [NVIDIA's documentation](https://developer.nvidia.com/cudnn). 
+- cuDNN v6. For details, see [NVIDIA's documentation](https://developer.nvidia.com/cudnn). 
 
-GPU card with CUDA Compute Capability 3.0 or higher.
+- GPU card with CUDA Compute Capability 3.0 or higher.
 
-The libcupti-dev library,
+- The libcupti-dev library,
 
-To install this library, issue the following command:
+- To install this library, issue the following command:
 
 ```
 $ sudo apt-get install libcupti-dev
