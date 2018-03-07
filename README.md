@@ -38,9 +38,9 @@ The exponential growth in the number of complex datasets every year requires  mo
 ### Text Datasets: ###
 
 - [IMDB Dataset](http://ai.stanford.edu/~amaas/data/sentiment/)
- -This dataset contains 50,000 documents with 2 categories.
+*This dataset contains 50,000 documents with 2 categories.
 - [Reters-21578 Dataset](https://keras.io/datasets/)
-        -This dataset contains 21,578 documents with 90 categories.
+*This dataset contains 21,578 documents with 90 categories.
 - [20Newsgroups Dataset](https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups)
         -This dataset contains 20,000 documents with 20 categories.      
 - Web of Science Dataset (DOI: [10.17632/9rw3vkcfy4.2](http://dx.doi.org/10.17632/9rw3vkcfy4.2)
