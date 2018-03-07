@@ -37,18 +37,18 @@ The exponential growth in the number of complex datasets every year requires  mo
 
 ### Text Datasets: ###
 
-#### [IMDB Dataset](http://ai.stanford.edu/~amaas/data/sentiment/) ####
-        This dataset contains 50,000 documents with 2 categories.
-#### [Reters-21578 Dataset](https://keras.io/datasets/) ####
-        This dataset contains 21,578 documents with 90 categories.
-#### [20Newsgroups Dataset](https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups) ####
-        This dataset contains 20,000 documents with 20 categories.      
-#### Web of Science Dataset (DOI: [10.17632/9rw3vkcfy4.2](http://dx.doi.org/10.17632/9rw3vkcfy4.2) ####
-##### Web of Science Dataset [WOS-11967](http://dx.doi.org/10.17632/9rw3vkcfy4.2)#####
-        This dataset contains 11,967 documents with 35 categories which include 7 parents categories.
-#####  Web of Science Dataset [WOS-46985](http://dx.doi.org/10.17632/9rw3vkcfy4.2) #####
-        This dataset contains 46,985 documents with 134 categories which include 7 parents categories.
-##### Web of Science Dataset [WOS-5736](http://dx.doi.org/10.17632/9rw3vkcfy4.2) #####
+-[IMDB Dataset](http://ai.stanford.edu/~amaas/data/sentiment/)
+        -This dataset contains 50,000 documents with 2 categories.
+-[Reters-21578 Dataset](https://keras.io/datasets/)
+        -This dataset contains 21,578 documents with 90 categories.
+-[20Newsgroups Dataset](https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups)
+        -This dataset contains 20,000 documents with 20 categories.      
+-Web of Science Dataset (DOI: [10.17632/9rw3vkcfy4.2](http://dx.doi.org/10.17632/9rw3vkcfy4.2)
+ -Web of Science Dataset [WOS-11967](http://dx.doi.org/10.17632/9rw3vkcfy4.2)
+  -This dataset contains 11,967 documents with 35 categories which include 7 parents categories.
+-Web of Science Dataset [WOS-46985](http://dx.doi.org/10.17632/9rw3vkcfy4.2)
+ -This dataset contains 46,985 documents with 134 categories which include 7 parents categories.
+-Web of Science Dataset [WOS-5736](http://dx.doi.org/10.17632/9rw3vkcfy4.2) 
         This dataset contains 5,736 documents with 11 categories which include 3 parents categories.
 ### Image datasets: ### 
 
@@ -60,7 +60,6 @@ The exponential growth in the number of complex datasets every year requires  mo
         ![#f03c15](The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.)
 ## Requirment for RMDL : ##
 
-<font color="red">Status: **Not yet implemented**</font>
 
 General:
 
