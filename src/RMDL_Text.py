@@ -75,10 +75,55 @@ def Text_classification(X_train, X_train_M, y_train, X_test, X_test_M, y_test,
     del X_test
     gc.collect()
 
-    # for i in range(0, Random_Deep[1]):
-    #   model_CNN.append(Sequential())
-    i = 0
+    i=0
     while i < Random_Deep[1]:
+        try:
+            print("RNN " + str(i))
+            filepath = "weights\weights_RNN_" + str(i) + ".hdf5"
+            checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
+                                         mode='max')
+            callbacks_list = [checkpoint]
+
+            model_RNN, model_tmp = BuildModel.buildModel_RNN(word_index, embeddings_index, number_of_classes,
+                                                                MAX_SEQUENCE_LENGTH, EMBEDDING_DIM, sparse_categorical)
+
+            h = model_RNN.fit(X_train_M, y_train,
+                                 validation_data=(X_test_M, y_test),
+                                 epochs=n_epochs[2],
+                                 batch_size=batch_size,
+                                 callbacks=callbacks_list,
+                                 verbose=2)
+            History.append(h)
+
+            if sparse_categorical == 0:
+                model_tmp.load_weights(filepath)
+                model_tmp.compile(loss='sparse_categorical_crossentropy',
+                                  optimizer='rmsprop',
+                                  metrics=['accuracy'])
+                y_pr = model_tmp.predict_classes(X_test_M, batch_size=batch_size)
+                y_proba.append(np.array(y_pr))
+                score.append(accuracy_score(y_test, y_pr))
+            else:
+                model_tmp.load_weights(filepath)
+                model_tmp.compile(loss='categorical_crossentropy',
+                                  optimizer='rmsprop',
+                                  metrics=['accuracy'])
+                y_pr = model_tmp.predict(X_test_M, batch_size=batch_size)
+                y_pr = np.argmax(y_pr, axis=1)
+                y_proba.append(np.array(y_pr))
+                y_test_temp = np.argmax(y_test, axis=1)
+                score.append(accuracy_score(y_test_temp, y_pr))
+            i += 1
+            del model_tmp
+            gc.collect()
+        except:
+            print("Error in model ", i, "   try to re-generate an other model")
+        del model_RNN
+    gc.collect()
+    # Plot.plot_RMDL(History)# plot histori of all RDL models
+
+    i = 0
+    while i < Random_Deep[2]:
         try:
             print("CNN" + str(i))
 
@@ -124,52 +169,8 @@ def Text_classification(X_train, X_train_M, y_train, X_test, X_test_M, y_test,
             print("Error in model ", i, "   try to re-generate an other model")
 
     gc.collect()
-    i=0
-    while i < Random_Deep[2]:
-        try:
-            print("RNN " + str(i))
-            filepath = "weights\weights_RNN_" + str(i) + ".hdf5"
-            checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
-                                         mode='max')
-            callbacks_list = [checkpoint]
 
-            model_RNN, model_tmp = BuildModel.buildModel_RNN(word_index, embeddings_index, number_of_classes,
-                                                                MAX_SEQUENCE_LENGTH, EMBEDDING_DIM, sparse_categorical)
 
-            h = model_RNN.fit(X_train_M, y_train,
-                                 validation_data=(X_test_M, y_test),
-                                 epochs=n_epochs[2],
-                                 batch_size=batch_size,
-                                 callbacks=callbacks_list,
-                                 verbose=2)
-            History.append(h)
-
-            if sparse_categorical == 0:
-                model_tmp.load_weights(filepath)
-                model_tmp.compile(loss='sparse_categorical_crossentropy',
-                                  optimizer='rmsprop',
-                                  metrics=['accuracy'])
-                y_pr = model_tmp.predict_classes(X_test_M, batch_size=batch_size)
-                y_proba.append(np.array(y_pr))
-                score.append(accuracy_score(y_test, y_pr))
-            else:
-                model_tmp.load_weights(filepath)
-                model_tmp.compile(loss='categorical_crossentropy',
-                                  optimizer='rmsprop',
-                                  metrics=['accuracy'])
-                y_pr = model_tmp.predict(X_test_M, batch_size=batch_size)
-                y_pr = np.argmax(y_pr, axis=1)
-                y_proba.append(np.array(y_pr))
-                y_test_temp = np.argmax(y_test, axis=1)
-                score.append(accuracy_score(y_test_temp, y_pr))
-            i += 1
-            del model_tmp
-            gc.collect()
-        except:
-            print("Error in model ", i, "   try to re-generate an other model")
-        del model_RNN
-    gc.collect()
-    # Plot.plot_RMDL(History)# plot histori of all RDL models
     y_proba = np.array(y_proba).transpose()
 
     final_y = []
