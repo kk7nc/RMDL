@@ -54,6 +54,12 @@ def to_multi_gpu(model, n_gpus=2):
 
     return Model(inputs=[x], outputs=[merged])
 
+'''
+buildModel_DNN_image(shape, nClasses,sparse_categorical)
+Build Deep neural networks Model for text classification
+Shape is input feature space
+nClasses is number of classes
+'''
 
 def buildModel_DNN_image(shape, nClasses,sparse_categorical):
     model = Sequential()
@@ -80,6 +86,14 @@ def buildModel_DNN_image(shape, nClasses,sparse_categorical):
                       optimizer='adam',
                       metrics=['accuracy'])
     return model,model_tmp
+
+
+'''
+buildModel_DNN_Tex(shape, nClasses,sparse_categorical)
+Build Deep neural networks Model for text classification
+Shape is input feature space
+nClasses is number of classes
+'''
 
 def buildModel_DNN_Tex(shape, nClasses,sparse_categorical):
     model = Sequential()
@@ -108,7 +122,12 @@ def buildModel_DNN_Tex(shape, nClasses,sparse_categorical):
                       metrics=['accuracy'])
     return model,model_tem
 
-# define the larger model
+'''
+def Image_model_CNN(num_classes,shape):
+num_classes is number of classes, 
+shape is (w,h,p) 
+'''
+
 def Image_model_CNN(num_classes,shape):
     model = Sequential()
     values = list(range(32,256))
@@ -135,7 +154,11 @@ def Image_model_CNN(num_classes,shape):
     model.compile(loss='sparse_categorical_crossentropy', optimizer=keras.optimizers.adam(), metrics=['accuracy'])
     return model,model_tmp
 
-
+'''
+def Image_3D_model_CNN(num_classes,shape):
+num_classes is number of classes, 
+shape is (w,h,p) 
+'''
 def Image_3D_model_CNN(num_classes,shape,kernel_size=(3,3)):
     model = Sequential()
     values = list(range(96,256))
@@ -157,7 +180,11 @@ def Image_3D_model_CNN(num_classes,shape,kernel_size=(3,3)):
 
     model.compile(loss='sparse_categorical_crossentropy', optimizer=keras.optimizers.adam(), metrics=['accuracy'])
     return model
-
+'''
+def Image_model_RNN(num_classes,shape):
+num_classes is number of classes, 
+shape is (w,h,p) 
+'''
 def Image_model_RNN(num_classes,shape):
 
     values = list(range(128,512))
@@ -183,7 +210,13 @@ def Image_model_RNN(num_classes,shape):
     return model,model_tmp
 
 
-
+'''
+def buildModel_RNN(word_index, embeddings_index, nClasses, MAX_SEQUENCE_LENGTH, EMBEDDING_DIM, sparse_categorical):
+word_index in word index , 
+embeddings_index is embeddings index, look at data_helper.py 
+nClasses is number of classes, 
+MAX_SEQUENCE_LENGTH is maximum lenght of text sequences
+'''
 def buildModel_RNN(word_index, embeddings_index, nClasses, MAX_SEQUENCE_LENGTH, EMBEDDING_DIM,sparse_categorical):
     model = Sequential()
     values = list(range(32,128))
@@ -227,7 +260,17 @@ def buildModel_RNN(word_index, embeddings_index, nClasses, MAX_SEQUENCE_LENGTH, 
                       metrics=['accuracy'])
     return model,model_tmp
 
-
+'''
+def buildModel_CNN(word_index,embeddings_index,nClasses,MAX_SEQUENCE_LENGTH,EMBEDDING_DIM,Complexity=0):
+word_index in word index , 
+embeddings_index is embeddings index, look at data_helper.py 
+nClasses is number of classes, 
+MAX_SEQUENCE_LENGTH is maximum lenght of text sequences, 
+EMBEDDING_DIM is an int value for dimention of word embedding look at data_helper.py 
+Complexity we have two different CNN model as follows 
+F=0 is simple CNN with [1 5] hidden layer
+Complexity=2 is more complex model of CNN with filter_length of range [1 10]
+'''
 def buildModel_CNN(word_index,embeddings_index,nClasses,MAX_SEQUENCE_LENGTH,EMBEDDING_DIM,F=1,sparse_categorical=0):
     model = Sequential()
     if F==0:
