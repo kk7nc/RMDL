@@ -12,16 +12,13 @@ print(sys.version_info)
 
 # image shape
 
-
 # path to the directory with the data
 DATA_DIR = '.\data_WOS'
 
 # url of the binary data
 DATA_URL = 'http://kowsari.net/WebOfScience.tar.gz'
 
-
 # path to the binary train file with image data
-
 
 def download_and_extract():
     """
