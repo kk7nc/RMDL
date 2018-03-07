@@ -31,7 +31,7 @@ if __name__ == "__main__":
     X_train, X_test, y_train, y_test = train_test_split(content, Label, test_size=0.33, random_state=1)
     batch_size = 64
     sparse_categorical = 0
-    n_epochs = [250, 500, 1000]  ## DNN--RNN-CNN
+    n_epochs = [5000, 500, 500]  ## DNN--RNN-CNN
     Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
 
     RMDL.Text_Classifcation(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,

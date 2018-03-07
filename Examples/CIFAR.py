@@ -21,8 +21,8 @@ if __name__ == "__main__":
     X_test = X_test.reshape(X_test.shape[0], 64, 64, 1).astype('float32')
     batch_size = 100
     sparse_categorical = 0
-    n_epochs = [5000, 500, 1000]  ## DNN--RNN-CNN
-    Random_Deep = [0, 30, 0]  ## DNN--RNN-CNN
+    n_epochs = [5000, 500, 500]  ## DNN--RNN-CNN
+    Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
 
     RMDL.Image_Classifcation(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
                             n_epochs)
