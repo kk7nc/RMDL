@@ -60,6 +60,7 @@ The exponential growth in the number of complex datasets every year requires  mo
         ![#f03c15](The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.)
 ## Requirment for RMDL : ##
 
+<font color="red">Status: **Not yet implemented**</font>
 
 General:
 
