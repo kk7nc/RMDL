@@ -62,12 +62,12 @@ The exponential growth in the number of complex datasets every year requires  mo
      * This dataset contains 5,736 documents with 11 categories which include 3 parents categories.
 ### Image datasets: ### 
 
-####  [MNIST Dataset](https://en.wikipedia.org/wiki/MNIST_database) ####
+- [MNIST Dataset](https://en.wikipedia.org/wiki/MNIST_database)
 
-- The MNIST database contains 60,000 training images and 10,000 testing images.
-#### [CIFAR-10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html) ####
+  * The MNIST database contains 60,000 training images and 10,000 testing images.
+- [CIFAR-10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
 
--The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.
+  * The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.
 ## Requirment for RMDL : ##
 
 
