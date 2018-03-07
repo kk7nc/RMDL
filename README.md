@@ -38,7 +38,6 @@ The exponential growth in the number of complex datasets every year requires  mo
 ### Text Datasets: ###
 
 #### [IMDB Dataset](http://ai.stanford.edu/~amaas/data/sentiment/) ####
-
         This dataset contains 50,000 documents with 2 categories.
 #### [Reters-21578 Dataset](https://keras.io/datasets/) ####
         This dataset contains 21,578 documents with 90 categories.
@@ -58,7 +57,7 @@ The exponential growth in the number of complex datasets every year requires  mo
         The MNIST database contains 60,000 training images and 10,000 testing images.
 #### [CIFAR-10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html) ####
 
-        - ![#f03c15](The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.)
+        ![#f03c15](The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.)
 ## Requirment for RMDL : ##
 
 
