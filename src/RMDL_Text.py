@@ -4,8 +4,6 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 
 from sklearn.metrics import accuracy_score
-import numpy as np
-import matplotlib.pyplot as plt
 import gc
 from sklearn.metrics import confusion_matrix
 import Plot
@@ -13,7 +11,7 @@ from pylab import *
 import collections
 from sklearn.metrics import precision_recall_fscore_support
 import BuildModel
-import pylab
+
 from keras.callbacks import ModelCheckpoint
 np.random.seed(7)
 
@@ -125,7 +123,7 @@ def Text_classification(X_train, X_train_M, y_train, X_test, X_test_M, y_test,
     i = 0
     while i < Random_Deep[2]:
         try:
-            print("CNN" + str(i))
+            print("CNN " + str(i))
 
             model_CNN, model_tmp = BuildModel.buildModel_CNN(word_index, embeddings_index, number_of_classes,
                                                              MAX_SEQUENCE_LENGTH, EMBEDDING_DIM, 1, sparse_categorical)

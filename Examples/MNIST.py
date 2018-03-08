@@ -16,9 +16,9 @@ if __name__ == "__main__":
     X_test = X_test_D / 255.0
     number_of_classes = np.unique(y_train).shape[0]
     shape = (28, 28, 1)
-    batch_size = 100
+    batch_size = 500
     sparse_categorical = 0
-    n_epochs = [5000, 500, 500]  ## DNN--RNN-CNN
-    Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
+    n_epochs = [10, 0, 50]  ## DNN--RNN-CNN
+    Random_Deep = [10, 0, 3]  ## DNN--RNN-CNN
     RMDL.Image_Classifcation(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
                             n_epochs)
