@@ -12,9 +12,8 @@ RMDL: Random Multimodel Deep Learning for Classification
  *
  * Refrenced paper : An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)
  * 
+ * Comments and Error: email: kk7nc@virginia.edu
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-
 
 import os
 os.environ["THEANO_FLAGS"] = "mode=FAST_RUN,device=gpu,floatX=float32"

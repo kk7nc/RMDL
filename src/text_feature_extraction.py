@@ -12,6 +12,7 @@ RMDL: Random Multimodel Deep Learning for Classification
  *
  * Refrenced paper : An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)
  * 
+ * Comments and Error: email: kk7nc@virginia.edu
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 
@@ -137,11 +138,6 @@ def W2V_Tokenizer(Data,X_train, X_test):
         embedding_vector = w2vmodel.wv[w2vmodel.wv.index2word[i]]
         if embedding_vector is not None:
             embedding_matrix[i] = embedding_vector
-    embedding_layer = Embedding(len(w2vmodel.wv.vocab),
-                                EMBEDDING_DIM,
-                                weights=[embedding_matrix],
-                                input_length=500,
-                                trainable=True)
     n = 5
 
     return (X_train, X_test, word_index,embeddings_index)

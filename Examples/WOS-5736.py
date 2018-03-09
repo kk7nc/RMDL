@@ -1,5 +1,5 @@
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-RMDL: Random Multimodel Deep Learning
+RMDL: Random Multimodel Deep Learning for Classification
 
  * Copyright (C) 2018  Kamran Kowsari <kk7nc@virginia.edu>
  *
@@ -12,6 +12,7 @@ RMDL: Random Multimodel Deep Learning
  *
  * Refrenced paper : An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)
  * 
+ * Comments and Error: email: kk7nc@virginia.edu
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 import sys

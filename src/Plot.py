@@ -12,8 +12,8 @@ RMDL: Random Multimodel Deep Learning for Classification
  *
  * Refrenced paper : An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)
  * 
+ * Comments and Error: email: kk7nc@virginia.edu
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
 
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score,precision_recall_fscore_support
