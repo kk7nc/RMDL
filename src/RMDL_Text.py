@@ -1,3 +1,21 @@
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+RMDL: Random Multimodel Deep Learning for Classification
+
+ * Copyright (C) 2018  Kamran Kowsari <kk7nc@virginia.edu>
+ *
+ * This file is part of  RMDL project, University of Virginia.
+ *
+ * Free to use, change, share and distribute source code of RMDL
+ *
+ *
+ * Refrenced paper : RMDL: Random Multimodel Deep Learning for Classification
+ *
+ * Refrenced paper : An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)
+ * 
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+
+
 import os
 os.environ["THEANO_FLAGS"] = "mode=FAST_RUN,device=gpu,floatX=float32"
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'

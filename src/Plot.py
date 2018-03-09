@@ -1,15 +1,24 @@
-import os
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+RMDL: Random Multimodel Deep Learning for Classification
+
+ * Copyright (C) 2018  Kamran Kowsari <kk7nc@virginia.edu>
+ *
+ * This file is part of  RMDL project, University of Virginia.
+ *
+ * Free to use, change, share and distribute source code of RMDL
+ *
+ *
+ * Refrenced paper : RMDL: Random Multimodel Deep Learning for Classification
+ *
+ * Refrenced paper : An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)
+ * 
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+
 from sklearn.metrics import accuracy_score
-from keras.datasets import cifar,mnist,imdb
-import numpy as np
-import itertools
-import matplotlib.pyplot as plt
 from sklearn.metrics import f1_score,precision_recall_fscore_support
-import BuildModel
-from sklearn.feature_extraction.text import CountVectorizer
-from itertools import chain
-from keras.callbacks import ModelCheckpoint
 from pylab import *
+import itertools
 
 def plot_RMDL(history_):
     Number_of_models = len(history_)

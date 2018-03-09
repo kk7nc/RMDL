@@ -1,5 +1,21 @@
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+RMDL: Random Multimodel Deep Learning for Classification
+
+ * Copyright (C) 2018  Kamran Kowsari <kk7nc@virginia.edu>
+ *
+ * This file is part of  RMDL project, University of Virginia.
+ *
+ * Free to use, change, share and distribute source code of RMDL
+ *
+ *
+ * Refrenced paper : RMDL: Random Multimodel Deep Learning for Classification
+ *
+ * Refrenced paper : An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)
+ * 
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+
 import random
-from keras.optimizers import SGD
 from keras.models import Sequential
 import keras
 import numpy as np
@@ -9,7 +25,6 @@ from keras.layers import Conv1D,MaxPooling2D, \
     MaxPooling1D, Embedding, Merge, Dropout,\
     GRU,TimeDistributed,Convolution2D,\
     Activation,Convolution3D,GlobalAveragePooling3D,LSTM
-np.random.seed(7)
 from keras import backend as K
 from keras.models import Model
 from keras.layers import Input
