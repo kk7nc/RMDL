@@ -22,8 +22,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 from sklearn.datasets import fetch_olivetti_faces
 from sklearn.model_selection import train_test_split
-import numpy as np
-import RMDL
+import RMDL_Image as RMDL
 
 if __name__ == "__main__":
     number_of_classes = 40
@@ -36,7 +35,7 @@ if __name__ == "__main__":
 
     batch_size = 100
     sparse_categorical = 0
-    n_epochs = [5000, 500, 500]  ## DNN--RNN-CNN
-    Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
-    RMDL.Image_Classifcation(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
+    n_epochs = [500, 500, 1000]  ## DNN--RNN-CNN
+    Random_Deep = [4, 5, 0]  ## DNN--RNN-CNN
+    RMDL.Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
                             n_epochs)

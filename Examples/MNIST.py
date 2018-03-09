@@ -23,7 +23,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 from keras.datasets import mnist
 import numpy as np
-import RMDL
+import RMDL_Image as RMDL
 
 if __name__ == "__main__":
     (X_train, y_train), (X_test, y_test) = mnist.load_data()
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     shape = (28, 28, 1)
     batch_size = 500
     sparse_categorical = 0
-    n_epochs = [10, 0, 50]  ## DNN--RNN-CNN
-    Random_Deep = [10, 0, 3]  ## DNN--RNN-CNN
-    RMDL.Image_Classifcation(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
+    n_epochs = [500, 500, 500]  ## DNN--RNN-CNN
+    Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
+    RMDL.Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
                             n_epochs)

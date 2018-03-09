@@ -28,11 +28,13 @@ from sklearn.metrics import confusion_matrix
 import collections
 from sklearn.metrics import f1_score
 import BuildModel
+import Global as G
 from keras.callbacks import ModelCheckpoint
 np.random.seed(7)
 
-def image_classifciation(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
+def Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
                             n_epochs):
+    G.setup()
     y_proba = []
 
     score = []

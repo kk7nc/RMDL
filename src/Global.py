@@ -17,8 +17,25 @@ RMDL: Random Multimodel Deep Learning for Classification
 
 import numpy as np
 import os
-global GLOVE_DIR
-GLOVE_DIR = "D:/glove/"
+import os.path
+global GloVe_DIR
+from pathlib import Path
+
+
+GloVe_DIR = "D:\\glove\\"
+GloVe_file = "glove.6B.100d.txt"
+GloVe = Path(GloVe_DIR+GloVe_file)
+if not GloVe.is_file():
+    print("Could not find %s Set GloVe Directory in Global.py ",GloVe)
+    exit()
+
+
+MAX_SEQUENCE_LENGTH = 500
+MAX_NB_WORDS = 75000
+EMBEDDING_DIM = 100  # it could be 50, 100, and 300 please download GLOVE https://nlp.stanford.edu/projects/glove/ and set address of directory in Text_Data_load.py
+
+
+
 
 def setup():
     np.set_printoptions(threshold=np.inf)

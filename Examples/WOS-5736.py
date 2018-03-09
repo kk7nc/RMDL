@@ -23,10 +23,10 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 import text_feature_extraction as txt
 import WOS_input as WOS
-import RMDL
+import RMDL_Text as RMDL
 import sys
 sys.path.append('../Download_datasets')
-from sklearn.cross_validation import train_test_split, cross_val_score
+from sklearn.cross_validation import train_test_split
 import numpy as np
 
 
@@ -49,8 +49,8 @@ if __name__ == "__main__":
 
     batch_size = 100
     sparse_categorical = 0
-    n_epochs = [500, 500, 500]  ## DNN--RNN-CNN
-    Random_Deep = [3, 0, 0]  ## DNN--RNN-CNN
+    n_epochs = [5, 5, 5]  ## DNN--RNN-CNN
+    Random_Deep = [1, 1, 1]  ## DNN--RNN-CNN
 
-    RMDL.Text_Classifcation(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
+    RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
                             n_epochs)

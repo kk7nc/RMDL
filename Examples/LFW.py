@@ -24,7 +24,7 @@ os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 from sklearn.datasets import fetch_lfw_people
 from sklearn.model_selection import train_test_split
 import numpy as np
-import RMDL
+import RMDL_Image as RMDL
 
 if __name__ == "__main__":
 
@@ -56,10 +56,9 @@ if __name__ == "__main__":
     number_of_classes = np.max(y_train)+1
     X_train /= 255
     X_test /= 255
-    print(y_test)
     batch_size = 100
     sparse_categorical = 0
     n_epochs = [5000, 500, 500]  ## DNN--RNN-CNN
     Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
-    RMDL.Image_Classifcation(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
+    RMDL.Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
                             n_epochs)

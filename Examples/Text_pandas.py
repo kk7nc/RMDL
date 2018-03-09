@@ -23,7 +23,7 @@ import os
 os.environ["THEANO_FLAGS"] = "mode=FAST_RUN,device=gpu,floatX=float32"
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
-import RMDL
+import RMDL_Text as RMDL
 import sys
 sys.path.append('../Download_datasets')
 from sklearn.cross_validation import train_test_split, cross_val_score
@@ -52,5 +52,5 @@ if __name__ == "__main__":
     n_epochs = [5000, 500, 500]  ## DNN--RNN-CNN
     Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
 
-    RMDL.Text_Classifcation(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
+    RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
                             n_epochs)
