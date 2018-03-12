@@ -100,6 +100,12 @@ General:
 ```
 $ sudo apt-get install libcupti-dev
 ```
+## Text and Document Classification ##
+
+- Download GloVe: Global Vectors for Word Representation [Instruction Documents](https://nlp.stanford.edu/projects/glove/)
+
+ * Set data directory into [Global.py](https://github.com/kk7nc/RMDL/blob/master/src/Global.py)
+
 
 ## Error and Comments: ##
 
