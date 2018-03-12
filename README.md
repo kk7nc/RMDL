@@ -30,6 +30,8 @@ Random  Multimodel  Deep  Learning  (RDML)  architecture  for  classification.  
 
 
 ## Installation ##
+
+There are git submodules in this repository; to clone all the needed files, please use:
     
      git clone --recursive https://github.com/kk7nc/RMDL.git
 
