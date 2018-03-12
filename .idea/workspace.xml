@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a4c78d4-a455-45d3-99a2-5c81c09af077" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Examples/20NewsGroup .py" afterPath="$PROJECT_DIR$/Examples/20NewsGroup .py" />
-      <change beforePath="$PROJECT_DIR$/Examples/CIFAR.py" afterPath="$PROJECT_DIR$/Examples/CIFAR.py" />
-      <change beforePath="$PROJECT_DIR$/Examples/IMDB.py" afterPath="$PROJECT_DIR$/Examples/IMDB.py" />
-      <change beforePath="$PROJECT_DIR$/Examples/MNIST.py" afterPath="$PROJECT_DIR$/Examples/MNIST.py" />
-      <change beforePath="$PROJECT_DIR$/Examples/ORL.py" afterPath="$PROJECT_DIR$/Examples/ORL.py" />
-      <change beforePath="$PROJECT_DIR$/Examples/Reuters-21578.py" afterPath="$PROJECT_DIR$/Examples/Reuters-21578.py" />
-      <change beforePath="$PROJECT_DIR$/Examples/Text_pandas.py" afterPath="$PROJECT_DIR$/Examples/Text_pandas.py" />
-      <change beforePath="$PROJECT_DIR$/Examples/WOS-11967.py" afterPath="$PROJECT_DIR$/Examples/WOS-11967.py" />
-      <change beforePath="$PROJECT_DIR$/Examples/WOS-46985.py" afterPath="$PROJECT_DIR$/Examples/WOS-46985.py" />
-      <change beforePath="$PROJECT_DIR$/Examples/WOS-5736.py" afterPath="$PROJECT_DIR$/Examples/WOS-5736.py" />
-      <change beforePath="$PROJECT_DIR$/src/BuildModel.py" afterPath="$PROJECT_DIR$/src/BuildModel.py" />
-      <change beforePath="$PROJECT_DIR$/src/Global.py" afterPath="$PROJECT_DIR$/src/Global.py" />
-      <change beforePath="$PROJECT_DIR$/src/Plot.py" afterPath="$PROJECT_DIR$/src/Plot.py" />
-      <change beforePath="$PROJECT_DIR$/src/RMDL_Image.py" afterPath="$PROJECT_DIR$/src/RMDL_Image.py" />
       <change beforePath="$PROJECT_DIR$/src/RMDL_Text.py" afterPath="$PROJECT_DIR$/src/RMDL_Text.py" />
-      <change beforePath="$PROJECT_DIR$/src/text_feature_extraction.py" afterPath="$PROJECT_DIR$/src/text_feature_extraction.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,7 +41,7 @@
     <SUITE FILE_PATH="coverage/Data_Cleaning_Code_Python$Read.coverage" NAME="Read Coverage Results" MODIFIED="1496104821841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RMDL$Multi_Correlation_Accelemeter.coverage" NAME="Multi_Correlation_Accelemeter Coverage Results" MODIFIED="1504817345681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/cbm/Project1/Project1" />
     <SUITE FILE_PATH="coverage/Data_Cleaning_Code_Python$CNN_.coverage" NAME="CNN_ Coverage Results" MODIFIED="1496309498026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RMDL$20NewsGroup_.coverage" NAME="20NewsGroup  Coverage Results" MODIFIED="1520632384366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Examples" />
+    <SUITE FILE_PATH="coverage/RMDL$20NewsGroup_.coverage" NAME="20NewsGroup  Coverage Results" MODIFIED="1520868628906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Examples" />
     <SUITE FILE_PATH="coverage/HDLTex_finalCode$RDeeps.coverage" NAME="RDeeps Coverage Results" MODIFIED="1499457074731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RMDL$DNN.coverage" NAME="DNN Coverage Results" MODIFIED="1506801317976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/SHen/Code_Regression" />
     <SUITE FILE_PATH="coverage/RMDL$WOS_5736__1_.coverage" NAME="WOS-5736 Coverage Results" MODIFIED="1520546374915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Examples" />
@@ -96,8 +81,28 @@
       <file leaf-file-name="20NewsGroup .py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Examples/20NewsGroup .py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+            <state relative-caret-position="170">
+              <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RMDL_Text.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RMDL_Text.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Global.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Global.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -188,7 +193,6 @@
         <option value="$PROJECT_DIR$/src/RMDL.py" />
         <option value="$PROJECT_DIR$/Examples/LFW.py" />
         <option value="$PROJECT_DIR$/src/text_feature_extraction.py" />
-        <option value="$PROJECT_DIR$/src/RMDL_Text.py" />
         <option value="$PROJECT_DIR$/src/RMDL_Image.py" />
         <option value="$PROJECT_DIR$/Examples/CIFAR.py" />
         <option value="$PROJECT_DIR$/src/Plot.py" />
@@ -203,6 +207,7 @@
         <option value="$PROJECT_DIR$/Examples/Reuters-21578.py" />
         <option value="$PROJECT_DIR$/Examples/Text_pandas.py" />
         <option value="$PROJECT_DIR$/Examples/20NewsGroup .py" />
+        <option value="$PROJECT_DIR$/src/RMDL_Text.py" />
       </list>
     </option>
   </component>
@@ -757,14 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Global.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Plot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -777,14 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RMDL_Text.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
           <folding />
         </state>
       </provider>
@@ -877,10 +866,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Global.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RMDL_Text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Examples/20NewsGroup .py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        <state relative-caret-position="170">
+          <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
           <folding />
         </state>
       </provider>
