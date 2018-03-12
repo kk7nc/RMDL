@@ -44,9 +44,9 @@ Or
 
     pip3  install -r requirements.txt
 
-Or you can use CONDA:
+Or:
 
-    conda install requirements.txt
+    conda install --file requirements.txt
         
 If the above command does not work, use the following:
 
