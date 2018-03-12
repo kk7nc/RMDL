@@ -24,7 +24,7 @@ from sklearn.metrics import accuracy_score
 import gc
 from sklearn.metrics import confusion_matrix
 import Plot
-from pylab import *
+import numpy as np
 import Global as G
 import collections
 from sklearn.metrics import precision_recall_fscore_support
@@ -36,7 +36,7 @@ np.random.seed(7)
 
 def Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
                             n_epochs):
-    G.setup()
+
 
     X_train_tfidf, X_test_tfidf = txt.loadData(X_train, X_test)
     X_train_Embedded, X_test_Embedded, word_index, embeddings_index = txt.loadData_Tokenizer(X_train, X_test)
