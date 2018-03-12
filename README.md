@@ -145,9 +145,9 @@ Send an email to [kk7nc@virginia.edu](mailto:kk7nc@virginia.edu)
     organization={ACM}
     }
 
- 
+And
 
-    @inproceedings{Kowsari2018RMDL,
+    @inproceedings{Heidarysafa2018RMDL,
     title={An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)},
     author={Heidarysafa, Mojtaba and Kowsari, Kamran and  Brown, Donald E. and Jafari Meimandi, Kiana and Barnes, Laura E.},
     booktitle={International Journal of Machine Learning and Computing (IJMLC)},
