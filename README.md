@@ -135,7 +135,7 @@ $ sudo apt-get install libcupti-dev
 Send an email to [kk7nc@virginia.edu](mailto:kk7nc@virginia.edu)
 
 
-## Cihtation ##
+## Citations ##
 
     @inproceedings{Kowsari2018RMDL,
     title={RMDL: Random Multimodel Deep Learning for Classification},
