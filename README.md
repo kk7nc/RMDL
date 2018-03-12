@@ -39,6 +39,10 @@ There are git RMDL in this repository; to clone all the needed files, please use
 he primary requirements for this package are Python 3 with Tensorflow version 1.0.1 or greater. The requirements.txt file contains a listing of the required Python packages; to install all requirements, run the following:
     
     pip -r install requirements.txt
+    
+Or
+
+    pip3  install -r requirements.txt
 
 Or you can use CONDA:
 
