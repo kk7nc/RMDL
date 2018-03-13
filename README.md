@@ -17,7 +17,7 @@ Overview  of  RDML:  Random  Multimodel  Deep  Learning  for  classification.  T
 
 
 <p align="center">
-<img src="http://kowsari.net/onewebmedia/RDL.jpg" width="40%"></img> 
+<img src="http://kowsari.net/onewebmedia/RDL.jpg" width="50%"></img> 
 </p>
 
 
@@ -25,7 +25,7 @@ Random  Multimodel  Deep  Learning  (RDML)  architecture  for  classification.  
 
 
 <p align="center">
-<img src="http://kowsari.net/onewebmedia/RMDL.jpg" width="40%"></img> 
+<img src="http://kowsari.net/onewebmedia/RMDL.jpg" width="55%"></img> 
 </p>
 
 
