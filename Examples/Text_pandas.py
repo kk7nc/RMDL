@@ -33,8 +33,8 @@ import pandas as pd
 
 
 if __name__ == "__main__":
-    file_x = "..\Data\X.csv"
-    file_y = "..\Data\Y.csv"
+    file_x = "D:\CHI\Facebook\X.csv"
+    file_y = "D:\CHI\Facebook\Y_new.csv"
     content = pd.read_csv(file_x, encoding="utf-8")
     Label = pd.read_csv(file_y, encoding="utf-8")
     # content = content.as_matrix()
@@ -45,12 +45,12 @@ if __name__ == "__main__":
     Label = np.matrix(Label)
     np.random.seed(7)
     # print(Label)
-    content = [txt.text_cleaner(x) for x in content]
-    X_train, X_test, y_train, y_test = train_test_split(content, Label, test_size=0.33, random_state=1)
+    content = [txt.text_cleaner(x,deep_clean=True) for x in content]
+    X_train, X_test, y_train, y_test = train_test_split(content, Label, test_size=0.2, random_state=42)
     batch_size = 64
     sparse_categorical = 0
-    n_epochs = [5000, 500, 500]  ## DNN--RNN-CNN
-    Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
+    n_epochs = [100, 50, 500]  ## DNN--RNN-CNN
+    Random_Deep = [3, 0, 0]  ## DNN--RNN-CNN
 
     RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
                             n_epochs)

@@ -110,7 +110,7 @@ def Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_cat
 
             h = model_RNN.fit(X_train_Embedded, y_train,
                                  validation_data=(X_test_Embedded, y_test),
-                                 epochs=n_epochs[2],
+                                 epochs=n_epochs[1],
                                  batch_size=batch_size,
                                  callbacks=callbacks_list,
                                  verbose=2)
@@ -158,7 +158,7 @@ def Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_cat
 
             h = model_CNN.fit(X_train_Embedded, y_train,
                               validation_data=(X_test_Embedded, y_test),
-                              epochs=n_epochs[1],
+                              epochs=n_epochs[2],
                               batch_size=batch_size,
                               callbacks=callbacks_list,
                               verbose=2)
