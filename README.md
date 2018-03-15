@@ -1,7 +1,5 @@
 # RMDL: Random Multimodel Deep Learning for Classification #
 
-All codes and Datasets: coming soon
-
 
 Refrenced paper : [RMDL: Random Multimodel Deep Learning for Classification]()
 
