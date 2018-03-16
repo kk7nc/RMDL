@@ -1,6 +1,6 @@
 # Results #
 
-
+## MNIST annd CIFAR-10 ##
 
 |     Methods    | MNIST | CIFAR-10 |
 |:--------------:|:-----:|:--------:|
@@ -14,6 +14,8 @@
 | RMDL (15 RDLs) |  0.21 |   8.74   |
 | RMDL (30 RDLs) |  0.18 |   8.79   |
 
+
+## Web of Science Dataset annd Reuters-21578 ##
 
 |                | WOS-5,736 | WOS-11,967 | WOS-46,985 | Reuters-21578 |
 |:--------------:|:---------:|:----------:|:----------:|:-------------:|
