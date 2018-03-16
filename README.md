@@ -106,17 +106,17 @@ General:
 
 - GPU (if you want to run on GPU):
 
-- CUDA® Toolkit 8.0. For details, see [NVIDIA's documentation](https://developer.nvidia.com/cuda-toolkit). 
+    * CUDA® Toolkit 8.0. For details, see [NVIDIA's documentation](https://developer.nvidia.com/cuda-toolkit). 
 
-- The [NVIDIA drivers associated with CUDA Toolkit 8.0](http://www.nvidia.com/Download/index.aspx).
+    * The [NVIDIA drivers associated with CUDA Toolkit 8.0](http://www.nvidia.com/Download/index.aspx).
 
-- cuDNN v6. For details, see [NVIDIA's documentation](https://developer.nvidia.com/cudnn). 
+    * cuDNN v6. For details, see [NVIDIA's documentation](https://developer.nvidia.com/cudnn). 
 
-- GPU card with CUDA Compute Capability 3.0 or higher.
+    * GPU card with CUDA Compute Capability 3.0 or higher.
 
-- The libcupti-dev library,
+    * The libcupti-dev library,
 
-- To install this library, issue the following command:
+    * To install this library, issue the following command:
 
 ```
 $ sudo apt-get install libcupti-dev
