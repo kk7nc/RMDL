@@ -36,18 +36,18 @@
 
 |                                               | WOS-5,736 | WOS-11,967 | WOS-46,985 | Reuters-21578 |
 |:---------------------------------------------:|:---------:|:----------:|:----------:|:-------------:|
-|       Deep Neural Networks                    |   86.15   |    80.02   |    66.95   |      85.3     |
-|   Convolutional Neural Netwroks               |   88.68   |    83.29   |    70.46   |      86.3     |
-|       Recurrent Neural Networks               |   89.46   |    83.96   |    72.12   |      88.4     |
-|     Naive Bayesian Classifier                 |   78.14   |    68.8    |    46.2    |      83.6     |
-|   Support Vector Machine (SVM)                |   85.54   |    80.65   |    67.56   |      86.9     |
+|              Deep Neural Networks             |   86.15   |    80.02   |    66.95   |      85.3     |
+|         Convolutional Neural Netwroks         |   88.68   |    83.29   |    70.46   |      86.3     |
+|           Recurrent Neural Networks           |   89.46   |    83.96   |    72.12   |      88.4     |
+|           Naive Bayesian Classifier           |   78.14   |    68.8    |    46.2    |      83.6     |
+|         Support Vector Machine (SVM)          |   85.54   |    80.65   |    67.56   |      86.9     |
 |  Support Vector Machine (SVM using TF-IDF)    |   88.24   |    83.16   |    70.22   |     88.93     |
-|  Stacking Support Vector Machine              |   85.68   |    79.45   |    71.81   |       NA      |
-|     HDLTex                                    |   90.42   |    86.07   |    76.58   |       NA      |
-|  RMDL (3 RDLs)                                |   90.86   |    87.39   |    78.39   |     89.10     |
-|  RMDL (9 RDLs)                                |   92.60   |    90.65   |    81.92   |     90.36     |
-| RMDL (15 RDLs)                                |   92.66   |    91.01   |    81.86   |     89.91     |
-| RMDL (30 RDLs)                                |   93.57   |    91.59   |    82.42   |     90.69     |
+|         Stacking Support Vector Machine       |   85.68   |    79.45   |    71.81   |       NA      |
+|                  HDLTex                       |   90.42   |    86.07   |    76.58   |       NA      |
+|               RMDL (3 RDLs)                   |   90.86   |    87.39   |    78.39   |     89.10     |
+|               RMDL (9 RDLs)                   |   92.60   |    90.65   |    81.92   |     90.36     |
+|               RMDL (15 RDLs)                  |   92.66   |    91.01   |    81.86   |     89.91     |
+|               RMDL (30 RDLs)                  |   93.57   |    91.59   |    82.42   |     90.69     |
 
 ### 20NewsGroup and IMDB ###
 
@@ -60,17 +60,17 @@
   * This dataset contains 50,000 documents with 2 categories.
 
 
-|         Methods         |  IMDB | 20NewsGroup |
-|:-----------------------:|:-----:|:-----------:|
-|  Deep Neural Networks           | 88.55 |     86.5    |
-|           Convolutional Neural Netwroks           | 87.44 |    82.91    |
-|           Recurrent Neural Networks           | 88.59 |    83.75    |
-|Naive Bayesian Classifier| 83.19 |    81.67    |
-|           Support Vector Machine (SVM)            | 87.97 |    84.57    |
-|        Support Vector Machine (SVM using TF-IDF)      | 88.45 |      86     |
-|      RMDL (3 RDLs)      | 89.91 |    86.73    |
-|      RMDL (9 RDLs)      | 90.13 |    87.62    |
-|     RMDL (15 RDLs)      | 90.79 |    87.91    |
+|         Methods                          |  IMDB | 20NewsGroup |
+|:----------------------------------------:|:-----:|:-----------:|
+|             Deep Neural Networks         | 88.55 |     86.5    |
+|       Convolutional Neural Netwroks      | 87.44 |    82.91    |
+|          Recurrent Neural Networks       | 88.59 |    83.75    |
+|          Naive Bayesian Classifier       | 83.19 |    81.67    |
+|         Support Vector Machine (SVM)     | 87.97 |    84.57    |
+|Support Vector Machine (SVM using TF-IDF) | 88.45 |      86     |
+|            RMDL (3 RDLs)                 | 89.91 |    86.73    |
+|            RMDL (9 RDLs)                 | 90.13 |    87.62    |
+|            RMDL (15 RDLs)                | 90.79 |    87.91    |
 
 
 ## Face Recognition ##
@@ -81,18 +81,18 @@
    
 ### The Olivetti Faces Dataset ###
 
-|      Methods     | 5 Images | 7 Images | 9 Images |
-|:----------------:|:--------:|:--------:|:--------:|
-|     gcForest     |   91.00  |   96.67  |   97.50  |
-|   Random Forest  |   91.00  |   93.33  |   95.00  |
-|        Convolutional Neural Netwroks       |   86.50  |   91.67  |   95.00  |
-| SVM (rbf kernel) |   80.50  |   82.50  |   85.00  |
-|        kNN       |   76.00  |   83.33  |   92.50  |
-|        Deep Neural Networks       |   85.50  |   90.84  |   92.5   |
-|   RMDL (3 RDL)   |   93.50  |   96.67  |   97.5   |
-|   RMDL (9 RDL)   |   93.50  |   98.34  |   97.5   |
-|   RMDL (15 RDL)  |   94.50  |   96.67  |   97.5   |
-|   RMDL (30 RDL)  |   95.00  |   98.34  |  100.00  |
+|      Methods                   | 5 Images | 7 Images | 9 Images |
+|:------------------------------:|:--------:|:--------:|:--------:|
+|     gcForest                   |   91.00  |   96.67  |   97.50  |
+|   Random Forest                |   91.00  |   93.33  |   95.00  |
+|Convolutional Neural Netwroks   |   86.50  |   91.67  |   95.00  |
+| SVM (rbf kernel)               |   80.50  |   82.50  |   85.00  |
+|    k-nearest neighbors         |   76.00  |   83.33  |   92.50  |
+|   Deep Neural Networks         |   85.50  |   90.84  |   92.5   |
+|   RMDL (3 RDL)                 |   93.50  |   96.67  |   97.5   |
+|   RMDL (9 RDL)                 |   93.50  |   98.34  |   97.5   |
+|   RMDL (15 RDL)                |   94.50  |   96.67  |   97.5   |
+|   RMDL (30 RDL)                |   95.00  |   98.34  |  100.00  |
 
 
 
