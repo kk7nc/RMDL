@@ -126,9 +126,8 @@ General:
 
         * To install this library, issue the following command:
 
-                ```
-                $ sudo apt-get install libcupti-dev
-                ```
+                 $ sudo apt-get install libcupti-dev
+               
 ## Text and Document Classification ##
 
 - Download GloVe: Global Vectors for Word Representation [Instruction Documents](https://nlp.stanford.edu/projects/glove/)
