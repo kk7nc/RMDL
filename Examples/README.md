@@ -34,6 +34,7 @@
 
 
 
+## The Olivetti faces dataset ##
 
 |      Methods     | 5 Images | 7 Images | 9 Images |
 |:----------------:|:--------:|:--------:|:--------:|
@@ -49,6 +50,8 @@
 |   RMDL (30 RDL)  |   95.00  |   98.34  |  100.00  |
 
 
+
+## 20NewsGroup and IMDB ##
 
 
 |         Methods         |  IMDB | 20NewsGroup |
