@@ -89,6 +89,14 @@ The exponential growth in the number of complex datasets every year requires  mo
 - [CIFAR-10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
 
   * The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.
+  
+  
+### Face Recognition ###
+[The Database of Faces (The Olivetti Faces Dataset)](http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html)
+
+   * The The Database of Faces dataset consists of 400 92x112 colour images and grayscale in 40 person
+   
+   
 ## Requirment for RMDL : ##
 
 
