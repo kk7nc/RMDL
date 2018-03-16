@@ -1,6 +1,14 @@
 # Results #
 
-## MNIST annd CIFAR-10 ##
+## Image Classification ##
+- [MNIST Dataset](https://en.wikipedia.org/wiki/MNIST_database)
+
+  * The MNIST database contains 60,000 training images and 10,000 testing images.
+- [CIFAR-10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
+
+  * The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.
+  
+### MNIST annd CIFAR-10 ###
 
 |     Methods    | MNIST | CIFAR-10 |
 |:--------------:|:-----:|:--------:|
@@ -14,8 +22,17 @@
 | RMDL (15 RDLs) |  0.21 |   8.74   |
 | RMDL (30 RDLs) |  0.18 |   8.79   |
 
+## Text Classification ##
 
-## Web of Science Dataset annd Reuters-21578 ##
+- [Reters-21578 Dataset](https://keras.io/datasets/)
+
+  * This dataset contains 21,578 documents with 90 categories.
+      
+  
+- Web of Science Dataset (DOI: [10.17632/9rw3vkcfy4.2](http://dx.doi.org/10.17632/9rw3vkcfy4.2))
+
+
+### Web of Science Dataset annd Reuters-21578 ###
 
 |                | WOS-5,736 | WOS-11,967 | WOS-46,985 | Reuters-21578 |
 |:--------------:|:---------:|:----------:|:----------:|:-------------:|
@@ -31,6 +48,29 @@
 |  RMDL (9 RDLs) |   92.60   |    90.65   |    81.92   |     90.36     |
 | RMDL (15 RDLs) |   92.66   |    91.01   |    81.86   |     89.91     |
 | RMDL (30 RDLs) |   93.57   |    91.59   |    82.42   |     90.69     |
+
+### 20NewsGroup and IMDB ###
+
+- [20Newsgroups Dataset](https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups)
+
+  * This dataset contains 20,000 documents with 20 categories.
+  
+- [IMDB Dataset](http://ai.stanford.edu/~amaas/data/sentiment/)
+
+  * This dataset contains 50,000 documents with 2 categories.
+
+
+|         Methods         |  IMDB | 20NewsGroup |
+|:-----------------------:|:-----:|:-----------:|
+|           DNN           | 88.55 |     86.5    |
+|           CNN           | 87.44 |    82.91    |
+|           RNN           | 88.59 |    83.75    |
+|Naive Bayesian Classifier| 83.19 |    81.67    |
+|          SVM            | 87.97 |    84.57    |
+|       SVM (TF-IDF)      | 88.45 |      86     |
+|      RMDL (3 RDLs)      | 89.91 |    86.73    |
+|      RMDL (9 RDLs)      | 90.13 |    87.62    |
+|     RMDL (15 RDLs)      | 90.79 |    87.91    |
 
 
 
@@ -51,17 +91,4 @@
 
 
 
-## 20NewsGroup and IMDB ##
 
-
-|         Methods         |  IMDB | 20NewsGroup |
-|:-----------------------:|:-----:|:-----------:|
-|           DNN           | 88.55 |     86.5    |
-|           CNN           | 87.44 |    82.91    |
-|           RNN           | 88.59 |    83.75    |
-|Naive Bayesian Classifier| 83.19 |    81.67    |
-|          SVM            | 87.97 |    84.57    |
-|       SVM (TF-IDF)      | 88.45 |      86     |
-|      RMDL (3 RDLs)      | 89.91 |    86.73    |
-|      RMDL (9 RDLs)      | 90.13 |    87.62    |
-|     RMDL (15 RDLs)      | 90.79 |    87.91    |
