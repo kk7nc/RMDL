@@ -73,8 +73,13 @@
 |     RMDL (15 RDLs)      | 90.79 |    87.91    |
 
 
+## Face Recognition ##
 
-## The Olivetti faces dataset ##
+[The Database of Faces (The Olivetti Faces Dataset)](http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html)
+
+   * he files are in PGM format, and can conveniently be viewed on UNIX (TM) systems using the 'xv' program. The size of each image is 92x112 pixels, with 256 grey levels per pixel. The images are organised in 40 directories (one for each subject), which have names of the form sX, where X indicates the subject number (between 1 and 40). In each of these directories, there are ten different images of that subject, which have names of the form Y.pgm, where Y is the image number for that subject (between 1 and 10).
+   
+### The Olivetti Faces Dataset ###
 
 |      Methods     | 5 Images | 7 Images | 9 Images |
 |:----------------:|:--------:|:--------:|:--------:|
