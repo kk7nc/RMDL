@@ -1,6 +1,5 @@
 Build Status:
-[![Documentation Status](https://builds.apache.org/job/incubator-mxnet-build-site/badge/icon)](https://mxnet.incubator.apache.org/)
-[![GitHub license](https://en.wikipedia.org/wiki/GNU_General_Public_License#/media/File:GPLv3_Logo.svg)](./LICENSE)
+[![GitHub license](https://img.shields.io/badge/licence-GPL-blue.svg)](./LICENSE)
 
 
 # RMDL: Random Multimodel Deep Learning for Classification #
