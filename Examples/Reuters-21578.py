@@ -19,14 +19,13 @@ import sys
 sys.path.append('../src')
 sys.path.append('../Download_datasets')
 import os
-os.environ["THEANO_FLAGS"] = "mode=FAST_RUN,device=gpu,floatX=float32"
+os.environ['KERAS_BACKEND'] = 'tensorflow'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
-import text_feature_extraction as txt
 from nltk.corpus import reuters
 from sklearn.preprocessing import MultiLabelBinarizer
 import numpy as np
-import RMDL_Text as RMDL
+import src.RMDL_Text as RMDL
 
 if __name__ == "__main__":
     print("Load Reuters dataset....")
@@ -49,7 +48,7 @@ if __name__ == "__main__":
 
     batch_size = 100
     sparse_categorical = 0
-    n_epochs = [5000, 500, 500]  ## DNN--RNN-CNN
+    n_epochs = [500, 500, 500]  ## DNN--RNN-CNN
     Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
 
     RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,

@@ -19,13 +19,12 @@ RMDL: Random Multimodel Deep Learning for Classification
 import sys
 sys.path.append('../src')
 import os
-os.environ["THEANO_FLAGS"] = "mode=FAST_RUN,device=gpu,floatX=float32"
+os.environ['KERAS_BACKEND'] = 'tensorflow'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 from sklearn.datasets import fetch_olivetti_faces
 from sklearn.model_selection import train_test_split
-import numpy as np
-import RMDL_Image as RMDL
+import src.RMDL_Image as RMDL
 
 if __name__ == "__main__":
     number_of_classes = 40

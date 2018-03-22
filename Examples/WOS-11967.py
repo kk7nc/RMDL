@@ -19,19 +19,19 @@ import sys
 sys.path.append('../src')
 sys.path.append('../Download_datasets')
 import os
-os.environ["THEANO_FLAGS"] = "mode=FAST_RUN,device=gpu,floatX=float32"
+os.environ['KERAS_BACKEND'] = 'tensorflow'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
-import text_feature_extraction as txt
+import src.text_feature_extraction as txt
 from sklearn.model_selection import train_test_split
-import WOS_input as WOS
+import Download_datasets.Download_WOS as WOS
 import numpy as np
-import RMDL
+import src.RMDL_Text as RMDL
 
 if __name__ == "__main__":
-    WOS.download_and_extract()
-    fname = "./Data_WOS/WebOfScience/WOS11967/X.txt"
-    fnamek = "./Data_WOS/WebOfScience/WOS11967/Y.txt"
+    path_WOS = WOS.download_and_extract()
+    fname = os.path.join(path_WOS,"WebOfScience/WOS11967/X.txt")
+    fnamek = os.path.join(path_WOS,"WebOfScience/WOS11967/Y.txt")
     with open(fname, encoding="utf-8") as f:
         content = f.readlines()
         content = [txt.text_cleaner(x) for x in content]

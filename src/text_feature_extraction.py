@@ -30,7 +30,7 @@ from nltk import word_tokenize
 from nltk.corpus import stopwords
 import re
 from nltk import PorterStemmer
-import Global as G
+import src.Global as G
 
 cachedStopWords = stopwords.words("english")
 
@@ -132,7 +132,7 @@ def loadData_Tokenizer(X_train, X_test):
     X_train = text[0:len(X_train),]
     X_test = text[len(X_train):,]
     embeddings_index = {}
-    f = open(os.path.join(G.GloVe_DIR, G.GloVe_file), encoding="utf8")
+    f = open(G.GloVe_DIR, encoding="utf8")
     for line in f:
         values = line.split()
         word = values[0]

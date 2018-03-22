@@ -20,11 +20,11 @@ import sys
 sys.path.append('../src')
 sys.path.append('../Download_datasets')
 import os
-os.environ["THEANO_FLAGS"] = "mode=FAST_RUN,device=gpu,floatX=float32"
+os.environ['KERAS_BACKEND'] = 'tensorflow'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 from sklearn.datasets import fetch_20newsgroups
-import RMDL_Text as RMDL
+import src.RMDL_Text as RMDL
 
 if __name__ == "__main__":
     newsgroups_train = fetch_20newsgroups(subset='train')

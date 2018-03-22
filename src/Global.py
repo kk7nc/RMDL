@@ -20,12 +20,15 @@ import os
 import os.path
 global GloVe_DIR
 from pathlib import Path
+import Download_datasets.Download_Glove as GloVe
 
 
-GloVe_DIR = "D:\\glove\\"
+GloVe_DIR = GloVe.download_and_extract()
 GloVe_file = "glove.6B.100d.txt"
-GloVe = Path(GloVe_DIR+GloVe_file)
-if not GloVe.is_file():
+GloVe_DIR = os.path.join(GloVe_DIR, GloVe_file)
+
+
+if not os.path.isfile(GloVe_DIR):
     print("Could not find %s Set GloVe Directory in Global.py ",GloVe)
     exit()
 
@@ -33,9 +36,6 @@ if not GloVe.is_file():
 MAX_SEQUENCE_LENGTH = 500
 MAX_NB_WORDS = 75000
 EMBEDDING_DIM = 100  # it could be 50, 100, and 300 please download GLOVE https://nlp.stanford.edu/projects/glove/ and set address of directory in Text_Data_load.py
-
-
-
 
 def setup():
     np.set_printoptions(threshold=np.inf)

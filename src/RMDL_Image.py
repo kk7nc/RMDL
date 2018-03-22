@@ -16,19 +16,18 @@ RMDL: Random Multimodel Deep Learning for Classification
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 import os
-os.environ["THEANO_FLAGS"] = "mode=FAST_RUN,device=gpu,floatX=float32"
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 from sklearn.metrics import accuracy_score
 import numpy as np
-import Plot
+import src.Plot as Plot
 import gc
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 import collections
 from sklearn.metrics import f1_score
-import BuildModel
-import Global as G
+import src.BuildModel as BuildModel
+import src.Global as G
 from keras.callbacks import ModelCheckpoint
 np.random.seed(7)
 

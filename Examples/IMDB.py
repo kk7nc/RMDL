@@ -20,13 +20,13 @@ import sys
 sys.path.append('../src')
 sys.path.append('../Download_datasets')
 import os
-os.environ["THEANO_FLAGS"] = "mode=FAST_RUN,device=gpu,floatX=float32"
+os.environ['KERAS_BACKEND'] = 'tensorflow'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
-import text_feature_extraction as txt
+import src.text_feature_extraction as txt
 from keras.datasets import imdb
 import numpy as np
-import RMDL_Text as RMDL
+import src.RMDL_Text as RMDL
 
 if __name__ == "__main__":
     print("Load IMDB dataset....")
