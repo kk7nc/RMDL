@@ -33,7 +33,7 @@ build:
     # # Use this virtualenv step for python 3.2
      - virtualenv
          name: setup virtual environment
-         python_location: /usr/bin/python3.6
+         python_location: /root/venv/python3.6
 
     # A step that executes `pip install` command.
     - pip-install:
