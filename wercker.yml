@@ -20,21 +20,21 @@ box: python:3.6
 # Read more about pipelines on our dev center
 # http://devcenter.wercker.com/docs/pipelines/index.html
 build:
-    - pip install virtualenv
+   # - pip install virtualenv
   # The steps that will be executed on build
   # Steps make up the actions in your pipeline
   # Read more about steps on our dev center:
   # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     # A step that sets up the python virtual environment
-    - virtualenv:
-        name: setup virtual environment
-        install_wheel: true # Enable wheel to speed up builds (experimental)
+    #- virtualenv:
+      #  name: setup virtual environment
+       # install_wheel: true # Enable wheel to speed up builds (experimental)
 
     # # Use this virtualenv step for python 3.2
-     - virtualenv
-         name: setup virtual environment
-         python_location: /root/venv/python3.6
+     #- virtualenv
+        # name: setup virtual environment
+        # python_location: /root/venv/python3.6
 
     # A step that executes `pip install` command.
     - pip-install:
