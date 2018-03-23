@@ -47,4 +47,4 @@ build:
     - script:
         name: python unit test
         code: |
-          python .\Example\MNIST.py
+          python ./Example/MNIST.py
