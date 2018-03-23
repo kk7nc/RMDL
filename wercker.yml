@@ -49,5 +49,3 @@ build:
         code: |
           echo "python version $(python --version) running"
           echo "pip version $(pip --version) running"
-
-          python ./Example/MNIST.py
