@@ -12,14 +12,7 @@ Create weights folder and download GloVe for text classification (if you already
 
 ## Text Feature Extraction: ##
 
-latexImg = function(latex){
-
-    link = paste0('http://latex.codecogs.com/gif.latex?',
-           gsub('\\=','%3D',URLencode(latex)))
-
-    link = gsub("(%..)","\\U\\1",link,perl=TRUE)
-    return(paste0('![](',link,')'))
-}
+\text{S}_1(N) = \sum_{p=1}^N \text{E}(p)
 
 ## General requirements: ##
 
