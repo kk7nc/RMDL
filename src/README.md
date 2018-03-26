@@ -12,7 +12,17 @@ Create weights folder and download GloVe for text classification (if you already
 
 ## Text Feature Extraction: ##
 
-\text{S}_1(N) = \sum_{p=1}^N \text{E}(p)
+We used two different feature extraction : 
+
+### [Term  Frequency-Inverse  Document  Frequency](http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) ##
+
+### [GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/) ##
+
+## BuildModel.py: ##
+
+This file contain build random model of deep learning architectures for image and text including (DNN, CNN, and RNN)
+
+
 
 ## General requirements: ##
 
