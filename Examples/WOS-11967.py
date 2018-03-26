@@ -24,7 +24,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 import src.text_feature_extraction as txt
 from sklearn.model_selection import train_test_split
-import Download_datasets.Download_WOS as WOS
+import Download.Download_WOS as WOS
 import numpy as np
 import src.RMDL_Text as RMDL
 

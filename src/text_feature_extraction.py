@@ -93,7 +93,7 @@ def text_cleaner(text, deep_clean=False):
         text = text.replace('+', ' ').replace('.', ' ').replace(',', ' ').replace(':', ' ')
         text = re.sub("(^|\W)\d+($|\W)", " ", text)
         text = transliterate(text)
-        #text = PorterStemmer().stem(text)
+        text = PorterStemmer().stem(text)
     else:
         rules = [
             {r'>\s+': u'>'},  # remove spaces after a tag opens or closes

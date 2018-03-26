@@ -18,17 +18,31 @@ print(sys.version_info)
 DATA_DIR = '.\Glove'
 
 # url of the binary data
-DATA_URL = 'http://nlp.stanford.edu/data/glove.6B.zip'
+
 
 
 # path to the binary train file with image data
 
 
-def download_and_extract():
+def download_and_extract(data='Wikipedia'):
     """
     Download and extract the GloVe
     :return: None
     """
+
+    if data=='Wikipedia':
+        DATA_URL = 'http://nlp.stanford.edu/data/glove.6B.zip'
+    elif data=='Common_Crawl_840B':
+        DATA_URL = 'http://nlp.stanford.edu/data/wordvecs/glove.840B.300d.zip'
+    elif data=='Common_Crawl_42B':
+        DATA_URL = 'http://nlp.stanford.edu/data/wordvecs/glove.840B.300d.zip'
+    elif data=='Twitter ':
+        DATA_URL = 'http://nlp.stanford.edu/data/wordvecs/glove.twitter.27B.zip'
+    else:
+        print("prameter should be Twitter, Common_Crawl_42B, Common_Crawl_840B, or Wikipedia")
+        exit(0)
+
+
     dest_directory = DATA_DIR
     if not os.path.exists(dest_directory):
         os.makedirs(dest_directory)
