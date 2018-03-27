@@ -29,7 +29,7 @@ import os
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 import re
-from nltk import PorterStemmer
+from nltk.stem import PorterStemmer, WordNetLemmatizer
 import src.Global as G
 
 cachedStopWords = stopwords.words("english")
@@ -61,6 +61,7 @@ def tokenize(text):
 
 
 
+
 def text_cleaner(text, deep_clean=False):
     if deep_clean:
         text = text.replace(".", "")
@@ -72,6 +73,8 @@ def text_cleaner(text, deep_clean=False):
         text = text.replace("\"", "")
         text = text.replace("-", " ")
         text = text.replace("=", " ")
+        text = text.replace("?", " ")
+        text = text.replace("!", " ")
         rules = [
             {r'>\s+': u'>'},  # remove spaces after a tag opens or closes
             {r'\s+': u' '},  # replace consecutive spaces
@@ -94,6 +97,11 @@ def text_cleaner(text, deep_clean=False):
         text = re.sub("(^|\W)\d+($|\W)", " ", text)
         text = transliterate(text)
         text = PorterStemmer().stem(text)
+        text = WordNetLemmatizer().lemmatize(text)
+        stop_words = set(stopwords.words('english'))
+        word_tokens = word_tokenize(text)
+        text = [w for w in word_tokens if not w in stop_words]
+        text = ' '.join(str(e) for e in text)
     else:
         rules = [
             {r'>\s+': u'>'},  # remove spaces after a tag opens or closes

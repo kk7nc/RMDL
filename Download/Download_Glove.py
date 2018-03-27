@@ -36,7 +36,7 @@ def download_and_extract(data='Wikipedia'):
         DATA_URL = 'http://nlp.stanford.edu/data/wordvecs/glove.840B.300d.zip'
     elif data=='Common_Crawl_42B':
         DATA_URL = 'http://nlp.stanford.edu/data/wordvecs/glove.840B.300d.zip'
-    elif data=='Twitter ':
+    elif data=='Twitter':
         DATA_URL = 'http://nlp.stanford.edu/data/wordvecs/glove.twitter.27B.zip'
     else:
         print("prameter should be Twitter, Common_Crawl_42B, Common_Crawl_840B, or Wikipedia")

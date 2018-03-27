@@ -23,7 +23,7 @@ from pathlib import Path
 import Download.Download_Glove as GloVe
 
 
-GloVe_DIR = GloVe.download_and_extract(data='twitter')
+GloVe_DIR = GloVe.download_and_extract(data='Twitter')
 GloVe_file = "glove.twitter.27B.25d.txt"
 GloVe_DIR = os.path.join(GloVe_DIR, GloVe_file)
 
@@ -33,7 +33,7 @@ if not os.path.isfile(GloVe_DIR):
     exit()
 
 
-MAX_SEQUENCE_LENGTH = 200
+MAX_SEQUENCE_LENGTH = 500
 MAX_NB_WORDS = 75000
 EMBEDDING_DIM = 25  # it could be 50, 100, and 300 please download GLOVE https://nlp.stanford.edu/projects/glove/ and set address of directory in Text_Data_load.py
 

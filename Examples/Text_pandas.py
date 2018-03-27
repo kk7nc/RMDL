@@ -22,7 +22,7 @@ sys.path.append('../Download_datasets')
 import os
 os.environ['KERAS_BACKEND'] = 'tensorflow'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
+os.environ["CUDA_VISIBLE_DEVICES"]="0,2,1"
 import src.RMDL_Text as RMDL
 import sys
 sys.path.append('../Download_datasets')
@@ -34,7 +34,7 @@ import pandas as pd
 
 if __name__ == "__main__":
     file_x = "D:\CHI\Facebook\X.csv"
-    file_y = "D:\CHI\Facebook\Y_new.csv"
+    file_y = "D:\CHI\Facebook\Y_.csv"
     content = pd.read_csv(file_x, encoding="utf-8")
     Label = pd.read_csv(file_y, encoding="utf-8")
     # content = content.as_matrix()
@@ -47,10 +47,10 @@ if __name__ == "__main__":
     # print(Label)
     content = [txt.text_cleaner(x,deep_clean=True) for x in content]
     X_train, X_test, y_train, y_test = train_test_split(content, Label, test_size=0.1, random_state=42)
-    batch_size = 64
+    batch_size = 256
     sparse_categorical = 0
-    n_epochs = [100, 50, 50]  ## DNN--RNN-CNN
-    Random_Deep = [1, 1, 1]  ## DNN--RNN-CNN
+    n_epochs = [100, 100, 50]  ## DNN--RNN-CNN
+    Random_Deep = [9, 0, 0]  ## DNN--RNN-CNN
 
     RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
                             n_epochs)
