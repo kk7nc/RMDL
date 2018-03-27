@@ -16,17 +16,16 @@ RMDL: Random Multimodel Deep Learning for Classification
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 import sys
-sys.path.append('../src')
 sys.path.append('../Download_datasets')
 import os
 os.environ['KERAS_BACKEND'] = 'tensorflow'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
-import src.text_feature_extraction as txt
+from RMDL import text_feature_extraction as txt
 from sklearn.model_selection import train_test_split
-import Download.Download_WOS as WOS
+from Download import Download_WOS as WOS
 import numpy as np
-import src.RMDL_Text as RMDL
+from RMDL import RMDL_Text as RMDL
 
 if __name__ == "__main__":
     path_WOS = WOS.download_and_extract()

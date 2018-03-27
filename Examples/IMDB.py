@@ -23,10 +23,10 @@ import os
 os.environ['KERAS_BACKEND'] = 'tensorflow'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
-import src.text_feature_extraction as txt
+from RMDL import text_feature_extraction as txt
 from keras.datasets import imdb
 import numpy as np
-import src.RMDL_Text as RMDL
+from RMDL import RMDL_Text as RMDL
 
 if __name__ == "__main__":
     print("Load IMDB dataset....")

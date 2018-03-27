@@ -23,7 +23,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 from keras.datasets import mnist
 import numpy as np
-import src.RMDL_Image as RMDL
+from RMDL import RMDL_Image as RMDL
 
 if __name__ == "__main__":
     (X_train, y_train), (X_test, y_test) = mnist.load_data()

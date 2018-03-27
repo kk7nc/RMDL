@@ -20,7 +20,7 @@ import os
 import os.path
 global GloVe_DIR
 from pathlib import Path
-import Download.Download_Glove as GloVe
+from Download import Download_Glove as GloVe
 
 
 GloVe_DIR = GloVe.download_and_extract(data='Twitter')

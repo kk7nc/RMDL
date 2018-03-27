@@ -20,14 +20,14 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 from sklearn.metrics import accuracy_score
 import numpy as np
-import src.Plot as Plot
+from RMDL import Plot as Plot
 import gc
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 import collections
 from sklearn.metrics import f1_score
-import src.BuildModel as BuildModel
-import src.Global as G
+from RMDL import BuildModel as BuildModel
+from RMDL import Global as G
 from keras.callbacks import ModelCheckpoint
 np.random.seed(7)
 

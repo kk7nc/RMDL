@@ -25,12 +25,11 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 import numpy as np
-import os
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 import re
 from nltk.stem import PorterStemmer, WordNetLemmatizer
-import src.Global as G
+from RMDL import Global as G
 
 cachedStopWords = stopwords.words("english")
 

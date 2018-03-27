@@ -23,9 +23,9 @@ os.environ["THEANO_FLAGS"] = "mode=FAST_RUN,device=gpu,floatX=float32"
 os.environ['KERAS_BACKEND'] = 'tensorflow'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
-import src.text_feature_extraction as txt
-import Download.Download_WOS as WOS
-import src.RMDL_Text as RMDL
+from RMDL import text_feature_extraction as txt
+from Download import Download_WOS as WOS
+from RMDL import RMDL_Text as RMDL
 import sys
 sys.path.append('../Download_datasets')
 from sklearn.cross_validation import train_test_split

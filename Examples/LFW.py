@@ -24,7 +24,7 @@ os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 from sklearn.datasets import fetch_lfw_people
 from sklearn.model_selection import train_test_split
 import numpy as np
-import src.RMDL_Image as RMDL
+from RMDL import RMDL_Image as RMDL
 
 if __name__ == "__main__":
 

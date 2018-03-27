@@ -24,7 +24,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 from sklearn.datasets import fetch_olivetti_faces
 from sklearn.model_selection import train_test_split
-import src.RMDL_Image as RMDL
+from RMDL import RMDL_Image as RMDL
 
 if __name__ == "__main__":
     number_of_classes = 40

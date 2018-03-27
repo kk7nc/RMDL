@@ -23,11 +23,11 @@ import os
 os.environ['KERAS_BACKEND'] = 'tensorflow'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="0,2,1"
-import src.RMDL_Text as RMDL
+from RMDL import RMDL_Text as RMDL
 import sys
 sys.path.append('../Download_datasets')
 from sklearn.cross_validation import train_test_split, cross_val_score
-import src.text_feature_extraction as txt
+from RMDL import text_feature_extraction as txt
 import numpy as np
 import pandas as pd
 

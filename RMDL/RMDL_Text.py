@@ -23,13 +23,13 @@ os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 from sklearn.metrics import accuracy_score
 import gc
 from sklearn.metrics import confusion_matrix
-import src.Plot as Plot
+from RMDL import Plot as Plot
 import numpy as np
-import src.Global as G
+from RMDL import Global as G
 import collections
 from sklearn.metrics import precision_recall_fscore_support
-import src.BuildModel as BuildModel
-import src.text_feature_extraction as txt
+from RMDL import BuildModel as BuildModel
+from RMDL import text_feature_extraction as txt
 from keras.callbacks import ModelCheckpoint
 np.random.seed(7)
 

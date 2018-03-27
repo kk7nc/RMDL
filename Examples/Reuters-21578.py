@@ -25,7 +25,7 @@ os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 from nltk.corpus import reuters
 from sklearn.preprocessing import MultiLabelBinarizer
 import numpy as np
-import src.RMDL_Text as RMDL
+from RMDL import RMDL_Text as RMDL
 
 if __name__ == "__main__":
     print("Load Reuters dataset....")
