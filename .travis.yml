@@ -44,14 +44,12 @@ install:
   # set library path
   - export LD_LIBRARY_PATH=$HOME/miniconda/envs/test-environment/lib/:$LD_LIBRARY_PATH
 
-  # install TensorFlow (CPU version).
-  - pip install tensorflow
-  - pip install scikit-learn
-  - pip  install keras
-  
+
   # install pydot for visualization tests
   - conda install pydot graphviz
-
+  
+before_script:
+  - pip install -r requirements.txt
 # command to run tests
 script:
     - if [[ "$TEST_MODE" == "Text" ]]; then
