@@ -20,7 +20,7 @@ import os
 import os.path
 global GloVe_DIR
 from Download import Download_Glove as GloVe
-
+import nltk
 
 
 
@@ -39,6 +39,7 @@ def setup(text=False):
         os.makedirs(".\weights")
 
     if text:
+        nltk.download()
         global GloVe_DIR
         GloVe_DIR = GloVe.download_and_extract()
         GloVe_file = "glove.6B.100d.txt"
