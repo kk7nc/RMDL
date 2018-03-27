@@ -18,9 +18,6 @@ RMDL: Random Multimodel Deep Learning for Classification
 
 import sys
 sys.path.append('../Download_datasets')
-
-import nltk
-import gensim
 from sklearn.feature_extraction.text import TfidfVectorizer
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
@@ -151,40 +148,6 @@ def loadData_Tokenizer(X_train, X_test):
     f.close()
     print('Total %s word vectors.' % len(embeddings_index))
     return (X_train, X_test, word_index,embeddings_index)
-
-def W2V_Tokenizer(Data,X_train, X_test):
-
-    nar = [nltk.word_tokenize(sentences) for sentences in Data]
-    w2vmodel = gensim.models.Word2Vec(nar, size=100, window=5, min_count=5, workers=4)
-    selected_nar = nar
-    word_indexes = {}
-    for i in range(len(w2vmodel.wv.vocab)):
-        word_indexes[w2vmodel.wv.index2word[i]] = i
-    narindexed = []
-
-    for a_nar in selected_nar:
-        a_nar_indexed = []
-        for a_word in a_nar:
-            if a_word in word_indexes.keys():
-                a_nar_indexed.append(word_indexes[a_word])
-            else:
-                a_nar_indexed.append(0)
-        narindexed.append(a_nar_indexed)
-
-        word_index = w2vmodel.wv.vocab
-
-    data = pad_sequences(narindexed, maxlen=500)
-
-    EMBEDDING_DIM = 100
-    embedding_matrix = np.zeros((len(w2vmodel.wv.vocab), 100))
-    for i in range(len(w2vmodel.wv.vocab)):
-        embedding_vector = w2vmodel.wv[w2vmodel.wv.index2word[i]]
-        if embedding_vector is not None:
-            embedding_matrix[i] = embedding_vector
-    n = 5
-
-    return (X_train, X_test, word_index,embeddings_index)
-
 
 def loadData(X_train, X_test):
     vectorizer_x = TfidfVectorizer()
