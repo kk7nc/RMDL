@@ -22,8 +22,6 @@ global GloVe_DIR
 from Download import Download_Glove as GloVe
 
 
-GloVe_DIR = ""
-GloVe_DIR = ""
 
 
 
@@ -41,7 +39,8 @@ def setup(text=False):
         os.makedirs(".\weights")
 
     if text:
-        GloVe_DIR = GloVe.download_and_extract(data='Twitter')
+        global GloVe_DIR
+        GloVe_DIR = GloVe.download_and_extract()
         GloVe_file = "glove.6B.100d.txt"
         GloVe_DIR = os.path.join(GloVe_DIR, GloVe_file)
         if not os.path.isfile(GloVe_DIR):
