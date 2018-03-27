@@ -48,9 +48,6 @@ This file contain build random model of deep learning architectures for image an
 
     * The libcupti-dev library,
 
-        * To install this library, issue the following command:
-
-                 $ sudo apt-get install libcupti-dev
                
 
 ## Error and Comments: ##
