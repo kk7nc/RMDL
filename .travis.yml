@@ -19,9 +19,9 @@ matrix:
           env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_comp TEST_MODE=Text
         - python: 3.5
           env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_comp TEST_MODE=Image
-        - python: 3.6ile
+        - python: 3.6
           env: KERAS_BACKEND=cntk PYTHONWARNINGS=ignore TEST_MODE=Text
-        - python: 3.6ile
+        - python: 3.6
           env: KERAS_BACKEND=cntk PYTHONWARNINGS=ignore TEST_MODE=Image
 install:
   # code below is taken from http://conda.pydata.org/docs/travis.html
