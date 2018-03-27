@@ -21,11 +21,7 @@ import os.path
 global GloVe_DIR
 from Download import Download_Glove as GloVe
 import nltk
-
-
-
-
-
+nltk.download("all")
 
 
 MAX_SEQUENCE_LENGTH = 500
@@ -39,7 +35,7 @@ def setup(text=False):
         os.makedirs(".\weights")
 
     if text:
-        nltk.download("all")
+        
         global GloVe_DIR
         GloVe_DIR = GloVe.download_and_extract()
         GloVe_file = "glove.6B.100d.txt"
