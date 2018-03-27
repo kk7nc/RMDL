@@ -54,8 +54,8 @@ install:
 
 # command to run tests
 script:
-    - if [[ "$TEST_MODE" == "Image" ]]; then
+    - if [[ "$TEST_MODE" == "Text" ]]; then
           python Examples/Reuters-21578.py;
-        elif [[ "$TEST_MODE" == "Text" ]]; then
+        elif [[ "$TEST_MODE" == "Image" ]]; then
           python Examples/MNIST.py;
         fi
