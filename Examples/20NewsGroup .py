@@ -24,7 +24,7 @@ os.environ['KERAS_BACKEND'] = 'tensorflow'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 from sklearn.datasets import fetch_20newsgroups
-import src.RMDL_Text as RMDL
+from RMDL import RMDL_Text as RMDL
 
 if __name__ == "__main__":
     newsgroups_train = fetch_20newsgroups(subset='train')
