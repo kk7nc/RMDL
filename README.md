@@ -129,15 +129,14 @@ General:
 
     * The libcupti-dev library,
 
-        * To install this library, issue the following command:
-
-                 $ sudo apt-get install libcupti-dev
                
 ## Text and Document Classification ##
 
 - Download GloVe: Global Vectors for Word Representation [Instruction Documents](https://nlp.stanford.edu/projects/glove/)
 
      * Set data directory into [Global.py](https://github.com/kk7nc/RMDL/blob/master/src/Global.py)
+     
+     * if you are not setting GloVe directory, GloVe will be downloaded  
 
 
 ## Error and Comments: ##
