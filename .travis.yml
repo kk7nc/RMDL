@@ -53,7 +53,7 @@ install:
 # command to run tests
 script:
 - if [[ "$TEST_MODE" == "Image" ]]; then
-      PYTHONPATH=$PWD:$PYTHONPATH py.test Examples/Reuters-21578.py
+      python Examples/Reuters-21578.py;
     elif [[ "$TEST_MODE" == "Text" ]]; then
-      PYTHONPATH=$PWD:$PYTHONPATH py.test Examples/MNIST.py
+      python Examples/MNIST.py;
     fi
