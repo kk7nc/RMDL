@@ -37,7 +37,7 @@ np.random.seed(7)
 def Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
                             n_epochs):
 
-    G.setup()
+    G.setup(text=True)
     X_train_tfidf, X_test_tfidf = txt.loadData(X_train, X_test)
     X_train_Embedded, X_test_Embedded, word_index, embeddings_index = txt.loadData_Tokenizer(X_train, X_test)
     del X_train

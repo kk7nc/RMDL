@@ -33,7 +33,7 @@ np.random.seed(7)
 
 def Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
                             n_epochs):
-    G.setup()
+    G.setup(text=False)
     y_proba = []
 
     score = []

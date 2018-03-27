@@ -23,8 +23,8 @@ from keras.constraints import maxnorm
 from keras.layers import Dense, Flatten
 from keras.layers import Conv1D,MaxPooling2D, \
     MaxPooling1D, Embedding, Merge, Dropout,\
-    GRU,TimeDistributed,Convolution2D,\
-    Activation,Convolution3D,GlobalAveragePooling3D,LSTM
+    GRU,TimeDistributed,Conv2D,\
+    Activation,Conv3D,GlobalAveragePooling3D,LSTM
 from keras import backend as K
 from keras.models import Model
 from keras.layers import Input
@@ -149,14 +149,14 @@ def Image_model_CNN(num_classes,shape):
     Layers = list(range(1, 4))
     Layer = random.choice(Layers)
     Filter = random.choice(values)
-    model.add(Convolution2D(Filter, 3, 3, border_mode='same', input_shape=shape))
+    model.add(Conv2D(Filter, (3, 3), padding='same', input_shape=shape))
     model.add(Activation('relu'))
-    model.add(Convolution2D(Filter, 3, 3))
+    model.add(Conv2D(Filter, (3, 3)))
     model.add(Activation('relu'))
 
     for i in range(0,Layer):
         Filter = random.choice(values)
-        model.add(Convolution2D(Filter, 3, 3,border_mode='same'))
+        model.add(Conv2D(Filter, (3, 3),padding='same'))
         model.add(Activation('relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
         model.add(Dropout(0.5))
@@ -180,13 +180,13 @@ def Image_3D_model_CNN(num_classes,shape,kernel_size=(3,3)):
     Layer = 3
     Filter = random.choice(values)
     print(shape)
-    model.add(Convolution3D(Filter,3,3,1,border_mode='same', input_shape=shape))
+    model.add(Conv2D(Filter,(3,3),1,padding='same', input_shape=shape))
     model.add(Activation('relu'))
-    model.add(Convolution3D(Filter,3, 3,1, border_mode='same', subsample=(2, 2,1)))
+    model.add(Conv2D(Filter,(3, 3),1, padding='same', subsample=(2, 2,1)))
     model.add(Dropout(0.25))
     for i in range(0,Layer):
         Filter = random.choice(values)
-        model.add(Convolution3D(Filter, 3,3,1,subsample = (2,2,1)))
+        model.add(Conv3D(Filter,(3,3,1),subsample = (2,2,1)))
         model.add(Activation('relu'))
     model.add(Dense(512,activation='relu'))
     model.add(GlobalAveragePooling3D())
