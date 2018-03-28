@@ -21,7 +21,7 @@ import os.path
 global GloVe_DIR
 from Download import Download_Glove as GloVe
 import nltk
-nltk.download("all")
+nltk.download("stopwords")
 
 
 MAX_SEQUENCE_LENGTH = 500
