@@ -33,7 +33,7 @@ if __name__ == "__main__":
     X_test = X_test_D / 255.0
     number_of_classes = np.unique(y_train).shape[0]
     shape = (28, 28, 1)
-    batch_size = 500
+    batch_size = 128
     sparse_categorical = 0
     n_epochs = [10, 500, 50]  ## DNN--RNN-CNN
     Random_Deep = [0, 0, 3]  ## DNN--RNN-CNN
