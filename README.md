@@ -1,6 +1,7 @@
-Build Status:
+[![license](https://img.shields.io/badge/DOI-10.1145/3206098.3206111-blue.svg?style=flat)](https://doi.org/10.1145/3206098.3206111)
 [![wercker status](https://app.wercker.com/status/3a564158e809971e2f7416beba5d05af/s/master "wercker status")](https://app.wercker.com/project/byKey/3a564158e809971e2f7416beba5d05af)
 [![Build Status](https://travis-ci.com/kk7nc/RMDL.svg?token=hgKUQ8w7fyzKbCumBbo8&branch=master)](https://travis-ci.com/kk7nc/RMDL)
+[![license](https://img.shields.io/badge/ResearchGate-RMDL-blue.svg?style=flat)](https://www.researchgate.net)
 [![GitHub license](https://img.shields.io/badge/licence-GPL-blue.svg)](./LICENSE)
 
 
