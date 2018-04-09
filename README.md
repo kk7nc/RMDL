@@ -1,7 +1,7 @@
 [![license](https://img.shields.io/badge/DOI-10.1145/3206098.3206111-blue.svg?style=flat)](https://doi.org/10.1145/3206098.3206111)
 [![wercker status](https://app.wercker.com/status/3a564158e809971e2f7416beba5d05af/s/master "wercker status")](https://app.wercker.com/project/byKey/3a564158e809971e2f7416beba5d05af)
 [![Build Status](https://travis-ci.com/kk7nc/RMDL.svg?token=hgKUQ8w7fyzKbCumBbo8&branch=master)](https://travis-ci.com/kk7nc/RMDL)
-[![PowerPoint](https://img.shields.io/badge/PowerPoint-download-red.svg?style=flat)](https://arxiv.org/abs/1709.08267)
+[![PowerPoint](https://img.shields.io/badge/Presentation-download-red.svg?style=flat)](https://github.com/kk7nc/RMDL/blob/master/Documents/RMDL.pdf)
 [![license](https://img.shields.io/badge/ResearchGate-RMDL-blue.svg?style=flat)](https://www.researchgate.net)
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/kk7nc/HDLTex/master)
 [![pdf](https://img.shields.io/badge/pdf-download-red.svg?style=flat)](https://arxiv.org/abs/1709.08267)
@@ -25,7 +25,7 @@ Overview  of  RDML:  Random  Multimodel  Deep  Learning  for  classification.  T
 
 
 <p align="center">
-<img src="http://kowsari.net/onewebmedia/RDL.jpg" width="70%"></img> 
+<img src="http://kowsari.net/onewebmedia/RDL.jpg" width="80%"></img> 
 </p>
 
 
@@ -33,7 +33,7 @@ Random  Multimodel  Deep  Learning  (RDML)  architecture  for  classification.  
 
 
 <p align="center">
-<img src="http://kowsari.net/onewebmedia/RMDL.jpg" width="75%"></img> 
+<img src="http://kowsari.net/onewebmedia/RMDL.jpg" width="85%"></img> 
 </p>
 
 
