@@ -3,7 +3,8 @@
 [![Build Status](https://travis-ci.com/kk7nc/RMDL.svg?token=hgKUQ8w7fyzKbCumBbo8&branch=master)](https://travis-ci.com/kk7nc/RMDL)
 [![license](https://img.shields.io/badge/ResearchGate-RMDL-blue.svg?style=flat)](https://www.researchgate.net)
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/kk7nc/HDLTex/master)
-[![license](https://img.shields.io/badge/pdf-download-red.svg?style=flat)](https://arxiv.org/abs/1709.08267)
+[![pdf](https://img.shields.io/badge/pdf-download-red.svg?style=flat)](https://arxiv.org/abs/1709.08267)
+[![PowerPoint](https://img.shields.io/badge/PowerPoint-download-red.svg?style=flat)](https://arxiv.org/abs/1709.08267)
 [![GitHub license](https://img.shields.io/badge/licence-GPL-blue.svg)](./LICENSE)
 
 
