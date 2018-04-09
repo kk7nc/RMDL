@@ -1,6 +1,10 @@
-Build Status:
+[![license](https://img.shields.io/badge/DOI-10.1145/3206098.3206111-blue.svg?style=flat)](https://doi.org/10.1145/3206098.3206111)
 [![wercker status](https://app.wercker.com/status/3a564158e809971e2f7416beba5d05af/s/master "wercker status")](https://app.wercker.com/project/byKey/3a564158e809971e2f7416beba5d05af)
 [![Build Status](https://travis-ci.com/kk7nc/RMDL.svg?token=hgKUQ8w7fyzKbCumBbo8&branch=master)](https://travis-ci.com/kk7nc/RMDL)
+[![PowerPoint](https://img.shields.io/badge/PowerPoint-download-red.svg?style=flat)](https://arxiv.org/abs/1709.08267)
+[![license](https://img.shields.io/badge/ResearchGate-RMDL-blue.svg?style=flat)](https://www.researchgate.net)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/kk7nc/HDLTex/master)
+[![pdf](https://img.shields.io/badge/pdf-download-red.svg?style=flat)](https://arxiv.org/abs/1709.08267)
 [![GitHub license](https://img.shields.io/badge/licence-GPL-blue.svg)](./LICENSE)
 
 
@@ -14,7 +18,7 @@ Refrenced paper : [An Improvement of Data Classification using Random Multimodel
 
 ## Random  Multimodel  Deep  Learning (RMDL): ##
 
-a   new   ensemble,   deep   learning   approach   for classification.  Deep  learning  models  have  achieved  state-of-the-art  results  across  many  domains.  RMDL  solves  the  problem of  finding  the  best  deep  learning  structure  and  architecture while simultaneously improving robustness and accuracy through ensembles  of  deep  learning  architectures.  RDML  can  accept  asinput a variety data to include text, video, images, and symbolic. 
+A new   ensemble,   deep   learning   approach   for classification.  Deep  learning  models  have  achieved  state-of-the-art  results  across  many  domains.  RMDL  solves  the  problem of  finding  the  best  deep  learning  structure  and  architecture while simultaneously improving robustness and accuracy through ensembles  of  deep  learning  architectures.  RDML  can  accept  asinput a variety data to include text, video, images, and symbolic. 
 
 
 Overview  of  RDML:  Random  Multimodel  Deep  Learning  for  classification.  The  RMDL  includesnRandom  modelswhich aredrandom model of DNN classifiers,cmodels of CNN classifiers, andrRNN classifiers wherer+c+d=n.
