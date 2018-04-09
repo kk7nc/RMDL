@@ -156,6 +156,7 @@ Send an email to [kk7nc@virginia.edu](mailto:kk7nc@virginia.edu)
     author={Kowsari, Kamran and Heidarysafa, Mojtaba and Brown, Donald E. and Jafari Meimandi, Kiana and Barnes, Laura E.},
     booktitle={Proceedings of the 2018 International Conference on Information System and Data Mining},
     year={2018},
+    DOI={https://doi.org/10.1145/3206098.3206111},
     organization={ACM}
     }
 
