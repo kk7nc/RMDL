@@ -2,6 +2,7 @@
 [![wercker status](https://app.wercker.com/status/3a564158e809971e2f7416beba5d05af/s/master "wercker status")](https://app.wercker.com/project/byKey/3a564158e809971e2f7416beba5d05af)
 [![Build Status](https://travis-ci.com/kk7nc/RMDL.svg?token=hgKUQ8w7fyzKbCumBbo8&branch=master)](https://travis-ci.com/kk7nc/RMDL)
 [![license](https://img.shields.io/badge/ResearchGate-RMDL-blue.svg?style=flat)](https://www.researchgate.net)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/kk7nc/HDLTex/master)
 [![GitHub license](https://img.shields.io/badge/licence-GPL-blue.svg)](./LICENSE)
 
 
