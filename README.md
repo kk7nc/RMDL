@@ -11,10 +11,10 @@
 # RMDL: Random Multimodel Deep Learning for Classification #
 
 
-Refrenced paper : [RMDL: Random Multimodel Deep Learning for Classification]()
+Referenced  paper : [RMDL: Random Multimodel Deep Learning for Classification]()
 
 
-Refrenced paper : [An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)]()
+Referenced  paper : [An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)]()
 
 ## Random  Multimodel  Deep  Learning (RMDL): ##
 
