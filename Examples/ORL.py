@@ -30,7 +30,7 @@ if __name__ == "__main__":
     shape = (64, 64, 1)
     data = fetch_olivetti_faces()
     X_train, X_test, y_train, y_test = train_test_split(data.data,
-                                                    data.target, stratify=data.target, test_size=200)
+                                                    data.target, stratify=data.target, test_size=40)
     X_train = X_train.reshape(X_train.shape[0], 64, 64, 1).astype('float32')
     X_test = X_test.reshape(X_test.shape[0], 64, 64, 1).astype('float32')
 
