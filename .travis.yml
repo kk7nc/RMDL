@@ -4,6 +4,16 @@ language: python
 matrix:
     include:
         - python: 3.6
+          env: KERAS_BACKEND=tensorflow TEST_MODE=ORL
+        - python: 3.5
+          env: KERAS_BACKEND=tensorflow TEST_MODE=ORL
+        - python: 3.6
+          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_compile TEST_MODE=ORL
+        - python: 3.5
+          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_comp TEST_MODE=ORL
+        - python: 3.6
+          env: KERAS_BACKEND=cntk PYTHONWARNINGS=ignore TEST_MODE=ORL
+        - python: 3.6
           env: KERAS_BACKEND=tensorflow TEST_MODE=WOS
         - python: 3.5
           env: KERAS_BACKEND=tensorflow TEST_MODE=WOS
@@ -23,16 +33,6 @@ matrix:
           env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_comp TEST_MODE=CIFAR
         - python: 3.6
           env: KERAS_BACKEND=cntk PYTHONWARNINGS=ignore TEST_MODE=CIFAR            
-        - python: 3.6
-          env: KERAS_BACKEND=tensorflow TEST_MODE=ORL
-        - python: 3.5
-          env: KERAS_BACKEND=tensorflow TEST_MODE=ORL
-        - python: 3.6
-          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_compile TEST_MODE=ORL
-        - python: 3.5
-          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_comp TEST_MODE=ORL
-        - python: 3.6
-          env: KERAS_BACKEND=cntk PYTHONWARNINGS=ignore TEST_MODE=ORL
         - python: 3.6
           env: KERAS_BACKEND=tensorflow TEST_MODE=MNIST
         - python: 3.5
