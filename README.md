@@ -24,42 +24,17 @@ A new   ensemble,   deep   learning   approach   for classification.  Deep  lear
 Overview  of  RDML:  Random  Multimodel  Deep  Learning  for  classification.  The  RMDL  includesnRandom  modelswhich aredrandom model of DNN classifiers,cmodels of CNN classifiers, andrRNN classifiers wherer+c+d=n.
 
 
-<p align="center">
-<img src="http://kowsari.net/onewebmedia/RDL.jpg" width="80%"></img> 
-</p>
-
-
 Random  Multimodel  Deep  Learning  (RDML)  architecture  for  classification.  RMDL  includes  3  Random  models,  oneDNN classifier at left, one Deep CNN classifier at middle, and one Deep RNN classifier at right (each unit could be LSTMor GRU).
 
-
-<p align="center">
-<img src="http://kowsari.net/onewebmedia/RMDL.jpg" width="85%"></img> 
-</p>
 
 
 ## Installation ##
 
 There are git RMDL in this repository; to clone all the needed files, please use:
-
-    git clone --recursive https://github.com/kk7nc/RMDL.git
-     
-     
-The primary requirements for this package are Python 3 with Tensorflow. The requirements.txt file contains a listing of the required Python packages; to install all requirements, run the following:
-    
-    pip -r install requirements.txt
-    
-If the above command does not work, use the following:
-
-    pip3  install -r requirements.txt
-        
-or
-
-    sudo -H pip  install -r requirements.txt
-    
-If are using [Anaconda](https://www.anaconda.com/download/), use the following:
-
-    conda install --file requirements.txt
-        
+```python
+    pip install RMDL
+```        
+       
 ## Documentation: ##
 The exponential growth in the number of complex datasets every year requires  more enhancement in machine learning methods to provide  robust and accurate data classification. Lately, deep learning approaches have been achieved surpassing results in comparison to previous machine learning algorithms on tasks such as image classification, natural language processing, face recognition, and etc. The success of these deep learning algorithms relys on their capacity to model complex and non-linear relationships between data. However, finding the suitable structure for these models has been a challenge for researchers. This paper introduces Random Multimodel Deep Learning (RMDL): a new ensemble, deep learning approach for classification.  RMDL solves the problem of finding the best deep learning structure and architecture while simultaneously improving robustness and accuracy through ensembles of deep learning architectures. In short, RMDL trains multiple models of Deep Neural Network (DNN), Convolutional Neural Network (CNN) and Recurrent Neural Network (RNN) in parallel and combines their results to produce better result of any of those models individually. To create these models, each deep learning model has been constructed in a random fashion regarding the number of layers and nodes in their neural network structure. The resulting RDML model can be used for various domains such as text, video, images, and symbolic. In this paper, we describe RMDL model in depth and show the results for image and text classification as well as face recognition. For image classification, we compared our model with some of the available baselines using MNIST and CIFAR-10 datasets. Similarly, we used four datasets namely, WOS, Reuters, IMDB, and 20newsgroup and compared our results with available baselines. Web of Science (WOS) has been collected  by authors and consists of three sets (small, medium and large set). Lastly, we used ORL dataset to compare the performance with other face recognition methods. These test results show that RDML model consistently outperform standard methods over a broad range of data types and classification problems.
 
@@ -143,6 +118,36 @@ General:
      
      * if you are not setting GloVe directory, GloVe will be downloaded  
 
+
+## Example ##
+
+
+### MNIST ###
+```python
+    import sys
+    sys.path.append('../RMDL')
+    import os
+    os.environ['KERAS_BACKEND'] = 'tensorflow'
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+    os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
+    from keras.datasets import mnist
+    import numpy as np
+    from RMDL import RMDL_Image as RMDL
+    
+        (X_train, y_train), (X_test, y_test) = mnist.load_data()
+    X_train_D = X_train.reshape(X_train.shape[0], 28, 28, 1).astype('float32')
+    X_test_D = X_test.reshape(X_test.shape[0], 28, 28, 1).astype('float32')
+    X_train = X_train_D / 255.0
+    X_test = X_test_D / 255.0
+    number_of_classes = np.unique(y_train).shape[0]
+    shape = (28, 28, 1)
+    batch_size = 128
+    sparse_categorical = 0
+    n_epochs = [10, 500, 50]  ## DNN--RNN-CNN
+    Random_Deep = [3, 0, 0]  ## DNN--RNN-CNN
+    RMDL.Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
+                            n_epochs)
+  ```
 
 ## Error and Comments: ##
 
