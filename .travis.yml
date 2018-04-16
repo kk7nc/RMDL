@@ -4,25 +4,37 @@ language: python
 matrix:
     include:
         - python: 3.6
-          env: KERAS_BACKEND=tensorflow TEST_MODE=Text
-        - python: 3.6
-          env: KERAS_BACKEND=tensorflow TEST_MODE=Image
+          env: KERAS_BACKEND=tensorflow TEST_MODE=WOS
         - python: 3.5
-          env: KERAS_BACKEND=tensorflow TEST_MODE=Text
+          env: KERAS_BACKEND=tensorflow TEST_MODE=WOS
+        - python: 3.6
+          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_compile TEST_MODE=WOS
         - python: 3.5
-          env: KERAS_BACKEND=tensorflow TEST_MODE=Image
+          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_comp TEST_MODE=WOS
         - python: 3.6
-          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_compile TEST_MODE=Text
+          env: KERAS_BACKEND=cntk PYTHONWARNINGS=ignore TEST_MODE=WOS   
         - python: 3.6
-          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_compile TEST_MODE=Image
+          env: KERAS_BACKEND=tensorflow TEST_MODE=MNIST
         - python: 3.5
-          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_comp TEST_MODE=Text
+          env: KERAS_BACKEND=tensorflow TEST_MODE=MNIST
+        - python: 3.6
+          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_compile TEST_MODE=MNIST
         - python: 3.5
-          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_comp TEST_MODE=Image
+          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_comp TEST_MODE=MNIST
         - python: 3.6
-          env: KERAS_BACKEND=cntk PYTHONWARNINGS=ignore TEST_MODE=Text
+          env: KERAS_BACKEND=cntk PYTHONWARNINGS=ignore TEST_MODE=MNIST          
         - python: 3.6
-          env: KERAS_BACKEND=cntk PYTHONWARNINGS=ignore TEST_MODE=Image
+          env: KERAS_BACKEND=tensorflow TEST_MODE=Reuters-21578
+        - python: 3.5
+          env: KERAS_BACKEND=tensorflow TEST_MODE=Reuters-21578
+        - python: 3.6
+          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_compile TEST_MODE=Reuters-21578
+        - python: 3.5
+          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_comp TEST_MODE=Reuters-21578
+        - python: 3.6
+          env: KERAS_BACKEND=cntk PYTHONWARNINGS=ignore TEST_MODE=Reuters-21578 
+       
+          
 install:
   # code below is taken from http://conda.pydata.org/docs/travis.html
   - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
@@ -52,8 +64,18 @@ before_script:
   - pip install -r requirements.txt
 # command to run tests
 script:
-    - if [[ "$TEST_MODE" == "Text" ]]; then
-          python Examples/Reuters-21578.py;
-        elif [[ "$TEST_MODE" == "Image" ]]; then
+    - if [[ "$TEST_MODE" == "20NewsGroup" ]]; then
+          python Examples/20NewsGroup.py;
+        elif [[ "$TEST_MODE" == "CIFAR" ]]; then
+          python Examples/CIFAR.py;
+        elif [[ "$TEST_MODE" == "IMDB" ]]; then
+          python Examples/IMDB.py;
+        elif [[ "$TEST_MODE" == "ORL" ]]; then
+          python Examples/ORL.py;
+        elif [[ "$TEST_MODE" == "MNIST" ]]; then
           python Examples/MNIST.py;
+        elif [[ "$TEST_MODE" == "Reuters-21578" ]]; then
+          python Examples/Reuters-21578.py;
+        elif [[ "$TEST_MODE" == "WOS" ]]; then
+          python Examples/WOS-5736.py;
         fi

@@ -1,20 +1,20 @@
 [![license](https://img.shields.io/badge/DOI-10.1145/3206098.3206111-blue.svg?style=flat)](https://doi.org/10.1145/3206098.3206111)
 [![wercker status](https://app.wercker.com/status/3a564158e809971e2f7416beba5d05af/s/master "wercker status")](https://app.wercker.com/project/byKey/3a564158e809971e2f7416beba5d05af)
 [![Build Status](https://travis-ci.com/kk7nc/RMDL.svg?token=hgKUQ8w7fyzKbCumBbo8&branch=master)](https://travis-ci.com/kk7nc/RMDL)
-[![PowerPoint](https://img.shields.io/badge/PowerPoint-download-red.svg?style=flat)](https://arxiv.org/abs/1709.08267)
+[![PowerPoint](https://img.shields.io/badge/Presentation-download-red.svg?style=flat)](https://github.com/kk7nc/RMDL/blob/master/Documents/RMDL.pdf)
 [![license](https://img.shields.io/badge/ResearchGate-RMDL-blue.svg?style=flat)](https://www.researchgate.net)
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/kk7nc/HDLTex/master)
-[![pdf](https://img.shields.io/badge/pdf-download-red.svg?style=flat)](https://arxiv.org/abs/1709.08267)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/kk7nc/RMDL/master)
+[![pdf](https://img.shields.io/badge/pdf-download-red.svg?style=flat)](https://github.com/kk7nc/RMDL/blob/master/Documents/ACM-RMDL.pdf)
 [![GitHub license](https://img.shields.io/badge/licence-GPL-blue.svg)](./LICENSE)
 
 
 # RMDL: Random Multimodel Deep Learning for Classification #
 
 
-Refrenced paper : [RMDL: Random Multimodel Deep Learning for Classification]()
+Referenced  paper : [RMDL: Random Multimodel Deep Learning for Classification]()
 
 
-Refrenced paper : [An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)]()
+Referenced  paper : [An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)]()
 
 ## Random  Multimodel  Deep  Learning (RMDL): ##
 
@@ -24,42 +24,17 @@ A new   ensemble,   deep   learning   approach   for classification.  Deep  lear
 Overview  of  RDML:  Random  Multimodel  Deep  Learning  for  classification.  The  RMDL  includesnRandom  modelswhich aredrandom model of DNN classifiers,cmodels of CNN classifiers, andrRNN classifiers wherer+c+d=n.
 
 
-<p align="center">
-<img src="http://kowsari.net/onewebmedia/RDL.jpg" width="70%"></img> 
-</p>
-
-
 Random  Multimodel  Deep  Learning  (RDML)  architecture  for  classification.  RMDL  includes  3  Random  models,  oneDNN classifier at left, one Deep CNN classifier at middle, and one Deep RNN classifier at right (each unit could be LSTMor GRU).
 
-
-<p align="center">
-<img src="http://kowsari.net/onewebmedia/RMDL.jpg" width="75%"></img> 
-</p>
 
 
 ## Installation ##
 
 There are git RMDL in this repository; to clone all the needed files, please use:
-
-    git clone --recursive https://github.com/kk7nc/RMDL.git
-     
-     
-The primary requirements for this package are Python 3 with Tensorflow. The requirements.txt file contains a listing of the required Python packages; to install all requirements, run the following:
-    
-    pip -r install requirements.txt
-    
-If the above command does not work, use the following:
-
-    pip3  install -r requirements.txt
-        
-or
-
-    sudo -H pip  install -r requirements.txt
-    
-If are using [Anaconda](https://www.anaconda.com/download/), use the following:
-
-    conda install --file requirements.txt
-        
+```python
+    pip install RMDL
+```        
+       
 ## Documentation: ##
 The exponential growth in the number of complex datasets every year requires  more enhancement in machine learning methods to provide  robust and accurate data classification. Lately, deep learning approaches have been achieved surpassing results in comparison to previous machine learning algorithms on tasks such as image classification, natural language processing, face recognition, and etc. The success of these deep learning algorithms relys on their capacity to model complex and non-linear relationships between data. However, finding the suitable structure for these models has been a challenge for researchers. This paper introduces Random Multimodel Deep Learning (RMDL): a new ensemble, deep learning approach for classification.  RMDL solves the problem of finding the best deep learning structure and architecture while simultaneously improving robustness and accuracy through ensembles of deep learning architectures. In short, RMDL trains multiple models of Deep Neural Network (DNN), Convolutional Neural Network (CNN) and Recurrent Neural Network (RNN) in parallel and combines their results to produce better result of any of those models individually. To create these models, each deep learning model has been constructed in a random fashion regarding the number of layers and nodes in their neural network structure. The resulting RDML model can be used for various domains such as text, video, images, and symbolic. In this paper, we describe RMDL model in depth and show the results for image and text classification as well as face recognition. For image classification, we compared our model with some of the available baselines using MNIST and CIFAR-10 datasets. Similarly, we used four datasets namely, WOS, Reuters, IMDB, and 20newsgroup and compared our results with available baselines. Web of Science (WOS) has been collected  by authors and consists of three sets (small, medium and large set). Lastly, we used ORL dataset to compare the performance with other face recognition methods. These test results show that RDML model consistently outperform standard methods over a broad range of data types and classification problems.
 
@@ -144,6 +119,64 @@ General:
      * if you are not setting GloVe directory, GloVe will be downloaded  
 
 
+## Example ##
+
+
+### MNIST ###
+```python
+    from keras.datasets import mnist
+    import numpy as np
+    from RMDL import RMDL_Image as RMDL
+    
+        (X_train, y_train), (X_test, y_test) = mnist.load_data()
+    X_train_D = X_train.reshape(X_train.shape[0], 28, 28, 1).astype('float32')
+    X_test_D = X_test.reshape(X_test.shape[0], 28, 28, 1).astype('float32')
+    X_train = X_train_D / 255.0
+    X_test = X_test_D / 255.0
+    number_of_classes = np.unique(y_train).shape[0]
+    shape = (28, 28, 1)
+    batch_size = 128
+    sparse_categorical = 0
+    n_epochs = [10, 500, 50]  ## DNN--RNN-CNN
+    Random_Deep = [3, 0, 0]  ## DNN--RNN-CNN
+    RMDL.Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
+                            n_epochs)
+  ```
+
+
+### Web Of Science ###
+```python
+    from RMDL import text_feature_extraction as txt
+    from sklearn.model_selection import train_test_split
+    from RMDL.Download import Download_WOS as WOS
+    import numpy as np
+    from RMDL import RMDL_Text as RMDL
+
+    path_WOS = WOS.download_and_extract()
+    fname = os.path.join(path_WOS,"WebOfScience/WOS11967/X.txt")
+    fnamek = os.path.join(path_WOS,"WebOfScience/WOS11967/Y.txt")
+    with open(fname, encoding="utf-8") as f:
+        content = f.readlines()
+        content = [txt.text_cleaner(x) for x in content]
+    with open(fnamek) as fk:
+        contentk = fk.readlines()
+    contentk = [x.strip() for x in contentk]
+    Label = np.matrix(contentk, dtype=int)
+    Label = np.transpose(Label)
+    np.random.seed(7)
+    print(Label.shape)
+    X_train, X_test, y_train, y_test = train_test_split(content, Label, test_size=0.2, random_state=4)
+
+    batch_size = 100
+    sparse_categorical = 0
+    n_epochs = [5000, 500, 500]  ## DNN--RNN-CNN
+    Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
+
+    RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
+                            n_epochs)
+
+```
+More Exanmple [link](https://github.com/kk7nc/RMDL/tree/master/Examples)
 ## Error and Comments: ##
 
 Send an email to [kk7nc@virginia.edu](mailto:kk7nc@virginia.edu)
@@ -156,6 +189,7 @@ Send an email to [kk7nc@virginia.edu](mailto:kk7nc@virginia.edu)
     author={Kowsari, Kamran and Heidarysafa, Mojtaba and Brown, Donald E. and Jafari Meimandi, Kiana and Barnes, Laura E.},
     booktitle={Proceedings of the 2018 International Conference on Information System and Data Mining},
     year={2018},
+    DOI={https://doi.org/10.1145/3206098.3206111},
     organization={ACM}
     }
 
