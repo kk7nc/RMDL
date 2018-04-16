@@ -20,12 +20,18 @@ Referenced  paper : [An Improvement of Data Classification using Random Multimod
 
 A new   ensemble,   deep   learning   approach   for classification.  Deep  learning  models  have  achieved  state-of-the-art  results  across  many  domains.  RMDL  solves  the  problem of  finding  the  best  deep  learning  structure  and  architecture while simultaneously improving robustness and accuracy through ensembles  of  deep  learning  architectures.  RDML  can  accept  asinput a variety data to include text, video, images, and symbolic. 
 
+<p align="center">	
+<img src="http://kowsari.net/onewebmedia/RDL.jpg" width="80%"></img> 	
+</p>
 
 Overview  of  RDML:  Random  Multimodel  Deep  Learning  for  classification.  The  RMDL  includesnRandom  modelswhich aredrandom model of DNN classifiers,cmodels of CNN classifiers, andrRNN classifiers wherer+c+d=n.
 
 
 Random  Multimodel  Deep  Learning  (RDML)  architecture  for  classification.  RMDL  includes  3  Random  models,  oneDNN classifier at left, one Deep CNN classifier at middle, and one Deep RNN classifier at right (each unit could be LSTMor GRU).
 
+<p align="center">	
+<img src="http://kowsari.net/onewebmedia/RMDL.jpg" width="85%"></img> 	
+</p>	
 
 
 ## Installation ##
