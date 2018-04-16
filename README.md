@@ -144,7 +144,7 @@ General:
   ```
 
 
-### MNIST ###
+### Web Of Science ###
 ```python
     from RMDL import text_feature_extraction as txt
     from sklearn.model_selection import train_test_split
@@ -176,6 +176,7 @@ General:
                             n_epochs)
 
 ```
+More Exanmple [link](https://github.com/kk7nc/RMDL/tree/master/Examples)
 ## Error and Comments: ##
 
 Send an email to [kk7nc@virginia.edu](mailto:kk7nc@virginia.edu)
