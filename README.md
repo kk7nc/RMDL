@@ -124,12 +124,6 @@ General:
 
 ### MNIST ###
 ```python
-    import sys
-    sys.path.append('../RMDL')
-    import os
-    os.environ['KERAS_BACKEND'] = 'tensorflow'
-    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-    os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
     from keras.datasets import mnist
     import numpy as np
     from RMDL import RMDL_Image as RMDL
@@ -152,15 +146,9 @@ General:
 
 ### MNIST ###
 ```python
-    import sys
-    sys.path.append('../Download_datasets')
-    import os
-    os.environ['KERAS_BACKEND'] = 'tensorflow'
-    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-    os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
     from RMDL import text_feature_extraction as txt
     from sklearn.model_selection import train_test_split
-    from Download import Download_WOS as WOS
+    from RMDL.Download import Download_WOS as WOS
     import numpy as np
     from RMDL import RMDL_Text as RMDL
 
