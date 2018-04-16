@@ -16,12 +16,7 @@ RMDL: Random Multimodel Deep Learning for Classification
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 import sys
-sys.path.append('../src')
-sys.path.append('../Download_datasets')
 import os
-os.environ['KERAS_BACKEND'] = 'tensorflow'
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
 import nltk
 nltk.download("reuters")
 from nltk.corpus import reuters

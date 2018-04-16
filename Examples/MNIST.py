@@ -15,12 +15,7 @@ RMDL: Random Multimodel Deep Learning for Classification
  * Comments and Error: email: kk7nc@virginia.edu
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-import sys
-sys.path.append('../RMDL')
-import os
-os.environ['KERAS_BACKEND'] = 'tensorflow'
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-os.environ["CUDA_VISIBLE_DEVICES"]="2,1,0"
+
 from keras.datasets import mnist
 import numpy as np
 from RMDL import RMDL_Image as RMDL

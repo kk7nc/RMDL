@@ -19,7 +19,7 @@ import numpy as np
 import os
 import os.path
 global GloVe_DIR
-from Download import Download_Glove as GloVe
+from RMDL.Download import Download_Glove as GloVe
 import nltk
 nltk.download("stopwords")
 
@@ -40,6 +40,7 @@ def setup(text=False):
         GloVe_DIR = GloVe.download_and_extract()
         GloVe_file = "glove.6B.100d.txt"
         GloVe_DIR = os.path.join(GloVe_DIR, GloVe_file)
+        print(GloVe_DIR)
         if not os.path.isfile(GloVe_DIR):
             print("Could not find %s Set GloVe Directory in Global.py ", GloVe)
             exit()

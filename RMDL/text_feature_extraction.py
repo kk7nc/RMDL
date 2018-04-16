@@ -16,8 +16,6 @@ RMDL: Random Multimodel Deep Learning for Classification
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 
-import sys
-sys.path.append('../Download_datasets')
 from sklearn.feature_extraction.text import TfidfVectorizer
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
@@ -138,6 +136,7 @@ def loadData_Tokenizer(X_train, X_test):
     embeddings_index = {}
     f = open(G.GloVe_DIR, encoding="utf8")
     for line in f:
+
         values = line.split()
         word = values[0]
         try:
