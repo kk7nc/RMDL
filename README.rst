@@ -1,4 +1,4 @@
-|license| |wercker status| |Build Status| |PowerPoint| |license|
+|DOI| |license| |wercker status| |Build Status| |PowerPoint| |license|
 |Binder| |pdf| |GitHub license|
 
 RMDL: Random Multimodel Deep Learning for Classification
@@ -290,7 +290,7 @@ And
     year={2018}
     }
 
-.. |license| image:: https://img.shields.io/badge/DOI-10.1145/3206098.3206111-blue.svg?style=flat
+.. |DOI| image:: https://img.shields.io/badge/DOI-10.1145/3206098.3206111-blue.svg?style=flat
    :target: https://doi.org/10.1145/3206098.3206111
 .. |wercker status| image:: https://app.wercker.com/status/3a564158e809971e2f7416beba5d05af/s/master
    :target: https://app.wercker.com/project/byKey/3a564158e809971e2f7416beba5d05af
