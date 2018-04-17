@@ -1,4 +1,4 @@
-|DOI| |license| |wercker status| |Build Status| |PowerPoint| |license|
+|DOI| |wercker status| |Build Status| |PowerPoint| |license|
 |Binder| |pdf| |GitHub license|
 
 RMDL: Random Multimodel Deep Learning for Classification
