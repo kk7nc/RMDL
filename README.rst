@@ -5,10 +5,10 @@ RMDL: Random Multimodel Deep Learning for Classification
 ========================================================
 
 Referenced paper : `RMDL: Random Multimodel Deep Learning for
-Classification <>`__
+Classification <www.kowsari.net>`__
 
 Referenced paper : `An Improvement of Data Classification using Random
-Multimodel Deep Learning (RMDL) <>`__
+Multimodel Deep Learning (RMDL) <www.kowsari.net>`__
 
 Random Multimodel Deep Learning (RMDL):
 ---------------------------------------
@@ -257,8 +257,12 @@ Web Of Science
                                 n_epochs)
 
 More Exanmple
-`link <https://github.com/kk7nc/RMDL/tree/master/Examples>`__ ## Error
-and Comments: ##
+`link <https://github.com/kk7nc/RMDL/tree/master/Examples>`__ 
+
+
+
+Error and Comments:
+---------
 
 Send an email to kk7nc@virginia.edu
 
