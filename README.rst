@@ -20,13 +20,14 @@ architecture while simultaneously improving robustness and accuracy
 through ensembles of deep learning architectures. RDML can accept
 asinput a variety data to include text, video, images, and symbolic.
 
-.. raw:: html
 
-   <p align="center">
+.. image:: http://kowsari.net/onewebmedia/RDL.jpg
+    :alt: RDL
+    :width: 888 px
+    :align: center
+    
 
-.. raw:: html
-
-   </p>
+   
 
 Overview of RDML: Random Multimodel Deep Learning for classification.
 The RMDL includesnRandom modelswhich aredrandom model of DNN
@@ -38,13 +39,11 @@ RMDL includes 3 Random models, oneDNN classifier at left, one Deep CNN
 classifier at middle, and one Deep RNN classifier at right (each unit
 could be LSTMor GRU).
 
-.. raw:: html
-
-   <p align="center">
-
-.. raw:: html
-
-   </p>
+.. image:: http://kowsari.net/onewebmedia/RMDL.jpg
+    :alt: RDL
+    :width: 888 px
+    :align: center
+   
 
 Installation
 ------------
