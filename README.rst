@@ -53,7 +53,7 @@ please use:
 
 .. code:: python
 
-        pip install RMDL
+        - pip install RMDL
 
 Documentation:
 --------------
