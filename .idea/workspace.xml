@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a4c78d4-a455-45d3-99a2-5c81c09af077" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Examples/Text_pandas - Copy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/Text_pandas - Copy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Examples/WOS-5736.py" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/WOS-5736.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Examples/replay_pid360.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RMDL/Plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/RMDL/Plot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RMDL/RMDL_Image.py" beforeDir="false" afterPath="$PROJECT_DIR$/RMDL/RMDL_Image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RMDL/RMDL_Text.py" beforeDir="false" afterPath="$PROJECT_DIR$/RMDL/RMDL_Text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/README.rst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,9 +29,10 @@
     <SUITE FILE_PATH="coverage/Data_Cleaning_Code_Python$Read.coverage" NAME="Read Coverage Results" MODIFIED="1496104821841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RMDL$ACM_CHI.coverage" NAME="ACM_CHI Coverage Results" MODIFIED="1504309649187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RMDL$Reuters_21578.coverage" NAME="Reuters-21578 Coverage Results" MODIFIED="1521754575486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Examples" />
-    <SUITE FILE_PATH="coverage/RMDL$Text_pandas___Copy.coverage" NAME="Text_pandas - Copy Coverage Results" MODIFIED="1524173534711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Examples" />
+    <SUITE FILE_PATH="coverage/RMDL$Text_pandas___Copy.coverage" NAME="Text_pandas - Copy Coverage Results" MODIFIED="1524174494270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Examples" />
     <SUITE FILE_PATH="coverage/Data_Cleaning_Code_Python$DNN.coverage" NAME="DNN Coverage Results" MODIFIED="1496379277572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RMDL$DNN.coverage" NAME="DNN Coverage Results" MODIFIED="1506801317976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/SHen/Code_Regression" />
+    <SUITE FILE_PATH="coverage/RMDL$docutils_task_in_README_rst.coverage" NAME="docutils task in README.rst Coverage Results" MODIFIED="1524176029291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HDLTex_finalCode$HDLTex.coverage" NAME="HDLTex Coverage Results" MODIFIED="1498705865770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RMDL$WOS_5736__1_.coverage" NAME="WOS-5736 Coverage Results" MODIFIED="1520546374915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Examples" />
     <SUITE FILE_PATH="coverage/Data_Cleaning_Code_Python$train.coverage" NAME="train Coverage Results" MODIFIED="1496124427554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/multi-class-text-classification-cnn-rnn-master" />
@@ -111,8 +110,8 @@
       <file leaf-file-name="RMDL_Text.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RMDL/RMDL_Text.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="233" column="13" lean-forward="true" selection-start-line="233" selection-start-column="13" selection-end-line="233" selection-end-column="13" />
+            <state relative-caret-position="304">
+              <caret line="228" selection-start-line="228" selection-end-line="229" selection-end-column="32" />
               <folding>
                 <element signature="e#628#637#0" expanded="true" />
               </folding>
@@ -123,8 +122,8 @@
       <file leaf-file-name="MNIST.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Examples/MNIST.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+            <state relative-caret-position="218">
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -132,8 +131,8 @@
       <file leaf-file-name="RMDL_Image.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RMDL/RMDL_Image.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="150" column="43" lean-forward="true" selection-start-line="150" selection-start-column="43" selection-end-line="150" selection-end-column="43" />
+            <state relative-caret-position="321">
+              <caret line="157" column="32" selection-start-line="157" selection-start-column="32" selection-end-line="157" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -162,8 +161,8 @@
       <file leaf-file-name="Text_pandas - Copy.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Examples/Text_pandas - Copy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="46" column="17" lean-forward="true" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+            <state relative-caret-position="219">
+              <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
               <folding>
                 <element signature="e#628#662#0" expanded="true" />
               </folding>
@@ -171,11 +170,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Plot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Plot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RMDL/Plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+            <state relative-caret-position="119">
+              <caret line="22" column="14" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -198,11 +197,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.rst" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.rst" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="144" column="41" selection-start-line="144" selection-start-column="41" selection-end-line="144" selection-end-column="41" />
+            <state relative-caret-position="283">
+              <caret line="276" column="40" selection-start-line="276" selection-start-column="40" selection-end-line="276" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -301,12 +300,12 @@
         <option value="$PROJECT_DIR$/RMDL/Global.py" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/RMDL/text_feature_extraction.py" />
-        <option value="$PROJECT_DIR$/README.rst" />
         <option value="$PROJECT_DIR$/Examples/Text_pandas - Copy.py" />
         <option value="$PROJECT_DIR$/Examples/WOS-5736.py" />
+        <option value="$PROJECT_DIR$/RMDL/Plot.py" />
         <option value="$PROJECT_DIR$/RMDL/RMDL_Text.py" />
         <option value="$PROJECT_DIR$/RMDL/RMDL_Image.py" />
-        <option value="$PROJECT_DIR$/RMDL/Plot.py" />
+        <option value="$PROJECT_DIR$/README.rst" />
       </list>
     </option>
   </component>
@@ -390,7 +389,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.MNIST">
+  <component name="RunManager" selected="Python docs.docutils task in README.rst">
     <configuration name="MNIST" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Data Cleaning Code Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -424,25 +423,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Examples/ORL.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="true" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="Text_facebook" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Data Cleaning Code Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\tensorflow\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Examples" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Examples/Text_facebook.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="true" />
@@ -609,6 +589,22 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
+    <configuration name="docutils task in README.rst" type="docs" factoryName="Docutils task" temporary="true">
+      <module name="Data Cleaning Code Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="docutils_input_file" value="$PROJECT_DIR$/README.rst" />
+      <option name="docutils_output_file" value="$PROJECT_DIR$/README.html" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="rst2html" />
+      <option name="docutils_open_in_browser" value="true" />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -633,18 +629,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.WOS-5736" />
-      <item itemvalue="Python.Text_facebook" />
       <item itemvalue="Python.ORL" />
       <item itemvalue="Python.Text_pandas - Copy" />
       <item itemvalue="Python.MNIST" />
+      <item itemvalue="Python docs.docutils task in README.rst" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.MNIST" />
+        <item itemvalue="Python docs.docutils task in README.rst" />
         <item itemvalue="Python.Text_pandas - Copy" />
+        <item itemvalue="Python.MNIST" />
         <item itemvalue="Python.WOS-5736" />
         <item itemvalue="Python.ORL" />
-        <item itemvalue="Python.Text_facebook" />
       </list>
     </recent_temporary>
   </component>
@@ -688,9 +684,9 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32900432" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.32900432" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49343544" visible="true" weight="0.32900432" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49343544" visible="true" weight="0.32900432" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.32683983" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10660981" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10660981" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32942432" />
       <window_info anchor="right" id="SciView" order="4" sideWeight="0.9580645" visible="true" weight="0.39392325" />
@@ -972,13 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="144" column="41" selection-start-line="144" selection-start-column="41" selection-end-line="144" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Examples/WOS-5736.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -993,46 +982,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RMDL/RMDL_Text.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="233" column="13" lean-forward="true" selection-start-line="233" selection-start-column="13" selection-end-line="233" selection-end-column="13" />
-          <folding>
-            <element signature="e#628#637#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Examples/MNIST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RMDL/RMDL_Image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="150" column="43" lean-forward="true" selection-start-line="150" selection-start-column="43" selection-end-line="150" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RMDL/text_feature_extraction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1086">
           <caret line="71" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="e#629#688#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Examples/Text_pandas - Copy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="46" column="17" lean-forward="true" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
-          <folding>
-            <element signature="e#628#662#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1046,8 +1001,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RMDL/Plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        <state relative-caret-position="119">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RMDL/RMDL_Text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="228" selection-start-line="228" selection-end-line="229" selection-end-column="32" />
+          <folding>
+            <element signature="e#628#637#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RMDL/RMDL_Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="157" column="32" selection-start-line="157" selection-start-column="32" selection-end-line="157" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/MNIST.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/Text_pandas - Copy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+          <folding>
+            <element signature="e#628#662#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="276" column="40" selection-start-line="276" selection-start-column="40" selection-end-line="276" selection-end-column="40" />
         </state>
       </provider>
     </entry>

@@ -112,7 +112,7 @@ Text Datasets:
          include 3 parents categories. 
          
 Image datasets:
-~~~~~~~~~~~~~~         
+~~~~~~~~~~~~~~~~~
 
 -  `MNIST Dataset <https://en.wikipedia.org/wiki/MNIST_database>`__
 
@@ -126,7 +126,7 @@ Image datasets:
       images and 10000 test images.
 
 Face Recognition
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 `The Database of Faces (The Olivetti Faces
 Dataset) <http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html>`__
@@ -135,7 +135,7 @@ Dataset) <http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html>`__
    images and grayscale in 40 person
 
 Requirements for RMDL :
----------------------
+------------------------
 
 
 General:
@@ -157,7 +157,7 @@ General:
 
 
 GPU (if you want to run on GPU):
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  CUDA® Toolkit 8.0. For details, see `NVIDIA’s
    documentation <https://developer.nvidia.com/cuda-toolkit>`__.
@@ -173,7 +173,7 @@ GPU (if you want to run on GPU):
 -  The libcupti-dev library,
 
 Text and Document Classification
---------------------------------
+---------------------------------
 
 -  Download GloVe: Global Vectors for Word Representation `Instruction
    Documents <https://nlp.stanford.edu/projects/glove/>`__
@@ -280,10 +280,12 @@ Web Of Science
 More Exanmple
 `link <https://github.com/kk7nc/RMDL/tree/master/Examples>`__ 
 
+|Results|
+
 
 
 Error and Comments:
----------
+----------------------
 
 Send an email to kk7nc@virginia.edu
 
@@ -330,3 +332,5 @@ And
    :target: ./LICENSE
 .. |RDL| image:: http://kowsari.net/onewebmedia/RDL.jpg
 .. |RMDL| image:: http://kowsari.net/onewebmedia/RMDL.jpg
+.. |Results| image:: http://kowsari.net/onewebmedia/RMDL_Results.png
+
