@@ -40,9 +40,40 @@ Installation
 There are git RMDL in this repository; to clone all the needed files,
 please use:
 
+Using pip
+~~~~~~~~~
 .. code:: python
 
-        - pip install RMDL
+        pip install RMDL
+        
+        
+Using git
+~~~~~~~~~
+.. code:: bash
+
+    git clone --recursive https://github.com/kk7nc/RMDL.git
+
+
+The primary requirements for this package are Python 3 with Tensorflow.
+The requirements.txt file contains a listing of the required Python
+packages; to install all requirements, run the following:
+
+.. code:: bash
+
+    pip -r install requirements.txt
+
+Or
+
+.. code:: bash
+
+    pip3  install -r requirements.txt
+
+Or:
+
+.. code:: bash
+
+    conda install --file requirements.txt
+
 
 Documentation:
 --------------
