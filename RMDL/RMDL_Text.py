@@ -32,10 +32,13 @@ np.random.seed(7)
 
 def Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
                             n_epochs):
+    GloVe_needed = Random_Deep[1] != 0 or Random_Deep[2] != 0
 
-    G.setup(text=True)
-    X_train_tfidf, X_test_tfidf = txt.loadData(X_train, X_test)
-    X_train_Embedded, X_test_Embedded, word_index, embeddings_index = txt.loadData_Tokenizer(X_train, X_test)
+    G.setup(text=True,GloVe_needed=GloVe_needed)
+    if Random_Deep[0] != 0:
+        X_train_tfidf, X_test_tfidf = txt.loadData(X_train, X_test)
+    if Random_Deep[1] != 0 or Random_Deep[2] != 0 :
+        X_train_Embedded, X_test_Embedded, word_index, embeddings_index = txt.loadData_Tokenizer(X_train, X_test)
     del X_train
     del X_test
     gc.collect()
@@ -88,9 +91,12 @@ def Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_cat
             del model_DNN
         except:
             print("Error in model ", i, "   try to re-generate an other model")
-    del X_train_tfidf
-    del X_test_tfidf
-    gc.collect()
+    try:
+        del X_train_tfidf
+        del X_test_tfidf
+        gc.collect()
+    except:
+        pass
 
     i=0
     while i < Random_Deep[1]:

@@ -112,18 +112,17 @@ nClasses is number of classes
 
 def buildModel_DNN_Tex(shape, nClasses,sparse_categorical):
     model = Sequential()
-    values = list(range(512,1024))
-    Numberof_NOde =  random.choice(values)
-    values = list(range(1,4))
-    nLayers = random.choice(values)
+    node = list(range(256,1024))
+    Numberof_NOde =  random.choice(node)
+    layer = list(range(1,4))
+    nLayers = random.choice(layer)
     Numberof_NOde_old = Numberof_NOde
     model.add(Dense(Numberof_NOde,input_dim=shape,activation='relu'))
-    model.add(Dropout(0.25))
-    values = list(range(256,1024))
+    model.add(Dropout(0.5))
     for i in range(0,nLayers):
-        Numberof_NOde = random.choice(values)
+        Numberof_NOde = random.choice(node)
         model.add(Dense(Numberof_NOde,input_dim=Numberof_NOde_old,activation='relu'))
-        model.add(Dropout(0.25))
+        model.add(Dropout(0.5))
         Numberof_NOde_old = Numberof_NOde
     model.add(Dense(nClasses, activation='softmax'))
     model_tem = model

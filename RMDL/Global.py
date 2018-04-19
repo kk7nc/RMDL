@@ -24,23 +24,23 @@ import nltk
 nltk.download("stopwords")
 
 
-MAX_SEQUENCE_LENGTH = 500
+MAX_SEQUENCE_LENGTH = 700
 MAX_NB_WORDS = 75000
-EMBEDDING_DIM = 100  # it could be 50, 100, and 300 please download GLOVE https://nlp.stanford.edu/projects/glove/ and set address of directory in Text_Data_load.py
+EMBEDDING_DIM = 50  # it could be 50, 100, and 300 please download GLOVE https://nlp.stanford.edu/projects/glove/ and set address of directory in Text_Data_load.py
 
-def setup(text=False):
+def setup(text=False,GloVe_needed=True):
     np.set_printoptions(threshold=np.inf)
     np.random.seed(7)
     if not os.path.exists(".\weights"):
         os.makedirs(".\weights")
 
     if text:
-        
-        global GloVe_DIR
-        GloVe_DIR = GloVe.download_and_extract()
-        GloVe_file = "glove.6B.100d.txt"
-        GloVe_DIR = os.path.join(GloVe_DIR, GloVe_file)
-        print(GloVe_DIR)
-        if not os.path.isfile(GloVe_DIR):
-            print("Could not find %s Set GloVe Directory in Global.py ", GloVe)
-            exit()
+        if GloVe_needed:
+            global GloVe_DIR
+            GloVe_DIR = GloVe.download_and_extract()
+            GloVe_file = "glove.6B.50d.txt"
+            GloVe_DIR = os.path.join(GloVe_DIR, GloVe_file)
+            print(GloVe_DIR)
+            if not os.path.isfile(GloVe_DIR):
+                print("Could not find %s Set GloVe Directory in Global.py ", GloVe)
+                exit()

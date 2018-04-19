@@ -1,4 +1,4 @@
-|license| |wercker status| |Build Status| |PowerPoint| |license|
+﻿|DOI| |wercker status| |Build Status| |PowerPoint| |license|
 |Binder| |pdf| |GitHub license|
 
 RMDL: Random Multimodel Deep Learning for Classification
@@ -20,14 +20,7 @@ architecture while simultaneously improving robustness and accuracy
 through ensembles of deep learning architectures. RDML can accept
 asinput a variety data to include text, video, images, and symbolic.
 
-
-.. image:: http://kowsari.net/onewebmedia/RDL.jpg
-    :alt: RDL
-    :width: 888 px
-    :align: center
-    
-
-   
+|RDL|
 
 Overview of RDML: Random Multimodel Deep Learning for classification.
 The RMDL includesnRandom modelswhich aredrandom model of DNN
@@ -39,11 +32,7 @@ RMDL includes 3 Random models, oneDNN classifier at left, one Deep CNN
 classifier at middle, and one Deep RNN classifier at right (each unit
 could be LSTMor GRU).
 
-.. image:: http://kowsari.net/onewebmedia/RMDL.jpg
-    :alt: RDL
-    :width: 888 px
-    :align: center
-   
+|RMDL|
 
 Installation
 ------------
@@ -51,9 +40,40 @@ Installation
 There are git RMDL in this repository; to clone all the needed files,
 please use:
 
+Using pip
+~~~~~~~~~
 .. code:: python
 
-        - pip install RMDL
+        pip install RMDL
+        
+        
+Using git
+~~~~~~~~~
+.. code:: bash
+
+    git clone --recursive https://github.com/kk7nc/RMDL.git
+
+
+The primary requirements for this package are Python 3 with Tensorflow.
+The requirements.txt file contains a listing of the required Python
+packages; to install all requirements, run the following:
+
+.. code:: bash
+
+    pip -r install requirements.txt
+
+Or
+
+.. code:: bash
+
+    pip3  install -r requirements.txt
+
+Or:
+
+.. code:: bash
+
+    conda install --file requirements.txt
+
 
 Documentation:
 --------------
@@ -128,7 +148,10 @@ Text Datasets:
       `WOS-5736 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
 
       -  This dataset contains 5,736 documents with 11 categories which
-         include 3 parents categories. ### Image datasets: ###
+         include 3 parents categories. 
+         
+Image datasets:
+~~~~~~~~~~~~~~         
 
 -  `MNIST Dataset <https://en.wikipedia.org/wiki/MNIST_database>`__
 
@@ -150,7 +173,7 @@ Dataset) <http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html>`__
 -  The The Database of Faces dataset consists of 400 92x112 colour
    images and grayscale in 40 person
 
-Requirment for RMDL :
+Requirementsfor RMDL :
 ---------------------
 
 General:
@@ -216,10 +239,44 @@ MNIST
         shape = (28, 28, 1)
         batch_size = 128
         sparse_categorical = 0
-        n_epochs = [10, 500, 50]  ## DNN--RNN-CNN
-        Random_Deep = [3, 0, 0]  ## DNN--RNN-CNN
+        n_epochs = [100, 100, 100]  ## DNN--RNN-CNN 
+        Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN 
         RMDL.Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
                                 n_epochs)
+
+IMDB
+~~~~~~~~~~~~~~
+.. code:: python
+
+        import sys
+        import os
+        from RMDL import text_feature_extraction as txt
+        from keras.datasets import imdb
+        import numpy as np
+        from RMDL import RMDL_Text as RMDL
+
+        print("Load IMDB dataset....")
+        (X_train, y_train), (X_test, y_test) = imdb.load_data(num_words=MAX_NB_WORDS)
+        print(len(X_train))
+        print(y_test)
+        word_index = imdb.get_word_index()
+        index_word = {v: k for k, v in word_index.items()}
+        X_train = [txt.text_cleaner(' '.join(index_word.get(w) for w in x)) for x in X_train]
+        X_test = [txt.text_cleaner(' '.join(index_word.get(w) for w in x)) for x in X_test]
+        X_train = np.array(X_train)
+        X_train = np.array(X_train).ravel()
+        print(X_train.shape)
+        X_test = np.array(X_test)
+        X_test = np.array(X_test).ravel()
+
+        batch_size = 100
+        sparse_categorical = 0
+        n_epochs = [100, 100, 100]  ## DNN--RNN-CNN
+        Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
+
+        RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
+                            n_epochs)
+
 
 Web Of Science
 ~~~~~~~~~~~~~~
@@ -290,7 +347,7 @@ And
     year={2018}
     }
 
-.. |license| image:: https://img.shields.io/badge/DOI-10.1145/3206098.3206111-blue.svg?style=flat
+.. |DOI| image:: https://img.shields.io/badge/DOI-10.1145/3206098.3206111-blue.svg?style=flat
    :target: https://doi.org/10.1145/3206098.3206111
 .. |wercker status| image:: https://app.wercker.com/status/3a564158e809971e2f7416beba5d05af/s/master
    :target: https://app.wercker.com/project/byKey/3a564158e809971e2f7416beba5d05af
@@ -306,3 +363,5 @@ And
    :target: https://github.com/kk7nc/RMDL/blob/master/Documents/ACM-RMDL.pdf
 .. |GitHub license| image:: https://img.shields.io/badge/licence-GPL-blue.svg
    :target: ./LICENSE
+.. |RDL| image:: http://kowsari.net/onewebmedia/RDL.jpg
+.. |RMDL| image:: http://kowsari.net/onewebmedia/RMDL.jpg
