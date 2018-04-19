@@ -31,7 +31,7 @@ np.random.seed(7)
 
 
 def Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
-                            n_epochs):
+                            n_epochs,plot=True):
     GloVe_needed = Random_Deep[1] != 0 or Random_Deep[2] != 0
 
     G.setup(text=True,GloVe_needed=GloVe_needed)
@@ -197,6 +197,7 @@ def Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_cat
     y_proba = np.array(y_proba).transpose()
 
     final_y = []
+
     for i in range(0, y_proba.shape[0]):
         a = np.array(y_proba[i, :])
         a = collections.Counter(a).most_common()[0][0]
@@ -210,20 +211,23 @@ def Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_cat
         # Compute confusion matrix
         # Plot non-normalized confusion matrix
 
-        classes = list(range(0, np.max(y_test)+1))
-        Plot.plot_confusion_matrix(cnf_matrix, classes=classes,
-                                   title='Confusion matrix, without normalization')
+        if plot:
+            classes = list(range(0, np.max(y_test)+1))
+            Plot.plot_confusion_matrix(cnf_matrix, classes=classes,
+                                       title='Confusion matrix, without normalization')
 
-        # Plot normalized confusion matrix
+            # Plot normalized confusion matrix
 
-        Plot.plot_confusion_matrix(cnf_matrix, classes=classes, normalize=True,
-                                   title='Normalized confusion matrix')
+            Plot.plot_confusion_matrix(cnf_matrix, classes=classes, normalize=True,
+                                       title='Normalized confusion matrix')
     else:
         y_test_temp = np.argmax(y_test, axis=1)
         F_score = accuracy_score(y_test_temp, final_y)
         F1 = precision_recall_fscore_support(y_test_temp, final_y, average='micro')
         F2 = precision_recall_fscore_support(y_test_temp, final_y, average='macro')
         F3 = precision_recall_fscore_support(y_test_temp, final_y, average='weighted')
+    if plot:
+        Plot.RMDL_epoch(History)
     print(y_proba.shape)
     print(score)
     print(F_score)

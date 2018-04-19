@@ -32,7 +32,7 @@ from keras.callbacks import ModelCheckpoint
 np.random.seed(7)
 
 def Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
-                            n_epochs):
+                            n_epochs,plot=True):
     G.setup(text=False)
     y_proba = []
 
@@ -146,14 +146,17 @@ def Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sp
     cnf_matrix = confusion_matrix(y_test, final_y)
     # Compute confusion matrix
     np.set_printoptions(precision=2)
+    if plot:
+        # Plot non-normalized confusion matrix
+        classes = list(range(0,np.max(y_test)+1))
+        Plot.plot_confusion_matrix(cnf_matrix, classes=classes,
+                         title='Confusion matrix, without normalization')
+        Plot.plot_confusion_matrix(cnf_matrix, classes=classes,normalize=True,
+                              title='Confusion matrix, without normalization')
 
-    # Plot non-normalized confusion matrix
-    classes = list(range(0,np.max(y_test)+1))
-    #Plot.plot_confusion_matrix(cnf_matrix, classes=classes,
-    #                      title='Confusion matrix, without normalization')
-    #Plot.plot_confusion_matrix(cnf_matrix, classes=classes,normalize=True,
-    #                      title='Confusion matrix, without normalization')
-    # Plot normalized confusion matrix
+    if plot:
+        Plot.RMDL_epoch(history_)
+
     print(score)
     print(F_score)
     print(F1)

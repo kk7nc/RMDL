@@ -20,44 +20,42 @@ from sklearn.metrics import f1_score,precision_recall_fscore_support
 from pylab import *
 import itertools
 
-def plot_RMDL(history_):
+def RMDL_epoch(history_):
     Number_of_models = len(history_)
-    plt.legend(['RDL 1', 'RDL 2', 'RDL 3', 'RDL 4', 'RDL 5', 'RDL 6', 'RDL 7', 'RDL 8', 'RDL 9', 'RDL 10',
-                'RDL 11', 'RDL 12', 'RDL 13', 'RDL 14', 'RDL 15'], loc='upper right')
+    caption=[]
+    for i in range(0,len(history_)):
+        caption.append('RDL '+str(i+1))
+    plt.legend(caption, loc='upper right')
     for i in range(0, Number_of_models):
         plt.plot(history_[i].history['acc'])
-        plt.title('model accuracy')
+        plt.title('model train accuracy')
         plt.ylabel('accuracy')
         plt.xlabel('epoch')
-    plt.legend(['RDL 1', 'RDL 2', 'RDL 3', 'RDL 4', 'RDL 5', 'RDL 6', 'RDL 7', 'RDL 8', 'RDL 9', 'RDL 10',
-                'RDL 11', 'RDL 12', 'RDL 13', 'RDL 14', 'RDL 15'], loc='upper right')
+    plt.legend(caption, loc='upper right')
     plt.show()
 
 
 
     for i in range(0, Number_of_models):
         plt.plot(history_[i].history['val_acc'])
-        plt.title('model accuracy')
+        plt.title('model test accuracy')
         plt.ylabel('accuracy')
         plt.xlabel('epoch')
 
     plt.show()
-    plt.legend(['RDL 1', 'RDL 2', 'RDL 3', 'RDL 4', 'RDL 5', 'RDL 6', 'RDL 7', 'RDL 8', 'RDL 9', 'RDL 10',
-                'RDL 11', 'RDL 12', 'RDL 13', 'RDL 14', 'RDL 15'], loc='upper right')
+    plt.legend(caption, loc='upper right')
     for i in range(0, Number_of_models):
         # summarize history for loss
         plt.plot(history_[i].history['loss'])
 
-        plt.title('model loss train')
+        plt.title('model train loss ')
         plt.ylabel('loss')
         plt.xlabel('epoch')
 
-    plt.legend(['RDL 1', 'RDL 2', 'RDL 3', 'RDL 4', 'RDL 5', 'RDL 6', 'RDL 7', 'RDL 8', 'RDL 9', 'RDL 10',
-                'RDL 11', 'RDL 12', 'RDL 13', 'RDL 14', 'RDL 15'], loc='upper right')
+    plt.legend(caption, loc='upper right')
     plt.show()
     plt.legend(
-        ['RDL 1', 'RDL 2', 'RDL 3', 'RDL 4', 'RDL 5', 'RDL 6', 'RDL 7', 'RDL 8', 'RDL 9', 'RDL 10', 'RDL 11',
-         'RDL 12', 'RDL 13', 'RDL 14', 'RDL 15'], loc='upper right')
+        caption, loc='upper right')
     for i in range(0, Number_of_models):
         # summarize history for loss
         plt.plot(history_[i].history['val_loss'])
@@ -65,8 +63,7 @@ def plot_RMDL(history_):
         plt.title('model loss test')
         plt.ylabel('loss')
         plt.xlabel('epoch')
-    plt.legend(['RDL 1', 'RDL 2', 'RDL 3', 'RDL 4', 'RDL 5', 'RDL 6', 'RDL 7', 'RDL 8', 'RDL 9', 'RDL 10',
-                'RDL 11', 'RDL 12', 'RDL 13', 'RDL 14', 'RDL 15'], loc='upper right')
+    plt.legend(caption, loc='upper right')
     plt.show()
 
 
