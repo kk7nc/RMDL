@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-﻿|DOI| |wercker status| |Build Status| |PowerPoint| |license|
-=======
-|DOI| |wercker status| |Build Status| |PowerPoint| |license|
->>>>>>> 0d93e8a08eb74390c532190f2a485f9c0d73a0f9
-|Binder| |pdf| |GitHub license|
+﻿|DOI| |wercker status| |Build Status| |PowerPoint| |license||Binder| |pdf| |GitHub license|
 
 RMDL: Random Multimodel Deep Learning for Classification
 ========================================================
@@ -177,7 +172,7 @@ Dataset) <http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html>`__
 -  The The Database of Faces dataset consists of 400 92x112 colour
    images and grayscale in 40 person
 
-Requirementsfor RMDL :
+Requirements for RMDL :
 ---------------------
 
 General:
