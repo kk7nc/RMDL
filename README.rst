@@ -175,7 +175,9 @@ Dataset) <http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html>`__
 Requirements for RMDL :
 ---------------------
 
+
 General:
+~~~~~~~~~~~~~~
 
 -  Python 3.5 or later see `Instruction
    Documents <https://www.python.org/>`__
@@ -191,20 +193,22 @@ General:
 -  scipy see `Instruction
    Documents <https://www.scipy.org/install.html>`__
 
--  GPU (if you want to run on GPU):
 
-   -  CUDA® Toolkit 8.0. For details, see `NVIDIA’s
-      documentation <https://developer.nvidia.com/cuda-toolkit>`__.
+GPU (if you want to run on GPU):
+~~~~~~~~~~~~~~
 
-   -  The `NVIDIA drivers associated with CUDA Toolkit
-      8.0 <http://www.nvidia.com/Download/index.aspx>`__.
+-  CUDA® Toolkit 8.0. For details, see `NVIDIA’s
+   documentation <https://developer.nvidia.com/cuda-toolkit>`__.
 
-   -  cuDNN v6. For details, see `NVIDIA’s
-      documentation <https://developer.nvidia.com/cudnn>`__.
+-  The `NVIDIA drivers associated with CUDA Toolkit
+   8.0 <http://www.nvidia.com/Download/index.aspx>`__.
 
-   -  GPU card with CUDA Compute Capability 3.0 or higher.
+-  cuDNN v6. For details, see `NVIDIA’s
+   documentation <https://developer.nvidia.com/cudnn>`__.
 
-   -  The libcupti-dev library,
+-  GPU card with CUDA Compute Capability 3.0 or higher.
+
+-  The libcupti-dev library,
 
 Text and Document Classification
 --------------------------------

@@ -38,11 +38,11 @@ if __name__ == "__main__":
     np.random.seed(7)
     content = np.array(content).astype(str)
     # print(Label)
-    content = [txt.text_cleaner(x,deep_clean=False) for x in content]
+    content = [txt.text_cleaner(x,deep_clean=True) for x in content]
     X_train, X_test, y_train, y_test = train_test_split(content, Label, test_size=0.2, random_state=42)
     batch_size = 256
     sparse_categorical = 0
     n_epochs = [20, 15, 20]  ## DNN--RNN-CNN
-    Random_Deep = [0, 0, 1]  ## DNN--RNN-CNN
+    Random_Deep = [3, 0, 0]  ## DNN--RNN-CNN
     RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
                             n_epochs)
