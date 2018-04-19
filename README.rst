@@ -148,7 +148,10 @@ Text Datasets:
       `WOS-5736 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
 
       -  This dataset contains 5,736 documents with 11 categories which
-         include 3 parents categories. ### Image datasets: ###
+         include 3 parents categories. 
+         
+Image datasets:
+~~~~~~~~~~~~~~         
 
 -  `MNIST Dataset <https://en.wikipedia.org/wiki/MNIST_database>`__
 
