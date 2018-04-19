@@ -12,26 +12,20 @@ Multimodel Deep Learning (RMDL) <www.kowsari.net>`__
 Random Multimodel Deep Learning (RMDL):
 ---------------------------------------
 
-A new ensemble, deep learning approach for classification. Deep learning
-models have achieved state-of-the-art results across many domains. RMDL
-solves the problem of finding the best deep learning structure and
-architecture while simultaneously improving robustness and accuracy
-through ensembles of deep learning architectures. RDML can accept
-asinput a variety data to include text, video, images, and symbolic.
+A new ensemble, deep learning approach for classification. Deep learning models have achieved state-of-the-art results across many domains. RMDL solves the problem of finding the best deep learning structure and architecture while simultaneously improving robustness and accuracy through ensembles of deep learning architectures. RDML can accept asinput a variety data to include text, video, images, and symbolic.
 
 |RDL|
 
-Overview of RDML: Random Multimodel Deep Learning for classification.
-The RMDL includesnRandom modelswhich aredrandom model of DNN
-classifiers,cmodels of CNN classifiers, andrRNN classifiers
-wherer+c+d=n.
+Overview of RDML: Random Multimodel Deep Learning for classification. The RMDL includesnRandom modelswhich aredrandom model of DNN classifiers,cmodels of CNN classifiers, andrRNN classifiers wherer+c+d=n.
 
-Random Multimodel Deep Learning (RDML) architecture for classification.
-RMDL includes 3 Random models, oneDNN classifier at left, one Deep CNN
-classifier at middle, and one Deep RNN classifier at right (each unit
-could be LSTMor GRU).
+
 
 |RMDL|
+
+
+
+Random Multimodel Deep Learning (RDML) architecture for classification. RMDL includes 3 Random models, oneDNN classifier at left, one Deep CNN classifier at middle, and one Deep RNN classifier at right (each unit could be LSTMor GRU).
+
 
 Installation
 ------------
@@ -53,9 +47,7 @@ Using git
     git clone --recursive https://github.com/kk7nc/RMDL.git
 
 
-The primary requirements for this package are Python 3 with Tensorflow.
-The requirements.txt file contains a listing of the required Python
-packages; to install all requirements, run the following:
+The primary requirements for this package are Python 3 with Tensorflow. The requirements.txt file contains a listing of the required Python packages; to install all requirements, run the following:
 
 .. code:: bash
 
@@ -77,37 +69,7 @@ Or:
 Documentation:
 --------------
 
-The exponential growth in the number of complex datasets every year
-requires more enhancement in machine learning methods to provide robust
-and accurate data classification. Lately, deep learning approaches have
-been achieved surpassing results in comparison to previous machine
-learning algorithms on tasks such as image classification, natural
-language processing, face recognition, and etc. The success of these
-deep learning algorithms relys on their capacity to model complex and
-non-linear relationships between data. However, finding the suitable
-structure for these models has been a challenge for researchers. This
-paper introduces Random Multimodel Deep Learning (RMDL): a new ensemble,
-deep learning approach for classification. RMDL solves the problem of
-finding the best deep learning structure and architecture while
-simultaneously improving robustness and accuracy through ensembles of
-deep learning architectures. In short, RMDL trains multiple models of
-Deep Neural Network (DNN), Convolutional Neural Network (CNN) and
-Recurrent Neural Network (RNN) in parallel and combines their results to
-produce better result of any of those models individually. To create
-these models, each deep learning model has been constructed in a random
-fashion regarding the number of layers and nodes in their neural network
-structure. The resulting RDML model can be used for various domains such
-as text, video, images, and symbolic. In this paper, we describe RMDL
-model in depth and show the results for image and text classification as
-well as face recognition. For image classification, we compared our
-model with some of the available baselines using MNIST and CIFAR-10
-datasets. Similarly, we used four datasets namely, WOS, Reuters, IMDB,
-and 20newsgroup and compared our results with available baselines. Web
-of Science (WOS) has been collected by authors and consists of three
-sets (small, medium and large set). Lastly, we used ORL dataset to
-compare the performance with other face recognition methods. These test
-results show that RDML model consistently outperform standard methods
-over a broad range of data types and classification problems.
+The exponential growth in the number of complex datasets every year requires  more enhancement in machine learning methods to provide  robust and accurate data classification. Lately, deep learning approaches have been achieved surpassing results in comparison to previous machine learning algorithms on tasks such as image classification, natural language processing, face recognition, and etc. The success of these deep learning algorithms relys on their capacity to model complex and non-linear relationships within data. However, finding the suitable structure for these models has been a challenge for researchers. This paper introduces Random Multimodel Deep Learning (RMDL): a new ensemble, deep learning approach for classification.  RMDL solves the problem of finding the best deep learning structure and architecture while simultaneously improving robustness and accuracy through ensembles of deep learning architectures. In short, RMDL trains multiple models of Deep Neural Network (DNN), Convolutional Neural Network (CNN) and Recurrent Neural Network (RNN) in parallel and combines their results to produce better result of any of those models individually. To create these models, each deep learning model has been constructed in a random fashion regarding the number of layers and nodes in their neural network structure. The resulting RDML model can be used for various domains such as text, video, images, and symbolic. In this Project, we describe RMDL model in depth and show the results for image and text classification as well as face recognition. For image classification, we compared our model with some of the available baselines using MNIST and CIFAR-10 datasets. Similarly, we used four datasets namely, WOS, Reuters, IMDB, and 20newsgroup and compared our results with available baselines. Web of Science (WOS) has been collected  by authors and consists of three sets~(small, medium and large set). Lastly, we used ORL dataset to compare the performance of our approach with other face recognition methods. These test results show that RDML model consistently outperform standard methods over a broad range of data types and classification problems
 
 Datasets for RMDL:
 ------------------
