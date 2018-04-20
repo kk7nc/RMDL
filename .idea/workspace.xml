@@ -32,7 +32,7 @@
     <SUITE FILE_PATH="coverage/RMDL$Text_pandas___Copy.coverage" NAME="Text_pandas - Copy Coverage Results" MODIFIED="1524174494270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Examples" />
     <SUITE FILE_PATH="coverage/Data_Cleaning_Code_Python$DNN.coverage" NAME="DNN Coverage Results" MODIFIED="1496379277572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RMDL$DNN.coverage" NAME="DNN Coverage Results" MODIFIED="1506801317976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/SHen/Code_Regression" />
-    <SUITE FILE_PATH="coverage/RMDL$docutils_task_in_README_rst.coverage" NAME="docutils task in README.rst Coverage Results" MODIFIED="1524252097730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RMDL$docutils_task_in_README_rst.coverage" NAME="docutils task in README.rst Coverage Results" MODIFIED="1524253374450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HDLTex_finalCode$HDLTex.coverage" NAME="HDLTex Coverage Results" MODIFIED="1498705865770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RMDL$WOS_5736__1_.coverage" NAME="WOS-5736 Coverage Results" MODIFIED="1520546374915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Examples" />
     <SUITE FILE_PATH="coverage/Data_Cleaning_Code_Python$train.coverage" NAME="train Coverage Results" MODIFIED="1496124427554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/multi-class-text-classification-cnn-rnn-master" />
@@ -206,8 +206,8 @@
       <file leaf-file-name="README.rst" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="432" lean-forward="true" selection-start-line="432" selection-end-line="432" />
+            <state relative-caret-position="171">
+              <caret line="313" lean-forward="true" selection-start-line="313" selection-end-line="313" />
             </state>
           </provider>
         </entry>
@@ -1048,8 +1048,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="432" lean-forward="true" selection-start-line="432" selection-end-line="432" />
+        <state relative-caret-position="171">
+          <caret line="313" lean-forward="true" selection-start-line="313" selection-end-line="313" />
         </state>
       </provider>
     </entry>

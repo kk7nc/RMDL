@@ -189,7 +189,7 @@ Example
 MNIST
 -----
 
--The MNIST database contains 60,000 training images and 10,000 testing images.
+-  The MNIST database contains 60,000 training images and 10,000 testing images.
 
 Import Packages
 ~~~~~~~~~~~~~~~
@@ -229,7 +229,7 @@ Using RMDL
 IMDB
 -----
 
--This dataset contains 50,000 documents with 2 categories.
+-  This dataset contains 50,000 documents with 2 categories.
 
 Import Packages
 ~~~~~~~~~~~~~~~
@@ -247,6 +247,7 @@ Load Data
 ~~~~~~~~~
 
 .. code:: python
+
         print("Load IMDB dataset....")
         (X_train, y_train), (X_test, y_test) = imdb.load_data(num_words=MAX_NB_WORDS)
         print(len(X_train))
@@ -278,26 +279,21 @@ Using RMDL
 Web Of Science
 --------------
 
-Linke of dataset: |Data|
+-  Linke of dataset: |Data|
 
-Web of Science Dataset
-`WOS-11967 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
+   -  Web of Science Dataset `WOS-11967 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
 
 ::
 
         This dataset contains 11,967 documents with 35 categories which include 7 parents categories.
 
 
-Web of Science Dataset
-`WOS-46985 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
+   -  Web of Science Dataset `WOS-46985 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
 
-::
-
-        This dataset contains 46,985 documents with 134 categories which include 7 parents categories.
+::  This dataset contains 46,985 documents with 134 categories which include 7 parents categories.
 
 
-Web of Science Dataset
-`WOS-5736 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
+   -  Web of Science Dataset `WOS-5736 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
 
 ::
 
