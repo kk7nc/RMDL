@@ -31,6 +31,26 @@ from keras.layers import Input
 from keras.layers.core import Lambda
 from keras.layers.merge import Concatenate
 import tensorflow as tf
+from keras import optimizers
+import random
+
+def Optimizors():
+    i = random.randint(0,5)
+    if i==0:
+        opt = optimizers.SGD()
+    elif i==1:
+        opt= optimizers.RMSprop()
+    elif i==2:
+        opt= optimizers.Adagrad()
+    elif i==3:
+        opt = optimizers.Adam()
+    elif i==4:
+        opt =optimizers.Nadam()
+    elif i==5:
+        opt= optimizers.TFOptimizer()
+    print(opt)
+    return opt
+
 
 
 def slice_batch(x, n_gpus, part):
@@ -94,11 +114,11 @@ def buildModel_DNN_image(shape, nClasses,sparse_categorical):
     model_tmp = model
     if sparse_categorical==0:
         model.compile(loss='sparse_categorical_crossentropy',
-                      optimizer='adam',
+                      optimizer=Optimizors(),
                       metrics=['accuracy'])
     else:
         model.compile(loss='categorical_crossentropy',
-                      optimizer='adam',
+                      optimizer=Optimizors(),
                       metrics=['accuracy'])
     return model,model_tmp
 
@@ -128,11 +148,11 @@ def buildModel_DNN_Tex(shape, nClasses,sparse_categorical):
     model_tem = model
     if sparse_categorical==0:
         model.compile(loss='sparse_categorical_crossentropy',
-                      optimizer='rmsprop',
+                      optimizer=Optimizors(),
                       metrics=['accuracy'])
     else:
         model.compile(loss='categorical_crossentropy',
-                      optimizer='rmsprop',
+                      optimizer=Optimizors(),
                       metrics=['accuracy'])
     return model,model_tem
 
@@ -165,7 +185,7 @@ def Image_model_CNN(num_classes,shape):
     model.add(Dropout(0.5))
     model.add(Dense(num_classes,activation='softmax',kernel_constraint=maxnorm(3)))
     model_tmp = model
-    model.compile(loss='sparse_categorical_crossentropy', optimizer=keras.optimizers.adam(), metrics=['accuracy'])
+    model.compile(loss='sparse_categorical_crossentropy', optimizer=Optimizors(), metrics=['accuracy'])
     return model,model_tmp
 
 '''
@@ -192,7 +212,7 @@ def Image_3D_model_CNN(num_classes,shape,kernel_size=(3,3)):
     model.add(Dense(256, activation='relu'))
     model.add(Dense(num_classes,activation='softmax'))
 
-    model.compile(loss='sparse_categorical_crossentropy', optimizer=keras.optimizers.adam(), metrics=['accuracy'])
+    model.compile(loss='sparse_categorical_crossentropy', optimizer=Optimizors(), metrics=['accuracy'])
     return model
 '''
 def Image_model_RNN(num_classes,shape):
@@ -219,7 +239,7 @@ def Image_model_RNN(num_classes,shape):
     model = Model(x, prediction)
     model_tmp = model
     model.compile(loss='sparse_categorical_crossentropy',
-                  optimizer='rmsprop',
+                  optimizer=Optimizors(),
                   metrics=['accuracy'])
     return model,model_tmp
 
@@ -266,11 +286,11 @@ def buildModel_RNN(word_index, embeddings_index, nClasses, MAX_SEQUENCE_LENGTH, 
 
     if sparse_categorical==0:
         model.compile(loss='sparse_categorical_crossentropy',
-                      optimizer='rmsprop',
+                      optimizer=Optimizors(),
                       metrics=['accuracy'])
     else:
         model.compile(loss='categorical_crossentropy',
-                      optimizer='rmsprop',
+                      optimizer=Optimizors(),
                       metrics=['accuracy'])
     return model,model_tmp
 
@@ -323,11 +343,11 @@ def buildModel_CNN(word_index,embeddings_index,nClasses,MAX_SEQUENCE_LENGTH,EMBE
         #model = Model(sequence_input, preds)
         if sparse_categorical == 0:
             model.compile(loss='sparse_categorical_crossentropy',
-                          optimizer='rmsprop',
+                          optimizer=Optimizors(),
                           metrics=['accuracy'])
         else:
             model.compile(loss='categorical_crossentropy',
-                          optimizer='rmsprop',
+                          optimizer=Optimizors(),
                           metrics=['accuracy'])
     else:
         embedding_matrix = np.random.random((len(word_index) + 1, EMBEDDING_DIM))
@@ -381,11 +401,11 @@ def buildModel_CNN(word_index,embeddings_index,nClasses,MAX_SEQUENCE_LENGTH,EMBE
         model_tmp = model
         if sparse_categorical == 0:
             model.compile(loss='sparse_categorical_crossentropy',
-                          optimizer='rmsprop',
+                          optimizer=Optimizors(),
                           metrics=['accuracy'])
         else:
             model.compile(loss='categorical_crossentropy',
-                          optimizer='rmsprop',
+                          optimizer=Optimizors(),
                           metrics=['accuracy'])
 
 
