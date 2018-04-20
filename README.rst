@@ -189,8 +189,10 @@ Example
 MNIST
 -----
 
-Packages
-~~~~~~~~
+-The MNIST database contains 60,000 training images and 10,000 testing images.
+
+Import Packages
+~~~~~~~~~~~~~~~
 
 .. code:: python
 
@@ -225,7 +227,13 @@ Using RMDL
                                 n_epochs)
 
 IMDB
-~~~~~~~~~~~~~~
+-----
+
+-This dataset contains 50,000 documents with 2 categories.
+
+Import Packages
+~~~~~~~~~~~~~~~
+
 .. code:: python
 
         import sys
@@ -235,6 +243,10 @@ IMDB
         import numpy as np
         from RMDL import RMDL_Text as RMDL
 
+Load Data
+~~~~~~~~~
+
+.. code:: python
         print("Load IMDB dataset....")
         (X_train, y_train), (X_test, y_test) = imdb.load_data(num_words=MAX_NB_WORDS)
         print(len(X_train))
@@ -249,6 +261,11 @@ IMDB
         X_test = np.array(X_test)
         X_test = np.array(X_test).ravel()
 
+Using RMDL
+~~~~~~~~~~~
+
+.. code:: python
+
         batch_size = 100
         sparse_categorical = 0
         n_epochs = [100, 100, 100]  ## DNN--RNN-CNN
@@ -259,7 +276,37 @@ IMDB
 
 
 Web Of Science
-~~~~~~~~~~~~~~
+--------------
+
+Linke of dataset: |Data|
+
+Web of Science Dataset
+`WOS-11967 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
+
+::
+
+        This dataset contains 11,967 documents with 35 categories which include 7 parents categories.
+
+
+Web of Science Dataset
+`WOS-46985 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
+
+::
+
+        This dataset contains 46,985 documents with 134 categories which include 7 parents categories.
+
+
+Web of Science Dataset
+`WOS-5736 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
+
+::
+
+        This dataset contains 5,736 documents with 11 categories which include 3 parents categories.
+
+
+
+Import Packages
+~~~~~~~~~~~~~~~
 
 .. code:: python
 
@@ -268,6 +315,10 @@ Web Of Science
         from RMDL.Download import Download_WOS as WOS
         import numpy as np
         from RMDL import RMDL_Text as RMDL
+
+Load Data
+~~~~~~~~~
+.. code:: python
 
         path_WOS = WOS.download_and_extract()
         fname = os.path.join(path_WOS,"WebOfScience/WOS11967/X.txt")
@@ -284,6 +335,10 @@ Web Of Science
         print(Label.shape)
         X_train, X_test, y_train, y_test = train_test_split(content, Label, test_size=0.2, random_state=4)
 
+Using RMDL
+~~~~~~~~~~~
+.. code:: python
+
         batch_size = 100
         sparse_categorical = 0
         n_epochs = [5000, 500, 500]  ## DNN--RNN-CNN
@@ -294,7 +349,12 @@ Web Of Science
 
 
 Reuters-21578
-~~~~~~~~~~~~~~
+-------------
+
+-This dataset contains 21,578 documents with 90 categories.
+
+Import Packages
+~~~~~~~~~~~~~~~
 
 .. code:: python
 
@@ -306,6 +366,11 @@ Reuters-21578
          from sklearn.preprocessing import MultiLabelBinarizer
          import numpy as np
          from RMDL import RMDL_Text as RMDL
+
+Load Data
+~~~~~~~~~
+.. code:: python
+
          documents = reuters.fileids()
 
          train_docs_id = list(filter(lambda doc: doc.startswith("train"),
@@ -322,6 +387,11 @@ Reuters-21578
          y_train = np.argmax(y_train, axis=1)
          y_test = np.argmax(y_test, axis=1)
 
+
+Using RMDL
+~~~~~~~~~~~
+.. code:: python
+
          batch_size = 100
          sparse_categorical = 0
          n_epochs = [20, 500, 50]  ## DNN--RNN-CNN
@@ -333,13 +403,22 @@ Reuters-21578
 
 
 Olivetti Faces
-~~~~~~~~~~~~~~
+--------------
+-There are ten different images of each of 40 distinct subjects. For some subjects, the images were taken at different times, varying the lighting, facial expressions (open / closed eyes, smiling / not smiling) and facial details (glasses / no glasses). All the images were taken against a dark homogeneous background with the subjects in an upright, frontal position (with tolerance for some side movement).
+
+Import Packages
+~~~~~~~~~~~~~~~
 
 .. code:: python
 
          from sklearn.datasets import fetch_olivetti_faces
          from sklearn.model_selection import train_test_split
          from RMDL import RMDL_Image as RMDL
+
+Load Data
+~~~~~~~~~
+.. code:: python
+
          number_of_classes = 40
          shape = (64, 64, 1)
          data = fetch_olivetti_faces()
@@ -347,6 +426,10 @@ Olivetti Faces
                                                        data.target, stratify=data.target, test_size=40)
          X_train = X_train.reshape(X_train.shape[0], 64, 64, 1).astype('float32')
          X_test = X_test.reshape(X_test.shape[0], 64, 64, 1).astype('float32')
+
+Using RMDL
+~~~~~~~~~~~
+.. code:: python
 
          batch_size = 100
          sparse_categorical = 0
@@ -413,4 +496,5 @@ And
 .. |RDL| image:: http://kowsari.net/onewebmedia/RDL.jpg
 .. |RMDL| image:: http://kowsari.net/onewebmedia/RMDL.jpg
 .. |Results| image:: http://kowsari.net/onewebmedia/RMDL_Results.png
-
+.. |Data| image:: https://img.shields.io/badge/DOI-10.17632/9rw3vkcfy4.6-blue.svg?style=flat
+   :target: http://dx.doi.org/10.17632/9rw3vkcfy4.6
