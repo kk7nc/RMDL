@@ -204,8 +204,8 @@ MNIST
         shape = (28, 28, 1)
         batch_size = 128
         sparse_categorical = 0
-        n_epochs = [100, 100, 100]  ## DNN--RNN-CNN 
-        Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN 
+        n_epochs = [100, 100, 100]  ## DNN-RNN-CNN 
+        Random_Deep = [3, 3, 3]  ## DNN-RNN-CNN 
         RMDL.Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
                                 n_epochs)
 
