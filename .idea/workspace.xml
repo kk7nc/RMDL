@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a4c78d4-a455-45d3-99a2-5c81c09af077" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Examples/MNIST.py" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/MNIST.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Examples/WOS-5736.py" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/WOS-5736.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Examples/replay_pid360.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/README.rst" afterDir="false" />
@@ -207,8 +206,8 @@
       <file leaf-file-name="README.rst" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="322" column="9" selection-start-line="322" selection-start-column="9" selection-end-line="338" selection-end-column="40" />
+            <state relative-caret-position="304">
+              <caret line="284" lean-forward="true" selection-start-line="284" selection-end-line="284" />
             </state>
           </provider>
         </entry>
@@ -1049,8 +1048,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="322" column="9" selection-start-line="322" selection-start-column="9" selection-end-line="338" selection-end-column="40" />
+        <state relative-caret-position="304">
+          <caret line="284" lean-forward="true" selection-start-line="284" selection-end-line="284" />
         </state>
       </provider>
     </entry>

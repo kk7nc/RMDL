@@ -282,6 +282,7 @@ Reuters-21578
 ~~~~~~~~~~~~~~
 
 .. code:: python
+
          import sys
          import os
          import nltk
@@ -320,6 +321,7 @@ Olivetti Faces
 ~~~~~~~~~~~~~~
 
 .. code:: python
+
          from sklearn.datasets import fetch_olivetti_faces
          from sklearn.model_selection import train_test_split
          from RMDL import RMDL_Image as RMDL
