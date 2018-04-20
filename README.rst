@@ -1,4 +1,4 @@
-﻿|DOI| |wercker status| |Build Status| |PowerPoint| |license| |Binder| |pdf| |GitHub license|
+﻿﻿|DOI| |wercker status| |Build Status| |PowerPoint| |license| |Binder| |pdf| |GitHub license|
 
 RMDL: Random Multimodel Deep Learning for Classification
 ========================================================
@@ -38,8 +38,8 @@ Using pip
 .. code:: python
 
         pip install RMDL
-        
-        
+
+
 Using git
 ---------
 .. code:: bash
@@ -109,8 +109,8 @@ Text Datasets:
       `WOS-5736 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
 
       -  This dataset contains 5,736 documents with 11 categories which
-         include 3 parents categories. 
-         
+         include 3 parents categories.
+
 Image datasets:
 ---------------
 
@@ -221,8 +221,8 @@ Using RMDL
 
         batch_size = 128
         sparse_categorical = 0
-        n_epochs = [100, 100, 100]  ## DNN-RNN-CNN 
-        Random_Deep = [3, 3, 3]  ## DNN-RNN-CNN 
+        n_epochs = [100, 100, 100]  ## DNN-RNN-CNN
+        Random_Deep = [3, 3, 3]  ## DNN-RNN-CNN
         RMDL.Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
                                 n_epochs)
 
@@ -283,21 +283,17 @@ Web Of Science
 
    -  Web of Science Dataset `WOS-11967 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
 
-::
-
-        This dataset contains 11,967 documents with 35 categories which include 7 parents categories.
+       - This dataset contains 11,967 documents with 35 categories which include 7 parents categories.
 
 
    -  Web of Science Dataset `WOS-46985 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
 
-::  This dataset contains 46,985 documents with 134 categories which include 7 parents categories.
+        - This dataset contains 46,985 documents with 134 categories which include 7 parents categories.
 
 
    -  Web of Science Dataset `WOS-5736 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
 
-::
-
-        This dataset contains 5,736 documents with 11 categories which include 3 parents categories.
+        - This dataset contains 5,736 documents with 11 categories which include 3 parents categories.
 
 
 
