@@ -10,7 +10,7 @@ Referenced paper : `An Improvement of Data Classification using Random
 Multimodel Deep Learning (RMDL) <www.kowsari.net>`__
 
 Random Multimodel Deep Learning (RMDL):
----------------------------------------
+========================================================
 
 A new ensemble, deep learning approach for classification. Deep learning models have achieved state-of-the-art results across many domains. RMDL solves the problem of finding the best deep learning structure and architecture while simultaneously improving robustness and accuracy through ensembles of deep learning architectures. RDML can accept asinput a variety data to include text, video, images, and symbolic.
 
@@ -28,20 +28,20 @@ Random Multimodel Deep Learning (RDML) architecture for classification. RMDL inc
 
 
 Installation
-------------
+=============
 
 There are git RMDL in this repository; to clone all the needed files,
 please use:
 
 Using pip
-~~~~~~~~~
+----------
 .. code:: python
 
         pip install RMDL
         
         
 Using git
-~~~~~~~~~
+---------
 .. code:: bash
 
     git clone --recursive https://github.com/kk7nc/RMDL.git
@@ -67,15 +67,15 @@ Or:
 
 
 Documentation:
---------------
+==============
 
 The exponential growth in the number of complex datasets every year requires  more enhancement in machine learning methods to provide  robust and accurate data classification. Lately, deep learning approaches have been achieved surpassing results in comparison to previous machine learning algorithms on tasks such as image classification, natural language processing, face recognition, and etc. The success of these deep learning algorithms relys on their capacity to model complex and non-linear relationships within data. However, finding the suitable structure for these models has been a challenge for researchers. This paper introduces Random Multimodel Deep Learning (RMDL): a new ensemble, deep learning approach for classification.  RMDL solves the problem of finding the best deep learning structure and architecture while simultaneously improving robustness and accuracy through ensembles of deep learning architectures. In short, RMDL trains multiple models of Deep Neural Network (DNN), Convolutional Neural Network (CNN) and Recurrent Neural Network (RNN) in parallel and combines their results to produce better result of any of those models individually. To create these models, each deep learning model has been constructed in a random fashion regarding the number of layers and nodes in their neural network structure. The resulting RDML model can be used for various domains such as text, video, images, and symbolic. In this Project, we describe RMDL model in depth and show the results for image and text classification as well as face recognition. For image classification, we compared our model with some of the available baselines using MNIST and CIFAR-10 datasets. Similarly, we used four datasets namely, WOS, Reuters, IMDB, and 20newsgroup and compared our results with available baselines. Web of Science (WOS) has been collected  by authors and consists of three sets~(small, medium and large set). Lastly, we used ORL dataset to compare the performance of our approach with other face recognition methods. These test results show that RDML model consistently outperform standard methods over a broad range of data types and classification problems
 
 Datasets for RMDL:
-------------------
+==================
 
 Text Datasets:
-~~~~~~~~~~~~~~
+--------------
 
 -  `IMDB Dataset <http://ai.stanford.edu/~amaas/data/sentiment/>`__
 
@@ -112,7 +112,7 @@ Text Datasets:
          include 3 parents categories. 
          
 Image datasets:
-~~~~~~~~~~~~~~~~~
+---------------
 
 -  `MNIST Dataset <https://en.wikipedia.org/wiki/MNIST_database>`__
 
@@ -126,7 +126,7 @@ Image datasets:
       images and 10000 test images.
 
 Face Recognition
-~~~~~~~~~~~~~~~~~~~
+----------------
 
 `The Database of Faces (The Olivetti Faces
 Dataset) <http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html>`__
@@ -135,11 +135,11 @@ Dataset) <http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html>`__
    images and grayscale in 40 person
 
 Requirements for RMDL :
-------------------------
+=======================
 
 
 General:
-~~~~~~~~~~~~~~
+----------
 
 -  Python 3.5 or later see `Instruction
    Documents <https://www.python.org/>`__
@@ -157,7 +157,7 @@ General:
 
 
 GPU (if you want to run on GPU):
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 -  CUDA® Toolkit 8.0. For details, see `NVIDIA’s
    documentation <https://developer.nvidia.com/cuda-toolkit>`__.
@@ -173,7 +173,7 @@ GPU (if you want to run on GPU):
 -  The libcupti-dev library,
 
 Text and Document Classification
----------------------------------
+=================================
 
 -  Download GloVe: Global Vectors for Word Representation `Instruction
    Documents <https://nlp.stanford.edu/projects/glove/>`__
@@ -184,24 +184,39 @@ Text and Document Classification
    -  if you are not setting GloVe directory, GloVe will be downloaded
 
 Example
--------
+========
 
 MNIST
-~~~~~
+-----
+
+Packages
+~~~~~~~~
 
 .. code:: python
 
         from keras.datasets import mnist
         import numpy as np
         from RMDL import RMDL_Image as RMDL
-        
-            (X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+
+Load Data
+~~~~~~~~~
+
+.. code:: python
+
+        (X_train, y_train), (X_test, y_test) = mnist.load_data()
         X_train_D = X_train.reshape(X_train.shape[0], 28, 28, 1).astype('float32')
         X_test_D = X_test.reshape(X_test.shape[0], 28, 28, 1).astype('float32')
         X_train = X_train_D / 255.0
         X_test = X_test_D / 255.0
         number_of_classes = np.unique(y_train).shape[0]
         shape = (28, 28, 1)
+
+Using RMDL
+~~~~~~~~~~~
+
+.. code:: python
+
         batch_size = 128
         sparse_categorical = 0
         n_epochs = [100, 100, 100]  ## DNN-RNN-CNN 

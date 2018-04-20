@@ -32,7 +32,7 @@
     <SUITE FILE_PATH="coverage/RMDL$Text_pandas___Copy.coverage" NAME="Text_pandas - Copy Coverage Results" MODIFIED="1524174494270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Examples" />
     <SUITE FILE_PATH="coverage/Data_Cleaning_Code_Python$DNN.coverage" NAME="DNN Coverage Results" MODIFIED="1496379277572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RMDL$DNN.coverage" NAME="DNN Coverage Results" MODIFIED="1506801317976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/SHen/Code_Regression" />
-    <SUITE FILE_PATH="coverage/RMDL$docutils_task_in_README_rst.coverage" NAME="docutils task in README.rst Coverage Results" MODIFIED="1524176029291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RMDL$docutils_task_in_README_rst.coverage" NAME="docutils task in README.rst Coverage Results" MODIFIED="1524252097730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HDLTex_finalCode$HDLTex.coverage" NAME="HDLTex Coverage Results" MODIFIED="1498705865770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RMDL$WOS_5736__1_.coverage" NAME="WOS-5736 Coverage Results" MODIFIED="1520546374915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Examples" />
     <SUITE FILE_PATH="coverage/Data_Cleaning_Code_Python$train.coverage" NAME="train Coverage Results" MODIFIED="1496124427554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/multi-class-text-classification-cnn-rnn-master" />
@@ -206,8 +206,8 @@
       <file leaf-file-name="README.rst" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="284" lean-forward="true" selection-start-line="284" selection-end-line="284" />
+            <state relative-caret-position="287">
+              <caret line="215" column="11" lean-forward="true" selection-start-line="215" selection-start-column="11" selection-end-line="215" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -395,7 +395,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.WOS-5736">
+  <component name="RunManager" selected="Python docs.docutils task in README.rst">
     <configuration name="MNIST" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Data Cleaning Code Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -642,9 +642,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python docs.docutils task in README.rst" />
         <item itemvalue="Python.WOS-5736" />
         <item itemvalue="Python.MNIST" />
-        <item itemvalue="Python docs.docutils task in README.rst" />
         <item itemvalue="Python.Text_pandas - Copy" />
         <item itemvalue="Python.ORL" />
       </list>
@@ -690,12 +690,12 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32900432" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.32900432" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49343544" visible="true" weight="0.32900432" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49343544" visible="true" weight="0.32900432" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.32683983" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983871" visible="true" weight="0.10660981" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32942432" />
-      <window_info active="true" anchor="right" id="SciView" order="4" sideWeight="0.9580645" visible="true" weight="0.39392325" />
+      <window_info anchor="right" id="SciView" order="4" sideWeight="0.9580645" visible="true" weight="0.39392325" />
       <window_info id="Structure" order="2" sideWeight="0.5016129" side_tool="true" weight="0.10660981" />
       <window_info id="Favorites" order="1" sideWeight="0.5016129" side_tool="true" visible="true" weight="0.10660981" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3982684" />
@@ -1048,8 +1048,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="284" lean-forward="true" selection-start-line="284" selection-end-line="284" />
+        <state relative-caret-position="287">
+          <caret line="215" column="11" lean-forward="true" selection-start-line="215" selection-start-column="11" selection-end-line="215" selection-end-column="11" />
         </state>
       </provider>
     </entry>
