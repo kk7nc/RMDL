@@ -277,6 +277,69 @@ Web Of Science
         RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
                                 n_epochs)
 
+
+Reuters-21578
+~~~~~~~~~~~~~~
+
+.. code:: python
+         import sys
+         import os
+         import nltk
+         nltk.download("reuters")
+         from nltk.corpus import reuters
+         from sklearn.preprocessing import MultiLabelBinarizer
+         import numpy as np
+         from RMDL import RMDL_Text as RMDL
+         documents = reuters.fileids()
+
+         train_docs_id = list(filter(lambda doc: doc.startswith("train"),
+                                   documents))
+         test_docs_id = list(filter(lambda doc: doc.startswith("test"),
+                                  documents))
+         X_train = [(reuters.raw(doc_id)) for doc_id in train_docs_id]
+         X_test = [(reuters.raw(doc_id)) for doc_id in test_docs_id]
+         mlb = MultiLabelBinarizer()
+         y_train = mlb.fit_transform([reuters.categories(doc_id)
+                                    for doc_id in train_docs_id])
+         y_test = mlb.transform([reuters.categories(doc_id)
+                               for doc_id in test_docs_id])
+         y_train = np.argmax(y_train, axis=1)
+         y_test = np.argmax(y_test, axis=1)
+
+         batch_size = 100
+         sparse_categorical = 0
+         n_epochs = [20, 500, 50]  ## DNN--RNN-CNN
+         Random_Deep = [3, 0, 0]  ## DNN--RNN-CNN
+
+         RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
+                               n_epochs)
+
+
+
+Olivetti Faces
+~~~~~~~~~~~~~~
+
+.. code:: python
+         from sklearn.datasets import fetch_olivetti_faces
+         from sklearn.model_selection import train_test_split
+         from RMDL import RMDL_Image as RMDL
+         number_of_classes = 40
+         shape = (64, 64, 1)
+         data = fetch_olivetti_faces()
+         X_train, X_test, y_train, y_test = train_test_split(data.data,
+                                                       data.target, stratify=data.target, test_size=40)
+         X_train = X_train.reshape(X_train.shape[0], 64, 64, 1).astype('float32')
+         X_test = X_test.reshape(X_test.shape[0], 64, 64, 1).astype('float32')
+
+         batch_size = 100
+         sparse_categorical = 0
+         n_epochs = [500, 500, 50]  ## DNN--RNN-CNN
+         Random_Deep = [0, 0, 1]  ## DNN--RNN-CNN
+         RMDL.Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
+                               n_epochs)
+
+
+
 More Exanmple
 `link <https://github.com/kk7nc/RMDL/tree/master/Examples>`__ 
 
