@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/Examples/WOS-5736.py" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/WOS-5736.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Examples/replay_pid360.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/README.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RMDL/BuildModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/RMDL/BuildModel.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -206,8 +205,8 @@
       <file leaf-file-name="README.rst" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="467" column="22" lean-forward="true" selection-start-line="467" selection-start-column="22" selection-end-line="467" selection-end-column="22" />
+            <state relative-caret-position="440">
+              <caret line="398" column="2" selection-start-line="398" selection-start-column="2" selection-end-line="398" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -1048,8 +1047,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="467" column="22" lean-forward="true" selection-start-line="467" selection-start-column="22" selection-end-line="467" selection-end-column="22" />
+        <state relative-caret-position="440">
+          <caret line="398" column="2" selection-start-line="398" selection-start-column="2" selection-end-line="398" selection-end-column="2" />
         </state>
       </provider>
     </entry>
