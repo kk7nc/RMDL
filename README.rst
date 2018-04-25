@@ -197,7 +197,7 @@ Text_Classification
          from RMDL import RMDL_Text
 
 
-.. code::
+.. code:: python
 
        Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
                         EMBEDDING_DIM=50,MAX_SEQUENCE_LENGTH = 500, MAX_NB_WORDS = 75000,
@@ -372,7 +372,7 @@ Image_Classification
 
          from RMDL import RMDL_Image
 
-.. code::
+.. code:: python
 
          Image_Classification(x_train, y_train, x_test, y_test, shape, batch_size=128,
                                   sparse_categorical=True, random_deep=[3, 3, 3], epochs=[500, 500, 500], plot=True,
