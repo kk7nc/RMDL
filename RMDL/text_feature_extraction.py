@@ -2,16 +2,11 @@
 RMDL: Random Multimodel Deep Learning for Classification
 
  * Copyright (C) 2018  Kamran Kowsari <kk7nc@virginia.edu>
- *
+ * Last Update: 04/25/2018
  * This file is part of  RMDL project, University of Virginia.
- *
  * Free to use, change, share and distribute source code of RMDL
- *
- *
  * Refrenced paper : RMDL: Random Multimodel Deep Learning for Classification
- *
  * Refrenced paper : An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)
- * 
  * Comments and Error: email: kk7nc@virginia.edu
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -56,7 +51,11 @@ def tokenize(text):
 
 
 
-def text_cleaner(text, deep_clean=False, stem= True, stop_words=True,translite_rate=True):
+def text_cleaner(text,
+                 deep_clean=False,
+                 stem= True,
+                 stop_words=True,
+                 translite_rate=True):
     rules = [
         {r'>\s+': u'>'},  # remove spaces after a tag opens or closes
         {r'\s+': u' '},  # replace consecutive spaces
@@ -111,34 +110,72 @@ def text_cleaner(text, deep_clean=False, stem= True, stop_words=True,translite_r
     return text.lower()
 
 def loadData_Tokenizer(X_train, X_test):
-    np.random.seed(7)
-    text = np.concatenate((X_train, X_test),axis=0)
-    text = np.array(text)
-    tokenizer = Tokenizer(num_words=G.MAX_NB_WORDS)
-    tokenizer.fit_on_texts(text)
-    sequences = tokenizer.texts_to_sequences(text)
-    word_index = tokenizer.word_index
-    text = pad_sequences(sequences, maxlen=G.MAX_SEQUENCE_LENGTH)
-    print('Found %s unique tokens.' % len(word_index))
-    indices = np.arange(text.shape[0])
-    #np.random.shuffle(indices)
-    text = text[indices]
-    print(text.shape)
-    X_train = text[0:len(X_train),]
-    X_test = text[len(X_train):,]
-    embeddings_index = {}
-    f = open(G.GloVe_DIR, encoding="utf8")
-    for line in f:
+    if False:
+        np.random.seed(7)
+        text = np.concatenate((X_train, X_test),axis=0)
+        text = np.array(X_train)
+        tokenizer = Tokenizer(num_words=G.MAX_NB_WORDS)
+        tokenizer.fit_on_texts(text)
+        sequences = tokenizer.texts_to_sequences(text)
+        word_index = tokenizer.word_index
+        text = pad_sequences(sequences, maxlen=G.MAX_SEQUENCE_LENGTH)
+        indices = np.arange(text.shape[0])
+        text = text[indices]
+        print(text.shape)
+        X_train = text
+        text = np.array(X_test)
+        sequences = tokenizer.texts_to_sequences(text)
+        text = pad_sequences(sequences, maxlen=G.MAX_SEQUENCE_LENGTH)
+        print('Found %s unique tokens.' % len(word_index))
+        indices = np.arange(text.shape[0])
+        text = text[indices]
+        print(text.shape)
+        X_test = text
 
-        values = line.split()
-        word = values[0]
-        try:
-            coefs = np.asarray(values[1:], dtype='float32')
-        except:
-            print("Warnning"+str(values)+" in" + str(line))
-        embeddings_index[word] = coefs
-    f.close()
-    print('Total %s word vectors.' % len(embeddings_index))
+
+        embeddings_index = {}
+        f = open(G.GloVe_DIR, encoding="utf8")
+        for line in f:
+
+            values = line.split()
+            word = values[0]
+            try:
+                coefs = np.asarray(values[1:], dtype='float32')
+            except:
+                print("Warnning"+str(values)+" in" + str(line))
+            embeddings_index[word] = coefs
+        f.close()
+
+        print('Total %s word vectors.' % len(embeddings_index))
+    else:
+        np.random.seed(7)
+        text = np.concatenate((X_train, X_test), axis=0)
+        text = np.array(text)
+        tokenizer = Tokenizer(num_words=G.MAX_NB_WORDS)
+        tokenizer.fit_on_texts(text)
+        sequences = tokenizer.texts_to_sequences(text)
+        word_index = tokenizer.word_index
+        text = pad_sequences(sequences, maxlen=G.MAX_SEQUENCE_LENGTH)
+        print('Found %s unique tokens.' % len(word_index))
+        indices = np.arange(text.shape[0])
+        # np.random.shuffle(indices)
+        text = text[indices]
+        print(text.shape)
+        X_train = text[0:len(X_train), ]
+        X_test = text[len(X_train):, ]
+        embeddings_index = {}
+        f = open(G.GloVe_DIR, encoding="utf8")
+        for line in f:
+
+            values = line.split()
+            word = values[0]
+            try:
+                coefs = np.asarray(values[1:], dtype='float32')
+            except:
+                print("Warnning" + str(values) + " in" + str(line))
+            embeddings_index[word] = coefs
+        f.close()
+        print('Total %s word vectors.' % len(embeddings_index))
     return (X_train, X_test, word_index,embeddings_index)
 
 def loadData(X_train, X_test):

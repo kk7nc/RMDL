@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<title>README.rst</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<p>ï»¿ï»¿<a class="reference external" href="https://doi.org/10.1145/3206098.3206111"><img alt="DOI" src="https://img.shields.io/badge/DOI-10.1145/3206098.3206111-blue.svg?style=flat" /></a> <a class="reference external" href="https://pypi.org"><object data="https://img.shields.io/badge/Pypi-RMDL%201.0.0-blue.svg" type="image/svg+xml">Pypi</object></a> <a class="reference external" href="https://app.wercker.com/project/byKey/3a564158e809971e2f7416beba5d05af"><img alt="wercker status" src="https://app.wercker.com/status/3a564158e809971e2f7416beba5d05af/s/master" /></a> <a class="reference external" href="https://travis-ci.com/kk7nc/RMDL"><img alt="Build Status" src="https://travis-ci.com/kk7nc/RMDL.svg?token=hgKUQ8w7fyzKbCumBbo8&amp;branch=master" /></a> <a class="reference external" href="https://github.com/kk7nc/RMDL/blob/master/Documents/RMDL.pdf"><img alt="PowerPoint" src="https://img.shields.io/badge/Presentation-download-red.svg?style=flat" /></a> <a class="reference external" href="https://www.researchgate.net"><img alt="license" src="https://img.shields.io/badge/ResearchGate-RMDL-blue.svg?style=flat" /></a> <a class="reference external" href="https://mybinder.org/v2/gh/kk7nc/RMDL/master"><object data="https://mybinder.org/badge.svg" type="image/svg+xml">Binder</object></a> <a class="reference external" href="https://github.com/kk7nc/RMDL/blob/master/Documents/ACM-RMDL.pdf"><img alt="pdf" src="https://img.shields.io/badge/pdf-download-red.svg?style=flat" /></a> <a class="reference external" href="./LICENSE"><object data="https://img.shields.io/badge/licence-GPL-blue.svg" type="image/svg+xml">GitHub license</object></a></p>
+<div class="section" id="rmdl-random-multimodel-deep-learning-for-classification">
+<h1>RMDL: Random Multimodel Deep Learning for Classification</h1>
+<p>Referenced paper : <a class="reference external" href="www.kowsari.net">RMDL: Random Multimodel Deep Learning for
+Classification</a></p>
+<p>Referenced paper : <a class="reference external" href="www.kowsari.net">An Improvement of Data Classification using Random
+Multimodel Deep Learning (RMDL)</a></p>
+</div>
+<div class="section" id="random-multimodel-deep-learning-rmdl">
+<h1>Random Multimodel Deep Learning (RMDL):</h1>
+<p>A new ensemble, deep learning approach for classification. Deep learning models have achieved state-of-the-art results across many domains. RMDL solves the problem of finding the best deep learning structure and architecture while simultaneously improving robustness and accuracy through ensembles of deep learning architectures. RDML can accept asinput a variety data to include text, video, images, and symbolic.</p>
+<p><img alt="RDL" src="http://kowsari.net/onewebmedia/RDL.jpg" /></p>
+<p>Overview of RDML: Random Multimodel Deep Learning for classification. The RMDL includesnRandom modelswhich aredrandom model of DNN classifiers,cmodels of CNN classifiers, andrRNN classifiers wherer+c+d=n.</p>
+<p><img alt="RMDL" src="http://kowsari.net/onewebmedia/RMDL.jpg" /></p>
+<p>Random Multimodel Deep Learning (RDML) architecture for classification. RMDL includes 3 Random models, oneDNN classifier at left, one Deep CNN classifier at middle, and one Deep RNN classifier at right (each unit could be LSTMor GRU).</p>
+</div>
+<div class="section" id="installation">
+<h1>Installation</h1>
+<p>There are git RMDL in this repository; to clone all the needed files,
+please use:</p>
+<div class="section" id="using-pip">
+<h2>Using pip</h2>
+<pre class="code python literal-block">
+<span class="name">pip</span> <span class="name">install</span> <span class="name">RMDL</span>
+</pre>
+</div>
+<div class="section" id="using-git">
+<h2>Using git</h2>
+<pre class="code bash literal-block">
+git clone --recursive https://github.com/kk7nc/RMDL.git
+</pre>
+<p>The primary requirements for this package are Python 3 with Tensorflow. The requirements.txt file contains a listing of the required Python packages; to install all requirements, run the following:</p>
+<pre class="code bash literal-block">
+pip -r install requirements.txt
+</pre>
+<p>Or</p>
+<pre class="code bash literal-block">
+pip3  install -r requirements.txt
+</pre>
+<p>Or:</p>
+<pre class="code bash literal-block">
+conda install --file requirements.txt
+</pre>
+</div>
+</div>
+<div class="section" id="documentation">
+<h1>Documentation:</h1>
+<p>The exponential growth in the number of complex datasets every year requires  more enhancement in machine learning methods to provide  robust and accurate data classification. Lately, deep learning approaches have been achieved surpassing results in comparison to previous machine learning algorithms on tasks such as image classification, natural language processing, face recognition, and etc. The success of these deep learning algorithms relys on their capacity to model complex and non-linear relationships within data. However, finding the suitable structure for these models has been a challenge for researchers. This paper introduces Random Multimodel Deep Learning (RMDL): a new ensemble, deep learning approach for classification.  RMDL solves the problem of finding the best deep learning structure and architecture while simultaneously improving robustness and accuracy through ensembles of deep learning architectures. In short, RMDL trains multiple models of Deep Neural Network (DNN), Convolutional Neural Network (CNN) and Recurrent Neural Network (RNN) in parallel and combines their results to produce better result of any of those models individually. To create these models, each deep learning model has been constructed in a random fashion regarding the number of layers and nodes in their neural network structure. The resulting RDML model can be used for various domains such as text, video, images, and symbolic. In this Project, we describe RMDL model in depth and show the results for image and text classification as well as face recognition. For image classification, we compared our model with some of the available baselines using MNIST and CIFAR-10 datasets. Similarly, we used four datasets namely, WOS, Reuters, IMDB, and 20newsgroup and compared our results with available baselines. Web of Science (WOS) has been collected  by authors and consists of three sets~(small, medium and large set). Lastly, we used ORL dataset to compare the performance of our approach with other face recognition methods. These test results show that RDML model consistently outperform standard methods over a broad range of data types and classification problems</p>
+</div>
+<div class="section" id="datasets-for-rmdl">
+<h1>Datasets for RMDL:</h1>
+<div class="section" id="text-datasets">
+<h2>Text Datasets:</h2>
+<ul class="simple">
+<li><a class="reference external" href="http://ai.stanford.edu/~amaas/data/sentiment/">IMDB Dataset</a><ul>
+<li>This dataset contains 50,000 documents with 2 categories.</li>
+</ul>
+</li>
+<li><a class="reference external" href="https://keras.io/datasets/">Reters-21578 Dataset</a><ul>
+<li>This dataset contains 21,578 documents with 90 categories.</li>
+</ul>
+</li>
+<li><a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups">20Newsgroups
+Dataset</a><ul>
+<li>This dataset contains 20,000 documents with 20 categories.</li>
+</ul>
+</li>
+<li>Web of Science Dataset (DOI:
+<a class="reference external" href="http://dx.doi.org/10.17632/9rw3vkcfy4.2">10.17632/9rw3vkcfy4.2</a>)<ul>
+<li>Web of Science Dataset
+<a class="reference external" href="http://dx.doi.org/10.17632/9rw3vkcfy4.2">WOS-11967</a><ul>
+<li>This dataset contains 11,967 documents with 35 categories which
+include 7 parents categories.</li>
+</ul>
+</li>
+<li>Web of Science Dataset
+<a class="reference external" href="http://dx.doi.org/10.17632/9rw3vkcfy4.2">WOS-46985</a><ul>
+<li>This dataset contains 46,985 documents with 134 categories
+which include 7 parents categories.</li>
+</ul>
+</li>
+<li>Web of Science Dataset
+<a class="reference external" href="http://dx.doi.org/10.17632/9rw3vkcfy4.2">WOS-5736</a><ul>
+<li>This dataset contains 5,736 documents with 11 categories which
+include 3 parents categories.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="image-datasets">
+<h2>Image datasets:</h2>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/MNIST_database">MNIST Dataset</a><ul>
+<li>The MNIST database contains 60,000 training images and 10,000
+testing images.</li>
+</ul>
+</li>
+<li><a class="reference external" href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10 Dataset</a><ul>
+<li>The CIFAR-10 dataset consists of 60000 32x32 colour images in 10
+classes, with 6000 images per class. There are 50000 training
+images and 10000 test images.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="face-recognition">
+<h2>Face Recognition</h2>
+<p><a class="reference external" href="http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html">The Database of Faces (The Olivetti Faces
+Dataset)</a></p>
+<ul class="simple">
+<li>The The Database of Faces dataset consists of 400 92x112 colour
+images and grayscale in 40 person</li>
+</ul>
+</div>
+</div>
+<div class="section" id="requirements-for-rmdl">
+<h1>Requirements for RMDL :</h1>
+<div class="section" id="general">
+<h2>General:</h2>
+<ul class="simple">
+<li>Python 3.5 or later see <a class="reference external" href="https://www.python.org/">Instruction
+Documents</a></li>
+<li>TensorFlow see <a class="reference external" href="https://www.tensorflow.org/install/install_linux">Instruction
+Documents</a>.</li>
+<li>scikit-learn see <a class="reference external" href="http://scikit-learn.org/stable/install.html">Instruction
+Documents</a></li>
+<li>Keras see <a class="reference external" href="https://keras.io/">Instruction Documents</a></li>
+<li>scipy see <a class="reference external" href="https://www.scipy.org/install.html">Instruction
+Documents</a></li>
+</ul>
+</div>
+<div class="section" id="gpu-if-you-want-to-run-on-gpu">
+<h2>GPU (if you want to run on GPU):</h2>
+<ul class="simple">
+<li>CUDAÂ® Toolkit 8.0. For details, see <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit">NVIDIAâ€™s
+documentation</a>.</li>
+<li>The <a class="reference external" href="http://www.nvidia.com/Download/index.aspx">NVIDIA drivers associated with CUDA Toolkit
+8.0</a>.</li>
+<li>cuDNN v6. For details, see <a class="reference external" href="https://developer.nvidia.com/cudnn">NVIDIAâ€™s
+documentation</a>.</li>
+<li>GPU card with CUDA Compute Capability 3.0 or higher.</li>
+<li>The libcupti-dev library,</li>
+</ul>
+</div>
+</div>
+<div class="section" id="text-and-document-classification">
+<h1>Text and Document Classification</h1>
+<ul class="simple">
+<li>Download GloVe: Global Vectors for Word Representation <a class="reference external" href="https://nlp.stanford.edu/projects/glove/">Instruction
+Documents</a><ul>
+<li>Set data directory into
+<a class="reference external" href="https://github.com/kk7nc/RMDL/blob/master/src/Global.py">Global.py</a></li>
+<li>if you are not setting GloVe directory, GloVe will be downloaded</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="example">
+<h1>Example</h1>
+<div class="section" id="mnist">
+<h2>MNIST</h2>
+<ul class="simple">
+<li>The MNIST database contains 60,000 training images and 10,000 testing images.</li>
+</ul>
+<div class="section" id="import-packages">
+<h3>Import Packages</h3>
+<pre class="code python literal-block">
+<span class="keyword namespace">from</span> <span class="name namespace">keras.datasets</span> <span class="keyword namespace">import</span> <span class="name">mnist</span>
+<span class="keyword namespace">import</span> <span class="name namespace">numpy</span> <span class="keyword namespace">as</span> <span class="name namespace">np</span>
+<span class="keyword namespace">from</span> <span class="name namespace">RMDL</span> <span class="keyword namespace">import</span> <span class="name">RMDL_Image</span> <span class="keyword">as</span> <span class="name">RMDL</span>
+</pre>
+</div>
+<div class="section" id="load-data">
+<h3>Load Data</h3>
+<pre class="code python literal-block">
+<span class="punctuation">(</span><span class="name">X_train</span><span class="punctuation">,</span> <span class="name">y_train</span><span class="punctuation">),</span> <span class="punctuation">(</span><span class="name">X_test</span><span class="punctuation">,</span> <span class="name">y_test</span><span class="punctuation">)</span> <span class="operator">=</span> <span class="name">mnist</span><span class="operator">.</span><span class="name">load_data</span><span class="punctuation">()</span>
+<span class="name">X_train_D</span> <span class="operator">=</span> <span class="name">X_train</span><span class="operator">.</span><span class="name">reshape</span><span class="punctuation">(</span><span class="name">X_train</span><span class="operator">.</span><span class="name">shape</span><span class="punctuation">[</span><span class="literal number integer">0</span><span class="punctuation">],</span> <span class="literal number integer">28</span><span class="punctuation">,</span> <span class="literal number integer">28</span><span class="punctuation">,</span> <span class="literal number integer">1</span><span class="punctuation">)</span><span class="operator">.</span><span class="name">astype</span><span class="punctuation">(</span><span class="literal string single">'float32'</span><span class="punctuation">)</span>
+<span class="name">X_test_D</span> <span class="operator">=</span> <span class="name">X_test</span><span class="operator">.</span><span class="name">reshape</span><span class="punctuation">(</span><span class="name">X_test</span><span class="operator">.</span><span class="name">shape</span><span class="punctuation">[</span><span class="literal number integer">0</span><span class="punctuation">],</span> <span class="literal number integer">28</span><span class="punctuation">,</span> <span class="literal number integer">28</span><span class="punctuation">,</span> <span class="literal number integer">1</span><span class="punctuation">)</span><span class="operator">.</span><span class="name">astype</span><span class="punctuation">(</span><span class="literal string single">'float32'</span><span class="punctuation">)</span>
+<span class="name">X_train</span> <span class="operator">=</span> <span class="name">X_train_D</span> <span class="operator">/</span> <span class="literal number float">255.0</span>
+<span class="name">X_test</span> <span class="operator">=</span> <span class="name">X_test_D</span> <span class="operator">/</span> <span class="literal number float">255.0</span>
+<span class="name">number_of_classes</span> <span class="operator">=</span> <span class="name">np</span><span class="operator">.</span><span class="name">unique</span><span class="punctuation">(</span><span class="name">y_train</span><span class="punctuation">)</span><span class="operator">.</span><span class="name">shape</span><span class="punctuation">[</span><span class="literal number integer">0</span><span class="punctuation">]</span>
+<span class="name">shape</span> <span class="operator">=</span> <span class="punctuation">(</span><span class="literal number integer">28</span><span class="punctuation">,</span> <span class="literal number integer">28</span><span class="punctuation">,</span> <span class="literal number integer">1</span><span class="punctuation">)</span>
+</pre>
+</div>
+<div class="section" id="using-rmdl">
+<h3>Using RMDL</h3>
+<pre class="code python literal-block">
+<span class="name">batch_size</span> <span class="operator">=</span> <span class="literal number integer">128</span>
+<span class="name">sparse_categorical</span> <span class="operator">=</span> <span class="literal number integer">0</span>
+<span class="name">n_epochs</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="literal number integer">100</span><span class="punctuation">,</span> <span class="literal number integer">100</span><span class="punctuation">,</span> <span class="literal number integer">100</span><span class="punctuation">]</span>  <span class="comment single">## DNN-RNN-CNN</span>
+<span class="name">Random_Deep</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="literal number integer">3</span><span class="punctuation">,</span> <span class="literal number integer">3</span><span class="punctuation">,</span> <span class="literal number integer">3</span><span class="punctuation">]</span>  <span class="comment single">## DNN-RNN-CNN</span>
+<span class="name">RMDL</span><span class="operator">.</span><span class="name">Image_Classification</span><span class="punctuation">(</span><span class="name">X_train</span><span class="punctuation">,</span> <span class="name">y_train</span><span class="punctuation">,</span> <span class="name">X_test</span><span class="punctuation">,</span> <span class="name">y_test</span><span class="punctuation">,</span> <span class="name">batch_size</span><span class="punctuation">,</span> <span class="name">shape</span><span class="punctuation">,</span> <span class="name">sparse_categorical</span><span class="punctuation">,</span> <span class="name">Random_Deep</span><span class="punctuation">,</span>
+                        <span class="name">n_epochs</span><span class="punctuation">)</span>
+</pre>
+</div>
+</div>
+<div class="section" id="imdb">
+<h2>IMDB</h2>
+<ul class="simple">
+<li>This dataset contains 50,000 documents with 2 categories.</li>
+</ul>
+<div class="section" id="id1">
+<h3>Import Packages</h3>
+<pre class="code python literal-block">
+<span class="keyword namespace">import</span> <span class="name namespace">sys</span>
+<span class="keyword namespace">import</span> <span class="name namespace">os</span>
+<span class="keyword namespace">from</span> <span class="name namespace">RMDL</span> <span class="keyword namespace">import</span> <span class="name">text_feature_extraction</span> <span class="keyword">as</span> <span class="name">txt</span>
+<span class="keyword namespace">from</span> <span class="name namespace">keras.datasets</span> <span class="keyword namespace">import</span> <span class="name">imdb</span>
+<span class="keyword namespace">import</span> <span class="name namespace">numpy</span> <span class="keyword namespace">as</span> <span class="name namespace">np</span>
+<span class="keyword namespace">from</span> <span class="name namespace">RMDL</span> <span class="keyword namespace">import</span> <span class="name">RMDL_Text</span> <span class="keyword">as</span> <span class="name">RMDL</span>
+</pre>
+</div>
+<div class="section" id="id2">
+<h3>Load Data</h3>
+<pre class="code python literal-block">
+<span class="keyword">print</span><span class="punctuation">(</span><span class="literal string double">&quot;Load IMDB dataset....&quot;</span><span class="punctuation">)</span>
+<span class="punctuation">(</span><span class="name">X_train</span><span class="punctuation">,</span> <span class="name">y_train</span><span class="punctuation">),</span> <span class="punctuation">(</span><span class="name">X_test</span><span class="punctuation">,</span> <span class="name">y_test</span><span class="punctuation">)</span> <span class="operator">=</span> <span class="name">imdb</span><span class="operator">.</span><span class="name">load_data</span><span class="punctuation">(</span><span class="name">num_words</span><span class="operator">=</span><span class="name">MAX_NB_WORDS</span><span class="punctuation">)</span>
+<span class="keyword">print</span><span class="punctuation">(</span><span class="name builtin">len</span><span class="punctuation">(</span><span class="name">X_train</span><span class="punctuation">))</span>
+<span class="keyword">print</span><span class="punctuation">(</span><span class="name">y_test</span><span class="punctuation">)</span>
+<span class="name">word_index</span> <span class="operator">=</span> <span class="name">imdb</span><span class="operator">.</span><span class="name">get_word_index</span><span class="punctuation">()</span>
+<span class="name">index_word</span> <span class="operator">=</span> <span class="punctuation">{</span><span class="name">v</span><span class="punctuation">:</span> <span class="name">k</span> <span class="keyword">for</span> <span class="name">k</span><span class="punctuation">,</span> <span class="name">v</span> <span class="operator word">in</span> <span class="name">word_index</span><span class="operator">.</span><span class="name">items</span><span class="punctuation">()}</span>
+<span class="name">X_train</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="name">txt</span><span class="operator">.</span><span class="name">text_cleaner</span><span class="punctuation">(</span><span class="literal string single">' '</span><span class="operator">.</span><span class="name">join</span><span class="punctuation">(</span><span class="name">index_word</span><span class="operator">.</span><span class="name">get</span><span class="punctuation">(</span><span class="name">w</span><span class="punctuation">)</span> <span class="keyword">for</span> <span class="name">w</span> <span class="operator word">in</span> <span class="name">x</span><span class="punctuation">))</span> <span class="keyword">for</span> <span class="name">x</span> <span class="operator word">in</span> <span class="name">X_train</span><span class="punctuation">]</span>
+<span class="name">X_test</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="name">txt</span><span class="operator">.</span><span class="name">text_cleaner</span><span class="punctuation">(</span><span class="literal string single">' '</span><span class="operator">.</span><span class="name">join</span><span class="punctuation">(</span><span class="name">index_word</span><span class="operator">.</span><span class="name">get</span><span class="punctuation">(</span><span class="name">w</span><span class="punctuation">)</span> <span class="keyword">for</span> <span class="name">w</span> <span class="operator word">in</span> <span class="name">x</span><span class="punctuation">))</span> <span class="keyword">for</span> <span class="name">x</span> <span class="operator word">in</span> <span class="name">X_test</span><span class="punctuation">]</span>
+<span class="name">X_train</span> <span class="operator">=</span> <span class="name">np</span><span class="operator">.</span><span class="name">array</span><span class="punctuation">(</span><span class="name">X_train</span><span class="punctuation">)</span>
+<span class="name">X_train</span> <span class="operator">=</span> <span class="name">np</span><span class="operator">.</span><span class="name">array</span><span class="punctuation">(</span><span class="name">X_train</span><span class="punctuation">)</span><span class="operator">.</span><span class="name">ravel</span><span class="punctuation">()</span>
+<span class="keyword">print</span><span class="punctuation">(</span><span class="name">X_train</span><span class="operator">.</span><span class="name">shape</span><span class="punctuation">)</span>
+<span class="name">X_test</span> <span class="operator">=</span> <span class="name">np</span><span class="operator">.</span><span class="name">array</span><span class="punctuation">(</span><span class="name">X_test</span><span class="punctuation">)</span>
+<span class="name">X_test</span> <span class="operator">=</span> <span class="name">np</span><span class="operator">.</span><span class="name">array</span><span class="punctuation">(</span><span class="name">X_test</span><span class="punctuation">)</span><span class="operator">.</span><span class="name">ravel</span><span class="punctuation">()</span>
+</pre>
+</div>
+<div class="section" id="id3">
+<h3>Using RMDL</h3>
+<pre class="code python literal-block">
+<span class="name">batch_size</span> <span class="operator">=</span> <span class="literal number integer">100</span>
+<span class="name">sparse_categorical</span> <span class="operator">=</span> <span class="literal number integer">0</span>
+<span class="name">n_epochs</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="literal number integer">100</span><span class="punctuation">,</span> <span class="literal number integer">100</span><span class="punctuation">,</span> <span class="literal number integer">100</span><span class="punctuation">]</span>  <span class="comment single">## DNN--RNN-CNN</span>
+<span class="name">Random_Deep</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="literal number integer">3</span><span class="punctuation">,</span> <span class="literal number integer">3</span><span class="punctuation">,</span> <span class="literal number integer">3</span><span class="punctuation">]</span>  <span class="comment single">## DNN--RNN-CNN</span>
+
+<span class="name">RMDL</span><span class="operator">.</span><span class="name">Text_Classification</span><span class="punctuation">(</span><span class="name">X_train</span><span class="punctuation">,</span> <span class="name">y_train</span><span class="punctuation">,</span> <span class="name">X_test</span><span class="punctuation">,</span> <span class="name">y_test</span><span class="punctuation">,</span> <span class="name">batch_size</span><span class="punctuation">,</span> <span class="name">sparse_categorical</span><span class="punctuation">,</span> <span class="name">Random_Deep</span><span class="punctuation">,</span>
+                    <span class="name">n_epochs</span><span class="punctuation">)</span>
+</pre>
+</div>
+</div>
+<div class="section" id="web-of-science">
+<h2>Web Of Science</h2>
+<ul>
+<li><p class="first">Linke of dataset: <a class="reference external" href="http://dx.doi.org/10.17632/9rw3vkcfy4.6"><img alt="Data" src="https://img.shields.io/badge/DOI-10.17632/9rw3vkcfy4.6-blue.svg?style=flat" /></a></p>
+<ul>
+<li><p class="first">Web of Science Dataset <a class="reference external" href="http://dx.doi.org/10.17632/9rw3vkcfy4.2">WOS-11967</a></p>
+<blockquote>
+<ul class="simple">
+<li>This dataset contains 11,967 documents with 35 categories which include 7 parents categories.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Web of Science Dataset <a class="reference external" href="http://dx.doi.org/10.17632/9rw3vkcfy4.2">WOS-46985</a></p>
+<blockquote>
+<ul class="simple">
+<li>This dataset contains 46,985 documents with 134 categories which include 7 parents categories.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Web of Science Dataset <a class="reference external" href="http://dx.doi.org/10.17632/9rw3vkcfy4.2">WOS-5736</a></p>
+<blockquote>
+<ul class="simple">
+<li>This dataset contains 5,736 documents with 11 categories which include 3 parents categories.</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="id4">
+<h3>Import Packages</h3>
+<pre class="code python literal-block">
+<span class="keyword namespace">from</span> <span class="name namespace">RMDL</span> <span class="keyword namespace">import</span> <span class="name">text_feature_extraction</span> <span class="keyword">as</span> <span class="name">txt</span>
+<span class="keyword namespace">from</span> <span class="name namespace">sklearn.model_selection</span> <span class="keyword namespace">import</span> <span class="name">train_test_split</span>
+<span class="keyword namespace">from</span> <span class="name namespace">RMDL.Download</span> <span class="keyword namespace">import</span> <span class="name">Download_WOS</span> <span class="keyword">as</span> <span class="name">WOS</span>
+<span class="keyword namespace">import</span> <span class="name namespace">numpy</span> <span class="keyword namespace">as</span> <span class="name namespace">np</span>
+<span class="keyword namespace">from</span> <span class="name namespace">RMDL</span> <span class="keyword namespace">import</span> <span class="name">RMDL_Text</span> <span class="keyword">as</span> <span class="name">RMDL</span>
+</pre>
+</div>
+<div class="section" id="id5">
+<h3>Load Data</h3>
+<pre class="code python literal-block">
+<span class="name">path_WOS</span> <span class="operator">=</span> <span class="name">WOS</span><span class="operator">.</span><span class="name">download_and_extract</span><span class="punctuation">()</span>
+<span class="name">fname</span> <span class="operator">=</span> <span class="name">os</span><span class="operator">.</span><span class="name">path</span><span class="operator">.</span><span class="name">join</span><span class="punctuation">(</span><span class="name">path_WOS</span><span class="punctuation">,</span><span class="literal string double">&quot;WebOfScience/WOS11967/X.txt&quot;</span><span class="punctuation">)</span>
+<span class="name">fnamek</span> <span class="operator">=</span> <span class="name">os</span><span class="operator">.</span><span class="name">path</span><span class="operator">.</span><span class="name">join</span><span class="punctuation">(</span><span class="name">path_WOS</span><span class="punctuation">,</span><span class="literal string double">&quot;WebOfScience/WOS11967/Y.txt&quot;</span><span class="punctuation">)</span>
+<span class="keyword">with</span> <span class="name builtin">open</span><span class="punctuation">(</span><span class="name">fname</span><span class="punctuation">,</span> <span class="name">encoding</span><span class="operator">=</span><span class="literal string double">&quot;utf-8&quot;</span><span class="punctuation">)</span> <span class="keyword">as</span> <span class="name">f</span><span class="punctuation">:</span>
+    <span class="name">content</span> <span class="operator">=</span> <span class="name">f</span><span class="operator">.</span><span class="name">readlines</span><span class="punctuation">()</span>
+    <span class="name">content</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="name">txt</span><span class="operator">.</span><span class="name">text_cleaner</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span> <span class="keyword">for</span> <span class="name">x</span> <span class="operator word">in</span> <span class="name">content</span><span class="punctuation">]</span>
+<span class="keyword">with</span> <span class="name builtin">open</span><span class="punctuation">(</span><span class="name">fnamek</span><span class="punctuation">)</span> <span class="keyword">as</span> <span class="name">fk</span><span class="punctuation">:</span>
+    <span class="name">contentk</span> <span class="operator">=</span> <span class="name">fk</span><span class="operator">.</span><span class="name">readlines</span><span class="punctuation">()</span>
+<span class="name">contentk</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="name">x</span><span class="operator">.</span><span class="name">strip</span><span class="punctuation">()</span> <span class="keyword">for</span> <span class="name">x</span> <span class="operator word">in</span> <span class="name">contentk</span><span class="punctuation">]</span>
+<span class="name">Label</span> <span class="operator">=</span> <span class="name">np</span><span class="operator">.</span><span class="name">matrix</span><span class="punctuation">(</span><span class="name">contentk</span><span class="punctuation">,</span> <span class="name">dtype</span><span class="operator">=</span><span class="name builtin">int</span><span class="punctuation">)</span>
+<span class="name">Label</span> <span class="operator">=</span> <span class="name">np</span><span class="operator">.</span><span class="name">transpose</span><span class="punctuation">(</span><span class="name">Label</span><span class="punctuation">)</span>
+<span class="name">np</span><span class="operator">.</span><span class="name">random</span><span class="operator">.</span><span class="name">seed</span><span class="punctuation">(</span><span class="literal number integer">7</span><span class="punctuation">)</span>
+<span class="keyword">print</span><span class="punctuation">(</span><span class="name">Label</span><span class="operator">.</span><span class="name">shape</span><span class="punctuation">)</span>
+<span class="name">X_train</span><span class="punctuation">,</span> <span class="name">X_test</span><span class="punctuation">,</span> <span class="name">y_train</span><span class="punctuation">,</span> <span class="name">y_test</span> <span class="operator">=</span> <span class="name">train_test_split</span><span class="punctuation">(</span><span class="name">content</span><span class="punctuation">,</span> <span class="name">Label</span><span class="punctuation">,</span> <span class="name">test_size</span><span class="operator">=</span><span class="literal number float">0.2</span><span class="punctuation">,</span> <span class="name">random_state</span><span class="operator">=</span><span class="literal number integer">4</span><span class="punctuation">)</span>
+</pre>
+</div>
+<div class="section" id="id6">
+<h3>Using RMDL</h3>
+<pre class="code python literal-block">
+<span class="name">batch_size</span> <span class="operator">=</span> <span class="literal number integer">100</span>
+<span class="name">sparse_categorical</span> <span class="operator">=</span> <span class="literal number integer">0</span>
+<span class="name">n_epochs</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="literal number integer">5000</span><span class="punctuation">,</span> <span class="literal number integer">500</span><span class="punctuation">,</span> <span class="literal number integer">500</span><span class="punctuation">]</span>  <span class="comment single">## DNN--RNN-CNN</span>
+<span class="name">Random_Deep</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="literal number integer">3</span><span class="punctuation">,</span> <span class="literal number integer">3</span><span class="punctuation">,</span> <span class="literal number integer">3</span><span class="punctuation">]</span>  <span class="comment single">## DNN--RNN-CNN</span>
+
+<span class="name">RMDL</span><span class="operator">.</span><span class="name">Text_Classification</span><span class="punctuation">(</span><span class="name">X_train</span><span class="punctuation">,</span> <span class="name">y_train</span><span class="punctuation">,</span> <span class="name">X_test</span><span class="punctuation">,</span> <span class="name">y_test</span><span class="punctuation">,</span> <span class="name">batch_size</span><span class="punctuation">,</span> <span class="name">sparse_categorical</span><span class="punctuation">,</span> <span class="name">Random_Deep</span><span class="punctuation">,</span>
+                        <span class="name">n_epochs</span><span class="punctuation">)</span>
+</pre>
+</div>
+</div>
+<div class="section" id="reuters-21578">
+<h2>Reuters-21578</h2>
+<p>-This dataset contains 21,578 documents with 90 categories.</p>
+<div class="section" id="id7">
+<h3>Import Packages</h3>
+<pre class="code python literal-block">
+<span class="keyword namespace">import</span> <span class="name namespace">sys</span>
+<span class="keyword namespace">import</span> <span class="name namespace">os</span>
+<span class="keyword namespace">import</span> <span class="name namespace">nltk</span>
+<span class="name">nltk</span><span class="operator">.</span><span class="name">download</span><span class="punctuation">(</span><span class="literal string double">&quot;reuters&quot;</span><span class="punctuation">)</span>
+<span class="keyword namespace">from</span> <span class="name namespace">nltk.corpus</span> <span class="keyword namespace">import</span> <span class="name">reuters</span>
+<span class="keyword namespace">from</span> <span class="name namespace">sklearn.preprocessing</span> <span class="keyword namespace">import</span> <span class="name">MultiLabelBinarizer</span>
+<span class="keyword namespace">import</span> <span class="name namespace">numpy</span> <span class="keyword namespace">as</span> <span class="name namespace">np</span>
+<span class="keyword namespace">from</span> <span class="name namespace">RMDL</span> <span class="keyword namespace">import</span> <span class="name">RMDL_Text</span> <span class="keyword">as</span> <span class="name">RMDL</span>
+</pre>
+</div>
+<div class="section" id="id8">
+<h3>Load Data</h3>
+<pre class="code python literal-block">
+<span class="name">documents</span> <span class="operator">=</span> <span class="name">reuters</span><span class="operator">.</span><span class="name">fileids</span><span class="punctuation">()</span>
+
+<span class="name">train_docs_id</span> <span class="operator">=</span> <span class="name builtin">list</span><span class="punctuation">(</span><span class="name builtin">filter</span><span class="punctuation">(</span><span class="keyword">lambda</span> <span class="name">doc</span><span class="punctuation">:</span> <span class="name">doc</span><span class="operator">.</span><span class="name">startswith</span><span class="punctuation">(</span><span class="literal string double">&quot;train&quot;</span><span class="punctuation">),</span>
+                          <span class="name">documents</span><span class="punctuation">))</span>
+<span class="name">test_docs_id</span> <span class="operator">=</span> <span class="name builtin">list</span><span class="punctuation">(</span><span class="name builtin">filter</span><span class="punctuation">(</span><span class="keyword">lambda</span> <span class="name">doc</span><span class="punctuation">:</span> <span class="name">doc</span><span class="operator">.</span><span class="name">startswith</span><span class="punctuation">(</span><span class="literal string double">&quot;test&quot;</span><span class="punctuation">),</span>
+                         <span class="name">documents</span><span class="punctuation">))</span>
+<span class="name">X_train</span> <span class="operator">=</span> <span class="punctuation">[(</span><span class="name">reuters</span><span class="operator">.</span><span class="name">raw</span><span class="punctuation">(</span><span class="name">doc_id</span><span class="punctuation">))</span> <span class="keyword">for</span> <span class="name">doc_id</span> <span class="operator word">in</span> <span class="name">train_docs_id</span><span class="punctuation">]</span>
+<span class="name">X_test</span> <span class="operator">=</span> <span class="punctuation">[(</span><span class="name">reuters</span><span class="operator">.</span><span class="name">raw</span><span class="punctuation">(</span><span class="name">doc_id</span><span class="punctuation">))</span> <span class="keyword">for</span> <span class="name">doc_id</span> <span class="operator word">in</span> <span class="name">test_docs_id</span><span class="punctuation">]</span>
+<span class="name">mlb</span> <span class="operator">=</span> <span class="name">MultiLabelBinarizer</span><span class="punctuation">()</span>
+<span class="name">y_train</span> <span class="operator">=</span> <span class="name">mlb</span><span class="operator">.</span><span class="name">fit_transform</span><span class="punctuation">([</span><span class="name">reuters</span><span class="operator">.</span><span class="name">categories</span><span class="punctuation">(</span><span class="name">doc_id</span><span class="punctuation">)</span>
+                           <span class="keyword">for</span> <span class="name">doc_id</span> <span class="operator word">in</span> <span class="name">train_docs_id</span><span class="punctuation">])</span>
+<span class="name">y_test</span> <span class="operator">=</span> <span class="name">mlb</span><span class="operator">.</span><span class="name">transform</span><span class="punctuation">([</span><span class="name">reuters</span><span class="operator">.</span><span class="name">categories</span><span class="punctuation">(</span><span class="name">doc_id</span><span class="punctuation">)</span>
+                      <span class="keyword">for</span> <span class="name">doc_id</span> <span class="operator word">in</span> <span class="name">test_docs_id</span><span class="punctuation">])</span>
+<span class="name">y_train</span> <span class="operator">=</span> <span class="name">np</span><span class="operator">.</span><span class="name">argmax</span><span class="punctuation">(</span><span class="name">y_train</span><span class="punctuation">,</span> <span class="name">axis</span><span class="operator">=</span><span class="literal number integer">1</span><span class="punctuation">)</span>
+<span class="name">y_test</span> <span class="operator">=</span> <span class="name">np</span><span class="operator">.</span><span class="name">argmax</span><span class="punctuation">(</span><span class="name">y_test</span><span class="punctuation">,</span> <span class="name">axis</span><span class="operator">=</span><span class="literal number integer">1</span><span class="punctuation">)</span>
+</pre>
+</div>
+<div class="section" id="id9">
+<h3>Using RMDL</h3>
+<pre class="code python literal-block">
+<span class="name">batch_size</span> <span class="operator">=</span> <span class="literal number integer">100</span>
+<span class="name">sparse_categorical</span> <span class="operator">=</span> <span class="literal number integer">0</span>
+<span class="name">n_epochs</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="literal number integer">20</span><span class="punctuation">,</span> <span class="literal number integer">500</span><span class="punctuation">,</span> <span class="literal number integer">50</span><span class="punctuation">]</span>  <span class="comment single">## DNN--RNN-CNN</span>
+<span class="name">Random_Deep</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="literal number integer">3</span><span class="punctuation">,</span> <span class="literal number integer">0</span><span class="punctuation">,</span> <span class="literal number integer">0</span><span class="punctuation">]</span>  <span class="comment single">## DNN--RNN-CNN</span>
+
+<span class="name">RMDL</span><span class="operator">.</span><span class="name">Text_Classification</span><span class="punctuation">(</span><span class="name">X_train</span><span class="punctuation">,</span> <span class="name">y_train</span><span class="punctuation">,</span> <span class="name">X_test</span><span class="punctuation">,</span> <span class="name">y_test</span><span class="punctuation">,</span> <span class="name">batch_size</span><span class="punctuation">,</span> <span class="name">sparse_categorical</span><span class="punctuation">,</span> <span class="name">Random_Deep</span><span class="punctuation">,</span>
+                      <span class="name">n_epochs</span><span class="punctuation">)</span>
+</pre>
+</div>
+</div>
+<div class="section" id="olivetti-faces">
+<h2>Olivetti Faces</h2>
+<ul class="simple">
+<li>There are ten different images of each of 40 distinct subjects. For some subjects, the images were taken at different times, varying the lighting, facial expressions (open / closed eyes, smiling / not smiling) and facial details (glasses / no glasses). All the images were taken against a dark homogeneous background with the subjects in an upright, frontal position (with tolerance for some side movement).</li>
+</ul>
+<div class="section" id="id10">
+<h3>Import Packages</h3>
+<pre class="code python literal-block">
+<span class="keyword namespace">from</span> <span class="name namespace">sklearn.datasets</span> <span class="keyword namespace">import</span> <span class="name">fetch_olivetti_faces</span>
+<span class="keyword namespace">from</span> <span class="name namespace">sklearn.model_selection</span> <span class="keyword namespace">import</span> <span class="name">train_test_split</span>
+<span class="keyword namespace">from</span> <span class="name namespace">RMDL</span> <span class="keyword namespace">import</span> <span class="name">RMDL_Image</span> <span class="keyword">as</span> <span class="name">RMDL</span>
+</pre>
+</div>
+<div class="section" id="id11">
+<h3>Load Data</h3>
+<pre class="code python literal-block">
+<span class="name">number_of_classes</span> <span class="operator">=</span> <span class="literal number integer">40</span>
+<span class="name">shape</span> <span class="operator">=</span> <span class="punctuation">(</span><span class="literal number integer">64</span><span class="punctuation">,</span> <span class="literal number integer">64</span><span class="punctuation">,</span> <span class="literal number integer">1</span><span class="punctuation">)</span>
+<span class="name">data</span> <span class="operator">=</span> <span class="name">fetch_olivetti_faces</span><span class="punctuation">()</span>
+<span class="name">X_train</span><span class="punctuation">,</span> <span class="name">X_test</span><span class="punctuation">,</span> <span class="name">y_train</span><span class="punctuation">,</span> <span class="name">y_test</span> <span class="operator">=</span> <span class="name">train_test_split</span><span class="punctuation">(</span><span class="name">data</span><span class="operator">.</span><span class="name">data</span><span class="punctuation">,</span>
+                                              <span class="name">data</span><span class="operator">.</span><span class="name">target</span><span class="punctuation">,</span> <span class="name">stratify</span><span class="operator">=</span><span class="name">data</span><span class="operator">.</span><span class="name">target</span><span class="punctuation">,</span> <span class="name">test_size</span><span class="operator">=</span><span class="literal number integer">40</span><span class="punctuation">)</span>
+<span class="name">X_train</span> <span class="operator">=</span> <span class="name">X_train</span><span class="operator">.</span><span class="name">reshape</span><span class="punctuation">(</span><span class="name">X_train</span><span class="operator">.</span><span class="name">shape</span><span class="punctuation">[</span><span class="literal number integer">0</span><span class="punctuation">],</span> <span class="literal number integer">64</span><span class="punctuation">,</span> <span class="literal number integer">64</span><span class="punctuation">,</span> <span class="literal number integer">1</span><span class="punctuation">)</span><span class="operator">.</span><span class="name">astype</span><span class="punctuation">(</span><span class="literal string single">'float32'</span><span class="punctuation">)</span>
+<span class="name">X_test</span> <span class="operator">=</span> <span class="name">X_test</span><span class="operator">.</span><span class="name">reshape</span><span class="punctuation">(</span><span class="name">X_test</span><span class="operator">.</span><span class="name">shape</span><span class="punctuation">[</span><span class="literal number integer">0</span><span class="punctuation">],</span> <span class="literal number integer">64</span><span class="punctuation">,</span> <span class="literal number integer">64</span><span class="punctuation">,</span> <span class="literal number integer">1</span><span class="punctuation">)</span><span class="operator">.</span><span class="name">astype</span><span class="punctuation">(</span><span class="literal string single">'float32'</span><span class="punctuation">)</span>
+</pre>
+</div>
+<div class="section" id="id12">
+<h3>Using RMDL</h3>
+<pre class="code python literal-block">
+<span class="name">batch_size</span> <span class="operator">=</span> <span class="literal number integer">100</span>
+<span class="name">sparse_categorical</span> <span class="operator">=</span> <span class="literal number integer">0</span>
+<span class="name">n_epochs</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="literal number integer">500</span><span class="punctuation">,</span> <span class="literal number integer">500</span><span class="punctuation">,</span> <span class="literal number integer">50</span><span class="punctuation">]</span>  <span class="comment single">## DNN--RNN-CNN</span>
+<span class="name">Random_Deep</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="literal number integer">0</span><span class="punctuation">,</span> <span class="literal number integer">0</span><span class="punctuation">,</span> <span class="literal number integer">1</span><span class="punctuation">]</span>  <span class="comment single">## DNN--RNN-CNN</span>
+<span class="name">RMDL</span><span class="operator">.</span><span class="name">Image_Classification</span><span class="punctuation">(</span><span class="name">X_train</span><span class="punctuation">,</span> <span class="name">y_train</span><span class="punctuation">,</span> <span class="name">X_test</span><span class="punctuation">,</span> <span class="name">y_test</span><span class="punctuation">,</span> <span class="name">batch_size</span><span class="punctuation">,</span> <span class="name">shape</span><span class="punctuation">,</span> <span class="name">sparse_categorical</span><span class="punctuation">,</span> <span class="name">Random_Deep</span><span class="punctuation">,</span>
+                      <span class="name">n_epochs</span><span class="punctuation">)</span>
+</pre>
+<p>More Exanmple
+<a class="reference external" href="https://github.com/kk7nc/RMDL/tree/master/Examples">link</a></p>
+<p><img alt="Results" src="http://kowsari.net/onewebmedia/RMDL_Results.png" /></p>
+</div>
+</div>
+<div class="section" id="error-and-comments">
+<h2>Error and Comments:</h2>
+<p>Send an email to <a class="reference external" href="mailto:kk7nc&#64;virginia.edu">kk7nc&#64;virginia.edu</a></p>
+</div>
+<div class="section" id="citations">
+<h2>Citations</h2>
+<pre class="literal-block">
+&#64;inproceedings{Kowsari2018RMDL,
+title={RMDL: Random Multimodel Deep Learning for Classification},
+author={Kowsari, Kamran and Heidarysafa, Mojtaba and Brown, Donald E. and Jafari Meimandi, Kiana and Barnes, Laura E.},
+booktitle={Proceedings of the 2018 International Conference on Information System and Data Mining},
+year={2018},
+DOI={https://doi.org/10.1145/3206098.3206111},
+organization={ACM}
+}
+</pre>
+<p>And</p>
+<pre class="literal-block">
+&#64;inproceedings{Heidarysafa2018RMDL,
+title={An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)},
+author={Heidarysafa, Mojtaba and Kowsari, Kamran and  Brown, Donald E. and Jafari Meimandi, Kiana and Barnes, Laura E.},
+booktitle={International Journal of Machine Learning and Computing (IJMLC)},
+year={2018}
+}
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -2,16 +2,11 @@
 RMDL: Random Multimodel Deep Learning for Classification
 
  * Copyright (C) 2018  Kamran Kowsari <kk7nc@virginia.edu>
- *
+ * Last Update: 04/25/2018
  * This file is part of  RMDL project, University of Virginia.
- *
  * Free to use, change, share and distribute source code of RMDL
- *
- *
  * Refrenced paper : RMDL: Random Multimodel Deep Learning for Classification
- *
  * Refrenced paper : An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)
- * 
  * Comments and Error: email: kk7nc@virginia.edu
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -31,28 +26,53 @@ from RMDL import Global as G
 from keras.callbacks import ModelCheckpoint
 np.random.seed(7)
 
-def Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
-                            n_epochs,plot=True):
+
+def Image_Classification(x_train, y_train, x_test, y_test, shape, batch_size=128,
+                         sparse_categorical=True, random_deep=[3, 3, 3], epochs=[500, 500, 500], plot=True,
+                         min_hidden_layer_dnn=1, max_hidden_layer_dnn=8, min_nodes_dnn=128, max_nodes_dnn=1024,
+                         min_hidden_layer_rnn=1, max_hidden_layer_rnn=5, min_nodes_rnn=32, max_nodes_rnn=128,
+                         min_hidden_layer_cnn=3, max_hidden_layer_cnn=10, min_nodes_cnn=128, max_nodes_cnn=512,
+                         random_state=42, random_optimizor=True, dropout=0.05):
+    np.random.seed(random_state)
     G.setup(text=False)
     y_proba = []
 
     score = []
     history_ = []
-    number_of_classes = np.max(y_train)+1
-    #X_train, y_train, X_test, y_test, shape, number_of_classes = Image_Data_load.load(Data_Image)
+    if sparse_categorical:
+        number_of_classes = np.max(y_train)+1
+    else:
+        number_of_classes = np.shape(y_train)[0]
+
     i =0
-    while i < Random_Deep[0]:
+    while i < random_deep[0]:
         try:
             print("DNN ", i, "\n")
-            model_DNN, model_tmp = BuildModel.buildModel_DNN_image(shape, number_of_classes, 0)
+            model_DNN, model_tmp = BuildModel.Build_Model_DNN_Image(shape,
+                                                                    number_of_classes,
+                                                                    sparse_categorical,
+                                                                    min_hidden_layer_dnn,
+                                                                    max_hidden_layer_dnn,
+                                                                    min_nodes_dnn,
+                                                                    max_nodes_dnn,
+                                                                    random_optimizor,
+                                                                    dropout)
+
+
             filepath = "weights\weights_DNN_" + str(i) + ".hdf5"
-            checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
+            checkpoint = ModelCheckpoint(filepath,
+                                         monitor='val_acc',
+                                         verbose=1,
+                                         save_best_only=True,
                                          mode='max')
             callbacks_list = [checkpoint]
 
-            history = model_DNN.fit(X_train, y_train, validation_data=(X_test, y_test),
-                                   epochs=n_epochs[0], batch_size=batch_size, callbacks=callbacks_list,
-                                   verbose=2)
+            history = model_DNN.fit(x_train, y_train,
+                                    validation_data=(x_test, y_test),
+                                    epochs=epochs[0],
+                                    batch_size=batch_size,
+                                    callbacks=callbacks_list,
+                                    verbose=2)
             history_.append(history)
             model_tmp.load_weights(filepath)
 
@@ -65,7 +85,7 @@ def Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sp
                                   optimizer='adam',
                                   metrics=['accuracy'])
 
-            y_pr = model_tmp.predict_classes(X_test, batch_size=batch_size)
+            y_pr = model_tmp.predict_classes(x_test, batch_size=batch_size)
             y_proba.append(np.array(y_pr))
             score.append(accuracy_score(y_test, y_pr))
             i = i + 1
@@ -73,27 +93,43 @@ def Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sp
             del model_DNN
             gc.collect()
         except:
-            print("Error in model ", i, "   try to re-generate an other model")
+            print("Error in model", i, "try to re-generate an other model")
+
+
     i =0
-    while i < Random_Deep[1]:
+    while i < random_deep[1]:
         try:
             print("RNN ", i, "\n")
-            model_RNN, model_tmp = BuildModel.Image_model_RNN(number_of_classes, shape)
+            model_RNN, model_tmp = BuildModel.Build_Model_RNN_Image(shape,
+                                                                    number_of_classes,
+                                                                    sparse_categorical,
+                                                                    min_nodes_rnn,
+                                                                    max_nodes_rnn,
+                                                                    random_optimizor,
+                                                                    dropout)
 
             filepath = "weights\weights_RNN_" + str(i) + ".hdf5"
-            checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
+            checkpoint = ModelCheckpoint(filepath,
+                                         monitor='val_acc',
+                                         verbose=1,
+                                         save_best_only=True,
                                          mode='max')
             callbacks_list = [checkpoint]
 
-            history = model_RNN.fit(X_train, y_train, validation_data=(X_test, y_test),
-                                   epochs=n_epochs[1], batch_size=batch_size, verbose=2, callbacks=callbacks_list)
+            history = model_RNN.fit(x_train, y_train,
+                                    validation_data=(x_test, y_test),
+                                    epochs=epochs[1],
+                                    batch_size=batch_size,
+                                    verbose=2,
+                                    callbacks=callbacks_list)
+
             model_tmp.load_weights(filepath)
             model_tmp.compile(loss='sparse_categorical_crossentropy',
                               optimizer='rmsprop',
                               metrics=['accuracy'])
             history_.append(history)
 
-            y_pr = model_tmp.predict(X_test, batch_size=batch_size)
+            y_pr = model_tmp.predict(x_test, batch_size=batch_size)
             y_pr = np.argmax(y_pr, axis=1)
             y_proba.append(np.array(y_pr))
             score.append(accuracy_score(y_test, y_pr))
@@ -102,33 +138,48 @@ def Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sp
             del model_RNN
             gc.collect()
         except:
-            print("Error in model ", i, "   try to re-generate an other model")
+            print("Error in model", i, " try to re-generate another model")
 
     # reshape to be [samples][pixels][width][height]
     i=0
-    while i < Random_Deep[2]:
+    while i < random_deep[2]:
 
         print("CNN ", i, "\n")
-        model_CNN, model_tmp = BuildModel.Image_model_CNN(number_of_classes, shape)
+        model_CNN, model_tmp = BuildModel.Build_Model_CNN_Image(shape,
+                                                                number_of_classes,
+                                                                sparse_categorical,
+                                                                min_hidden_layer_cnn,
+                                                                max_hidden_layer_cnn,
+                                                                min_nodes_cnn,
+                                                                max_nodes_cnn,
+                                                                random_optimizor,
+                                                                dropout)
 
         filepath = "weights\weights_CNN_" + str(i) + ".hdf5"
         checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
                                      mode='max')
         callbacks_list = [checkpoint]
 
-        history = model_CNN.fit(X_train, y_train, validation_data=(X_test, y_test),
-                               epochs=n_epochs[2], batch_size=batch_size, callbacks=callbacks_list, verbose=2)
+        history = model_CNN.fit(x_train, y_train,
+                                validation_data=(x_test, y_test),
+                                epochs=epochs[2],
+                                batch_size=batch_size,
+                                callbacks=callbacks_list,
+                                verbose=2)
         history_.append(history)
         model_tmp.load_weights(filepath)
-        model_tmp.compile(loss='sparse_categorical_crossentropy', optimizer='adam',
+        model_tmp.compile(loss='sparse_categorical_crossentropy',
+                          optimizer='adam',
                           metrics=['accuracy'])
-        y_pr = model_tmp.predict_classes(X_test, batch_size=batch_size)
+
+        y_pr = model_tmp.predict_classes(x_test, batch_size=batch_size)
         y_proba.append(np.array(y_pr))
         score.append(accuracy_score(y_test, y_pr))
         i = i+1
         del model_tmp
         del model_CNN
         gc.collect()
+
 
 
 
@@ -157,8 +208,9 @@ def Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sp
     if plot:
         Plot.RMDL_epoch(history_)
 
-    print(score)
-    print(F_score)
-    print(F1)
-    print(F2)
-    print(F3)
+    print(y_proba.shape)
+    print("Accuracy of",len(score),"models:",score)
+    print("Accuracy:",F_score)
+    print("F1_Micro:",F1)
+    print("F1_Macro:",F2)
+    print("F1_weighted:",F3)

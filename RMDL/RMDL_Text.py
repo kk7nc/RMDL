@@ -2,171 +2,221 @@
 RMDL: Random Multimodel Deep Learning for Classification
 
  * Copyright (C) 2018  Kamran Kowsari <kk7nc@virginia.edu>
- *
+ * Last Update: 04/25/2018
  * This file is part of  RMDL project, University of Virginia.
- *
  * Free to use, change, share and distribute source code of RMDL
- *
- *
  * Refrenced paper : RMDL: Random Multimodel Deep Learning for Classification
- *
  * Refrenced paper : An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)
- * 
  * Comments and Error: email: kk7nc@virginia.edu
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-import os
-from sklearn.metrics import accuracy_score
 import gc
-from sklearn.metrics import confusion_matrix
-from RMDL import Plot as Plot
 import numpy as np
-from RMDL import Global as G
 import collections
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_recall_fscore_support
+from keras.callbacks import ModelCheckpoint
 from RMDL import BuildModel as BuildModel
 from RMDL import text_feature_extraction as txt
-from keras.callbacks import ModelCheckpoint
-np.random.seed(7)
+from RMDL import Global as G
+from RMDL import Plot as Plot
 
 
-def Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
-                            n_epochs,plot=True):
-    GloVe_needed = Random_Deep[1] != 0 or Random_Deep[2] != 0
+def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
+                        EMBEDDING_DIM=50,MAX_SEQUENCE_LENGTH = 500, MAX_NB_WORDS = 75000,
+                        GloVe_dir="", GloVe_file = "glove.6B.50d.txt",
+                        sparse_categorical=True, random_deep=[3, 3, 3], epochs=[500, 500, 500],  plot=True,
+                        min_hidden_layer_dnn=1, max_hidden_layer_dnn=8, min_nodes_dnn=128, max_nodes_dnn=1024,
+                        min_hidden_layer_rnn=1, max_hidden_layer_rnn=5, min_nodes_rnn=32,  max_nodes_rnn=128,
+                        min_hidden_layer_cnn=3, max_hidden_layer_cnn=10, min_nodes_cnn=128, max_nodes_cnn=512,
+                        random_state=42, random_optimizor=True, dropout=0.05):
+
+    np.random.seed(random_state)
+
+    G.EMBEDDING_DIM = EMBEDDING_DIM
+    G.MAX_SEQUENCE_LENGTH = MAX_SEQUENCE_LENGTH
+    G.MAX_NB_WORDS = MAX_NB_WORDS
+    G.GloVe_directory = GloVe_dir
+    G.GloVe_file = GloVe_file
+
+    GloVe_needed = random_deep[1] != 0 or random_deep[2] != 0
 
     G.setup(text=True,GloVe_needed=GloVe_needed)
-    if Random_Deep[0] != 0:
-        X_train_tfidf, X_test_tfidf = txt.loadData(X_train, X_test)
-    if Random_Deep[1] != 0 or Random_Deep[2] != 0 :
-        X_train_Embedded, X_test_Embedded, word_index, embeddings_index = txt.loadData_Tokenizer(X_train, X_test)
-    del X_train
-    del X_test
+    if random_deep[0] != 0:
+        x_train_tfidf, x_test_tfidf = txt.loadData(x_train, x_test)
+    if random_deep[1] != 0 or random_deep[2] != 0 :
+        x_train_embedded, x_test_embedded, word_index, embeddings_index = txt.loadData_Tokenizer(x_train, x_test)
+
+    del x_train
+    del x_test
     gc.collect()
 
-    y_proba = []
+    y_pr = []
     History = []
     score = []
     number_of_classes = np.max(y_train)+1
     i = 0
-    while i < Random_Deep[0]:
+    while i < random_deep[0]:
         # model_DNN.append(Sequential())
         try:
             print("DNN " + str(i))
             filepath = "weights\weights_DNN_" + str(i) + ".hdf5"
-            checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
+            checkpoint = ModelCheckpoint(filepath,
+                                         monitor='val_acc',
+                                         verbose=1,
+                                         save_best_only=True,
                                          mode='max')
             callbacks_list = [checkpoint]
 
-            model_DNN, model_tmp = BuildModel.buildModel_DNN_Tex(X_train_tfidf.shape[1], number_of_classes,
-                                                                 sparse_categorical)
-            h = model_DNN.fit(X_train_tfidf, y_train,
-                              validation_data=(X_test_tfidf, y_test),
-                              epochs=n_epochs[0],
+            model_DNN, model_tmp = BuildModel.Build_Model_DNN_Text(x_train_tfidf.shape[1],
+                                                                   number_of_classes,
+                                                                   sparse_categorical,
+                                                                   min_hidden_layer_dnn,
+                                                                   max_hidden_layer_dnn,
+                                                                   min_nodes_dnn,
+                                                                   max_nodes_dnn,
+                                                                   random_optimizor,
+                                                                   dropout)
+            model_history = model_DNN.fit(x_train_tfidf, y_train,
+                              validation_data=(x_test_tfidf, y_test),
+                              epochs=epochs[0],
                               batch_size=batch_size,
                               callbacks=callbacks_list,
                               verbose=2)
-            History.append(h)
+            History.append(model_history)
 
             model_tmp.load_weights(filepath)
-            if sparse_categorical == 0:
+            if sparse_categorical:
                 model_tmp.compile(loss='sparse_categorical_crossentropy',
                                   optimizer='adam',
                                   metrics=['accuracy'])
 
-                y_pr = model_tmp.predict_classes(X_test_tfidf, batch_size=batch_size)
-                y_proba.append(np.array(y_pr))
-                score.append(accuracy_score(y_test, y_pr))
+                y_pr_ = model_tmp.predict_classes(x_test_tfidf,
+                                                  batch_size=batch_size)
+                y_pr.append(np.array(y_pr_))
+                score.append(accuracy_score(y_test, y_pr_))
             else:
                 model_tmp.compile(loss='categorical_crossentropy',
                                   optimizer='adam',
                                   metrics=['accuracy'])
-                y_pr = model_tmp.predict(X_test_tfidf, batch_size=batch_size)
-                y_pr = np.argmax(y_pr, axis=1)
-                y_proba.append(np.array(y_pr))
+
+                y_pr_ = model_tmp.predict(x_test_tfidf,
+                                          batch_size=batch_size)
+
+                y_pr_ = np.argmax(y_pr_, axis=1)
+                y_pr.append(np.array(y_pr_))
                 y_test_temp = np.argmax(y_test, axis=1)
-                score.append(accuracy_score(y_test_temp, y_pr))
+                score.append(accuracy_score(y_test_temp, y_pr_))
             # print(y_proba)
             i += 1
             del model_tmp
             del model_DNN
         except:
-            print("Error in model ", i, "   try to re-generate an other model")
+            print("Error in model", i, "try to re-generate another model")
     try:
-        del X_train_tfidf
-        del X_test_tfidf
+        del x_train_tfidf
+        del x_test_tfidf
         gc.collect()
     except:
         pass
 
     i=0
-    while i < Random_Deep[1]:
+    while i < random_deep[1]:
         try:
             print("RNN " + str(i))
             filepath = "weights\weights_RNN_" + str(i) + ".hdf5"
-            checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
+            checkpoint = ModelCheckpoint(filepath,
+                                         monitor='val_acc',
+                                         verbose=1,
+                                         save_best_only=True,
                                          mode='max')
             callbacks_list = [checkpoint]
 
-            model_RNN, model_tmp = BuildModel.buildModel_RNN(word_index, embeddings_index, number_of_classes,
-                                                                G.MAX_SEQUENCE_LENGTH, G.EMBEDDING_DIM, sparse_categorical)
+            model_RNN, model_tmp = BuildModel.Build_Model_RNN_Text(word_index,
+                                                                   embeddings_index,
+                                                                   number_of_classes,
+                                                                   G.MAX_SEQUENCE_LENGTH,
+                                                                   G.EMBEDDING_DIM,
+                                                                   sparse_categorical,
+                                                                   min_hidden_layer_rnn,
+                                                                   max_hidden_layer_rnn,
+                                                                   min_nodes_rnn,
+                                                                   max_nodes_rnn,
+                                                                   random_optimizor,
+                                                                   dropout)
 
-            h = model_RNN.fit(X_train_Embedded, y_train,
-                                 validation_data=(X_test_Embedded, y_test),
-                                 epochs=n_epochs[1],
-                                 batch_size=batch_size,
-                                 callbacks=callbacks_list,
-                                 verbose=2)
-            History.append(h)
+            model_history = model_RNN.fit(x_train_embedded, y_train,
+                              validation_data=(x_test_embedded, y_test),
+                              epochs=epochs[1],
+                              batch_size=batch_size,
+                              callbacks=callbacks_list,
+                              verbose=2)
+            History.append(model_history)
 
-            if sparse_categorical == 0:
+            if sparse_categorical:
                 model_tmp.load_weights(filepath)
                 model_tmp.compile(loss='sparse_categorical_crossentropy',
                                   optimizer='rmsprop',
                                   metrics=['accuracy'])
-                y_pr = model_tmp.predict_classes(X_test_Embedded, batch_size=batch_size)
-                y_proba.append(np.array(y_pr))
-                score.append(accuracy_score(y_test, y_pr))
+
+                y_pr_ = model_tmp.predict_classes(x_test_embedded, batch_size=batch_size)
+                y_pr.append(np.array(y_pr_))
+                score.append(accuracy_score(y_test, y_pr_))
             else:
                 model_tmp.load_weights(filepath)
                 model_tmp.compile(loss='categorical_crossentropy',
                                   optimizer='rmsprop',
                                   metrics=['accuracy'])
-                y_pr = model_tmp.predict(X_test_Embedded, batch_size=batch_size)
-                y_pr = np.argmax(y_pr, axis=1)
-                y_proba.append(np.array(y_pr))
+                y_pr_ = model_tmp.predict(x_test_embedded, batch_size=batch_size)
+                y_pr_ = np.argmax(y_pr_, axis=1)
+                y_pr.append(np.array(y_pr_))
                 y_test_temp = np.argmax(y_test, axis=1)
-                score.append(accuracy_score(y_test_temp, y_pr))
+                score.append(accuracy_score(y_test_temp, y_pr_))
             i += 1
             del model_tmp
+            del model_RNN
             gc.collect()
         except:
-            print("Error in model ", i, "   try to re-generate an other model")
-        del model_RNN
+            print("Error in model", i, "try to re-generate another model")
+
     gc.collect()
-    # Plot.plot_RMDL(History)# plot histori of all RDL models
 
     i = 0
-    while i < Random_Deep[2]:
-        try:
+    while i < random_deep[2]:
+        #try:
             print("CNN " + str(i))
 
-            model_CNN, model_tmp = BuildModel.buildModel_CNN(word_index, embeddings_index, number_of_classes,
-                                                             G.MAX_SEQUENCE_LENGTH, G.EMBEDDING_DIM, 1, sparse_categorical)
+            model_CNN, model_tmp = BuildModel.Build_Model_CNN_Text(word_index,
+                                                                     embeddings_index,
+                                                                     number_of_classes,
+                                                                     G.MAX_SEQUENCE_LENGTH,
+                                                                     G.EMBEDDING_DIM,
+                                                                     sparse_categorical,
+                                                                     min_hidden_layer_cnn,
+                                                                     max_hidden_layer_cnn,
+                                                                     min_nodes_cnn,
+                                                                     max_nodes_cnn,
+                                                                     random_optimizor,
+                                                                     dropout)
+
+
 
             filepath = "weights\weights_CNN_" + str(i) + ".hdf5"
             checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
                                          mode='max')
             callbacks_list = [checkpoint]
 
-            h = model_CNN.fit(X_train_Embedded, y_train,
-                              validation_data=(X_test_Embedded, y_test),
-                              epochs=n_epochs[2],
-                              batch_size=batch_size,
-                              callbacks=callbacks_list,
-                              verbose=2)
-            History.append(h)
+            model_history = model_CNN.fit(x_train_embedded, y_train,
+                                          validation_data=(x_test_embedded, y_test),
+                                          epochs=epochs[2],
+                                          batch_size=batch_size,
+                                          callbacks=callbacks_list,
+                                          verbose=2)
+            History.append(model_history)
+
             model_tmp.load_weights(filepath)
-            if sparse_categorical == 0:
+            if sparse_categorical:
                 model_tmp.compile(loss='sparse_categorical_crossentropy',
                                   optimizer='rmsprop',
                                   metrics=['accuracy'])
@@ -174,27 +224,28 @@ def Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_cat
                 model_tmp.compile(loss='categorical_crossentropy',
                                   optimizer='rmsprop',
                                   metrics=['accuracy'])
-            y_pr = model_tmp.predict(X_test_Embedded, batch_size=batch_size)
-            y_pr = np.argmax(y_pr, axis=1)
-            y_proba.append(np.array(y_pr))
 
-            if sparse_categorical == 0:
-                score.append(accuracy_score(y_test, y_pr))
+            y_pr_ = model_tmp.predict(x_test_embedded, batch_size=batch_size)
+            y_pr_ = np.argmax(y_pr_, axis=1)
+            y_pr.append(np.array(y_pr_))
+
+            if sparse_categorical:
+                score.append(accuracy_score(y_test, y_pr_))
             else:
                 y_test_temp = np.argmax(y_test, axis=1)
-                score.append(accuracy_score(y_test_temp, y_pr))
+                score.append(accuracy_score(y_test_temp, y_pr_))
             i += 1
 
             del model_tmp
             del model_CNN
             gc.collect()
-        except:
-            print("Error in model ", i, "   try to re-generate an other model")
+        #except:
+            #print("Error in model", i, "try to re-generate an other model")
 
     gc.collect()
 
 
-    y_proba = np.array(y_proba).transpose()
+    y_proba = np.array(y_pr).transpose()
 
     final_y = []
 
@@ -202,7 +253,7 @@ def Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_cat
         a = np.array(y_proba[i, :])
         a = collections.Counter(a).most_common()[0][0]
         final_y.append(a)
-    if sparse_categorical == 0:
+    if sparse_categorical:
         F_score = accuracy_score(y_test, final_y)
         F1 = precision_recall_fscore_support(y_test, final_y, average='micro')
         F2 = precision_recall_fscore_support(y_test, final_y, average='macro')
@@ -229,8 +280,8 @@ def Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_cat
     if plot:
         Plot.RMDL_epoch(History)
     print(y_proba.shape)
-    print(score)
-    print(F_score)
-    print(F1)
-    print(F2)
-    print(F3)
+    print("Accuracy of",len(score),"models:",score)
+    print("Accuracy:",F_score)
+    print("F1_Micro:",F1)
+    print("F1_Macro:",F2)
+    print("F1_weighted:",F3)

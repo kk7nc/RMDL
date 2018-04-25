@@ -183,6 +183,297 @@ Text and Document Classification
 
    -  if you are not setting GloVe directory, GloVe will be downloaded
 
+
+Parameters:
+===========
+
+Text_Classification
+-------------------
+.. code:: python
+
+         from RMDL import RMDL_Text
+
+
+Input
+~~~~~
+   - x_train
+   - y_train
+   - x_test
+   - y_test
+
+
+
+batch_size
+~~~~~~~~~~
+
+batch_size: Integer. Number of samples per gradient update. If unspecified, it will default to 128.
+
+EMBEDDING_DIM
+~~~~~~~~~~~~~~~~~~~~~~~
+
+batch_size: Integer. Shape of word embedding (this number should be same with GloVe or other pre-trained embedding techniques that be used), it will default to 50 that used with pain of glove.6B.50d.txt file.
+
+
+MAX_SEQUENCE_LENGTH
+~~~~~~~~~~~~~~~~~~~~~~~
+
+MAX_SEQUENCE_LENGTH: Integer. Maximum length of sequence or document in datasets, it will default to 500.
+
+
+MAX_NB_WORDS
+~~~~~~~~~~~~~~~~~~~~~~~
+
+MAX_NB_WORDS: Integer. Maximum number of unique words in datasets,  it will default to 75000.
+
+
+GloVe_dir
+~~~~~~~~~~~~~~~~~~~~~~~
+
+GloVe_dir: String. Address of GloVe or any pre-trained directory,  it will default to null which glove.6B.zip will be download.
+
+
+GloVe_file
+~~~~~~~~~~~~~~~~~~~~~~~
+
+GloVe_dir: String. Which version of GloVe or pre-trained word emending will be used,  it will default to glove.6B.50d.txt.
+
+- NOTE: if you use other version of GloVe EMBEDDING_DIM must be same dimensions.
+
+sparse_categorical
+~~~~~~~~~~~~~~~~~~~~~~~
+
+sparse_categorical: bool. When target's dataset is (n,1) should be True, it will default to True.
+
+random_deep
+~~~~~~~~~~~~~~~~~~~~~~~
+
+random_deep: Integer [3]. Number of ensembled model used in RMDL random_deep[0] is number of DNN, random_deep[1] is number of RNN, random_deep[0] is number of CNN, it will default to [3, 3, 3].
+
+
+epochs
+~~~~~~~~~~~~~~~~~~~~~~~
+
+epochs: Integer [3]. Number of epochs in each ensembled model used in RMDL epochs[0] is number of epochs used in DNN, epochs[1] is number of epochs used in  RNN, epochs[0] is number of epochs used in CNN, it will default to [500, 500, 500].
+
+
+plot
+~~~~~~~~~~~~~~~~~~~~~~~
+
+plot: bool. True: shows confusion matrix and accuracy and loss
+
+
+min_hidden_layer_dnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+min_hidden_layer_dnn: Integer. Lower Bounds of hidden layers of DNN used in RMDL, it will default to 1.
+
+
+max_hidden_layer_dnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+max_hidden_layer_dnn: Integer. Upper bounds of hidden layers of DNN used in RMDL, it will default to 8.
+
+
+min_nodes_dnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+min_nodes_dnn: Integer. Lower bounds of nodes in each layer of DNN used in RMDL, it will default to 128.
+
+max_nodes_dnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+max_nodes_dnn: Integer. Upper bounds of nodes in each layer of DNN used in RMDL, it will default to 1024.
+
+min_hidden_layer_rnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+min_hidden_layer_rnn: Integer. Lower Bounds of hidden layers of RNN used in RMDL, it will default to 1.
+
+
+max_hidden_layer_rnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+man_hidden_layer_rnn: Integer. Upper Bounds of hidden layers of RNN used in RMDL, it will default to 5.
+
+
+min_nodes_rnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+min_nodes_rnn: Integer. Lower bounds of nodes (LSTM or GRU) in each layer of RNN used in RMDL, it will default to 32.
+
+max_nodes_rnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+maz_nodes_rnn: Integer. Upper bounds of nodes (LSTM or GRU) in each layer of RNN used in RMDL, it will default to 128.
+
+
+min_hidden_layer_cnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+min_hidden_layer_cnn: Integer. Lower Bounds of hidden layers of CNN used in RMDL, it will default to 3.
+
+
+max_hidden_layer_cnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+max_hidden_layer_cnn: Integer. Upper Bounds of hidden layers of CNN used in RMDL, it will default to 10.
+
+
+min_nodes_cnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+min_nodes_cnn: Integer. Lower bounds of nodes (2D convolution layer) in each layer of CNN used in RMDL, it will default to 128.
+
+max_nodes_cnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+min_nodes_cnn: Integer. Upper bounds of nodes (2D convolution layer) in each layer of CNN used in RMDL, it will default to 512.
+
+random_state
+~~~~~~~~~~~~~~~~~~~~~~~
+
+random_state : Integer, RandomState instance or None, optional (default=None)
+
+If Integer, random_state is the seed used by the random number generator;
+
+
+random_optimizor
+~~~~~~~~~~~~~~~~~~~~~~~
+
+random_optimizor : bool, If False, all models use adam optimizer.  If True, all models use random optimizers. it will default to True
+
+
+dropout
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+dropout: Float between 0 and 1. Fraction of the units to drop for the linear transformation of the inputs.
+
+
+
+==============================================
+
+
+Image_Classification
+---------------------
+
+
+Input
+~~~~~
+   - x_train
+   - y_train
+   - x_test
+   - y_test
+
+shape
+~~~~~
+
+shape: np.shape . shape of image. The most common situation would be a 2D input with shape (batch_size, input_dim).
+
+batch_size
+~~~~~~~~~~
+
+batch_size: Integer. Number of samples per gradient update. If unspecified, it will default to 128.
+
+sparse_categorical
+~~~~~~~~~~~~~~~~~~~~~~~
+
+sparse_categorical: bool. When target's dataset is (n,1) should be True, it will default to True.
+
+random_deep
+~~~~~~~~~~~~~~~~~~~~~~~
+
+random_deep: Integer [3]. Number of ensembled model used in RMDL random_deep[0] is number of DNN, random_deep[1] is number of RNN, random_deep[0] is number of CNN, it will default to [3, 3, 3].
+
+
+epochs
+~~~~~~~~~~~~~~~~~~~~~~~
+
+epochs: Integer [3]. Number of epochs in each ensembled model used in RMDL epochs[0] is number of epochs used in DNN, epochs[1] is number of epochs used in  RNN, epochs[0] is number of epochs used in CNN, it will default to [500, 500, 500].
+
+
+plot
+~~~~~~~~~~~~~~~~~~~~~~~
+
+plot: bool. True: shows confusion matrix and accuracy and loss
+
+
+min_hidden_layer_dnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+min_hidden_layer_dnn: Integer. Lower Bounds of hidden layers of DNN used in RMDL, it will default to 1.
+
+
+max_hidden_layer_dnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+max_hidden_layer_dnn: Integer. Upper bounds of hidden layers of DNN used in RMDL, it will default to 8.
+
+
+min_nodes_dnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+min_nodes_dnn: Integer. Lower bounds of nodes in each layer of DNN used in RMDL, it will default to 128.
+
+max_nodes_dnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+max_nodes_dnn: Integer. Upper bounds of nodes in each layer of DNN used in RMDL, it will default to 1024.
+
+min_nodes_rnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+min_nodes_rnn: Integer. Lower bounds of nodes (LSTM or GRU) in each layer of RNN used in RMDL, it will default to 32.
+
+max_nodes_rnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+maz_nodes_rnn: Integer. Upper bounds of nodes (LSTM or GRU) in each layer of RNN used in RMDL, it will default to 128.
+
+
+min_hidden_layer_cnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+min_hidden_layer_cnn: Integer. Lower Bounds of hidden layers of CNN used in RMDL, it will default to 3.
+
+
+max_hidden_layer_cnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+max_hidden_layer_cnn: Integer. Upper Bounds of hidden layers of CNN used in RMDL, it will default to 10.
+
+
+min_nodes_cnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+min_nodes_cnn: Integer. Lower bounds of nodes (2D convolution layer) in each layer of CNN used in RMDL, it will default to 128.
+
+max_nodes_cnn
+~~~~~~~~~~~~~~~~~~~~~~~
+
+min_nodes_cnn: Integer. Upper bounds of nodes (2D convolution layer) in each layer of CNN used in RMDL, it will default to 512.
+
+random_state
+~~~~~~~~~~~~~~~~~~~~~~~
+
+random_state : Integer, RandomState instance or None, optional (default=None)
+
+If Integer, random_state is the seed used by the random number generator;
+
+
+random_optimizor
+~~~~~~~~~~~~~~~~~~~~~~~
+
+random_optimizor : bool, If False, all models use adam optimizer.  If True, all models use random optimizers. it will default to True
+
+
+dropout
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+dropout: Float between 0 and 1. Fraction of the units to drop for the linear transformation of the inputs.
+
+
 Example
 ========
 
