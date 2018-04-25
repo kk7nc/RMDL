@@ -479,6 +479,7 @@ Example
 
 MNIST
 -----
+========================================================================================================================================
 
 -  The MNIST database contains 60,000 training images and 10,000 testing images.
 
@@ -519,6 +520,7 @@ Using RMDL
 
 IMDB
 -----
+========================================================================================================================================
 
 -  This dataset contains 50,000 documents with 2 categories.
 
@@ -566,9 +568,10 @@ Using RMDL
         RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
                             n_epochs)
 
-
 Web Of Science
 --------------
+
+========================================================================================================================================
 
 -  Linke of dataset: |Data|
 
@@ -629,10 +632,11 @@ Using RMDL
 
         RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
                                 n_epochs)
-
-
+                                
 Reuters-21578
 -------------
+
+========================================================================================================================================
 
 -This dataset contains 21,578 documents with 90 categories.
 
@@ -684,9 +688,11 @@ Using RMDL
                                n_epochs)
 
 
-
 Olivetti Faces
 --------------
+
+========================================================================================================================================
+
 - There are ten different images of each of 40 distinct subjects. For some subjects, the images were taken at different times, varying the lighting, facial expressions (open / closed eyes, smiling / not smiling) and facial details (glasses / no glasses). All the images were taken against a dark homogeneous background with the subjects in an upright, frontal position (with tolerance for some side movement).
 
 Import Packages
@@ -729,14 +735,18 @@ More Exanmple
 |Results|
 
 
-
 Error and Comments:
 ----------------------
+
+========================================================================================================================================
 
 Send an email to kk7nc@virginia.edu
 
 Citations
 ---------
+
+========================================================================================================================================
+
 
 ::
 
