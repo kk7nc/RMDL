@@ -479,7 +479,6 @@ Example
 
 MNIST
 -----
-========================================================================================================================================
 
 -  The MNIST database contains 60,000 training images and 10,000 testing images.
 
@@ -520,7 +519,6 @@ Using RMDL
 
 IMDB
 -----
-========================================================================================================================================
 
 -  This dataset contains 50,000 documents with 2 categories.
 
@@ -571,23 +569,21 @@ Using RMDL
 Web Of Science
 --------------
 
-========================================================================================================================================
-
 -  Linke of dataset: |Data|
 
-   -  Web of Science Dataset `WOS-11967 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
+-  Web of Science Dataset `WOS-11967 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
 
-       - This dataset contains 11,967 documents with 35 categories which include 7 parents categories.
-
-
-   -  Web of Science Dataset `WOS-46985 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
-
-        - This dataset contains 46,985 documents with 134 categories which include 7 parents categories.
+    - This dataset contains 11,967 documents with 35 categories which include 7 parents categories.
 
 
-   -  Web of Science Dataset `WOS-5736 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
+-  Web of Science Dataset `WOS-46985 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
 
-        - This dataset contains 5,736 documents with 11 categories which include 3 parents categories.
+     - This dataset contains 46,985 documents with 134 categories which include 7 parents categories.
+
+
+-  Web of Science Dataset `WOS-5736 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
+
+     - This dataset contains 5,736 documents with 11 categories which include 3 parents categories.
 
 
 
@@ -632,11 +628,9 @@ Using RMDL
 
         RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
                                 n_epochs)
-                                
+
 Reuters-21578
 -------------
-
-========================================================================================================================================
 
 -This dataset contains 21,578 documents with 90 categories.
 
@@ -691,8 +685,6 @@ Using RMDL
 Olivetti Faces
 --------------
 
-========================================================================================================================================
-
 - There are ten different images of each of 40 distinct subjects. For some subjects, the images were taken at different times, varying the lighting, facial expressions (open / closed eyes, smiling / not smiling) and facial details (glasses / no glasses). All the images were taken against a dark homogeneous background with the subjects in an upright, frontal position (with tolerance for some side movement).
 
 Import Packages
@@ -730,7 +722,7 @@ Using RMDL
 
 
 More Exanmple
-`link <https://github.com/kk7nc/RMDL/tree/master/Examples>`__ 
+`link <https://github.com/kk7nc/RMDL/tree/master/Examples>`__
 
 |Results|
 
@@ -738,17 +730,15 @@ More Exanmple
 Error and Comments:
 ----------------------
 
-========================================================================================================================================
 
 Send an email to kk7nc@virginia.edu
 
 Citations
 ---------
 
-========================================================================================================================================
 
 
-::
+.. code:: python
 
     @inproceedings{Kowsari2018RMDL,
     title={RMDL: Random Multimodel Deep Learning for Classification},
@@ -761,7 +751,7 @@ Citations
 
 And
 
-::
+.. code:: python
 
     @inproceedings{Heidarysafa2018RMDL,
     title={An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)},
