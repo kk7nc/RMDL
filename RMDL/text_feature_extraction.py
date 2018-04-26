@@ -109,23 +109,23 @@ def text_cleaner(text,
             text = text.strip()
     return text.lower()
 
-def loadData_Tokenizer(X_train, X_test):
+def loadData_Tokenizer(X_train, X_test,GloVe_DIR,MAX_NB_WORDS,MAX_SEQUENCE_LENGTH,EMBEDDING_DIM):
     if False:
         np.random.seed(7)
         text = np.concatenate((X_train, X_test),axis=0)
         text = np.array(X_train)
-        tokenizer = Tokenizer(num_words=G.MAX_NB_WORDS)
+        tokenizer = Tokenizer(num_words=MAX_NB_WORDS)
         tokenizer.fit_on_texts(text)
         sequences = tokenizer.texts_to_sequences(text)
         word_index = tokenizer.word_index
-        text = pad_sequences(sequences, maxlen=G.MAX_SEQUENCE_LENGTH)
+        text = pad_sequences(sequences, maxlen=MAX_SEQUENCE_LENGTH)
         indices = np.arange(text.shape[0])
         text = text[indices]
         print(text.shape)
         X_train = text
         text = np.array(X_test)
         sequences = tokenizer.texts_to_sequences(text)
-        text = pad_sequences(sequences, maxlen=G.MAX_SEQUENCE_LENGTH)
+        text = pad_sequences(sequences, maxlen=MAX_SEQUENCE_LENGTH)
         print('Found %s unique tokens.' % len(word_index))
         indices = np.arange(text.shape[0])
         text = text[indices]
@@ -134,7 +134,7 @@ def loadData_Tokenizer(X_train, X_test):
 
 
         embeddings_index = {}
-        f = open(G.GloVe_DIR, encoding="utf8")
+        f = open(GloVe_DIR, encoding="utf8")
         for line in f:
 
             values = line.split()
@@ -151,11 +151,11 @@ def loadData_Tokenizer(X_train, X_test):
         np.random.seed(7)
         text = np.concatenate((X_train, X_test), axis=0)
         text = np.array(text)
-        tokenizer = Tokenizer(num_words=G.MAX_NB_WORDS)
+        tokenizer = Tokenizer(num_words=MAX_NB_WORDS)
         tokenizer.fit_on_texts(text)
         sequences = tokenizer.texts_to_sequences(text)
         word_index = tokenizer.word_index
-        text = pad_sequences(sequences, maxlen=G.MAX_SEQUENCE_LENGTH)
+        text = pad_sequences(sequences, maxlen=MAX_SEQUENCE_LENGTH)
         print('Found %s unique tokens.' % len(word_index))
         indices = np.arange(text.shape[0])
         # np.random.shuffle(indices)
@@ -164,7 +164,7 @@ def loadData_Tokenizer(X_train, X_test):
         X_train = text[0:len(X_train), ]
         X_test = text[len(X_train):, ]
         embeddings_index = {}
-        f = open(G.GloVe_DIR, encoding="utf8")
+        f = open(GloVe_DIR, encoding="utf8")
         for line in f:
 
             values = line.split()
@@ -172,7 +172,8 @@ def loadData_Tokenizer(X_train, X_test):
             try:
                 coefs = np.asarray(values[1:], dtype='float32')
             except:
-                print("Warnning" + str(values) + " in" + str(line))
+                #print("Warnning" + str(values) + " in" + str(line))
+                pass
             embeddings_index[word] = coefs
         f.close()
         print('Total %s word vectors.' % len(embeddings_index))

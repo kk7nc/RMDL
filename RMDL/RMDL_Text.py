@@ -11,6 +11,7 @@ RMDL: Random Multimodel Deep Learning for Classification
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 import gc
+import os
 import numpy as np
 import collections
 from sklearn.metrics import confusion_matrix
@@ -18,6 +19,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_recall_fscore_support
 from keras.callbacks import ModelCheckpoint
 from RMDL import BuildModel as BuildModel
+from RMDL.Download import Download_Glove as GloVe
 from RMDL import text_feature_extraction as txt
 from RMDL import Global as G
 from RMDL import Plot as Plot
@@ -34,19 +36,33 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
 
     np.random.seed(random_state)
 
-    G.EMBEDDING_DIM = EMBEDDING_DIM
-    G.MAX_SEQUENCE_LENGTH = MAX_SEQUENCE_LENGTH
-    G.MAX_NB_WORDS = MAX_NB_WORDS
-    G.GloVe_directory = GloVe_dir
-    G.GloVe_file = GloVe_file
+
+    glove_directory = GloVe_dir
+    GloVe_file = GloVe_file
+
+
 
     GloVe_needed = random_deep[1] != 0 or random_deep[2] != 0
 
-    G.setup(text=True,GloVe_needed=GloVe_needed)
+
+    if GloVe_needed:
+        if glove_directory == "":
+            GloVe_directory = GloVe.download_and_extract()
+            GloVe_DIR = os.path.join(GloVe_directory, GloVe_file)
+        else:
+            GloVe_DIR = os.path.join(glove_directory, GloVe_file)
+
+        print(GloVe_DIR)
+        if not os.path.isfile(GloVe_DIR):
+            print("Could not find %s Set GloVe Directory in Global.py ", GloVe)
+            exit()
+
+    G.setup()
     if random_deep[0] != 0:
         x_train_tfidf, x_test_tfidf = txt.loadData(x_train, x_test)
     if random_deep[1] != 0 or random_deep[2] != 0 :
-        x_train_embedded, x_test_embedded, word_index, embeddings_index = txt.loadData_Tokenizer(x_train, x_test)
+        print(GloVe_DIR)
+        x_train_embedded, x_test_embedded, word_index, embeddings_index = txt.loadData_Tokenizer(x_train, x_test,GloVe_DIR,MAX_NB_WORDS,MAX_SEQUENCE_LENGTH,EMBEDDING_DIM)
 
     del x_train
     del x_test
@@ -114,6 +130,11 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
             del model_DNN
         except:
             print("Error in model", i, "try to re-generate another model")
+            if max_hidden_layer_dnn > 3:
+                max_hidden_layer_dnn -= 1
+            if max_nodes_dnn > 256:
+                max_nodes_dnn -= 8
+
     try:
         del x_train_tfidf
         del x_test_tfidf
@@ -136,8 +157,8 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
             model_RNN, model_tmp = BuildModel.Build_Model_RNN_Text(word_index,
                                                                    embeddings_index,
                                                                    number_of_classes,
-                                                                   G.MAX_SEQUENCE_LENGTH,
-                                                                   G.EMBEDDING_DIM,
+                                                                   MAX_SEQUENCE_LENGTH,
+                                                                   EMBEDDING_DIM,
                                                                    sparse_categorical,
                                                                    min_hidden_layer_rnn,
                                                                    max_hidden_layer_rnn,
@@ -179,6 +200,10 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
             gc.collect()
         except:
             print("Error in model", i, "try to re-generate another model")
+            if max_hidden_layer_rnn > 3:
+                max_hidden_layer_rnn -= 1
+            if max_nodes_rnn > 64:
+                max_nodes_rnn -= 2
 
     gc.collect()
 
@@ -190,8 +215,8 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
             model_CNN, model_tmp = BuildModel.Build_Model_CNN_Text(word_index,
                                                                      embeddings_index,
                                                                      number_of_classes,
-                                                                     G.MAX_SEQUENCE_LENGTH,
-                                                                     G.EMBEDDING_DIM,
+                                                                     MAX_SEQUENCE_LENGTH,
+                                                                     EMBEDDING_DIM,
                                                                      sparse_categorical,
                                                                      min_hidden_layer_cnn,
                                                                      max_hidden_layer_cnn,
@@ -240,7 +265,12 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
             del model_CNN
             gc.collect()
         #except:
-            #print("Error in model", i, "try to re-generate an other model")
+            print("Error in model", i, "try to re-generate an other model")
+            if max_hidden_layer_cnn > 5:
+                max_hidden_layer_cnn -= 1
+            if max_nodes_cnn > 128:
+                max_nodes_cnn -= 2
+                min_nodes_cnn -= 1
 
     gc.collect()
 

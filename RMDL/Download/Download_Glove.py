@@ -48,7 +48,7 @@ def download_and_extract(data='Wikipedia'):
     elif data=='Common_Crawl_840B':
         DATA_URL = 'http://nlp.stanford.edu/data/wordvecs/glove.840B.300d.zip'
     elif data=='Common_Crawl_42B':
-        DATA_URL = 'http://nlp.stanford.edu/data/wordvecs/glove.840B.300d.zip'
+        DATA_URL = 'http://nlp.stanford.edu/data/wordvecs/glove.42B.300d.zip'
     elif data=='Twitter':
         DATA_URL = 'http://nlp.stanford.edu/data/wordvecs/glove.twitter.27B.zip'
     else:

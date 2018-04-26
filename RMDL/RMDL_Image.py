@@ -17,7 +17,6 @@ from sklearn.metrics import accuracy_score
 import numpy as np
 from RMDL import Plot as Plot
 import gc
-import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 import collections
 from sklearn.metrics import f1_score
@@ -94,6 +93,10 @@ def Image_Classification(x_train, y_train, x_test, y_test, shape, batch_size=128
             gc.collect()
         except:
             print("Error in model", i, "try to re-generate an other model")
+            if max_hidden_layer_dnn > 3:
+                max_hidden_layer_dnn -= 1
+            if max_nodes_dnn > 256:
+                max_nodes_dnn -= 8
 
 
     i =0
@@ -139,47 +142,57 @@ def Image_Classification(x_train, y_train, x_test, y_test, shape, batch_size=128
             gc.collect()
         except:
             print("Error in model", i, " try to re-generate another model")
+            if max_hidden_layer_rnn > 3:
+                max_hidden_layer_rnn -= 1
+            if max_nodes_rnn > 64:
+                max_nodes_rnn -= 2
 
     # reshape to be [samples][pixels][width][height]
     i=0
     while i < random_deep[2]:
+        try:
+            print("CNN ", i, "\n")
+            model_CNN, model_tmp = BuildModel.Build_Model_CNN_Image(shape,
+                                                                    number_of_classes,
+                                                                    sparse_categorical,
+                                                                    min_hidden_layer_cnn,
+                                                                    max_hidden_layer_cnn,
+                                                                    min_nodes_cnn,
+                                                                    max_nodes_cnn,
+                                                                    random_optimizor,
+                                                                    dropout)
 
-        print("CNN ", i, "\n")
-        model_CNN, model_tmp = BuildModel.Build_Model_CNN_Image(shape,
-                                                                number_of_classes,
-                                                                sparse_categorical,
-                                                                min_hidden_layer_cnn,
-                                                                max_hidden_layer_cnn,
-                                                                min_nodes_cnn,
-                                                                max_nodes_cnn,
-                                                                random_optimizor,
-                                                                dropout)
+            filepath = "weights\weights_CNN_" + str(i) + ".hdf5"
+            checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
+                                         mode='max')
+            callbacks_list = [checkpoint]
 
-        filepath = "weights\weights_CNN_" + str(i) + ".hdf5"
-        checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
-                                     mode='max')
-        callbacks_list = [checkpoint]
+            history = model_CNN.fit(x_train, y_train,
+                                    validation_data=(x_test, y_test),
+                                    epochs=epochs[2],
+                                    batch_size=batch_size,
+                                    callbacks=callbacks_list,
+                                    verbose=2)
+            history_.append(history)
+            model_tmp.load_weights(filepath)
+            model_tmp.compile(loss='sparse_categorical_crossentropy',
+                              optimizer='adam',
+                              metrics=['accuracy'])
 
-        history = model_CNN.fit(x_train, y_train,
-                                validation_data=(x_test, y_test),
-                                epochs=epochs[2],
-                                batch_size=batch_size,
-                                callbacks=callbacks_list,
-                                verbose=2)
-        history_.append(history)
-        model_tmp.load_weights(filepath)
-        model_tmp.compile(loss='sparse_categorical_crossentropy',
-                          optimizer='adam',
-                          metrics=['accuracy'])
-
-        y_pr = model_tmp.predict_classes(x_test, batch_size=batch_size)
-        y_proba.append(np.array(y_pr))
-        score.append(accuracy_score(y_test, y_pr))
-        i = i+1
-        del model_tmp
-        del model_CNN
-        gc.collect()
-
+            y_pr = model_tmp.predict_classes(x_test, batch_size=batch_size)
+            y_proba.append(np.array(y_pr))
+            score.append(accuracy_score(y_test, y_pr))
+            i = i+1
+            del model_tmp
+            del model_CNN
+            gc.collect()
+        except:
+            print("Error in model", i, " try to re-generate another model")
+            if max_hidden_layer_cnn > 5:
+                max_hidden_layer_cnn -= 1
+            if max_nodes_cnn > 128:
+                max_nodes_cnn -= 2
+                min_nodes_cnn -= 1
 
 
 
