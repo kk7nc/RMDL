@@ -32,7 +32,7 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
                         min_hidden_layer_dnn=1, max_hidden_layer_dnn=8, min_nodes_dnn=128, max_nodes_dnn=1024,
                         min_hidden_layer_rnn=1, max_hidden_layer_rnn=5, min_nodes_rnn=32,  max_nodes_rnn=128,
                         min_hidden_layer_cnn=3, max_hidden_layer_cnn=10, min_nodes_cnn=128, max_nodes_cnn=512,
-                        random_state=42, random_optimizor=True, dropout=0.05):
+                        random_state=42, random_optimizor=True, dropout=0.5):
 
     np.random.seed(random_state)
 
@@ -209,7 +209,7 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
 
     i = 0
     while i < random_deep[2]:
-        #try:
+        try:
             print("CNN " + str(i))
 
             model_CNN, model_tmp = BuildModel.Build_Model_CNN_Text(word_index,
@@ -264,7 +264,7 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
             del model_tmp
             del model_CNN
             gc.collect()
-        #except:
+        except:
             print("Error in model", i, "try to re-generate an other model")
             if max_hidden_layer_cnn > 5:
                 max_hidden_layer_cnn -= 1
