@@ -24,7 +24,7 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Environment :: Console',
         'Intended Audience :: Science/Research',
-        'License :: OSI Approved :: MIT License',
+        'License :: GNU General Public License v3.0',
         'Operating System :: OS Independent',
         'Topic :: Scientific/Engineering :: Artificial Intelligence',
         'Topic :: Scientific/Engineering :: Information Analysis',
@@ -39,7 +39,7 @@ setup(
         'numpy==1.12.1',
         'pandas==0.22.0',
         'scipy',
-        'tensorflow-gpu',
+        'tensorflow',
         'keras==2.0.9',
         'scikit-learn==0.19.0',
         'nltk==3.2.4'
