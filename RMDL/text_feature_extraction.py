@@ -15,6 +15,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 import numpy as np
+import nltk
+nltk.download("stopwords")
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 import re
@@ -35,17 +37,34 @@ def transliterate(line):
     return new_line
 
 
-def tokenize(text):
-  min_length = 3
-  words = map(lambda word: word.lower(), word_tokenize(text))
-  words = [word for word in words if word not in cachedStopWords]
-  tokens = (list(map(lambda token: PorterStemmer().stem(token),
-                                   words)))
-  p = re.compile('[a-zA-Z]+');
-  filtered_tokens = list(filter (lambda token: p.match(token) and
-                               len(token) >= min_length,
-                               tokens))
-  return filtered_tokens
+import pickle
+with open('D:/dic/dicts_from_file.pickle', 'rb') as f:
+    dicts_from_file = pickle.load(f)
+f.close()
+
+with open('D:/dic/dicts_from_file1.pickle', 'rb') as f:
+    dicts_from_file1 = pickle.load(f)
+f.close()
+
+with open('D:/dic/dicts_from_file2.pickle', 'rb') as f:
+    dicts_from_file2 = pickle.load(f)
+f.close()
+
+
+context = {}
+context.update(dicts_from_file1)
+context.update(dicts_from_file2)
+context.update(dicts_from_file)
+
+
+
+
+def translate(text_string):
+    for word in text_string.split():
+       if word in context:
+           if type(context[word]) != list:
+            text_string = text_string.replace(word, context[word])
+    return text_string
 
 
 
@@ -55,7 +74,9 @@ def text_cleaner(text,
                  deep_clean=False,
                  stem= True,
                  stop_words=True,
-                 translite_rate=True):
+                 translite_rate=True,
+                 sms=False):
+    text = re.sub(r'^https?:\/\/.*[\r\n]*', '', text, flags=re.MULTILINE)
     rules = [
         {r'>\s+': u'>'},  # remove spaces after a tag opens or closes
         {r'\s+': u' '},  # replace consecutive spaces
@@ -107,6 +128,13 @@ def text_cleaner(text,
                 text = regex.sub(v, text)
             text = text.rstrip()
             text = text.strip()
+    if sms:
+        from html.parser import HTMLParser
+        import itertools
+        # html_parser = HTMLParser()
+        # text = html_parser.unescape(text)
+        text = translate(str(text))
+        # text = ''.join(''.join(s)[:2] for _, s in itertools.groupby(text))
     return text.lower()
 
 def loadData_Tokenizer(X_train, X_test,GloVe_DIR,MAX_NB_WORDS,MAX_SEQUENCE_LENGTH,EMBEDDING_DIM):
