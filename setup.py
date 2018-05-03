@@ -1,8 +1,15 @@
+import io
+import os
+
+
+import numpy
+from setuptools import Extension
 from setuptools import setup, find_packages
+from os import path
 
 __author__ = 'Kamran Kowsari <kowsari.net>'
 
-from os import path
+
 
 here = path.abspath(path.dirname(__file__))
 
@@ -15,7 +22,7 @@ def readfile(file):
 
 setup(
     name='RMDL',
-    version='1.0.0',
+    version='1.0.1',
     description='RMDL: Random Multimodel Deep Learning for Classification',
     long_description=readfile('README.rst'),
     classifiers=[
@@ -24,7 +31,7 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Environment :: Console',
         'Intended Audience :: Science/Research',
-        'License :: GNU General Public License v3.0',
+        'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
         'Operating System :: OS Independent',
         'Topic :: Scientific/Engineering :: Artificial Intelligence',
         'Topic :: Scientific/Engineering :: Information Analysis',
@@ -33,7 +40,6 @@ setup(
     url='https://github.com/kk7nc/RMDL',
     author='Kamran Kowsari',
     author_email='kk7nc@virginia.edu',
-    packages=['RMDL'] + find_packages('RMDL'),
     install_requires=[
         'matplotlib==2.1.2',
         'numpy==1.12.1',
@@ -44,6 +50,6 @@ setup(
         'scikit-learn==0.19.0',
         'nltk==3.2.4'
     ],
-    include_package_data=False
+    packages=find_packages()
 )
 

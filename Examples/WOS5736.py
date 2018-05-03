@@ -39,8 +39,8 @@ if __name__ == "__main__":
 
     batch_size = 100
     sparse_categorical = 0
-    n_epochs = [10, 10, 10]  ## DNN--RNN-CNN
-    Random_Deep = [1, 1, 1]  ## DNN--RNN-CNN
+    n_epochs = [5, 10, 5]  ## DNN--RNN-CNN
+    Random_Deep = [1, 0, 1]  ## DNN--RNN-CNN
 
     RMDL.Text_Classification(X_train, y_train, X_test, y_test,
                              batch_size=batch_size,

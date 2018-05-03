@@ -1,27 +1,33 @@
-﻿﻿|DOI| |Pypi| |wercker status| |Build Status| |PowerPoint| |researchgate| |Binder| |pdf| |GitHub license|
+﻿|DOI| |Pypi| |werckerstatus| |BuildStatus| |PowerPoint| |researchgate| |Binder| |pdf| |GitHublicense|
 
-RMDL: Random Multimodel Deep Learning for Classification
-========================================================
 
 Referenced paper : `RMDL: Random Multimodel Deep Learning for
 Classification <https://www.researchgate.net/publication/324922651_RMDL_Random_Multimodel_Deep_Learning_for_Classification>`__
 
 Random Multimodel Deep Learning (RMDL):
-========================================================
+=======================================
 
-A new ensemble, deep learning approach for classification. Deep learning models have achieved state-of-the-art results across many domains. RMDL solves the problem of finding the best deep learning structure and architecture while simultaneously improving robustness and accuracy through ensembles of deep learning architectures. RDML can accept asinput a variety data to include text, video, images, and symbolic.
+A new ensemble, deep learning approach for classification. Deep
+learning models have achieved state-of-the-art results across many domains.
+RMDL solves the problem of finding the best deep learning structure
+and architecture while simultaneously improving robustness and accuracy
+through ensembles of deep learning architectures. RDML can accept
+asinput a variety data to include text, video, images, and symbolic.
 
 |RDL|
 
-Overview of RDML: Random Multimodel Deep Learning for classification. The RMDL includesnRandom modelswhich aredrandom model of DNN classifiers,cmodels of CNN classifiers, andrRNN classifiers wherer+c+d=n.
-
+Overview of RDML: Random Multimodel Deep Learning for classification. The
+RMDL includesnRandom modelswhich aredrandom model of DNN classifiers,
+cmodels of CNN classifiers, andrRNN classifiers wherer+c+d=n.
 
 
 |RMDL|
 
 
 
-Random Multimodel Deep Learning (RDML) architecture for classification. RMDL includes 3 Random models, oneDNN classifier at left, one Deep CNN classifier at middle, and one Deep RNN classifier at right (each unit could be LSTMor GRU).
+Random Multimodel Deep Learning (RDML) architecture for classification.
+RMDL includes 3 Random models, oneDNN classifier at left, one Deep CNN
+classifier at middle, and one Deep RNN classifier at right (each unit could be LSTMor GRU).
 
 
 Installation
@@ -32,6 +38,7 @@ please use:
 
 Using pip
 ----------
+
 .. code:: python
 
         pip install RMDL
@@ -43,8 +50,8 @@ Using git
 
     git clone --recursive https://github.com/kk7nc/RMDL.git
 
-
-The primary requirements for this package are Python 3 with Tensorflow. The requirements.txt file contains a listing of the required Python packages; to install all requirements, run the following:
+The primary requirements for this package are Python 3 with Tensorflow. The requirements.txt file
+contains a listing of the required Python packages; to install all requirements, run the following:
 
 .. code:: bash
 
@@ -62,11 +69,31 @@ Or:
 
     conda install --file requirements.txt
 
-
 Documentation:
 ==============
 
-The exponential growth in the number of complex datasets every year requires  more enhancement in machine learning methods to provide  robust and accurate data classification. Lately, deep learning approaches have been achieved surpassing results in comparison to previous machine learning algorithms on tasks such as image classification, natural language processing, face recognition, and etc. The success of these deep learning algorithms relys on their capacity to model complex and non-linear relationships within data. However, finding the suitable structure for these models has been a challenge for researchers. This paper introduces Random Multimodel Deep Learning (RMDL): a new ensemble, deep learning approach for classification.  RMDL solves the problem of finding the best deep learning structure and architecture while simultaneously improving robustness and accuracy through ensembles of deep learning architectures. In short, RMDL trains multiple models of Deep Neural Network (DNN), Convolutional Neural Network (CNN) and Recurrent Neural Network (RNN) in parallel and combines their results to produce better result of any of those models individually. To create these models, each deep learning model has been constructed in a random fashion regarding the number of layers and nodes in their neural network structure. The resulting RDML model can be used for various domains such as text, video, images, and symbolic. In this Project, we describe RMDL model in depth and show the results for image and text classification as well as face recognition. For image classification, we compared our model with some of the available baselines using MNIST and CIFAR-10 datasets. Similarly, we used four datasets namely, WOS, Reuters, IMDB, and 20newsgroup and compared our results with available baselines. Web of Science (WOS) has been collected  by authors and consists of three sets~(small, medium and large set). Lastly, we used ORL dataset to compare the performance of our approach with other face recognition methods. These test results show that RDML model consistently outperform standard methods over a broad range of data types and classification problems
+The exponential growth in the number of complex datasets every year requires  more enhancement in
+machine learning methods to provide  robust and accurate data classification. Lately, deep learning
+approaches have been achieved surpassing results in comparison to previous machine learning algorithms
+on tasks such as image classification, natural language processing, face recognition, and etc. The
+success of these deep learning algorithms relys on their capacity to model complex and non-linear
+relationships within data. However, finding the suitable structure for these models has been a challenge
+for researchers. This paper introduces Random Multimodel Deep Learning (RMDL): a new ensemble, deep learning
+approach for classification.  RMDL solves the problem of finding the best deep learning structure and
+architecture while simultaneously improving robustness and accuracy through ensembles of deep
+learning architectures. In short, RMDL trains multiple models of Deep Neural Network (DNN),
+Convolutional Neural Network (CNN) and Recurrent Neural Network (RNN) in parallel and combines
+their results to produce better result of any of those models individually. To create these models,
+each deep learning model has been constructed in a random fashion regarding the number of layers and
+nodes in their neural network structure. The resulting RDML model can be used for various domains such
+as text, video, images, and symbolic. In this Project, we describe RMDL model in depth and show the results
+for image and text classification as well as face recognition. For image classification, we compared our
+model with some of the available baselines using MNIST and CIFAR-10 datasets. Similarly, we used four
+datasets namely, WOS, Reuters, IMDB, and 20newsgroup and compared our results with available baselines.
+Web of Science (WOS) has been collected  by authors and consists of three sets~(small, medium and large set).
+Lastly, we used ORL dataset to compare the performance of our approach with other face recognition methods.
+These test results show that RDML model consistently outperform standard methods over a broad range of
+data types and classification problems.
 
 Datasets for RMDL:
 ==================
@@ -74,18 +101,17 @@ Datasets for RMDL:
 Text Datasets:
 --------------
 
--  `IMDB Dataset <http://ai.stanford.edu/~amaas/data/sentiment/>`__
+- `IMDB Dataset <http://ai.stanford.edu/~amaas/data/sentiment/>`__
 
-   -  This dataset contains 50,000 documents with 2 categories.
+   - This dataset contains 50,000 documents with 2 categories.
 
--  `Reters-21578 Dataset <https://keras.io/datasets/>`__
+- `Reters-21578 Dataset <https://keras.io/datasets/>`__
 
-   -  This dataset contains 21,578 documents with 90 categories.
+   - This dataset contains 21,578 documents with 90 categories.
 
--  `20Newsgroups
-   Dataset <https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups>`__
+- `20Newsgroups Dataset <https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups>`__
 
-   -  This dataset contains 20,000 documents with 20 categories.
+   - This dataset contains 20,000 documents with 20 categories.
 
 -  Web of Science Dataset (DOI:
    `10.17632/9rw3vkcfy4.2 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__)
@@ -134,7 +160,6 @@ Dataset) <http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html>`__
 Requirements for RMDL :
 =======================
 
-
 General:
 ----------
 
@@ -180,19 +205,15 @@ Text and Document Classification
 
    -  if you are not setting GloVe directory, GloVe will be downloaded
 
-
 Parameters:
 ===========
 
 Text_Classification
 -------------------
 
-=====================
-
 .. code:: python
 
          from RMDL import RMDL_Text
-
 
 .. code:: python
 
@@ -205,14 +226,14 @@ Text_Classification
                         min_hidden_layer_cnn=3, max_hidden_layer_cnn=10, min_nodes_cnn=128, max_nodes_cnn=512,
                         random_state=42, random_optimizor=True, dropout=0.05):
 
+
 Input
 ~~~~~
-   - x_train
-   - y_train
-   - x_test
-   - y_test
 
-
+- x_train
+- y_train
+- x_test
+- y_test
 
 batch_size
 ~~~~~~~~~~
@@ -220,13 +241,13 @@ batch_size
 - batch_size: Integer. Number of samples per gradient update. If unspecified, it will default to 128.
 
 EMBEDDING_DIM
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 - batch_size: Integer. Shape of word embedding (this number should be same with GloVe or other pre-trained embedding techniques that be used), it will default to 50 that used with pain of glove.6B.50d.txt file.
 
 
 MAX_SEQUENCE_LENGTH
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 - MAX_SEQUENCE_LENGTH: Integer. Maximum length of sequence or document in datasets, it will default to 500.
 
@@ -362,8 +383,6 @@ dropout
 
 Image_Classification
 ---------------------
-
-=====================
 
 .. code:: python
 
@@ -758,8 +777,6 @@ Send an email to kk7nc@virginia.edu
 Citations
 ---------
 
-
-
 .. code::
 
     @inproceedings{Kowsari2018RMDL,
@@ -771,12 +788,9 @@ Citations
     organization={ACM}
     }
 
-
-.. |DOI| image:: https://img.shields.io/badge/DOI-10.1145/3206098.3206111-blue.svg?style=flat
-   :target: https://doi.org/10.1145/3206098.3206111
-.. |wercker status| image:: https://app.wercker.com/status/3a564158e809971e2f7416beba5d05af/s/master
+.. |werckerstatus| image:: https://app.wercker.com/status/3a564158e809971e2f7416beba5d05af/s/master
    :target: https://app.wercker.com/project/byKey/3a564158e809971e2f7416beba5d05af
-.. |Build Status| image:: https://travis-ci.org/kk7nc/RMDL.svg?branch=master
+.. |BuildStatus| image:: https://travis-ci.org/kk7nc/RMDL.svg?branch=master
    :target: https://travis-ci.org/kk7nc/RMDL
 .. |PowerPoint| image:: https://img.shields.io/badge/Presentation-download-red.svg?style=flat
    :target: https://github.com/kk7nc/RMDL/blob/master/Documents/RMDL.pdf
@@ -786,7 +800,7 @@ Citations
    :target: https://mybinder.org/v2/gh/kk7nc/RMDL/master
 .. |pdf| image:: https://img.shields.io/badge/pdf-download-red.svg?style=flat
    :target: https://github.com/kk7nc/RMDL/blob/master/Documents/ACM-RMDL.pdf
-.. |GitHub license| image:: https://img.shields.io/badge/licence-GPL-blue.svg
+.. |GitHublicense| image:: https://img.shields.io/badge/licence-GPL-blue.svg
    :target: ./LICENSE
 .. |RDL| image:: http://kowsari.net/onewebmedia/RDL.jpg
 .. |RMDL| image:: http://kowsari.net/onewebmedia/RMDL.jpg
@@ -794,4 +808,6 @@ Citations
 .. |Data| image:: https://img.shields.io/badge/DOI-10.17632/9rw3vkcfy4.6-blue.svg?style=flat
    :target: http://dx.doi.org/10.17632/9rw3vkcfy4.6
 .. |Pypi| image:: https://img.shields.io/badge/Pypi-RMDL%201.0.0-blue.svg
-   :target: https://pypi.org
+   :target: https://pypi.org/project/RMDL/
+.. |DOI| image:: https://img.shields.io/badge/DOI-10.1145/3206098.3206111-blue.svg?style=flat
+   :target: https://doi.org/10.1145/3206098.3206111
