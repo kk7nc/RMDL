@@ -12,7 +12,8 @@ RMDL: Random Multimodel Deep Learning for Classification
 
 from sklearn.datasets import fetch_20newsgroups
 from RMDL import RMDL_Text as RMDL
-from sklearn.svm import LinearSVC
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 if __name__ == "__main__":
     newsgroups_train = fetch_20newsgroups(subset='train')

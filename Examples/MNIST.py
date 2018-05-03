@@ -10,10 +10,11 @@ RMDL: Random Multimodel Deep Learning for Classification
  * Comments and Error: email: kk7nc@virginia.edu
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from keras.datasets import mnist
 import numpy as np
-from keras.metrics import sparse_categorical_accuracy
+
 
 from RMDL import RMDL_Image as RMDL
 
@@ -27,9 +28,9 @@ if __name__ == "__main__":
     shape = (28, 28, 1)
     batch_size = 128
     sparse_categorical = 0
-    n_epochs = [1, 1, 1]  ## DNN--RNN-CNN
+    n_epochs = [10, 10, 10]  ## DNN--RNN-CNN
     Random_Deep = [1,1, 1]  ## DNN--RNN-CNN
-    RMDL.Image_Classification(X_train, y_train, X_test, y_test,
+    RMDL.Image_Classification(X_train, y_train, X_test, y_test,shape,
                              batch_size=batch_size,
                              sparse_categorical=True,
                              random_deep=Random_Deep,

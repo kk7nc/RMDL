@@ -17,7 +17,7 @@ from RMDL import text_feature_extraction as txt
 from RMDL.Download import Download_WOS as WOS
 from RMDL import RMDL_Text as RMDL
 from sklearn.cross_validation import train_test_split
-
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 
 

@@ -9,7 +9,8 @@ RMDL: Random Multimodel Deep Learning for Classification
  * Refrenced paper : An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)
  * Comments and Error: email: kk7nc@virginia.edu
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import gc
 import os
 import numpy as np
@@ -28,7 +29,7 @@ from RMDL import Plot as Plot
 def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
                         EMBEDDING_DIM=50,MAX_SEQUENCE_LENGTH = 500, MAX_NB_WORDS = 75000,
                         GloVe_dir="", GloVe_file = "glove.6B.50d.txt",
-                        sparse_categorical=True, random_deep=[3, 3, 3], epochs=[500, 500, 500],  plot=True,
+                        sparse_categorical=True, random_deep=[3, 3, 3], epochs=[500, 500, 500],  plot=False,
                         min_hidden_layer_dnn=1, max_hidden_layer_dnn=8, min_nodes_dnn=128, max_nodes_dnn=1024,
                         min_hidden_layer_rnn=1, max_hidden_layer_rnn=5, min_nodes_rnn=32,  max_nodes_rnn=128,
                         min_hidden_layer_cnn=3, max_hidden_layer_cnn=10, min_nodes_cnn=128, max_nodes_cnn=512,
@@ -52,7 +53,6 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
         else:
             GloVe_DIR = os.path.join(glove_directory, GloVe_file)
 
-        print(GloVe_DIR)
         if not os.path.isfile(GloVe_DIR):
             print("Could not find %s Set GloVe Directory in Global.py ", GloVe)
             exit()

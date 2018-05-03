@@ -10,7 +10,8 @@ RMDL: Random Multimodel Deep Learning for Classification
 * Comments and Error: email: kk7nc@virginia.edu
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from keras.models import Sequential
 import numpy as np
 from keras.constraints import maxnorm
