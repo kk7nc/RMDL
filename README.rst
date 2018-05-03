@@ -1,10 +1,10 @@
-﻿﻿|DOI| |Pypi| |wercker status| |Build Status| |PowerPoint| |license| |Binder| |pdf| |GitHub license|
+﻿﻿|DOI| |Pypi| |wercker status| |Build Status| |PowerPoint| |researchgate| |Binder| |pdf| |GitHub license|
 
 RMDL: Random Multimodel Deep Learning for Classification
 ========================================================
 
 Referenced paper : `RMDL: Random Multimodel Deep Learning for
-Classification <www.kowsari.net>`__
+Classification <https://www.researchgate.net/publication/324922651_RMDL_Random_Multimodel_Deep_Learning_for_Classification>`__
 
 Random Multimodel Deep Learning (RMDL):
 ========================================================
@@ -780,8 +780,8 @@ Citations
    :target: https://travis-ci.com/kk7nc/RMDL
 .. |PowerPoint| image:: https://img.shields.io/badge/Presentation-download-red.svg?style=flat
    :target: https://github.com/kk7nc/RMDL/blob/master/Documents/RMDL.pdf
-.. |license| image:: https://img.shields.io/badge/ResearchGate-RMDL-blue.svg?style=flat
-   :target: https://www.researchgate.net
+.. |researchgate| image:: https://img.shields.io/badge/ResearchGate-RMDL-blue.svg?style=flat
+   :target: https://www.researchgate.net/publication/324922651_RMDL_Random_Multimodel_Deep_Learning_for_Classification
 .. |Binder| image:: https://mybinder.org/badge.svg
    :target: https://mybinder.org/v2/gh/kk7nc/RMDL/master
 .. |pdf| image:: https://img.shields.io/badge/pdf-download-red.svg?style=flat
