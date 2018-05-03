@@ -37,34 +37,7 @@ def transliterate(line):
     return new_line
 
 
-import pickle
-with open('D:/dic/dicts_from_file.pickle', 'rb') as f:
-    dicts_from_file = pickle.load(f)
-f.close()
 
-with open('D:/dic/dicts_from_file1.pickle', 'rb') as f:
-    dicts_from_file1 = pickle.load(f)
-f.close()
-
-with open('D:/dic/dicts_from_file2.pickle', 'rb') as f:
-    dicts_from_file2 = pickle.load(f)
-f.close()
-
-
-context = {}
-context.update(dicts_from_file1)
-context.update(dicts_from_file2)
-context.update(dicts_from_file)
-
-
-
-
-def translate(text_string):
-    for word in text_string.split():
-       if word in context:
-           if type(context[word]) != list:
-            text_string = text_string.replace(word, context[word])
-    return text_string
 
 
 
@@ -74,9 +47,7 @@ def text_cleaner(text,
                  deep_clean=False,
                  stem= True,
                  stop_words=True,
-                 translite_rate=True,
-                 sms=False):
-    text = re.sub(r'^https?:\/\/.*[\r\n]*', '', text, flags=re.MULTILINE)
+                 translite_rate=True):
     rules = [
         {r'>\s+': u'>'},  # remove spaces after a tag opens or closes
         {r'\s+': u' '},  # replace consecutive spaces
@@ -128,83 +99,37 @@ def text_cleaner(text,
                 text = regex.sub(v, text)
             text = text.rstrip()
             text = text.strip()
-    if sms:
-        from html.parser import HTMLParser
-        import itertools
-        # html_parser = HTMLParser()
-        # text = html_parser.unescape(text)
-        text = translate(str(text))
-        # text = ''.join(''.join(s)[:2] for _, s in itertools.groupby(text))
     return text.lower()
 
 def loadData_Tokenizer(X_train, X_test,GloVe_DIR,MAX_NB_WORDS,MAX_SEQUENCE_LENGTH,EMBEDDING_DIM):
-    if False:
-        np.random.seed(7)
-        text = np.concatenate((X_train, X_test),axis=0)
-        text = np.array(X_train)
-        tokenizer = Tokenizer(num_words=MAX_NB_WORDS)
-        tokenizer.fit_on_texts(text)
-        sequences = tokenizer.texts_to_sequences(text)
-        word_index = tokenizer.word_index
-        text = pad_sequences(sequences, maxlen=MAX_SEQUENCE_LENGTH)
-        indices = np.arange(text.shape[0])
-        text = text[indices]
-        print(text.shape)
-        X_train = text
-        text = np.array(X_test)
-        sequences = tokenizer.texts_to_sequences(text)
-        text = pad_sequences(sequences, maxlen=MAX_SEQUENCE_LENGTH)
-        print('Found %s unique tokens.' % len(word_index))
-        indices = np.arange(text.shape[0])
-        text = text[indices]
-        print(text.shape)
-        X_test = text
+    np.random.seed(7)
+    text = np.concatenate((X_train, X_test), axis=0)
+    text = np.array(text)
+    tokenizer = Tokenizer(num_words=MAX_NB_WORDS)
+    tokenizer.fit_on_texts(text)
+    sequences = tokenizer.texts_to_sequences(text)
+    word_index = tokenizer.word_index
+    text = pad_sequences(sequences, maxlen=MAX_SEQUENCE_LENGTH)
+    print('Found %s unique tokens.' % len(word_index))
+    indices = np.arange(text.shape[0])
+    # np.random.shuffle(indices)
+    text = text[indices]
+    print(text.shape)
+    X_train = text[0:len(X_train), ]
+    X_test = text[len(X_train):, ]
+    embeddings_index = {}
+    f = open(GloVe_DIR, encoding="utf8")
+    for line in f:
 
-
-        embeddings_index = {}
-        f = open(GloVe_DIR, encoding="utf8")
-        for line in f:
-
-            values = line.split()
-            word = values[0]
-            try:
-                coefs = np.asarray(values[1:], dtype='float32')
-            except:
-                print("Warnning"+str(values)+" in" + str(line))
-            embeddings_index[word] = coefs
-        f.close()
-
-        print('Total %s word vectors.' % len(embeddings_index))
-    else:
-        np.random.seed(7)
-        text = np.concatenate((X_train, X_test), axis=0)
-        text = np.array(text)
-        tokenizer = Tokenizer(num_words=MAX_NB_WORDS)
-        tokenizer.fit_on_texts(text)
-        sequences = tokenizer.texts_to_sequences(text)
-        word_index = tokenizer.word_index
-        text = pad_sequences(sequences, maxlen=MAX_SEQUENCE_LENGTH)
-        print('Found %s unique tokens.' % len(word_index))
-        indices = np.arange(text.shape[0])
-        # np.random.shuffle(indices)
-        text = text[indices]
-        print(text.shape)
-        X_train = text[0:len(X_train), ]
-        X_test = text[len(X_train):, ]
-        embeddings_index = {}
-        f = open(GloVe_DIR, encoding="utf8")
-        for line in f:
-
-            values = line.split()
-            word = values[0]
-            try:
-                coefs = np.asarray(values[1:], dtype='float32')
-            except:
-                #print("Warnning" + str(values) + " in" + str(line))
-                pass
-            embeddings_index[word] = coefs
-        f.close()
-        print('Total %s word vectors.' % len(embeddings_index))
+        values = line.split()
+        word = values[0]
+        try:
+            coefs = np.asarray(values[1:], dtype='float32')
+        except:
+            pass
+        embeddings_index[word] = coefs
+    f.close()
+    print('Total %s word vectors.' % len(embeddings_index))
     return (X_train, X_test, word_index,embeddings_index)
 
 def loadData(X_train, X_test):
