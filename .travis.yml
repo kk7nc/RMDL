@@ -24,15 +24,15 @@ matrix:
         - python: 3.6
           env: KERAS_BACKEND=cntk PYTHONWARNINGS=ignore TEST_MODE=MNIST          
         - python: 3.6
-          env: KERAS_BACKEND=tensorflow TEST_MODE=Reuters-21578
+          env: KERAS_BACKEND=tensorflow TEST_MODE=Reuters21578
         - python: 3.5
-          env: KERAS_BACKEND=tensorflow TEST_MODE=Reuters-21578
+          env: KERAS_BACKEND=tensorflow TEST_MODE=Reuters21578
         - python: 3.6
-          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_compile TEST_MODE=Reuters-21578
+          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_compile TEST_MODE=Reuters21578
         - python: 3.5
-          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_comp TEST_MODE=Reuters-21578
+          env: KERAS_BACKEND=theano THEANO_FLAGS=optimizer=fast_comp TEST_MODE=Reuters21578
         - python: 3.6
-          env: KERAS_BACKEND=cntk PYTHONWARNINGS=ignore TEST_MODE=Reuters-21578 
+          env: KERAS_BACKEND=cntk PYTHONWARNINGS=ignore TEST_MODE=Reuters21578 
        
           
 install:
@@ -74,7 +74,7 @@ script:
           python Examples/ORL.py;
         elif [[ "$TEST_MODE" == "MNIST" ]]; then
           python Examples/MNIST.py;
-        elif [[ "$TEST_MODE" == "Reuters-21578" ]]; then
+        elif [[ "$TEST_MODE" == "Reuters21578" ]]; then
           python Examples/Reuters21578.py;
         elif [[ "$TEST_MODE" == "WOS" ]]; then
           python Examples/WOS5736.py;
