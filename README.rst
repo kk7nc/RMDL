@@ -6,9 +6,6 @@ RMDL: Random Multimodel Deep Learning for Classification
 Referenced paper : `RMDL: Random Multimodel Deep Learning for
 Classification <www.kowsari.net>`__
 
-Referenced paper : `An Improvement of Data Classification using Random
-Multimodel Deep Learning (RMDL) <www.kowsari.net>`__
-
 Random Multimodel Deep Learning (RMDL):
 ========================================================
 
@@ -774,16 +771,6 @@ Citations
     organization={ACM}
     }
 
-And
-
-.. code::
-
-    @inproceedings{Heidarysafa2018RMDL,
-    title={An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)},
-    author={Heidarysafa, Mojtaba and Kowsari, Kamran and  Brown, Donald E. and Jafari Meimandi, Kiana and Barnes, Laura E.},
-    booktitle={International Journal of Machine Learning and Computing (IJMLC)},
-    year={2018}
-    }
 
 .. |DOI| image:: https://img.shields.io/badge/DOI-10.1145/3206098.3206111-blue.svg?style=flat
    :target: https://doi.org/10.1145/3206098.3206111

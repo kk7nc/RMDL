@@ -265,6 +265,11 @@ def Build_Model_RNN_Text(word_index, embeddings_index, nclasses,  MAX_SEQUENCE_L
         embedding_vector = embeddings_index.get(word)
         if embedding_vector is not None:
             # words not found in embedding index will be all-zeros.
+            if len(embedding_matrix[i]) != len(embedding_vector):
+                print("could not broadcast input array from shape", str(len(embedding_matrix[i])),
+                      "into shape", str(len(embedding_vector)), " Please make sure your"
+                                                                " EMBEDDING_DIM is equal to embedding_vector file ,GloVe,")
+                exit(1)
             embedding_matrix[i] = embedding_vector
     model.add(Embedding(len(word_index) + 1,
                                 EMBEDDING_DIM,
@@ -319,6 +324,11 @@ def Build_Model_CNN_Text(word_index, embeddings_index, nclasses, MAX_SEQUENCE_LE
         for word, i in word_index.items():
             embedding_vector = embeddings_index.get(word)
             if embedding_vector is not None:
+                if len(embedding_matrix[i]) !=len(embedding_vector):
+                    print("could not broadcast input array from shape",str(len(embedding_matrix[i])),
+                                     "into shape",str(len(embedding_vector))," Please make sure your"
+                                     " EMBEDDING_DIM is equal to embedding_vector file ,GloVe,")
+                    exit(1)
                 # words not found in embedding index will be all-zeros.
                 embedding_matrix[i] = embedding_vector
         model.add(Embedding(len(word_index) + 1,
@@ -360,6 +370,12 @@ def Build_Model_CNN_Text(word_index, embeddings_index, nclasses, MAX_SEQUENCE_LE
             embedding_vector = embeddings_index.get(word)
             if embedding_vector is not None:
                 # words not found in embedding index will be all-zeros.
+                if len(embedding_matrix[i]) !=len(embedding_vector):
+                    print("could not broadcast input array from shape",str(len(embedding_matrix[i])),
+                                     "into shape",str(len(embedding_vector))," Please make sure your"
+                                     " EMBEDDING_DIM is equal to embedding_vector file ,GloVe,")
+                    exit(1)
+
                 embedding_matrix[i] = embedding_vector
 
         embedding_layer = Embedding(len(word_index) + 1,
@@ -397,7 +413,9 @@ def Build_Model_CNN_Text(word_index, embeddings_index, nclasses, MAX_SEQUENCE_LE
         l_cov2 = Dropout(dropout)(l_cov2)
         l_pool2 = MaxPooling1D(30)(l_cov2)
         l_flat = Flatten()(l_pool2)
-        l_dense = Dense(512, activation='relu')(l_flat)
+        l_dense = Dense(1024, activation='relu')(l_flat)
+        l_dense = Dropout(dropout)(l_dense)
+        l_dense = Dense(512, activation='relu')(l_dense)
         l_dense = Dropout(dropout)(l_dense)
         preds = Dense(nclasses, activation='softmax')(l_dense)
         model = Model(sequence_input, preds)

@@ -213,17 +213,17 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
             print("CNN " + str(i))
 
             model_CNN, model_tmp = BuildModel.Build_Model_CNN_Text(word_index,
-                                                                     embeddings_index,
-                                                                     number_of_classes,
-                                                                     MAX_SEQUENCE_LENGTH,
-                                                                     EMBEDDING_DIM,
-                                                                     sparse_categorical,
-                                                                     min_hidden_layer_cnn,
-                                                                     max_hidden_layer_cnn,
-                                                                     min_nodes_cnn,
-                                                                     max_nodes_cnn,
-                                                                     random_optimizor,
-                                                                     dropout)
+                                                                   embeddings_index,
+                                                                   number_of_classes,
+                                                                   MAX_SEQUENCE_LENGTH,
+                                                                   EMBEDDING_DIM,
+                                                                   sparse_categorical,
+                                                                   min_hidden_layer_cnn,
+                                                                   max_hidden_layer_cnn,
+                                                                   min_nodes_cnn,
+                                                                   max_nodes_cnn,
+                                                                   random_optimizor,
+                                                                   dropout)
 
 
 
