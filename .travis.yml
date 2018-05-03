@@ -65,7 +65,7 @@ before_script:
 # command to run tests
 script:
     - if [[ "$TEST_MODE" == "20NewsGroup" ]]; then
-          python Examples/20NewsGroup.py;
+          python Examples/_20NewsGroup.py;
         elif [[ "$TEST_MODE" == "CIFAR" ]]; then
           python Examples/CIFAR.py;
         elif [[ "$TEST_MODE" == "IMDB" ]]; then
@@ -75,7 +75,7 @@ script:
         elif [[ "$TEST_MODE" == "MNIST" ]]; then
           python Examples/MNIST.py;
         elif [[ "$TEST_MODE" == "Reuters-21578" ]]; then
-          python Examples/Reuters-21578.py;
+          python Examples/Reuters21578.py;
         elif [[ "$TEST_MODE" == "WOS" ]]; then
-          python Examples/WOS-5736.py;
+          python Examples/WOS5736.py;
         fi
