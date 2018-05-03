@@ -776,8 +776,8 @@ Citations
    :target: https://doi.org/10.1145/3206098.3206111
 .. |wercker status| image:: https://app.wercker.com/status/3a564158e809971e2f7416beba5d05af/s/master
    :target: https://app.wercker.com/project/byKey/3a564158e809971e2f7416beba5d05af
-.. |Build Status| image:: https://travis-ci.com/kk7nc/RMDL.svg?token=hgKUQ8w7fyzKbCumBbo8&branch=master
-   :target: https://travis-ci.com/kk7nc/RMDL
+.. |Build Status| image:: https://travis-ci.org/kk7nc/RMDL.svg?branch=master
+   :target: https://travis-ci.org/kk7nc/RMDL
 .. |PowerPoint| image:: https://img.shields.io/badge/Presentation-download-red.svg?style=flat
    :target: https://github.com/kk7nc/RMDL/blob/master/Documents/RMDL.pdf
 .. |researchgate| image:: https://img.shields.io/badge/ResearchGate-RMDL-blue.svg?style=flat
