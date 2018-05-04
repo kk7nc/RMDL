@@ -737,7 +737,7 @@ Send an email to <kk7nc@virginia.edu>
 Citations
 ---------
 
-``` {.sourceCode .}
+```bash
 @inproceedings{Kowsari2018RMDL,
 title={RMDL: Random Multimodel Deep Learning for Classification},
 author={Kowsari, Kamran and Heidarysafa, Mojtaba and Brown, Donald E. and Jafari Meimandi, Kiana and Barnes, Laura E.},
