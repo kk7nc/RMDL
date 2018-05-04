@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/Examples/LFW.py" line="39" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a4c78d4-a455-45d3-99a2-5c81c09af077" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Examples/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/README.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RMDL/Download/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/RMDL/Download/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RMDL/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/RMDL/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="2a4c78d4-a455-45d3-99a2-5c81c09af077" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +144,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RMDL/Download/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="583">
@@ -159,7 +153,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RMDL/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="6023">
@@ -1075,17 +1069,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RMDL/Download/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RMDL/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6023">
           <caret line="355" lean-forward="true" selection-start-line="355" selection-end-line="355" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RMDL/Download/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
         </state>
       </provider>
     </entry>
