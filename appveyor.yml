@@ -57,18 +57,14 @@ install:
   - "echo done"
 # command to run tests
 test_script:
-    - if TEST_MODE == "20NewsGroup"; then
+    - if TEST_MODE == 20NewsGroup; then
             python Examples/_20NewsGroup.py;
-          elif TEST_MODE == "CIFAR" ; then
+          elif TEST_MODE == CIFAR ; then
             python Examples/CIFAR.py;
-          elif TEST_MODE == "IMDB"; then
-            python Examples/IMDB.py;
-          elif TEST_MODE == "ORL" ; then
-            python Examples/ORL.py;
-          elif TEST_MODE == "MNIST" ; then
+          elif TEST_MODE == MNIST ; then
             python Examples/MNIST.py;
-          elif [[ "$TEST_MODE" == "Reuters21578" ]]; then
+          elif TEST_MODE == Reuters21578; then
             python Examples/Reuters21578.py;
-          elif [[ "$TEST_MODE" == "WOS" ]]; then
+          elif TEST_MODE == WOS; then
             python Examples/WOS5736.py;
           fi
