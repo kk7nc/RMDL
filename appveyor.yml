@@ -1,0 +1,71 @@
+build: off
+
+platform:
+  - x86
+  - x64
+
+environment:
+  matrix:
+    # Python 3.5, 64 bit (only working version according to TensorFlow docs)
+    - MINICONDA: C:\Miniconda35-x64
+      TEST_MODE: WOS
+    # Python 3.6
+    - MINICONDA: C:\Miniconda36-x64
+      TEST_MODE: WOS
+    - MINICONDA: C:\Miniconda35-x64
+      TEST_MODE: MNIST
+    # Python 3.6
+    - MINICONDA: C:\Miniconda36-x64
+      TEST_MODE: MNIST
+    - MINICONDA: C:\Miniconda35-x64
+      TEST_MODE: Reuters21578
+    # Python 3.6
+    - MINICONDA: C:\Miniconda36-x64
+      TEST_MODE: Reuters21578
+
+matrix:
+  exclude:
+    # Python 3.5
+    - MINICONDA: C:\Miniconda35-x64
+      platform: x86
+    - MINICONDA: C:\Miniconda36-x64
+      platform: x86
+  allow_failures:
+    - platform: x86
+    - MINICONDA: C:\Miniconda-x64
+    - MINICONDA: C:\Miniconda36-x64
+
+init:
+  - "set PATH=%MINICONDA%;%MINICONDA%\\Scripts;%MINICONDA%\\Library\\bin;%PATH%"
+
+  
+install:
+  - conda config --set always_yes yes --set changeps1 no
+  - conda config --add channels conda-forge
+  - conda update -q conda
+  - "python -m pip install --upgrade pip"
+  - "pip install --upgrade tensorflow"
+  - "pip install -q pytest"
+  - "pip install matplotlib"
+  - "pip install numpy"
+  - "pip install pandas"
+  - "pip install scipy"
+  - "pip install scikit-learn"
+  - "pip install nltk"
+  - "pip install keras"
+  
+  - "echo done"
+# command to run tests
+test_script:
+    - if TEST_MODE == 20NewsGroup; then
+            python Examples/_20NewsGroup.py;
+          elif TEST_MODE == CIFAR ; then
+            python Examples/CIFAR.py;
+          elif TEST_MODE == MNIST ; then
+            python Examples/MNIST.py;
+          elif TEST_MODE == Reuters21578; then
+            python Examples/Reuters21578.py;
+          elif TEST_MODE == WOS; then
+            python Examples/WOS5736.py;
+          fi
+
