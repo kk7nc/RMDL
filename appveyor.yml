@@ -11,28 +11,25 @@ environment:
       TEST_MODE: WOS
     # Python 3.6
     - MINICONDA: C:\Miniconda36-x64
+      TEST_MODE: WOS
+    - MINICONDA: C:\Miniconda35-x64
+      TEST_MODE: MNIST
+    # Python 3.6
+    - MINICONDA: C:\Miniconda36-x64
+      TEST_MODE: MNIST
+    - MINICONDA: C:\Miniconda35-x64
+      TEST_MODE: Reuters21578
+    # Python 3.6
+    - MINICONDA: C:\Miniconda36-x64
+      TEST_MODE: Reuters21578
 
 matrix:
   exclude:
     # Python 3.5
     - MINICONDA: C:\Miniconda35-x64
       platform: x86
-      TEST_MODE: WOS
     - MINICONDA: C:\Miniconda36-x64
       platform: x86
-      TEST_MODE: WOS
-    - MINICONDA: C:\Miniconda35-x64
-      platform: x86
-      TEST_MODE: MNIST
-    - MINICONDA: C:\Miniconda36-x64
-      platform: x86
-      TEST_MODE: MNIST
-    - MINICONDA: C:\Miniconda35-x64
-      platform: x86
-      TEST_MODE: Reuters21578
-    - MINICONDA: C:\Miniconda36-x64
-      platform: x86
-      TEST_MODE: Reuters21578
   allow_failures:
     - platform: x86
     - MINICONDA: C:\Miniconda-x64
