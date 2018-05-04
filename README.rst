@@ -1,4 +1,4 @@
-﻿|DOI| |Pypi| |werckerstatus| |appveyor| |BuildStatus| |PowerPoint| |researchgate| |Binder| |pdf| |GitHublicense|
+﻿﻿|DOI| |Pypi| |werckerstatus| |appveyor| |BuildStatus| |PowerPoint| |researchgate| |Binder| |pdf| |GitHublicense|
 
 
 Referenced paper : `RMDL: Random Multimodel Deep Learning for
@@ -103,15 +103,15 @@ Text Datasets:
 
 - `IMDB Dataset <http://ai.stanford.edu/~amaas/data/sentiment/>`__
 
-   - This dataset contains 50,000 documents with 2 categories.
+  * This dataset contains 50,000 documents with 2 categories.
 
 - `Reters-21578 Dataset <https://keras.io/datasets/>`__
 
-   - This dataset contains 21,578 documents with 90 categories.
+  * This dataset contains 21,578 documents with 90 categories.
 
 - `20Newsgroups Dataset <https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups>`__
 
-   - This dataset contains 20,000 documents with 20 categories.
+  * This dataset contains 20,000 documents with 20 categories.
 
 -  Web of Science Dataset (DOI:
    `10.17632/9rw3vkcfy4.2 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__)
@@ -366,7 +366,7 @@ random_state
 
 - random_state : Integer, RandomState instance or None, optional (default=None)
 
-   - If Integer, random_state is the seed used by the random number generator;
+  * If Integer, random_state is the seed used by the random number generator;
 
 
 random_optimizor
@@ -497,7 +497,7 @@ random_state
 
 - random_state : Integer, RandomState instance or None, optional (default=None)
 
-   - If Integer, random_state is the seed used by the random number generator;
+  * If Integer, random_state is the seed used by the random number generator;
 
 
 random_optimizor
@@ -673,7 +673,7 @@ Using RMDL
 Reuters-21578
 -------------
 
--This dataset contains 21,578 documents with 90 categories.
+- This dataset contains 21,578 documents with 90 categories.
 
 Import Packages
 ~~~~~~~~~~~~~~~

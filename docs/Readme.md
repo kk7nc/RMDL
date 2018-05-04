@@ -120,16 +120,16 @@ Text Datasets:
 
 -   [IMDB Dataset](http://ai.stanford.edu/~amaas/data/sentiment/)
 
-    > -   This dataset contains 50,000 documents with 2 categories.
+    -   This dataset contains 50,000 documents with 2 categories.
 
 -   [Reters-21578 Dataset](https://keras.io/datasets/)
 
-    > -   This dataset contains 21,578 documents with 90 categories.
+    -   This dataset contains 21,578 documents with 90 categories.
 
 -   [20Newsgroups
     Dataset](https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups)
 
-    > -   This dataset contains 20,000 documents with 20 categories.
+    -   This dataset contains 20,000 documents with 20 categories.
 
 -   Web of Science Dataset (DOI:
     [10.17632/9rw3vkcfy4.2](http://dx.doi.org/10.17632/9rw3vkcfy4.2))
@@ -209,11 +209,11 @@ Parameters:
 Text\_Classification
 --------------------
 
-``` {.sourceCode .python}
+```python
 from RMDL import RMDL_Text
 ```
 
-``` {.sourceCode .python}
+```python
 Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
                  EMBEDDING_DIM=50,MAX_SEQUENCE_LENGTH = 500, MAX_NB_WORDS = 75000,
                  GloVe_dir="", GloVe_file = "glove.6B.50d.txt",
@@ -353,8 +353,7 @@ Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
 -   random\_state : Integer, RandomState instance or None, optional
     (default=None)
 
-    > -   If Integer, random\_state is the seed used by the random
-    >     number generator;
+    -   If Integer, random\_state is the seed used by the random number generator;
 
 ### random\_optimizor
 
@@ -369,11 +368,11 @@ Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
 Image\_Classification
 ---------------------
 
-``` {.sourceCode .python}
+```python
 from RMDL import RMDL_Image
 ```
 
-``` {.sourceCode .python}
+```python
 Image_Classification(x_train, y_train, x_test, y_test, shape, batch_size=128,
                          sparse_categorical=True, random_deep=[3, 3, 3], epochs=[500, 500, 500], plot=True,
                          min_hidden_layer_dnn=1, max_hidden_layer_dnn=8, min_nodes_dnn=128, max_nodes_dnn=1024,
@@ -477,8 +476,7 @@ Image_Classification(x_train, y_train, x_test, y_test, shape, batch_size=128,
 -   random\_state : Integer, RandomState instance or None, optional
     (default=None)
 
-    > -   If Integer, random\_state is the seed used by the random
-    >     number generator;
+    -  If Integer, random\_state is the seed used by the random number generator;
 
 ### random\_optimizor
 
@@ -501,7 +499,7 @@ MNIST
 
 ### Import Packages
 
-``` {.sourceCode .python}
+```python
 from keras.datasets import mnist
 import numpy as np
 from RMDL import RMDL_Image as RMDL
@@ -509,7 +507,7 @@ from RMDL import RMDL_Image as RMDL
 
 ### Load Data
 
-``` {.sourceCode .python}
+```python
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
 X_train_D = X_train.reshape(X_train.shape[0], 28, 28, 1).astype('float32')
 X_test_D = X_test.reshape(X_test.shape[0], 28, 28, 1).astype('float32')
@@ -521,7 +519,7 @@ shape = (28, 28, 1)
 
 ### Using RMDL
 
-``` {.sourceCode .python}
+```python
 batch_size = 128
 sparse_categorical = 0
 n_epochs = [100, 100, 100]  ## DNN-RNN-CNN
@@ -537,7 +535,7 @@ IMDB
 
 ### Import Packages
 
-``` {.sourceCode .python}
+```python
 import sys
 import os
 from RMDL import text_feature_extraction as txt
@@ -548,7 +546,7 @@ from RMDL import RMDL_Text as RMDL
 
 ### Load Data
 
-``` {.sourceCode .python}
+```python
 print("Load IMDB dataset....")
 (X_train, y_train), (X_test, y_test) = imdb.load_data(num_words=MAX_NB_WORDS)
 print(len(X_train))
@@ -566,7 +564,7 @@ X_test = np.array(X_test).ravel()
 
 ### Using RMDL
 
-``` {.sourceCode .python}
+```python
 batch_size = 100
 sparse_categorical = 0
 n_epochs = [100, 100, 100]  ## DNN--RNN-CNN
@@ -596,7 +594,7 @@ Web Of Science
 
 ### Import Packages
 
-``` {.sourceCode .python}
+```python
 from RMDL import text_feature_extraction as txt
 from sklearn.model_selection import train_test_split
 from RMDL.Download import Download_WOS as WOS
@@ -606,7 +604,7 @@ from RMDL import RMDL_Text as RMDL
 
 ### Load Data
 
-``` {.sourceCode .python}
+```python
 path_WOS = WOS.download_and_extract()
 fname = os.path.join(path_WOS,"WebOfScience/WOS11967/X.txt")
 fnamek = os.path.join(path_WOS,"WebOfScience/WOS11967/Y.txt")
@@ -625,7 +623,7 @@ X_train, X_test, y_train, y_test = train_test_split(content, Label, test_size=0.
 
 ### Using RMDL
 
-``` {.sourceCode .python}
+```python
 batch_size = 100
 sparse_categorical = 0
 n_epochs = [5000, 500, 500]  ## DNN--RNN-CNN
@@ -638,11 +636,11 @@ RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_ca
 Reuters-21578
 -------------
 
--This dataset contains 21,578 documents with 90 categories.
+- This dataset contains 21,578 documents with 90 categories.
 
 ### Import Packages
 
-``` {.sourceCode .python}
+```python
 import sys
 import os
 import nltk
@@ -655,7 +653,7 @@ from RMDL import RMDL_Text as RMDL
 
 ### Load Data
 
-``` {.sourceCode .python}
+```python
 documents = reuters.fileids()
 
 train_docs_id = list(filter(lambda doc: doc.startswith("train"),
@@ -675,7 +673,7 @@ y_test = np.argmax(y_test, axis=1)
 
 ### Using RMDL
 
-``` {.sourceCode .python}
+```python
 batch_size = 100
 sparse_categorical = 0
 n_epochs = [20, 500, 50]  ## DNN--RNN-CNN
@@ -698,7 +696,7 @@ Olivetti Faces
 
 ### Import Packages
 
-``` {.sourceCode .python}
+```python
 from sklearn.datasets import fetch_olivetti_faces
 from sklearn.model_selection import train_test_split
 from RMDL import RMDL_Image as RMDL
@@ -706,7 +704,7 @@ from RMDL import RMDL_Image as RMDL
 
 ### Load Data
 
-``` {.sourceCode .python}
+```python
 number_of_classes = 40
 shape = (64, 64, 1)
 data = fetch_olivetti_faces()
@@ -718,7 +716,7 @@ X_test = X_test.reshape(X_test.shape[0], 64, 64, 1).astype('float32')
 
 ### Using RMDL
 
-``` {.sourceCode .python}
+```python
 batch_size = 100
 sparse_categorical = 0
 n_epochs = [500, 500, 50]  ## DNN--RNN-CNN

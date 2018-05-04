@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a4c78d4-a455-45d3-99a2-5c81c09af077" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.html" beforeDir="false" afterPath="$PROJECT_DIR$/README.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/README.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -105,7 +106,7 @@
         <entry file="file://C:/Code/RMDL/setup.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -118,20 +119,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="README.rst" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.rst">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="797" column="29" selection-end-line="815" />
+            <state relative-caret-position="835">
+              <caret line="749" lean-forward="true" selection-start-line="749" selection-end-line="749" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CIFAR.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Examples/CIFAR.py">
+      <file leaf-file-name="README.rst" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            <state relative-caret-position="839">
+              <caret line="815" lean-forward="true" selection-start-line="815" selection-end-line="815" />
             </state>
           </provider>
         </entry>
@@ -233,7 +234,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Example/WOS-11967.py" />
         <option value="$PROJECT_DIR$/Example/WOS-5736.py" />
         <option value="$PROJECT_DIR$/Example/Reuters-21578.py" />
         <option value="$PROJECT_DIR$/Example/ORL.py" />
@@ -276,7 +276,6 @@
         <option value="$PROJECT_DIR$/Examples/Reuters21578.py" />
         <option value="C:/Code/RMDL/RMDL/__init__.py" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/README.rst" />
         <option value="$PROJECT_DIR$/RMDL/BuildModel.py" />
         <option value="$PROJECT_DIR$/RMDL/Global.py" />
         <option value="$PROJECT_DIR$/RMDL/Plot.py" />
@@ -284,6 +283,8 @@
         <option value="$PROJECT_DIR$/RMDL/RMDL_Text.py" />
         <option value="$PROJECT_DIR$/RMDL/text_feature_extraction.py" />
         <option value="C:/Code/RMDL/setup.py" />
+        <option value="$PROJECT_DIR$/README.rst" />
+        <option value="$PROJECT_DIR$/docs/README.md" />
       </list>
     </option>
   </component>
@@ -302,7 +303,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="301" />
     <option name="y" value="-8" />
     <option name="width" value="1210" />
@@ -319,6 +320,11 @@
             <path>
               <item name="RMDL" type="b2602c69:ProjectViewProjectNode" />
               <item name="RMDL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RMDL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RMDL" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RMDL" type="b2602c69:ProjectViewProjectNode" />
@@ -758,13 +764,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../HDLTex/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/ProgramData/Anaconda3/envs/TensorFlow/Lib/site-packages/keras/layers/pooling.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1802">
@@ -1064,7 +1063,7 @@
     <entry file="file://C:/Code/RMDL/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -1076,8 +1075,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="797" column="29" selection-end-line="815" />
+        <state relative-caret-position="839">
+          <caret line="815" lean-forward="true" selection-start-line="815" selection-end-line="815" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="835">
+          <caret line="749" lean-forward="true" selection-start-line="749" selection-end-line="749" />
         </state>
       </provider>
     </entry>
