@@ -206,7 +206,7 @@ Text and Document Classification
 Parameters:
 ===========
 
-Text\_Classification
+Text Classification
 --------------------
 
 ```python
@@ -365,7 +365,7 @@ Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
 -   dropout: Float between 0 and 1. Fraction of the units to drop for
     the linear transformation of the inputs.
 
-Image\_Classification
+Image Classification
 ---------------------
 
 ```python
