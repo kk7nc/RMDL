@@ -3,10 +3,10 @@
 [![werckerstatus](https://app.wercker.com/status/3a564158e809971e2f7416beba5d05af/s/master)](https://app.wercker.com/project/byKey/3a564158e809971e2f7416beba5d05af)
 [![appveyor](https://ci.appveyor.com/api/projects/status/github/kk7nc/RMDL?branch=master&svg=true)](https://ci.appveyor.com/project/kk7nc/RMDL)
 [![BuildStatus](https://travis-ci.org/kk7nc/RMDL.svg?branch=master)](https://travis-ci.org/kk7nc/RMDL)
-[![PowerPoint](https://img.shields.io/badge/Presentation-download-red.svg?style=flat)](https://github.com/kk7nc/RMDL/blob/master/Documents/RMDL.pdf)
+[![PowerPoint](https://img.shields.io/badge/Presentation-download-red.svg?style=flat)](https://github.com/kk7nc/RMDL/blob/master/docs/RMDL.pdf)
 [![researchgate](https://img.shields.io/badge/ResearchGate-RMDL-blue.svg?style=flat)](https://www.researchgate.net/publication/324922651_RMDL_Random_Multimodel_Deep_Learning_for_Classification)
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/kk7nc/RMDL/master)
-[![pdf](https://img.shields.io/badge/pdf-download-red.svg?style=flat)](https://github.com/kk7nc/RMDL/blob/master/Documents/ACM-RMDL.pdf)
+[![pdf](https://img.shields.io/badge/pdf-download-red.svg?style=flat)](https://github.com/kk7nc/RMDL/blob/master/docs/ACM-RMDL.pdf)
 [![GitHublicense](https://img.shields.io/badge/licence-GPL-blue.svg)](./LICENSE)
 
 Referenced paper : [RMDL: Random Multimodel Deep Learning for

@@ -45,7 +45,7 @@ The links below contain word vectors obtained from the respective corpora. If yo
 
 Send an email to [kk7nc@virginia.edu](mailto:kk7nc@virginia.edu)
 
-## Citations ##
+## Citation ##
 
     @inproceedings{Kowsari2018RMDL,
     title={RMDL: Random Multimodel Deep Learning for Classification},
@@ -53,14 +53,5 @@ Send an email to [kk7nc@virginia.edu](mailto:kk7nc@virginia.edu)
     booktitle={Proceedings of the 2018 International Conference on Information System and Data Mining},
     year={2018},
     organization={ACM}
-    }
-
-And
-
-    @inproceedings{Heidarysafa2018RMDL,
-    title={An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)},
-    author={Heidarysafa, Mojtaba and Kowsari, Kamran and  Brown, Donald E. and Jafari Meimandi, Kiana and Barnes, Laura E.},
-    booktitle={International Journal of Machine Learning and Computing (IJMLC)},
-    year={2018}
     }
 
