@@ -522,6 +522,222 @@ Documents</a><ul>
 </li>
 </ul>
 </div>
+<div class="section" id="parameters">
+<h1>Parameters:</h1>
+<div class="section" id="text-classification">
+<h2>Text_Classification</h2>
+<pre class="code python literal-block">
+<span class="keyword namespace">from</span> <span class="name namespace">RMDL</span> <span class="keyword namespace">import</span> <span class="name">RMDL_Text</span>
+</pre>
+<div class="section" id="input">
+<h3>Input</h3>
+<blockquote>
+<ul class="simple">
+<li>x_train</li>
+<li>y_train</li>
+<li>x_test</li>
+<li>y_test</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="batch-size">
+<h3>batch_size</h3>
+<p>batch_size: Integer. Number of samples per gradient update. If unspecified, it will default to 128.</p>
+</div>
+<div class="section" id="embedding-dim">
+<h3>EMBEDDING_DIM</h3>
+<p>batch_size: Integer. Shape of word embedding (this number should be same with GloVe or other pre-trained embedding techniques that be used), it will default to 50 that used with pain of glove.6B.50d.txt file.</p>
+</div>
+<div class="section" id="max-sequence-length">
+<h3>MAX_SEQUENCE_LENGTH</h3>
+<p>MAX_SEQUENCE_LENGTH: Integer. Maximum length of sequence or document in datasets, it will default to 500.</p>
+</div>
+<div class="section" id="max-nb-words">
+<h3>MAX_NB_WORDS</h3>
+<p>MAX_NB_WORDS: Integer. Maximum number of unique words in datasets,  it will default to 75000.</p>
+</div>
+<div class="section" id="glove-dir">
+<h3>GloVe_dir</h3>
+<p>GloVe_dir: String. Address of GloVe or any pre-trained directory,  it will default to null which glove.6B.zip will be download.</p>
+</div>
+<div class="section" id="glove-file">
+<h3>GloVe_file</h3>
+<p>GloVe_dir: String. Which version of GloVe or pre-trained word emending will be used,  it will default to glove.6B.50d.txt.</p>
+<ul class="simple">
+<li>NOTE: if you use other version of GloVe EMBEDDING_DIM must be same dimensions.</li>
+</ul>
+</div>
+<div class="section" id="sparse-categorical">
+<h3>sparse_categorical</h3>
+<p>sparse_categorical: bool. When target's dataset is (n,1) should be True, it will default to True.</p>
+</div>
+<div class="section" id="random-deep">
+<h3>random_deep</h3>
+<p>random_deep: Integer [3]. Number of ensembled model used in RMDL random_deep[0] is number of DNN, random_deep[1] is number of RNN, random_deep[0] is number of CNN, it will default to [3, 3, 3].</p>
+</div>
+<div class="section" id="epochs">
+<h3>epochs</h3>
+<p>epochs: Integer [3]. Number of epochs in each ensembled model used in RMDL epochs[0] is number of epochs used in DNN, epochs[1] is number of epochs used in  RNN, epochs[0] is number of epochs used in CNN, it will default to [500, 500, 500].</p>
+</div>
+<div class="section" id="plot">
+<h3>plot</h3>
+<p>plot: bool. True: shows confusion matrix and accuracy and loss</p>
+</div>
+<div class="section" id="min-hidden-layer-dnn">
+<h3>min_hidden_layer_dnn</h3>
+<p>min_hidden_layer_dnn: Integer. Lower Bounds of hidden layers of DNN used in RMDL, it will default to 1.</p>
+</div>
+<div class="section" id="max-hidden-layer-dnn">
+<h3>max_hidden_layer_dnn</h3>
+<p>max_hidden_layer_dnn: Integer. Upper bounds of hidden layers of DNN used in RMDL, it will default to 8.</p>
+</div>
+<div class="section" id="min-nodes-dnn">
+<h3>min_nodes_dnn</h3>
+<p>min_nodes_dnn: Integer. Lower bounds of nodes in each layer of DNN used in RMDL, it will default to 128.</p>
+</div>
+<div class="section" id="max-nodes-dnn">
+<h3>max_nodes_dnn</h3>
+<p>max_nodes_dnn: Integer. Upper bounds of nodes in each layer of DNN used in RMDL, it will default to 1024.</p>
+</div>
+<div class="section" id="min-hidden-layer-rnn">
+<h3>min_hidden_layer_rnn</h3>
+<p>min_hidden_layer_rnn: Integer. Lower Bounds of hidden layers of RNN used in RMDL, it will default to 1.</p>
+</div>
+<div class="section" id="max-hidden-layer-rnn">
+<h3>max_hidden_layer_rnn</h3>
+<p>man_hidden_layer_rnn: Integer. Upper Bounds of hidden layers of RNN used in RMDL, it will default to 5.</p>
+</div>
+<div class="section" id="min-nodes-rnn">
+<h3>min_nodes_rnn</h3>
+<p>min_nodes_rnn: Integer. Lower bounds of nodes (LSTM or GRU) in each layer of RNN used in RMDL, it will default to 32.</p>
+</div>
+<div class="section" id="max-nodes-rnn">
+<h3>max_nodes_rnn</h3>
+<p>maz_nodes_rnn: Integer. Upper bounds of nodes (LSTM or GRU) in each layer of RNN used in RMDL, it will default to 128.</p>
+</div>
+<div class="section" id="min-hidden-layer-cnn">
+<h3>min_hidden_layer_cnn</h3>
+<p>min_hidden_layer_cnn: Integer. Lower Bounds of hidden layers of CNN used in RMDL, it will default to 3.</p>
+</div>
+<div class="section" id="max-hidden-layer-cnn">
+<h3>max_hidden_layer_cnn</h3>
+<p>max_hidden_layer_cnn: Integer. Upper Bounds of hidden layers of CNN used in RMDL, it will default to 10.</p>
+</div>
+<div class="section" id="min-nodes-cnn">
+<h3>min_nodes_cnn</h3>
+<p>min_nodes_cnn: Integer. Lower bounds of nodes (2D convolution layer) in each layer of CNN used in RMDL, it will default to 128.</p>
+</div>
+<div class="section" id="max-nodes-cnn">
+<h3>max_nodes_cnn</h3>
+<p>min_nodes_cnn: Integer. Upper bounds of nodes (2D convolution layer) in each layer of CNN used in RMDL, it will default to 512.</p>
+</div>
+<div class="section" id="random-state">
+<h3>random_state</h3>
+<p>random_state : Integer, RandomState instance or None, optional (default=None)</p>
+<p>If Integer, random_state is the seed used by the random number generator;</p>
+</div>
+<div class="section" id="random-optimizor">
+<h3>random_optimizor</h3>
+<p>random_optimizor : bool, If False, all models use adam optimizer.  If True, all models use random optimizers. it will default to True</p>
+</div>
+<div class="section" id="dropout">
+<h3>dropout</h3>
+<p>dropout: Float between 0 and 1. Fraction of the units to drop for the linear transformation of the inputs.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="image-classification">
+<h2>Image_Classification</h2>
+<div class="section" id="id1">
+<h3>Input</h3>
+<blockquote>
+<ul class="simple">
+<li>x_train</li>
+<li>y_train</li>
+<li>x_test</li>
+<li>y_test</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="shape">
+<h3>shape</h3>
+<p>shape: np.shape . shape of image. The most common situation would be a 2D input with shape (batch_size, input_dim).</p>
+</div>
+<div class="section" id="id2">
+<h3>batch_size</h3>
+<p>batch_size: Integer. Number of samples per gradient update. If unspecified, it will default to 128.</p>
+</div>
+<div class="section" id="id3">
+<h3>sparse_categorical</h3>
+<p>sparse_categorical: bool. When target's dataset is (n,1) should be True, it will default to True.</p>
+</div>
+<div class="section" id="id4">
+<h3>random_deep</h3>
+<p>random_deep: Integer [3]. Number of ensembled model used in RMDL random_deep[0] is number of DNN, random_deep[1] is number of RNN, random_deep[0] is number of CNN, it will default to [3, 3, 3].</p>
+</div>
+<div class="section" id="id5">
+<h3>epochs</h3>
+<p>epochs: Integer [3]. Number of epochs in each ensembled model used in RMDL epochs[0] is number of epochs used in DNN, epochs[1] is number of epochs used in  RNN, epochs[0] is number of epochs used in CNN, it will default to [500, 500, 500].</p>
+</div>
+<div class="section" id="id6">
+<h3>plot</h3>
+<p>plot: bool. True: shows confusion matrix and accuracy and loss</p>
+</div>
+<div class="section" id="id7">
+<h3>min_hidden_layer_dnn</h3>
+<p>min_hidden_layer_dnn: Integer. Lower Bounds of hidden layers of DNN used in RMDL, it will default to 1.</p>
+</div>
+<div class="section" id="id8">
+<h3>max_hidden_layer_dnn</h3>
+<p>max_hidden_layer_dnn: Integer. Upper bounds of hidden layers of DNN used in RMDL, it will default to 8.</p>
+</div>
+<div class="section" id="id9">
+<h3>min_nodes_dnn</h3>
+<p>min_nodes_dnn: Integer. Lower bounds of nodes in each layer of DNN used in RMDL, it will default to 128.</p>
+</div>
+<div class="section" id="id10">
+<h3>max_nodes_dnn</h3>
+<p>max_nodes_dnn: Integer. Upper bounds of nodes in each layer of DNN used in RMDL, it will default to 1024.</p>
+</div>
+<div class="section" id="id11">
+<h3>min_nodes_rnn</h3>
+<p>min_nodes_rnn: Integer. Lower bounds of nodes (LSTM or GRU) in each layer of RNN used in RMDL, it will default to 32.</p>
+</div>
+<div class="section" id="id12">
+<h3>max_nodes_rnn</h3>
+<p>maz_nodes_rnn: Integer. Upper bounds of nodes (LSTM or GRU) in each layer of RNN used in RMDL, it will default to 128.</p>
+</div>
+<div class="section" id="id13">
+<h3>min_hidden_layer_cnn</h3>
+<p>min_hidden_layer_cnn: Integer. Lower Bounds of hidden layers of CNN used in RMDL, it will default to 3.</p>
+</div>
+<div class="section" id="id14">
+<h3>max_hidden_layer_cnn</h3>
+<p>max_hidden_layer_cnn: Integer. Upper Bounds of hidden layers of CNN used in RMDL, it will default to 10.</p>
+</div>
+<div class="section" id="id15">
+<h3>min_nodes_cnn</h3>
+<p>min_nodes_cnn: Integer. Lower bounds of nodes (2D convolution layer) in each layer of CNN used in RMDL, it will default to 128.</p>
+</div>
+<div class="section" id="id16">
+<h3>max_nodes_cnn</h3>
+<p>min_nodes_cnn: Integer. Upper bounds of nodes (2D convolution layer) in each layer of CNN used in RMDL, it will default to 512.</p>
+</div>
+<div class="section" id="id17">
+<h3>random_state</h3>
+<p>random_state : Integer, RandomState instance or None, optional (default=None)</p>
+<p>If Integer, random_state is the seed used by the random number generator;</p>
+</div>
+<div class="section" id="id18">
+<h3>random_optimizor</h3>
+<p>random_optimizor : bool, If False, all models use adam optimizer.  If True, all models use random optimizers. it will default to True</p>
+</div>
+<div class="section" id="id19">
+<h3>dropout</h3>
+<p>dropout: Float between 0 and 1. Fraction of the units to drop for the linear transformation of the inputs.</p>
+</div>
+</div>
+</div>
 <div class="section" id="example">
 <h1>Example</h1>
 <div class="section" id="mnist">
@@ -566,7 +782,7 @@ Documents</a><ul>
 <ul class="simple">
 <li>This dataset contains 50,000 documents with 2 categories.</li>
 </ul>
-<div class="section" id="id1">
+<div class="section" id="id20">
 <h3>Import Packages</h3>
 <pre class="code python literal-block">
 <span class="keyword namespace">import</span> <span class="name namespace">sys</span>
@@ -577,7 +793,7 @@ Documents</a><ul>
 <span class="keyword namespace">from</span> <span class="name namespace">RMDL</span> <span class="keyword namespace">import</span> <span class="name">RMDL_Text</span> <span class="keyword">as</span> <span class="name">RMDL</span>
 </pre>
 </div>
-<div class="section" id="id2">
+<div class="section" id="id21">
 <h3>Load Data</h3>
 <pre class="code python literal-block">
 <span class="keyword">print</span><span class="punctuation">(</span><span class="literal string double">&quot;Load IMDB dataset....&quot;</span><span class="punctuation">)</span>
@@ -595,7 +811,7 @@ Documents</a><ul>
 <span class="name">X_test</span> <span class="operator">=</span> <span class="name">np</span><span class="operator">.</span><span class="name">array</span><span class="punctuation">(</span><span class="name">X_test</span><span class="punctuation">)</span><span class="operator">.</span><span class="name">ravel</span><span class="punctuation">()</span>
 </pre>
 </div>
-<div class="section" id="id3">
+<div class="section" id="id22">
 <h3>Using RMDL</h3>
 <pre class="code python literal-block">
 <span class="name">batch_size</span> <span class="operator">=</span> <span class="literal number integer">100</span>
@@ -612,7 +828,7 @@ Documents</a><ul>
 <h2>Web Of Science</h2>
 <ul>
 <li><p class="first">Linke of dataset: <a class="reference external" href="http://dx.doi.org/10.17632/9rw3vkcfy4.6"><img alt="Data" src="https://img.shields.io/badge/DOI-10.17632/9rw3vkcfy4.6-blue.svg?style=flat" /></a></p>
-<ul>
+</li>
 <li><p class="first">Web of Science Dataset <a class="reference external" href="http://dx.doi.org/10.17632/9rw3vkcfy4.2">WOS-11967</a></p>
 <blockquote>
 <ul class="simple">
@@ -635,9 +851,7 @@ Documents</a><ul>
 </blockquote>
 </li>
 </ul>
-</li>
-</ul>
-<div class="section" id="id4">
+<div class="section" id="id23">
 <h3>Import Packages</h3>
 <pre class="code python literal-block">
 <span class="keyword namespace">from</span> <span class="name namespace">RMDL</span> <span class="keyword namespace">import</span> <span class="name">text_feature_extraction</span> <span class="keyword">as</span> <span class="name">txt</span>
@@ -647,7 +861,7 @@ Documents</a><ul>
 <span class="keyword namespace">from</span> <span class="name namespace">RMDL</span> <span class="keyword namespace">import</span> <span class="name">RMDL_Text</span> <span class="keyword">as</span> <span class="name">RMDL</span>
 </pre>
 </div>
-<div class="section" id="id5">
+<div class="section" id="id24">
 <h3>Load Data</h3>
 <pre class="code python literal-block">
 <span class="name">path_WOS</span> <span class="operator">=</span> <span class="name">WOS</span><span class="operator">.</span><span class="name">download_and_extract</span><span class="punctuation">()</span>
@@ -666,7 +880,7 @@ Documents</a><ul>
 <span class="name">X_train</span><span class="punctuation">,</span> <span class="name">X_test</span><span class="punctuation">,</span> <span class="name">y_train</span><span class="punctuation">,</span> <span class="name">y_test</span> <span class="operator">=</span> <span class="name">train_test_split</span><span class="punctuation">(</span><span class="name">content</span><span class="punctuation">,</span> <span class="name">Label</span><span class="punctuation">,</span> <span class="name">test_size</span><span class="operator">=</span><span class="literal number float">0.2</span><span class="punctuation">,</span> <span class="name">random_state</span><span class="operator">=</span><span class="literal number integer">4</span><span class="punctuation">)</span>
 </pre>
 </div>
-<div class="section" id="id6">
+<div class="section" id="id25">
 <h3>Using RMDL</h3>
 <pre class="code python literal-block">
 <span class="name">batch_size</span> <span class="operator">=</span> <span class="literal number integer">100</span>
@@ -682,7 +896,7 @@ Documents</a><ul>
 <div class="section" id="reuters-21578">
 <h2>Reuters-21578</h2>
 <p>-This dataset contains 21,578 documents with 90 categories.</p>
-<div class="section" id="id7">
+<div class="section" id="id26">
 <h3>Import Packages</h3>
 <pre class="code python literal-block">
 <span class="keyword namespace">import</span> <span class="name namespace">sys</span>
@@ -695,7 +909,7 @@ Documents</a><ul>
 <span class="keyword namespace">from</span> <span class="name namespace">RMDL</span> <span class="keyword namespace">import</span> <span class="name">RMDL_Text</span> <span class="keyword">as</span> <span class="name">RMDL</span>
 </pre>
 </div>
-<div class="section" id="id8">
+<div class="section" id="id27">
 <h3>Load Data</h3>
 <pre class="code python literal-block">
 <span class="name">documents</span> <span class="operator">=</span> <span class="name">reuters</span><span class="operator">.</span><span class="name">fileids</span><span class="punctuation">()</span>
@@ -715,7 +929,7 @@ Documents</a><ul>
 <span class="name">y_test</span> <span class="operator">=</span> <span class="name">np</span><span class="operator">.</span><span class="name">argmax</span><span class="punctuation">(</span><span class="name">y_test</span><span class="punctuation">,</span> <span class="name">axis</span><span class="operator">=</span><span class="literal number integer">1</span><span class="punctuation">)</span>
 </pre>
 </div>
-<div class="section" id="id9">
+<div class="section" id="id28">
 <h3>Using RMDL</h3>
 <pre class="code python literal-block">
 <span class="name">batch_size</span> <span class="operator">=</span> <span class="literal number integer">100</span>
@@ -733,7 +947,7 @@ Documents</a><ul>
 <ul class="simple">
 <li>There are ten different images of each of 40 distinct subjects. For some subjects, the images were taken at different times, varying the lighting, facial expressions (open / closed eyes, smiling / not smiling) and facial details (glasses / no glasses). All the images were taken against a dark homogeneous background with the subjects in an upright, frontal position (with tolerance for some side movement).</li>
 </ul>
-<div class="section" id="id10">
+<div class="section" id="id29">
 <h3>Import Packages</h3>
 <pre class="code python literal-block">
 <span class="keyword namespace">from</span> <span class="name namespace">sklearn.datasets</span> <span class="keyword namespace">import</span> <span class="name">fetch_olivetti_faces</span>
@@ -741,7 +955,7 @@ Documents</a><ul>
 <span class="keyword namespace">from</span> <span class="name namespace">RMDL</span> <span class="keyword namespace">import</span> <span class="name">RMDL_Image</span> <span class="keyword">as</span> <span class="name">RMDL</span>
 </pre>
 </div>
-<div class="section" id="id11">
+<div class="section" id="id30">
 <h3>Load Data</h3>
 <pre class="code python literal-block">
 <span class="name">number_of_classes</span> <span class="operator">=</span> <span class="literal number integer">40</span>
@@ -753,7 +967,7 @@ Documents</a><ul>
 <span class="name">X_test</span> <span class="operator">=</span> <span class="name">X_test</span><span class="operator">.</span><span class="name">reshape</span><span class="punctuation">(</span><span class="name">X_test</span><span class="operator">.</span><span class="name">shape</span><span class="punctuation">[</span><span class="literal number integer">0</span><span class="punctuation">],</span> <span class="literal number integer">64</span><span class="punctuation">,</span> <span class="literal number integer">64</span><span class="punctuation">,</span> <span class="literal number integer">1</span><span class="punctuation">)</span><span class="operator">.</span><span class="name">astype</span><span class="punctuation">(</span><span class="literal string single">'float32'</span><span class="punctuation">)</span>
 </pre>
 </div>
-<div class="section" id="id12">
+<div class="section" id="id31">
 <h3>Using RMDL</h3>
 <pre class="code python literal-block">
 <span class="name">batch_size</span> <span class="operator">=</span> <span class="literal number integer">100</span>
@@ -774,27 +988,29 @@ Documents</a><ul>
 </div>
 <div class="section" id="citations">
 <h2>Citations</h2>
-<pre class="literal-block">
-&#64;inproceedings{Kowsari2018RMDL,
-title={RMDL: Random Multimodel Deep Learning for Classification},
-author={Kowsari, Kamran and Heidarysafa, Mojtaba and Brown, Donald E. and Jafari Meimandi, Kiana and Barnes, Laura E.},
-booktitle={Proceedings of the 2018 International Conference on Information System and Data Mining},
-year={2018},
-DOI={https://doi.org/10.1145/3206098.3206111},
-organization={ACM}
-}
+<pre class="code python literal-block">
+<span class="name decorator">&#64;inproceedings</span><span class="punctuation">{</span><span class="name">Kowsari2018RMDL</span><span class="punctuation">,</span>
+<span class="name">title</span><span class="operator">=</span><span class="punctuation">{</span><span class="name">RMDL</span><span class="punctuation">:</span> <span class="name">Random</span> <span class="name">Multimodel</span> <span class="name">Deep</span> <span class="name">Learning</span> <span class="keyword">for</span> <span class="name">Classification</span><span class="punctuation">},</span>
+<span class="name">author</span><span class="operator">=</span><span class="punctuation">{</span><span class="name">Kowsari</span><span class="punctuation">,</span> <span class="name">Kamran</span> <span class="operator word">and</span> <span class="name">Heidarysafa</span><span class="punctuation">,</span> <span class="name">Mojtaba</span> <span class="operator word">and</span> <span class="name">Brown</span><span class="punctuation">,</span> <span class="name">Donald</span> <span class="name">E</span><span class="operator">.</span> <span class="operator word">and</span> <span class="name">Jafari</span> <span class="name">Meimandi</span><span class="punctuation">,</span> <span class="name">Kiana</span> <span class="operator word">and</span> <span class="name">Barnes</span><span class="punctuation">,</span> <span class="name">Laura</span> <span class="name">E</span><span class="operator">.</span><span class="punctuation">},</span>
+<span class="name">booktitle</span><span class="operator">=</span><span class="punctuation">{</span><span class="name">Proceedings</span> <span class="name">of</span> <span class="name">the</span> <span class="literal number integer">2018</span> <span class="name">International</span> <span class="name">Conference</span> <span class="name">on</span> <span class="name">Information</span> <span class="name">System</span> <span class="operator word">and</span> <span class="name">Data</span> <span class="name">Mining</span><span class="punctuation">},</span>
+<span class="name">year</span><span class="operator">=</span><span class="punctuation">{</span><span class="literal number integer">2018</span><span class="punctuation">},</span>
+<span class="name">DOI</span><span class="operator">=</span><span class="punctuation">{</span><span class="name">https</span><span class="punctuation">:</span><span class="operator">//</span><span class="name">doi</span><span class="operator">.</span><span class="name">org</span><span class="operator">/</span><span class="literal number float">10.1145</span><span class="operator">/</span><span class="literal number float">3206098.3206111</span><span class="punctuation">},</span>
+<span class="name">organization</span><span class="operator">=</span><span class="punctuation">{</span><span class="name">ACM</span><span class="punctuation">}</span>
+<span class="punctuation">}</span>
 </pre>
 <p>And</p>
-<pre class="literal-block">
-&#64;inproceedings{Heidarysafa2018RMDL,
-title={An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)},
-author={Heidarysafa, Mojtaba and Kowsari, Kamran and  Brown, Donald E. and Jafari Meimandi, Kiana and Barnes, Laura E.},
-booktitle={International Journal of Machine Learning and Computing (IJMLC)},
-year={2018}
-}
+<pre class="code python literal-block">
+<span class="name decorator">&#64;inproceedings</span><span class="punctuation">{</span><span class="name">Heidarysafa2018RMDL</span><span class="punctuation">,</span>
+<span class="name">title</span><span class="operator">=</span><span class="punctuation">{</span><span class="name">An</span> <span class="name">Improvement</span> <span class="name">of</span> <span class="name">Data</span> <span class="name">Classification</span> <span class="name">using</span> <span class="name">Random</span> <span class="name">Multimodel</span> <span class="name">Deep</span> <span class="name">Learning</span> <span class="punctuation">(</span><span class="name">RMDL</span><span class="punctuation">)},</span>
+<span class="name">author</span><span class="operator">=</span><span class="punctuation">{</span><span class="name">Heidarysafa</span><span class="punctuation">,</span> <span class="name">Mojtaba</span> <span class="operator word">and</span> <span class="name">Kowsari</span><span class="punctuation">,</span> <span class="name">Kamran</span> <span class="operator word">and</span>  <span class="name">Brown</span><span class="punctuation">,</span> <span class="name">Donald</span> <span class="name">E</span><span class="operator">.</span> <span class="operator word">and</span> <span class="name">Jafari</span> <span class="name">Meimandi</span><span class="punctuation">,</span> <span class="name">Kiana</span> <span class="operator word">and</span> <span class="name">Barnes</span><span class="punctuation">,</span> <span class="name">Laura</span> <span class="name">E</span><span class="operator">.</span><span class="punctuation">},</span>
+<span class="name">booktitle</span><span class="operator">=</span><span class="punctuation">{</span><span class="name">International</span> <span class="name">Journal</span> <span class="name">of</span> <span class="name">Machine</span> <span class="name">Learning</span> <span class="operator word">and</span> <span class="name">Computing</span> <span class="punctuation">(</span><span class="name">IJMLC</span><span class="punctuation">)},</span>
+<span class="name">year</span><span class="operator">=</span><span class="punctuation">{</span><span class="literal number integer">2018</span><span class="punctuation">}</span>
+<span class="punctuation">}</span>
 </pre>
 </div>
 </div>
 </div>
 </body>
 </html>
+
+Process finished with exit code 0
