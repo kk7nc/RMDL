@@ -215,12 +215,17 @@ from RMDL import RMDL_Text
 
 ```python
 Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
-                 EMBEDDING_DIM=50,MAX_SEQUENCE_LENGTH = 500, MAX_NB_WORDS = 75000,
-                 GloVe_dir="", GloVe_file = "glove.6B.50d.txt",
-                 sparse_categorical=True, random_deep=[3, 3, 3], epochs=[500, 500, 500],  plot=True,
-                 min_hidden_layer_dnn=1, max_hidden_layer_dnn=8, min_nodes_dnn=128, max_nodes_dnn=1024,
-                 min_hidden_layer_rnn=1, max_hidden_layer_rnn=5, min_nodes_rnn=32,  max_nodes_rnn=128,
-                 min_hidden_layer_cnn=3, max_hidden_layer_cnn=10, min_nodes_cnn=128, max_nodes_cnn=512,
+                 EMBEDDING_DIM=50,MAX_SEQUENCE_LENGTH = 500,
+                 MAX_NB_WORDS = 75000, GloVe_dir="",
+                 GloVe_file = "glove.6B.50d.txt",
+                 sparse_categorical=True, random_deep=[3, 3, 3],
+                 epochs=[500, 500, 500],  plot=True,
+                 min_hidden_layer_dnn=1, max_hidden_layer_dnn=8,
+                 min_nodes_dnn=128, max_nodes_dnn=1024,
+                 min_hidden_layer_rnn=1, max_hidden_layer_rnn=5,
+                 min_nodes_rnn=32,  max_nodes_rnn=128,
+                 min_hidden_layer_cnn=3, max_hidden_layer_cnn=10,
+                 min_nodes_cnn=128, max_nodes_cnn=512,
                  random_state=42, random_optimizor=True, dropout=0.05):
 ```
 
@@ -374,11 +379,15 @@ from RMDL import RMDL_Image
 
 ```python
 Image_Classification(x_train, y_train, x_test, y_test, shape, batch_size=128,
-                         sparse_categorical=True, random_deep=[3, 3, 3], epochs=[500, 500, 500], plot=True,
-                         min_hidden_layer_dnn=1, max_hidden_layer_dnn=8, min_nodes_dnn=128, max_nodes_dnn=1024,
-                         min_hidden_layer_rnn=1, max_hidden_layer_rnn=5, min_nodes_rnn=32, max_nodes_rnn=128,
-                         min_hidden_layer_cnn=3, max_hidden_layer_cnn=10, min_nodes_cnn=128, max_nodes_cnn=512,
-                         random_state=42, random_optimizor=True, dropout=0.05)
+                     sparse_categorical=True, random_deep=[3, 3, 3],
+                     epochs=[500, 500, 500], plot=True,
+                     min_hidden_layer_dnn=1, max_hidden_layer_dnn=8,
+                     min_nodes_dnn=128, max_nodes_dnn=1024,
+                     min_hidden_layer_rnn=1, max_hidden_layer_rnn=5,
+                     min_nodes_rnn=32, max_nodes_rnn=128,
+                     min_hidden_layer_cnn=3, max_hidden_layer_cnn=10,
+                     min_nodes_cnn=128, max_nodes_cnn=512,
+                     random_state=42, random_optimizor=True, dropout=0.05)
 ```
 
 ### Input
@@ -522,10 +531,12 @@ shape = (28, 28, 1)
 ```python
 batch_size = 128
 sparse_categorical = 0
-n_epochs = [100, 100, 100]  ## DNN-RNN-CNN
-Random_Deep = [3, 3, 3]  ## DNN-RNN-CNN
-RMDL.Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
-                        n_epochs)
+Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
+RMDL.Image_Classification(X_train, y_train, X_test, y_test,shape,
+                         batch_size=batch_size,
+                         sparse_categorical=True,
+                         random_deep=Random_Deep,
+                         epochs=n_epochs)
 ```
 
 IMDB
@@ -567,11 +578,14 @@ X_test = np.array(X_test).ravel()
 ```python
 batch_size = 100
 sparse_categorical = 0
-n_epochs = [100, 100, 100]  ## DNN--RNN-CNN
-Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
+n_epochs = [500, 500, 500]  ## DNN--RNN-CNN
+Random_Deep = [3, 3,3]  ## DNN--RNN-CNN
 
-RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
-                    n_epochs)
+RMDL.Text_Classification(X_train, y_train, X_test, y_test,
+                         batch_size=batch_size,
+                         sparse_categorical=sparse_categorical,
+                         random_deep=Random_Deep,
+                         epochs=n_epochs)
 ```
 
 Web Of Science
@@ -605,6 +619,7 @@ from RMDL import RMDL_Text as RMDL
 ### Load Data
 
 ```python
+
 path_WOS = WOS.download_and_extract()
 fname = os.path.join(path_WOS,"WebOfScience/WOS11967/X.txt")
 fnamek = os.path.join(path_WOS,"WebOfScience/WOS11967/Y.txt")
@@ -624,13 +639,17 @@ X_train, X_test, y_train, y_test = train_test_split(content, Label, test_size=0.
 ### Using RMDL
 
 ```python
+
 batch_size = 100
 sparse_categorical = 0
-n_epochs = [5000, 500, 500]  ## DNN--RNN-CNN
+n_epochs = [100, 100, 100]  ## DNN--RNN-CNN
 Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
 
-RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
-                        n_epochs)
+RMDL.Text_Classification(X_train, y_train, X_test, y_test,
+                         batch_size=batch_size,
+                         sparse_categorical=True,
+                         random_deep=Random_Deep,
+                         epochs=n_epochs)
 ```
 
 Reuters-21578
@@ -674,13 +693,16 @@ y_test = np.argmax(y_test, axis=1)
 ### Using RMDL
 
 ```python
+
 batch_size = 100
 sparse_categorical = 0
-n_epochs = [20, 500, 50]  ## DNN--RNN-CNN
-Random_Deep = [3, 0, 0]  ## DNN--RNN-CNN
-
-RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
-                      n_epochs)
+n_epochs = [120, 120, 120]  ## DNN--RNN-CNN
+Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
+RMDL.Text_Classification(X_train, y_train, X_test, y_test,
+                         batch_size=batch_size,
+                         sparse_categorical=True,
+                         random_deep=Random_Deep,
+                         epochs=n_epochs)
 ```
 
 Olivetti Faces
@@ -697,6 +719,7 @@ Olivetti Faces
 ### Import Packages
 
 ```python
+
 from sklearn.datasets import fetch_olivetti_faces
 from sklearn.model_selection import train_test_split
 from RMDL import RMDL_Image as RMDL
@@ -705,6 +728,7 @@ from RMDL import RMDL_Image as RMDL
 ### Load Data
 
 ```python
+
 number_of_classes = 40
 shape = (64, 64, 1)
 data = fetch_olivetti_faces()
@@ -717,12 +741,16 @@ X_test = X_test.reshape(X_test.shape[0], 64, 64, 1).astype('float32')
 ### Using RMDL
 
 ```python
+
 batch_size = 100
 sparse_categorical = 0
-n_epochs = [500, 500, 50]  ## DNN--RNN-CNN
-Random_Deep = [0, 0, 1]  ## DNN--RNN-CNN
-RMDL.Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
-                      n_epochs)
+n_epochs = [150, 150, 150]  ## DNN--RNN-CNN
+Random_Deep = [3, 0, 3]  ## DNN--RNN-CNN
+RMDL.Image_Classification(X_train, y_train, X_test, y_test,
+                          shape,
+                          batch_size=batch_size,
+                          random_deep=Random_Deep,
+                          epochs=n_epochs)
 ```
 
 

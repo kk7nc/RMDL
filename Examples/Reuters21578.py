@@ -39,5 +39,7 @@ if __name__ == "__main__":
     n_epochs = [120, 120, 120]  ## DNN--RNN-CNN
     Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
     RMDL.Text_Classification(X_train, y_train, X_test, y_test,
-                             batch_size=batch_size, sparse_categorical=True,
-                             random_deep=Random_Deep, epochs=n_epochs)
+                             batch_size=batch_size,
+                             sparse_categorical=True,
+                             random_deep=Random_Deep,
+                             epochs=n_epochs)
