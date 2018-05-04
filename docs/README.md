@@ -45,14 +45,14 @@ please use:
 Using pip
 ---------
 
-``` {.sourceCode .python}
+```python
 pip install RMDL
 ```
 
 Using git
 ---------
 
-``` {.sourceCode .bash}
+```python
 git clone --recursive https://github.com/kk7nc/RMDL.git
 ```
 
@@ -60,19 +60,19 @@ The primary requirements for this package are Python 3 with Tensorflow.
 The requirements.txt file contains a listing of the required Python
 packages; to install all requirements, run the following:
 
-``` {.sourceCode .bash}
+```python
 pip -r install requirements.txt
 ```
 
 Or
 
-``` {.sourceCode .bash}
+```python
 pip3  install -r requirements.txt
 ```
 
 Or:
 
-``` {.sourceCode .bash}
+```python
 conda install --file requirements.txt
 ```
 
