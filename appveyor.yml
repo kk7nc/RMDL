@@ -8,6 +8,7 @@ environment:
   matrix:
     # Python 3.5, 64 bit (only working version according to TensorFlow docs)
     - MINICONDA: C:\Miniconda35-x64
+      TEST_MODE: WOS
     # Python 3.6
     - MINICONDA: C:\Miniconda36-x64
 
