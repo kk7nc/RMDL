@@ -1,4 +1,4 @@
-build: false
+build: off
 
 platform:
   - x86
@@ -68,4 +68,4 @@ test_script:
           elif TEST_MODE == WOS; then
             python Examples/WOS5736.py;
           fi
-build: off
+
