@@ -45,14 +45,14 @@ please use:
 Using pip
 ---------
 
-```python
+```bash
 pip install RMDL
 ```
 
 Using git
 ---------
 
-```python
+```bash
 git clone --recursive https://github.com/kk7nc/RMDL.git
 ```
 
@@ -60,19 +60,19 @@ The primary requirements for this package are Python 3 with Tensorflow.
 The requirements.txt file contains a listing of the required Python
 packages; to install all requirements, run the following:
 
-```python
+```bash
 pip -r install requirements.txt
 ```
 
 Or
 
-```python
+```bash
 pip3  install -r requirements.txt
 ```
 
 Or:
 
-```python
+```bash
 conda install --file requirements.txt
 ```
 
@@ -738,6 +738,7 @@ RMDL.Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, s
 
 ### MNIST annd CIFAR-10 ###
 
+
 |     Methods    | MNIST | CIFAR-10 |
 |:----------------:|:------:|:--------:|
 |   Deep L2-SVM    |  0.87  |   11.9   |
@@ -749,6 +750,7 @@ RMDL.Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, s
 |**RMDL (9 RDLs)** |**0.41**|  **9.1** |
 |**RMDL (15 RDLs)**|**0.21**|  **8.74**|
 |**RMDL (30 RDLs)**|**0.18**| **8.79** |
+
 
 ## Text Classification ##
 
@@ -836,7 +838,7 @@ Send an email to <kk7nc@virginia.edu>
 Citations
 ---------
 
-```bash
+```
 @inproceedings{Kowsari2018RMDL,
 title={RMDL: Random Multimodel Deep Learning for Classification},
 author={Kowsari, Kamran and Heidarysafa, Mojtaba and Brown, Donald E. and Jafari Meimandi, Kiana and Barnes, Laura E.},
