@@ -1,4 +1,4 @@
-﻿|DOI| |Pypi| |werckerstatus| |BuildStatus| |PowerPoint| |researchgate| |Binder| |pdf| |GitHublicense|
+﻿|DOI| |Pypi| |werckerstatus| |appveyor| |BuildStatus| |PowerPoint| |researchgate| |Binder| |pdf| |GitHublicense|
 
 
 Referenced paper : `RMDL: Random Multimodel Deep Learning for
@@ -811,3 +811,5 @@ Citations
    :target: https://pypi.org/project/RMDL/
 .. |DOI| image:: https://img.shields.io/badge/DOI-10.1145/3206098.3206111-blue.svg?style=flat
    :target: https://doi.org/10.1145/3206098.3206111
+.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/github/kk7nc/RMDL?branch=master&svg=true
+    :target: https://ci.appveyor.com/project/kk7nc/RMDL

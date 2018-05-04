@@ -2,7 +2,7 @@
 RMDL: Random Multimodel Deep Learning for Classification
 
  * Copyright (C) 2018  Kamran Kowsari <kk7nc@virginia.edu>
- * Last Update: 04/25/2018
+ * Last Update: May 3rd, 2018
  * This file is part of  RMDL project, University of Virginia.
  * Free to use, change, share and distribute source code of RMDL
  * Refrenced paper : RMDL: Random Multimodel Deep Learning for Classification
@@ -28,8 +28,8 @@ if __name__ == "__main__":
     shape = (28, 28, 1)
     batch_size = 128
     sparse_categorical = 0
-    n_epochs = [10, 10, 10]  ## DNN--RNN-CNN
-    Random_Deep = [0, 0, 1]  ## DNN--RNN-CNN
+    n_epochs = [100, 100, 100]  ## DNN--RNN-CNN
+    Random_Deep = [3, 0, 3]  ## DNN--RNN-CNN
     RMDL.Image_Classification(X_train, y_train, X_test, y_test,shape,
                              batch_size=batch_size,
                              sparse_categorical=True,

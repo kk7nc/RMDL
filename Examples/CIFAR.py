@@ -2,7 +2,7 @@
 RMDL: Random Multimodel Deep Learning for Classification
 
  * Copyright (C) 2018  Kamran Kowsari <kk7nc@virginia.edu>
- * Last Update: 04/25/2018
+ * Last Update: May 3rd, 2018
  * This file is part of  RMDL project, University of Virginia.
  * Free to use, change, share and distribute source code of RMDL
  * Refrenced paper : RMDL: Random Multimodel Deep Learning for Classification
@@ -11,27 +11,24 @@ RMDL: Random Multimodel Deep Learning for Classification
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 
-from sklearn.datasets import fetch_olivetti_faces
-from sklearn.model_selection import train_test_split
+from keras.datasets import cifar10
 from RMDL import RMDL_Image as RMDL
 
 if __name__ == "__main__":
     number_of_classes = 40
     shape = (64, 64, 1)
 
-    data = fetch_olivetti_faces()
+    (x_train, y_train), (x_test, y_test) = cifar10.load_data()
+    x_train = x_train.astype('float32')
+    x_test = x_test.astype('float32')
+    x_train /= 255
+    x_test /= 255
 
-    X_train, X_test, y_train, y_test = train_test_split(data.data,
-                                                        data.target, stratify=data.target, test_size=200)
-    X_train = X_train.reshape(X_train.shape[0], 64, 64, 1).astype('float32')
-    X_test = X_test.reshape(X_test.shape[0], 64, 64, 1).astype('float32')
     batch_size = 100
     sparse_categorical = 0
-    n_epochs = [5000, 500, 10]  ## DNN--RNN-CNN
-    Random_Deep = [0, 0, 1]  ## DNN--RNN-CNN
+    n_epochs = [500, 500, 500]  ## DNN--RNN-CNN
+    Random_Deep = [3, 0, 3]  ## DNN--RNN-CNN
 
-    RMDL.Image_Classification(X_train, y_train, X_test, y_test,
-                              shape,
-                              batch_size=batch_size,
-                              random_deep=Random_Deep,
+    RMDL.Image_Classification(x_train, y_train, x_test, y_test,(32,32,3),
+                              batch_size=batch_size,random_deep=Random_Deep,
                               epochs=n_epochs)
