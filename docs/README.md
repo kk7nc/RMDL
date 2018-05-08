@@ -8,6 +8,7 @@
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/kk7nc/RMDL/master)
 [![pdf](https://img.shields.io/badge/pdf-download-red.svg?style=flat)](https://github.com/kk7nc/RMDL/blob/master/docs/ACM-RMDL.pdf)
 [![GitHublicense](https://img.shields.io/badge/licence-GPL-blue.svg)](./LICENSE)
+[![twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=RMDL:%20Random%20Multimodel%20Deep%20Learning%20for%20Classification%0aGitHub:&url=https://github.com/kk7nc/RMDL&hashtags=DeepLearning,classification,MachineLearning,deep_neural_networks,Image_Classification,Text_Class)
 
 Referenced paper : [RMDL: Random Multimodel Deep Learning for
 Classification](https://www.researchgate.net/publication/324922651_RMDL_Random_Multimodel_Deep_Learning_for_Classification)
