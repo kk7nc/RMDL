@@ -1,4 +1,4 @@
-|DOI| |Pypi| |arxiv| |werckerstatus| |appveyor| |BuildStatus| |PowerPoint| |researchgate| |Binder| |pdf| |GitHublicense|
+|DOI| |Pypi| |arxiv| |werckerstatus| |appveyor| |BuildStatus| |PowerPoint| |researchgate| |Binder| |pdf| |GitHublicense| |twitter|
 
 
 Referenced paper : `RMDL: Random Multimodel Deep Learning for
@@ -815,3 +815,8 @@ Citations
     :target: https://ci.appveyor.com/project/kk7nc/RMDL
 .. |arxiv| image:: https://img.shields.io/badge/arXiv-1805.01890-red.svg
     :target: https://arxiv.org/abs/1805.01890
+.. |twitter| image:: https://img.shields.io/twitter/url/http/shields.io.svg?style=social
+    :target: https://twitter.com/intent/tweet?text=RMDL:%20Random%20Multimodel%20Deep%20Learning%20for%20Classification%0aGitHub:&url=https://github.com/kk7nc/RMDL&hashtags=DeepLearning,classification,MachineLearning,deep-neural-networks,image-classification,text-classification,EnsembleLearning
+    
+    
+    
