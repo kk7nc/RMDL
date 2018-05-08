@@ -816,7 +816,7 @@ Citations
 .. |arxiv| image:: https://img.shields.io/badge/arXiv-1805.01890-red.svg
     :target: https://arxiv.org/abs/1805.01890
 .. |twitter| image:: https://img.shields.io/twitter/url/http/shields.io.svg?style=social
-    :target: https://twitter.com/intent/tweet?text=RMDL:%20Random%20Multimodel%20Deep%20Learning%20for%20Classification%0aGitHub:&url=https://github.com/kk7nc/RMDL&hashtags=DeepLearning,classification,MachineLearning,deep-neural-networks,image-classification,text-classification,EnsembleLearning
+    :target: https://twitter.com/intent/tweet?text=RMDL:%20Random%20Multimodel%20Deep%20Learning%20for%20Classification%0aGitHub:&url=https://github.com/kk7nc/RMDL&hashtags=DeepLearning,classification,MachineLearning,deep_neural_networks,Image_Classification,Text_Classification,EnsembleLearning
     
     
     
