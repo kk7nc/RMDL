@@ -19,4 +19,4 @@ from . import RMDL_Image
 from . import text_feature_extraction
 from . import Plot
 
-__version__ = '1.0.0'
+__version__ = '1.0.3'

@@ -22,7 +22,7 @@ def readfile(file):
 
 setup(
     name='RMDL',
-    version='1.0.1',
+    version='1.0.3',
     description='RMDL: Random Multimodel Deep Learning for Classification',
     long_description=readfile('README.rst'),
     classifiers=[

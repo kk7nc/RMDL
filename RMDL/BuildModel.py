@@ -31,7 +31,7 @@ import random
 
 def optimizors(random_optimizor):
     if random_optimizor:
-        i = random.randint(1,4)
+        i = random.randint(1,3)
         if i==0:
             opt = optimizers.SGD()
         elif i==1:
