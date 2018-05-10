@@ -1,6 +1,0 @@
-{
-  "Examples/MNIST.py": true,
-  "__init__.py": true,
-  "test_test.py": true,
-  "tests/test_CIFAR.py": true
-}
