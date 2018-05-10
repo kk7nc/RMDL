@@ -22,7 +22,7 @@ def readfile(file):
 
 setup(
     name='RMDL',
-    version='1.0.3',
+    version='1.0.5',
     description='RMDL: Random Multimodel Deep Learning for Classification',
     long_description=readfile('README.rst'),
     classifiers=[
@@ -33,22 +33,25 @@ setup(
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
         'Operating System :: OS Independent',
+        'Topic :: Software Development :: Libraries',
+        'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Scientific/Engineering :: Artificial Intelligence',
         'Topic :: Scientific/Engineering :: Information Analysis',
-        'Topic :: Text Processing :: Linguistic',
+        'Topic :: Scientific/Engineering :: Image Recognition',
+        'Topic :: Text Editors :: Text Processing',
     ],
     url='https://github.com/kk7nc/RMDL',
     author='Kamran Kowsari',
     author_email='kk7nc@virginia.edu',
     install_requires=[
-        'matplotlib==2.1.2',
-        'numpy==1.12.1',
-        'pandas==0.22.0',
+        'matplotlib>=2.1.2',
+        'numpy>=1.12.1',
+        'pandas>=0.22.0',
         'scipy',
         'tensorflow',
-        'keras==2.0.9',
-        'scikit-learn==0.19.0',
-        'nltk==3.2.4'
+        'keras>=2.0.9',
+        'scikit-learn>=0.19.0',
+        'nltk>=3.2.4'
     ],
     packages=find_packages()
 )
