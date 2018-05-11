@@ -807,7 +807,7 @@ Citations
 .. |Results| image:: http://kowsari.net/onewebmedia/RMDL_Results.png
 .. |Data| image:: https://img.shields.io/badge/DOI-10.17632/9rw3vkcfy4.6-blue.svg?style=flat
    :target: http://dx.doi.org/10.17632/9rw3vkcfy4.6
-.. |Pypi| image:: https://img.shields.io/badge/Pypi-RMDL%201.0.0-blue.svg
+.. |Pypi| image:: https://img.shields.io/badge/Pypi-RMDL%201.0.5-blue.svg
    :target: https://pypi.org/project/RMDL/
 .. |DOI| image:: https://img.shields.io/badge/DOI-10.1145/3206098.3206111-blue.svg?style=flat
    :target: https://doi.org/10.1145/3206098.3206111
