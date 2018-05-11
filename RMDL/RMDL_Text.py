@@ -59,7 +59,7 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
 
     G.setup()
     if random_deep[0] != 0:
-        x_train_tfidf, x_test_tfidf = txt.loadData(x_train, x_test)
+        x_train_tfidf, x_test_tfidf = txt.loadData(x_train, x_test,MAX_NB_WORDS=MAX_NB_WORDS)
     if random_deep[1] != 0 or random_deep[2] != 0 :
         print(GloVe_DIR)
         x_train_embedded, x_test_embedded, word_index, embeddings_index = txt.loadData_Tokenizer(x_train, x_test,GloVe_DIR,MAX_NB_WORDS,MAX_SEQUENCE_LENGTH,EMBEDDING_DIM)
