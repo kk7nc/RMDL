@@ -605,7 +605,7 @@ Using RMDL
 Web Of Science
 --------------
 
--  Linke of dataset: |Data|
+-  Linke of dataset:  |Data|
 
    -  Web of Science Dataset
       `WOS-11967 <http://dx.doi.org/10.17632/9rw3vkcfy4.2>`__
