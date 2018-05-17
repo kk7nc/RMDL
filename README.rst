@@ -1,4 +1,4 @@
-|DOI| |Pypi| |arxiv| |werckerstatus| |appveyor| |BuildStatus| |PowerPoint| |researchgate| |Binder| |pdf| |GitHublicense| |twitter|
+|DOI| |Pypi| |arxiv| |werckerstatus| |appveyor| |BuildStatus| |Join the chat at https://gitter.im/RMDL-Random-Multimodel-Deep-Learning| |PowerPoint| |researchgate| |Binder| |pdf| |GitHublicense| |twitter|
 
 
 Referenced paper : `RMDL: Random Multimodel Deep Learning for
@@ -20,10 +20,7 @@ Overview of RDML: Random Multimodel Deep Learning for classification. The
 RMDL includesnRandom modelswhich aredrandom model of DNN classifiers,
 cmodels of CNN classifiers, andrRNN classifiers wherer+c+d=n.
 
-
 |RMDL|
-
-
 
 Random Multimodel Deep Learning (RDML) architecture for classification.
 RMDL includes 3 Random models, oneDNN classifier at left, one Deep CNN
@@ -817,6 +814,7 @@ Citations
     :target: https://arxiv.org/abs/1805.01890
 .. |twitter| image:: https://img.shields.io/twitter/url/http/shields.io.svg?style=social
     :target: https://twitter.com/intent/tweet?text=RMDL:%20Random%20Multimodel%20Deep%20Learning%20for%20Classification%0aGitHub:&url=https://github.com/kk7nc/RMDL&hashtags=DeepLearning,classification,MachineLearning,deep_neural_networks,Image_Classification,Text_Classification,EnsembleLearning
-    
+.. |Join the chat at https://gitter.im/RMDL-Random-Multimodel-Deep-Learning| image:: https://badges.gitter.im/Join%20Chat.svg
+   :target: https://gitter.im/RMDL-Random-Multimodel-Deep-Learning/Lobby?source=orgpage
     
     
