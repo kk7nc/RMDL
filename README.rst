@@ -30,8 +30,7 @@ classifier at middle, and one Deep RNN classifier at right (each unit could be L
 Installation
 =============
 
-There are git RMDL in this repository; to clone all the needed files,
-please use:
+There are pip and git for RMDL installation:
 
 Using pip
 ----------
