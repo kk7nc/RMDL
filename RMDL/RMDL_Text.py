@@ -1,8 +1,9 @@
+
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 RMDL: Random Multimodel Deep Learning for Classification
 
  * Copyright (C) 2018  Kamran Kowsari <kk7nc@virginia.edu>
- * Last Update: May 3rd, 2018
+ * Last Update: May 11, 2018
  * This file is part of  RMDL project, University of Virginia.
  * Free to use, change, share and distribute source code of RMDL
  * Refrenced paper : RMDL: Random Multimodel Deep Learning for Classification
@@ -33,89 +34,7 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
                         min_hidden_layer_dnn=1, max_hidden_layer_dnn=8, min_nodes_dnn=128, max_nodes_dnn=1024,
                         min_hidden_layer_rnn=1, max_hidden_layer_rnn=5, min_nodes_rnn=32,  max_nodes_rnn=128,
                         min_hidden_layer_cnn=3, max_hidden_layer_cnn=10, min_nodes_cnn=128, max_nodes_cnn=512,
-                        random_state=42, random_optimizor=True, dropout=0.5):
-    """
-        Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
-                            EMBEDDING_DIM=50,MAX_SEQUENCE_LENGTH = 500, MAX_NB_WORDS = 75000,
-                            GloVe_dir="", GloVe_file = "glove.6B.50d.txt",
-                            sparse_categorical=True, random_deep=[3, 3, 3], epochs=[500, 500, 500],  plot=False,
-                            min_hidden_layer_dnn=1, max_hidden_layer_dnn=8, min_nodes_dnn=128, max_nodes_dnn=1024,
-                            min_hidden_layer_rnn=1, max_hidden_layer_rnn=5, min_nodes_rnn=32,  max_nodes_rnn=128,
-                            min_hidden_layer_cnn=3, max_hidden_layer_cnn=10, min_nodes_cnn=128, max_nodes_cnn=512,
-                            random_state=42, random_optimizor=True, dropout=0.5):
-
-            Parameters
-            ----------
-                x_train : string
-                    input X for training
-                y_train : int
-                    input Y for training
-                x_test : string
-                    input X for testing
-                x_test : int
-                    input Y for testing
-                batch_size : Integer, , optional
-                    Number of samples per gradient update. If unspecified, it will default to 128
-                MAX_NB_WORDS: int, optional
-                    Maximum number of unique words in datasets, it will default to 75000.
-                GloVe_dir: String, optional
-                    Address of GloVe or any pre-trained directory, it will default to null which glove.6B.zip will be download.
-                GloVe_dir: String, optional
-                    Which version of GloVe or pre-trained word emending will be used, it will default to glove.6B.50d.txt.
-                    NOTE: if you use other version of GloVe EMBEDDING_DIM must be same dimensions.
-                sparse_categorical: bool.
-                    When target's dataset is (n,1) should be True, it will default to True.
-                random_deep: array of int [3], optional
-                    Number of ensembled model used in RMDL random_deep[0] is number of DNN, random_deep[1] is number of RNN, random_deep[0] is number of CNN, it will default to [3, 3, 3].
-                epochs: array of int [3], optional
-                    Number of epochs in each ensembled model used in RMDL epochs[0] is number of epochs used in DNN, epochs[1] is number of epochs used in RNN, epochs[0] is number of epochs used in CNN, it will default to [500, 500, 500].
-                plot: bool, optional
-                    True: shows confusion matrix and accuracy and loss
-                min_hidden_layer_dnn: Integer, optional
-                    Lower Bounds of hidden layers of DNN used in RMDL, it will default to 1.
-                max_hidden_layer_dnn: Integer, optional
-                    Upper bounds of hidden layers of DNN used in RMDL, it will default to 8.
-                min_nodes_dnn: Integer, optional
-                    Lower bounds of nodes in each layer of DNN used in RMDL, it will default to 128.
-                max_nodes_dnn: Integer, optional
-                    Upper bounds of nodes in each layer of DNN used in RMDL, it will default to 1024.
-                min_hidden_layer_rnn: Integer, optional
-                    Lower Bounds of hidden layers of RNN used in RMDL, it will default to 1.
-                min_hidden_layer_rnn: Integer, optional
-                    Upper Bounds of hidden layers of RNN used in RMDL, it will default to 5.
-                min_nodes_rnn: Integer, optional
-                    Lower bounds of nodes (LSTM or GRU) in each layer of RNN used in RMDL, it will default to 32.
-                max_nodes_rnn: Integer, optional
-                    Upper bounds of nodes (LSTM or GRU) in each layer of RNN used in RMDL, it will default to 128.
-                min_hidden_layer_cnn: Integer, optional
-                    Lower Bounds of hidden layers of CNN used in RMDL, it will default to 3.
-                max_hidden_layer_cnn: Integer, optional
-                    Upper Bounds of hidden layers of CNN used in RMDL, it will default to 10.
-                min_nodes_cnn: Integer, optional
-                    Lower bounds of nodes (2D convolution layer) in each layer of CNN used in RMDL, it will default to 128.
-                min_nodes_cnn: Integer, optional
-                    Upper bounds of nodes (2D convolution layer) in each layer of CNN used in RMDL, it will default to 512.
-                random_state : Integer, optional
-                    RandomState instance or None, optional (default=None)
-                    If Integer, random_state is the seed used by the random number generator;
-                random_optimizor : bool, optional
-                    If False, all models use adam optimizer. If True, all models use random optimizers. it will default to True
-                dropout: Float, optional
-                    between 0 and 1. Fraction of the units to drop for the linear transformation of the inputs.
-
-        """
-
-    if len(x_train) != len(y_train):
-        raise ValueError('shape of x_train and y_train must be equal'
-                         'The x_train has ' + str(len(x_train)) +
-                         'The x_train has' +
-                         str(len(y_train)))
-
-    if len(x_test) != len(y_test):
-        raise ValueError('shape of x_test and y_test must be equal '
-                         'The x_train has ' + str(len(x_test)) +
-                         'The y_test has ' +
-                         str(len(y_test)))
+                        random_state=42, random_optimizor=True, dropout=0.5,no_of_classes = 0):
 
     np.random.seed(random_state)
 
@@ -126,6 +45,39 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
 
 
     GloVe_needed = random_deep[1] != 0 or random_deep[2] != 0
+    
+    # example_input  = [0,1,3]
+    # example_output :
+    # 
+    # [[1 0 0 0]
+    #  [0 1 0 0]
+    #  [0 0 0 1]]
+    
+    def one_hot_encoder(value, label_data_):
+
+        label_data_[value] = 1
+
+        return label_data_
+
+    def _one_hot_values(labels_data):
+        encoded = [0] * len(labels_data)
+
+        for index_no, value in enumerate(labels_data):
+            max_value = [0] * (np.max(labels_data) + 1)
+
+            encoded[index_no] = one_hot_encoder(value, max_value)
+
+        return np.array(encoded)
+
+    if not isinstance(y_train[0], list) and not isinstance(y_train[0], np.ndarray):
+        #checking if labels are one hot or not otherwise dense_layer will give shape error 
+        
+        print("converted_into_one_hot")
+        y_train = _one_hot_values(y_train)
+        y_test = _one_hot_values(y_test)
+            
+
+
 
 
     if GloVe_needed:
@@ -153,7 +105,19 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
     y_pr = []
     History = []
     score = []
-    number_of_classes = np.max(y_train)+1
+
+    if no_of_classes==0:
+        
+        #checking no_of_classes 
+        #np.max(data)+1 will not work for one_hot encoding labels
+
+        number_of_classes = len(y_train[0])
+        print(number_of_classes)
+    else:
+        number_of_classes = no_of_classes
+        print(number_of_classes)
+
+
     i = 0
     while i < random_deep[0]:
         # model_DNN.append(Sequential())
@@ -210,7 +174,11 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
             i += 1
             del model_tmp
             del model_DNN
-        except:
+
+        except Exception as e:
+
+            print("Check the Error \n {} ".format(e))
+
             print("Error in model", i, "try to re-generate another model")
             if max_hidden_layer_dnn > 3:
                 max_hidden_layer_dnn -= 1
