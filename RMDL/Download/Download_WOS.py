@@ -55,7 +55,7 @@ def download_and_extract():
                                                           float(count * block_size) / float(total_size) * 100.0))
             sys.stdout.flush()
 
-        filepath, _ = urllib.urlretrieve(DATA_URL, filepath)#, reporthook=_progress)
+        filepath, _ = urllib.urlretrieve(DATA_URL, filepath, reporthook=_progress)
 
         print('Downloaded', filename)
 
