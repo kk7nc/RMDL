@@ -2,7 +2,7 @@
 RMDL: Random Multimodel Deep Learning for Classification
 
  * Copyright (C) 2018  Kamran Kowsari <kk7nc@virginia.edu>
- * Last Update: May 3rd, 2018
+ * Last Update: June 11, 2018
  * This file is part of  RMDL project, University of Virginia.
  * Free to use, change, share and distribute source code of RMDL
  * Refrenced paper : RMDL: Random Multimodel Deep Learning for Classification
@@ -10,7 +10,7 @@ RMDL: Random Multimodel Deep Learning for Classification
  * Comments and Error: email: kk7nc@virginia.edu
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 from sklearn.metrics import accuracy_score
-from sklearn.metrics import f1_score,precision_recall_fscore_support
+from sklearn.metrics import precision_recall_fscore_support
 from pylab import *
 import itertools
 

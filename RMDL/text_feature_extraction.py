@@ -16,13 +16,11 @@ from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 import numpy as np
 import nltk
-nltk.download("stopwords")
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 import re
 from nltk.stem import PorterStemmer, WordNetLemmatizer
-from RMDL import Global as G
-
+nltk.download("stopwords")
 cachedStopWords = stopwords.words("english")
 
 def transliterate(line):

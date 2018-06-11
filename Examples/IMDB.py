@@ -11,8 +11,6 @@ RMDL: Random Multimodel Deep Learning for Classification
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 
-import sys
-import os
 from RMDL import text_feature_extraction as txt
 from keras.datasets import imdb
 import numpy as np

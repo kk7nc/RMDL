@@ -22,7 +22,6 @@ from keras.layers import Conv1D,MaxPooling2D, \
     Activation,LSTM,Input
 from keras import backend as K
 from keras.models import Model
-
 from keras.layers.core import Lambda
 from keras.layers.merge import Concatenate
 import tensorflow as tf
