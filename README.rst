@@ -543,9 +543,12 @@ Using RMDL
         sparse_categorical = 0
         n_epochs = [100, 100, 100]  ## DNN-RNN-CNN
         Random_Deep = [3, 3, 3]  ## DNN-RNN-CNN
-        RMDL.Image_Classification(X_train, y_train, X_test, y_test, 
-                                   shape,batch_size=batch_size, sparse_categorical=sparse_categorical, 
-                                   random_deep=Random_Deep,epochs=n_epochs)
+        
+        RMDL.Image_Classification(X_train, y_train, X_test, y_test,shape,
+                             batch_size=batch_size,
+                             sparse_categorical=True,
+                             random_deep=Random_Deep,
+                             epochs=n_epochs)
 IMDB
 -----
 
@@ -592,9 +595,11 @@ Using RMDL
         n_epochs = [100, 100, 100]  ## DNN--RNN-CNN
         Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
 
-        RMDL.Image_Classification(X_train, y_train, X_test, y_test, 
-                                   shape,batch_size=batch_size, sparse_categorical=sparse_categorical, 
-                                   random_deep=Random_Deep,epochs=n_epochs)
+        RMDL.Text_Classification(X_train, y_train, X_test, y_test,
+                             batch_size=batch_size,
+                             sparse_categorical=sparse_categorical,
+                             random_deep=Random_Deep,
+                             epochs=n_epochs)
 
 Web Of Science
 --------------
@@ -708,13 +713,17 @@ Using RMDL
 ~~~~~~~~~~~
 .. code:: python
 
-         batch_size = 100
-         sparse_categorical = 0
-         n_epochs = [20, 500, 50]  ## DNN--RNN-CNN
-         Random_Deep = [3, 0, 0]  ## DNN--RNN-CNN
+        batch_size = 100
+        sparse_categorical = 0
+        n_epochs = [20, 500, 50]  ## DNN--RNN-CNN
+        Random_Deep = [3, 0, 0]  ## DNN--RNN-CNN
 
-         RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
-                               n_epochs)
+        RMDL.Text_Classification(X_train, y_train, X_test, y_test,
+                     batch_size=batch_size,
+                     sparse_categorical=True,
+                     random_deep=Random_Deep,
+                     epochs=n_epochs)
+
 
 
 Olivetti Faces
