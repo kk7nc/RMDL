@@ -34,7 +34,6 @@ Using pip
 
         pip install RMDL
 
-
 Using git
 ---------
 .. code:: bash
@@ -544,9 +543,9 @@ Using RMDL
         sparse_categorical = 0
         n_epochs = [100, 100, 100]  ## DNN-RNN-CNN
         Random_Deep = [3, 3, 3]  ## DNN-RNN-CNN
-        RMDL.Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
-                                n_epochs)
-
+        RMDL.Image_Classification(X_train, y_train, X_test, y_test, 
+                                   shape,batch_size=batch_size, sparse_categorical=sparse_categorical, 
+                                   random_deep=Random_Deep,epochs=n_epochs)
 IMDB
 -----
 
@@ -593,8 +592,9 @@ Using RMDL
         n_epochs = [100, 100, 100]  ## DNN--RNN-CNN
         Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
 
-        RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
-                            n_epochs)
+        RMDL.Image_Classification(X_train, y_train, X_test, y_test, 
+                                   shape,batch_size=batch_size, sparse_categorical=sparse_categorical, 
+                                   random_deep=Random_Deep,epochs=n_epochs)
 
 Web Of Science
 --------------
@@ -658,8 +658,11 @@ Using RMDL
         n_epochs = [5000, 500, 500]  ## DNN--RNN-CNN
         Random_Deep = [3, 3, 3]  ## DNN--RNN-CNN
 
-        RMDL.Text_Classification(X_train, y_train, X_test, y_test, batch_size, sparse_categorical, Random_Deep,
-                                n_epochs)
+        RMDL.Text_Classification(X_train, y_train, X_test, y_test,
+                             batch_size=batch_size,
+                             sparse_categorical=True,
+                             random_deep=Random_Deep,
+                             epochs=n_epochs,no_of_classes=12)
 
 Reuters-21578
 -------------
@@ -744,12 +747,17 @@ Using RMDL
 ~~~~~~~~~~~
 .. code:: python
 
-         batch_size = 100
-         sparse_categorical = 0
-         n_epochs = [500, 500, 50]  ## DNN--RNN-CNN
-         Random_Deep = [0, 0, 1]  ## DNN--RNN-CNN
-         RMDL.Image_Classification(X_train, y_train, X_test, y_test, batch_size, shape, sparse_categorical, Random_Deep,
-                               n_epochs)
+        batch_size = 100
+        sparse_categorical = 0
+        n_epochs = [500, 500, 50]  ## DNN--RNN-CNN
+        Random_Deep = [0, 0, 1]  ## DNN--RNN-CNN
+        
+        RMDL.Text_Classification(X_train, y_train, X_test, y_test,
+                     batch_size=batch_size,
+                     sparse_categorical=True,
+                     random_deep=Random_Deep,
+                     epochs=n_epochs)
+
 
 
 
