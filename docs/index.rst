@@ -7,13 +7,7 @@ Classification <https://www.researchgate.net/publication/324922651_RMDL_Random_M
 Random Multimodel Deep Learning (RMDL):
 =======================================
 
-A new ensemble, deep learning approach for classification. Deep
-learning models have achieved state-of-the-art results across many domains.
-RMDL solves the problem of finding the best deep learning structure
-and architecture while simultaneously improving robustness and accuracy
-through ensembles of deep learning architectures. RDML can accept
-asinput a variety data to include text, video, images, and symbolic.
-
+A new ensemble, deep learning approach for classification. Deep learning models have achieved state-of-the-art results across many domains. RMDL solves the problem of finding the best deep learning structure and architecture while simultaneously improving robustness and accuracy through ensembles of deep learning architectures. RDML can accept as input a variety of data to include text, video, images, and symbolic.
 
 |RMDL|
 
