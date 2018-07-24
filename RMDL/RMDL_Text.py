@@ -132,7 +132,7 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
 
         return np.array(encoded)
 
-    if not isinstance(y_train[0], list) and not isinstance(y_train[0], np.ndarray):
+    if not isinstance(y_train[0], list) and not isinstance(y_train[0], np.ndarray) and not sparse_categorical::
         #checking if labels are one hot or not otherwise dense_layer will give shape error 
         
         print("converted_into_one_hot")
