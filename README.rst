@@ -808,7 +808,7 @@ and
     year={2018},
     Volume={8},
     Number={4},
-     pages={289--310},
+    pages={298--310},
     DOI={https://doi.org/10.18178/ijmlc.2018.8.4.703}
     }
     
