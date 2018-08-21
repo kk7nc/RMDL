@@ -795,6 +795,23 @@ Citations
     DOI={https://doi.org/10.1145/3206098.3206111},
     organization={ACM}
     }
+    
+    
+and 
+
+.. code::
+
+    @article{Heidarysafa2018RMDL,
+    title={An Improvement of Data Classification Using Random Multimodel Deep Learning (RMDL)},
+    author={Heidarysafa, Mojtaba and Kowsari, Kamran and Brown, Donald E. and Jafari Meimandi, Kiana and Barnes, Laura E.},
+    booktitle={International Journal of Machine Learning and Computing (IJMLC)},
+    year={2018},
+    Volume={8},
+    Number={4},
+     pages={289--310},
+    DOI={https://doi.org/10.18178/ijmlc.2018.8.4.703}
+    }
+    
 
 .. |werckerstatus| image:: https://app.wercker.com/status/3a564158e809971e2f7416beba5d05af/s/master
    :target: https://app.wercker.com/project/byKey/3a564158e809971e2f7416beba5d05af
