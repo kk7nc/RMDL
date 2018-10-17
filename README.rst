@@ -788,13 +788,23 @@ Citations
 .. code::
 
     @inproceedings{Kowsari2018RMDL,
-    title={RMDL: Random Multimodel Deep Learning for Classification},
-    author={Kowsari, Kamran and Heidarysafa, Mojtaba and Brown, Donald E. and Jafari Meimandi, Kiana and Barnes, Laura E.},
-    booktitle={Proceedings of the 2018 International Conference on Information System and Data Mining},
-    year={2018},
-    DOI={https://doi.org/10.1145/3206098.3206111},
-    organization={ACM}
-    }
+         author = {Kowsari, Kamran and Heidarysafa, Mojtaba and Brown, Donald E. and Meimandi, Kiana Jafari and Barnes, Laura E.},
+         title = {RMDL: Random Multimodel Deep Learning for Classification},
+         booktitle = {Proceedings of the 2Nd International Conference on Information System and Data Mining},
+         series = {ICISDM '18},
+         year = {2018},
+         isbn = {978-1-4503-6354-9},
+         location = {Lakeland, FL, USA},
+         pages = {19--28},
+         numpages = {10},
+         url = {http://doi.acm.org/10.1145/3206098.3206111},
+         doi = {10.1145/3206098.3206111},
+         acmid = {3206111},
+         publisher = {ACM},
+         address = {New York, NY, USA},
+         keywords = {Data Mining, Deep Learning, Deep Neural Networks, Image Classification, Supervised Learning, Text Classification},
+        } 
+
     
     
 and 
