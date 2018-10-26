@@ -1,15 +1,18 @@
-
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 RMDL: Random Multimodel Deep Learning for Classification
 
- * Copyright (C) 2018  Kamran Kowsari <kk7nc@virginia.edu>
- * Last Update: June 04, 2018
- * This file is part of  RMDL project, University of Virginia.
- * Free to use, change, share and distribute source code of RMDL
- * Refrenced paper : RMDL: Random Multimodel Deep Learning for Classification
- * Refrenced paper : An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)
- * Comments and Error: email: kk7nc@virginia.edu
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+* Copyright (C) 2018  Kamran Kowsari <kk7nc@virginia.edu>
+* Last Update: Oct 26, 2018
+* This file is part of  RMDL project, University of Virginia.
+* Free to use, change, share and distribute source code of RMDL
+* Refrenced paper : RMDL: Random Multimodel Deep Learning for Classification
+* Link: https://dl.acm.org/citation.cfm?id=3206111
+* Refrenced paper : An Improvement of Data Classification using Random Multimodel Deep Learning (RMDL)
+* Link :  http://www.ijmlc.org/index.php?m=content&c=index&a=show&catid=79&id=823
+* Comments and Error: email: kk7nc@virginia.edu
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import gc
@@ -132,7 +135,7 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
 
         return np.array(encoded)
 
-    if not isinstance(y_train[0], list) and not isinstance(y_train[0], np.ndarray) and not sparse_categorical::
+    if not isinstance(y_train[0], list) and not isinstance(y_train[0], np.ndarray) and not sparse_categorical:
         #checking if labels are one hot or not otherwise dense_layer will give shape error 
         
         print("converted_into_one_hot")
