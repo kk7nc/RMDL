@@ -2,7 +2,12 @@
 
 
 Referenced paper : `RMDL: Random Multimodel Deep Learning for
-Classification <https://www.researchgate.net/publication/324922651_RMDL_Random_Multimodel_Deep_Learning_for_Classification>`__
+Classification <https://arxiv.org/abs/1805.01890>`__
+
+
+Referenced paper : `An Improvement of Data Classification Using Random Multimodel Deep Learning (RMDL) <https://arxiv.org/abs/1808.08121>`__
+
+
 
 Random Multimodel Deep Learning (RMDL):
 =======================================
