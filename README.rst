@@ -844,7 +844,7 @@ and
    :target: ./LICENSE
 .. |RDL| image:: http://kowsari.net/onewebmedia/RDL.jpg
 .. |RMDL| image:: http://kowsari.net/onewebmedia/RMDL.jpg
-.. |Results| image:: http://kowsari.net/onewebmedia/RMDL_Results.png
+.. |Results| image:: http://kowsari.net/onewebmedia/RMDLResults.png
 .. |Data| image:: https://img.shields.io/badge/DOI-10.17632/9rw3vkcfy4.6-blue.svg?style=flat
    :target: http://dx.doi.org/10.17632/9rw3vkcfy4.6
 .. |Pypi| image:: https://img.shields.io/badge/Pypi-RMDL%201.0.5-blue.svg
