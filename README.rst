@@ -775,7 +775,7 @@ Using RMDL
 
 
 
-More Exanmple
+More Example
 `link <https://github.com/kk7nc/RMDL/tree/master/Examples>`__
 
 |Results|
