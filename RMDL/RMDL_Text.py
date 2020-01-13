@@ -22,7 +22,7 @@ import collections
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_recall_fscore_support
-from keras.callbacks import ModelCheckpoint
+from keras.callbacks import ModelCheckpoint, EarlyStopping
 from RMDL import BuildModel as BuildModel
 from RMDL.Download import Download_Glove as GloVe
 from RMDL import text_feature_extraction as txt
@@ -37,7 +37,7 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
                         min_hidden_layer_dnn=1, max_hidden_layer_dnn=8, min_nodes_dnn=128, max_nodes_dnn=1024,
                         min_hidden_layer_rnn=1, max_hidden_layer_rnn=5, min_nodes_rnn=32,  max_nodes_rnn=128,
                         min_hidden_layer_cnn=3, max_hidden_layer_cnn=10, min_nodes_cnn=128, max_nodes_cnn=512,
-                        random_state=42, random_optimizor=True, dropout=0.5,no_of_classes=0):
+                        random_state=42, random_optimizor=True, dropout=0.5,no_of_classes=0, patience = 50):
 
 
     """
@@ -193,9 +193,11 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
             checkpoint = ModelCheckpoint(filepath,
                                          monitor='val_acc',
                                          verbose=1,
+                                         save_weights_only = False,
                                          save_best_only=True,
                                          mode='max')
-            callbacks_list = [checkpoint]
+            es = EarlyStopping(monitor='val_acc', mode='max', verbose=1, patience = patience)
+            callbacks_list = [checkpoint,es]
 
             model_DNN, model_tmp = BuildModel.Build_Model_DNN_Text(x_train_tfidf.shape[1],
                                                                    number_of_classes,
@@ -213,6 +215,14 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
                               callbacks=callbacks_list,
                               verbose=2)
             History.append(model_history)
+            #after history is done save the whole thing
+            # json serialize
+            filepath_full = "Model_Arch_DNN_" + str(i) + ".json"
+            # and then load the weights saved above
+            model_json = model_DNN.to_json()
+            with open(filepath_full, "w") as json_file:
+                json_file.write(model_json)
+            
 
             model_tmp.load_weights(filepath)
             if sparse_categorical:
@@ -267,8 +277,10 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
                                          monitor='val_acc',
                                          verbose=1,
                                          save_best_only=True,
+                                         save_weights_only = False,
                                          mode='max')
-            callbacks_list = [checkpoint]
+            es = EarlyStopping(monitor='val_acc', mode='max', verbose=1, patience = patience)
+            callbacks_list = [checkpoint,es]
 
             model_RNN, model_tmp = BuildModel.Build_Model_RNN_Text(word_index,
                                                                    embeddings_index,
@@ -290,6 +302,14 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
                               callbacks=callbacks_list,
                               verbose=2)
             History.append(model_history)
+            #after history is done save the whole thing
+            
+            filepath_full = "Model_Arch_RNN_" + str(i) + ".json"
+            # and then load the weights saved above
+
+            model_json = model_RNN.to_json()
+            with open(filepath_full, "w") as json_file:
+                json_file.write(model_json)
 
             if sparse_categorical:
                 model_tmp.load_weights(filepath)
@@ -344,9 +364,12 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
 
 
             filepath = "weights\weights_CNN_" + str(i) + ".hdf5"
-            checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
+            checkpoint = ModelCheckpoint(filepath, monitor='val_acc',
+                                         save_weights_only = False, verbose=1, 
+                                         save_best_only=True,
                                          mode='max')
-            callbacks_list = [checkpoint]
+            es = EarlyStopping(monitor='val_acc', mode='max', verbose=1, patience = patience)
+            callbacks_list = [checkpoint,es]
 
             model_history = model_CNN.fit(x_train_embedded, y_train,
                                           validation_data=(x_test_embedded, y_test),
@@ -354,7 +377,16 @@ def Text_Classification(x_train, y_train, x_test,  y_test, batch_size=128,
                                           batch_size=batch_size,
                                           callbacks=callbacks_list,
                                           verbose=2)
+            
             History.append(model_history)
+            #after history is done save the whole thing
+            filepath_full = "Model_Arch_CNN_" + str(i) + ".json"
+            # and then load the weights saved above
+
+            model_json = model_CNN.to_json()
+            with open(filepath_full, "w") as json_file:
+                json_file.write(model_json)
+
 
             model_tmp.load_weights(filepath)
             if sparse_categorical:
