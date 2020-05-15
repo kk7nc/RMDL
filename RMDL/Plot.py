@@ -25,7 +25,7 @@ def RMDL_epoch(history_):
         caption.append('RDL '+str(i+1))
     plt.legend(caption, loc='upper right')
     for i in range(0, Number_of_models):
-        plt.plot(history_[i].history['acc'])
+        plt.plot(history_[i].history['accuracy'])
         plt.title('model train accuracy')
         plt.ylabel('accuracy')
         plt.xlabel('epoch')
@@ -35,7 +35,7 @@ def RMDL_epoch(history_):
 
 
     for i in range(0, Number_of_models):
-        plt.plot(history_[i].history['val_acc'])
+        plt.plot(history_[i].history['val_accuracy'])
         plt.title('model test accuracy')
         plt.ylabel('accuracy')
         plt.xlabel('epoch')
