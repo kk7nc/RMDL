@@ -33,4 +33,4 @@ jobs:
             python -c "import RMDL"
     - name: Test with pytest
       run: |
-        pytest
+        python -c "import RMDL"
