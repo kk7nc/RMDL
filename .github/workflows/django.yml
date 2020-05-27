@@ -25,7 +25,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install -r rmdl
+        pip install RMDL
     - name: Run Tests
       run: |
         python "import RMDL"
