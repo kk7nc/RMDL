@@ -28,4 +28,4 @@ jobs:
         pip install RMDL
     - name: Run Tests
       run: |
-        python "import RMDL"
+        python -c "import RMDL"
