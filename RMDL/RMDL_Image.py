@@ -144,7 +144,7 @@ def Image_Classification(x_train, y_train, x_test, y_test, shape, batch_size=128
 
             filepath = "weights\weights_DNN_" + str(i) + ".hdf5"
             checkpoint = ModelCheckpoint(filepath,
-                                         monitor='val_acc',
+                                         monitor='val_accuracy',
                                          verbose=1,
                                          save_best_only=True,
                                          mode='max')
@@ -197,7 +197,7 @@ def Image_Classification(x_train, y_train, x_test, y_test, shape, batch_size=128
 
             filepath = "weights\weights_RNN_" + str(i) + ".hdf5"
             checkpoint = ModelCheckpoint(filepath,
-                                         monitor='val_acc',
+                                         monitor='val_accuracy',
                                          verbose=1,
                                          save_best_only=True,
                                          mode='max')
@@ -247,7 +247,10 @@ def Image_Classification(x_train, y_train, x_test, y_test, shape, batch_size=128
                                                                     dropout)
 
             filepath = "weights\weights_CNN_" + str(i) + ".hdf5"
-            checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True,
+            checkpoint = ModelCheckpoint(filepath, 
+                                         monitor='val_accuracy',
+                                         verbose=1, 
+                                         save_best_only=True,
                                          mode='max')
             callbacks_list = [checkpoint]
 
