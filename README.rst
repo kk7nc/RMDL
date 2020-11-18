@@ -860,7 +860,7 @@ and
 .. |Join the chat at https://gitter.im/RMDL-Random-Multimodel-Deep-Learning| image:: https://badges.gitter.im/Join%20Chat.svg
    :target: https://gitter.im/RMDL-Random-Multimodel-Deep-Learning/Lobby?source=orgpage
    
-.. |Download| image:: https://static.pepy.tech/personalized-badge/rmdl?period=total&units=none&left_color=green&right_color=orange&left_text=Downloads
-        :target: https://pepy.tech/project/rmdl
+.. |Download| image:: https://static.pepy.tech/personalized-badge/rmdl?period=total&units=none&left_color=brightgreen&right_color=blue&left_text=Downloads
+ :target: https://pepy.tech/project/rmdl
     
     
