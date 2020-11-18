@@ -1,4 +1,4 @@
-|DOI| |Pypi| |arxiv| |Download| |werckerstatus| |appveyor| |BuildStatus| |Join the chat at https://gitter.im/RMDL-Random-Multimodel-Deep-Learning| |PowerPoint| |researchgate| |Binder| |pdf| |GitHublicense| |twitter|
+|DOI| |Pypi| |arxiv| |Download| |werckerstatus| |appveyor| |BuildStatus| |Join the chat at https://gitter.im/RMDL-Random-Multimodel-Deep-Learning| |PowerPoint| |researchgate| |Binder| |GitHublicense| |twitter|
 
 
 Referenced paper : `RMDL: Random Multimodel Deep Learning for
