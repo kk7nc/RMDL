@@ -835,7 +835,7 @@ and
 .. |PowerPoint| image:: https://img.shields.io/badge/Presentation-download-red.svg?style=flat
    :target: https://github.com/kk7nc/RMDL/blob/master/docs/RMDL.pdf
 .. |researchgate| image:: https://img.shields.io/badge/ResearchGate-RMDL-blue.svg?style=flat
-   :target: https://www.researchgate.net/publication/324922651_RMDL_Random_Multimodel_Deep_Learning_for_Classification
+   :target: https://www.researchgate.net/publication/325936017_RMDL_Random_Multimodel_Deep_Learning_for_Classification
 .. |Binder| image:: https://mybinder.org/badge.svg
    :target: https://mybinder.org/v2/gh/kk7nc/RMDL/master
 .. |pdf| image:: https://img.shields.io/badge/pdf-download-red.svg?style=flat
