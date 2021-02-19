@@ -842,9 +842,9 @@ and
    :target: https://github.com/kk7nc/RMDL/blob/master/docs/ACM-RMDL.pdf
 .. |GitHublicense| image:: https://img.shields.io/badge/licence-GPL-blue.svg
    :target: ./LICENSE
-.. |RDL| image:: http://kowsari.net/onewebmedia/RDL.jpg
-.. |RMDL| image:: http://kowsari.net/onewebmedia/RMDL.jpg
-.. |Results| image:: http://kowsari.net/RMDLResults.png
+.. |RDL| image:: docs/RDL.jpg
+.. |RMDL| image:: docs/RMDL.jpg
+.. |Results| image:: docs/RMDL_Results.png
 .. |Data| image:: https://img.shields.io/badge/DOI-10.17632/9rw3vkcfy4.6-blue.svg?style=flat
    :target: http://dx.doi.org/10.17632/9rw3vkcfy4.6
 .. |Pypi| image:: https://img.shields.io/badge/Pypi-RMDL%201.0.8-blue.svg
