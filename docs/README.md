@@ -32,7 +32,7 @@ The RMDL includesnRandom modelswhich aredrandom model of DNN
 classifiers, cmodels of CNN classifiers, andrRNN classifiers
 wherer+c+d=n.
 
-![RMDL](https://github.com/kk7nc/RMDL/raw/master/docs/RMDL.png?raw=true)
+![RMDL](https://github.com/kk7nc/RMDL/raw/master/docs/RMDL.jpg?raw=true)
 
 Random Multimodel Deep Learning (RDML) architecture for classification.
 RMDL includes 3 Random models, oneDNN classifier at left, one Deep CNN
