@@ -1,4 +1,4 @@
-|DOI| |Pypi| |arxiv| |Download| |werckerstatus| |appveyor| |BuildStatus| |Join the chat at https://gitter.im/RMDL-Random-Multimodel-Deep-Learning| |PowerPoint| |researchgate| |Binder| |GitHublicense| |twitter|
+|DOI|  |Best|  |Pypi| |arxiv| |Download| |werckerstatus| |appveyor| |BuildStatus| |Join the chat at https://gitter.im/RMDL-Random-Multimodel-Deep-Learning| |PowerPoint| |researchgate| |Binder| |GitHublicense| |twitter|
 
 
 Referenced paper : `RMDL: Random Multimodel Deep Learning for
@@ -863,4 +863,5 @@ and
 .. |Download| image:: https://static.pepy.tech/personalized-badge/rmdl?period=total&units=none&left_color=brightgreen&right_color=blue&left_text=Downloads
  :target: https://pepy.tech/project/rmdl
     
-    
+.. |Best| image::     https://img.shields.io/badge/Award-Best%20Paper%20Award-brightgreen
+    :target: http://www.icisdm.org/icisdm2018.html
