@@ -6,7 +6,7 @@
 # If you want Google's container you would reference google/python
 # Read more about containers on our dev center
 # http://devcenter.wercker.com/docs/containers/index.html
-box: python
+box: python:3.0
 # You can also use services such as databases. Read more on our dev center:
 # http://devcenter.wercker.com/docs/services/index.html
 # services:
