@@ -25,6 +25,9 @@ build:
   # Read more about steps on our dev center:
   # http://devcenter.wercker.com/docs/steps/index.html
   steps:
+      # A step that executes `pip install` command.
+    - pip-install
+    
     # A step that sets up the python virtual environment
     - virtualenv:
         name: setup virtual environment
@@ -35,9 +38,7 @@ build:
     #     name: setup virtual environment
     #     python_location: /usr/bin/python3.2
 
-    # A step that executes `pip install` command.
-    - pip-install
-        packages_list: "virtualenv"
+
 
     # # This pip-install clears the local wheel cache
     # - pip-install:
