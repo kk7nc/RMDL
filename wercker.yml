@@ -37,7 +37,7 @@ build:
 
     # A step that executes `pip install` command.
     - pip-install
-    packages_list: "virtualenv"
+        packages_list: "virtualenv"
 
     # # This pip-install clears the local wheel cache
     # - pip-install:
