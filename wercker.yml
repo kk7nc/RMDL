@@ -28,7 +28,7 @@ build:
     # A step that sets up the python virtual environment
     - virtualenv:
         name: setup virtual environment
-        install_wheel: false # Enable wheel to speed up builds (experimental)
+        install_wheel: true # Enable wheel to speed up builds (experimental)
 
     # # Use this virtualenv step for python 3.2
     # - virtualenv
