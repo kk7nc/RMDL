@@ -2,7 +2,7 @@
 # the Docker Hub with the 3.6 tag:
 # https://registry.hub.docker.com/_/python/
 # If you want to use a slim Python container with
-# version 3.4.3 you would use: python:3.4-slim
+# version 3.4.3 you would use: python:3
 # If you want Google's container you would reference google/python
 # Read more about containers on our dev center
 # http://devcenter.wercker.com/docs/containers/index.html
