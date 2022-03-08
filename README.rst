@@ -8,7 +8,6 @@ Classification <https://arxiv.org/abs/1805.01890>`__
 Referenced paper : `An Improvement of Data Classification Using Random Multimodel Deep Learning (RMDL) <https://arxiv.org/abs/1808.08121>`__
 
 
-
 Random Multimodel Deep Learning (RMDL):
 =======================================
 
