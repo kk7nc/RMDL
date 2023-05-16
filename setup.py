@@ -7,7 +7,7 @@ from setuptools import Extension
 from setuptools import setup, find_packages
 from os import path
 
-__author__ = 'Kamran Kowsari <kowsari.net>'
+__author__ = 'Kamran Kowsari'
 
 
 
